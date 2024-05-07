@@ -41,17 +41,17 @@
         <div class="question" id="question1" style="display: block;">
             <h3>Question 1: What is 2 + 2?</h3>
             <input type="number" class="form-control" id="q1">
-            <button class="btn btn-primary btn-block" onclick="nextQuestion()">Next</button>
+            <button class="btn btn-primary btn-block" onclick="checkAnswer(4)">Next</button>
         </div>
         <div class="question" id="question2">
             <h3>Question 2: What is 5 - 3?</h3>
             <input type="number" class="form-control" id="q2">
-            <button class="btn btn-primary btn-block" onclick="nextQuestion()">Next</button>
+            <button class="btn btn-primary btn-block" onclick="checkAnswer(2)">Next</button>
         </div>
         <div class="question" id="question3">
             <h3>Question 3: What is 4 * 6?</h3>
             <input type="number" class="form-control" id="q3">
-            <button class="btn btn-primary btn-block" onclick="calculateScore()">Submit</button>
+            <button class="btn btn-primary btn-block" onclick="checkAnswer(24)">Submit</button>
         </div>
     </div>
 </div>
@@ -79,11 +79,18 @@
 <script>
     var currentQuestion = 1;
 
-    function nextQuestion() {
-        var answer = document.getElementById('q' + currentQuestion).value.trim();
-        if (answer === "") {
+    function checkAnswer(correctAnswer) {
+        var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
+        if (isNaN(userAnswer)) {
             alert("Please provide an answer.");
             return;
+        }
+        
+        var isCorrect = userAnswer === correctAnswer;
+        if (isCorrect) {
+            speak("Yes");
+        } else {
+            speak("No");
         }
         
         document.getElementById('question' + currentQuestion).style.display = 'none';
@@ -93,6 +100,11 @@
         } else {
             calculateScore(); // Call calculateScore() when all questions are answered
         }
+    }
+
+    function speak(text) {
+        var utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
     }
 
     function calculateScore() {
@@ -109,6 +121,9 @@
 
         document.getElementById('score').innerText = "You got " + score + " out of 3 correct!";
         $('#scoreModal').modal('show');
+
+        // Speak the score
+        speak("Your score is " + score + " out of 3.");
     }
 </script>
 
