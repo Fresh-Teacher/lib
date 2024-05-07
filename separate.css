@@ -1,51 +1,18 @@
 body {
-    font-family: 'Schoolbell', cursive;
-}
-.container {
-    margin-top: 50px;
-}
-h1 {
+    font-family: Arial, sans-serif;
     text-align: center;
-}
-.question {
-    display: none;
+  }
+  
+  #quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #question-container {
     margin-bottom: 20px;
-}
-.btn-primary {
-    font-size: 18px;
-    margin-top: 10px; /* Add margin-top to space out the button */
-}
-.form-control {
-    margin-bottom: 10px; /* Add margin-bottom to space out the input field */
-}
-#scoreModal .modal-dialog {
-    max-width: 400px;
-}
-/* CSS animation for gear icons */
-@keyframes rotateRight {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-@keyframes rotateLeft {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-.gear-icon-left {
-    display: inline-block;
-    animation: rotateLeft 2s infinite linear; /* Apply animation to rotate the gear icon to the left */
-}
-.gear-icon-right {
-    display: inline-block;
-    animation: rotateRight 2s infinite linear; /* Apply animation to rotate the gear icon to the right */
-}
-.correct-answer {
-color: red;
-}
+  }
+  
+  #feedback {
+    font-weight: bold;
+  }
+  
