@@ -123,6 +123,9 @@
     </div>
 </div>
 
+<audio id="yesAudio" src="kaweddemu.mp3"></audio>
+<audio id="noAudio" src="kufa.mp3"></audio>
+
 
 
 
@@ -255,13 +258,11 @@
     }
     
     var isCorrect = userAnswer === correctAnswer;
-    if (isCorrect && soundPreference === 'on') {
-        speak("Correct");
-    } else if (!isCorrect && soundPreference === 'on') {
-        speak("Incorrect");
-        showIncorrectModal(correctAnswer); // Display modal for incorrect answer
-        return;
-    }
+        if (isCorrect) {
+            playAudio('yesAudio');
+        } else {
+            playAudio('noAudio');
+        }
     
     document.querySelector('.question:nth-child(' + questionNumber + ')').style.display = 'none'; // Hide the current question
     currentQuestion++;
@@ -290,11 +291,10 @@ function showIncorrectModal(correctAnswer) {
 }
 
 
-    function speak(text) {
-        var utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
+function playAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.play();
     }
-
     function calculateScore() {
         var score = 0;
         var totalQuestions = 10; // Update total questions to 10
