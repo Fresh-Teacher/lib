@@ -101,15 +101,47 @@
 .btn-repeat-question {
   animation: heartbeat 1.5s infinite;
 }
-
+    #timer {
+        color: red;
+    }
 
     </style>
 </head>
-<body onload="$('#settingsModal').modal('show')">
+
+<script>
+    var timerInterval; // Variable to store the timer interval
+
+    // Function to start the timer
+    function startTimer() {
+        var timerDisplay = document.getElementById('timer');
+        var timeLeft = 300; // 5 minutes in seconds
+
+        // Update the timer display every second
+        timerInterval = setInterval(function() {
+            var minutes = Math.floor(timeLeft / 60);
+            var seconds = timeLeft % 60;
+
+            // Format minutes and seconds with leading zeros if needed
+            var formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+            timerDisplay.textContent = formattedTime;
+
+            // Check if time is up
+            if (timeLeft === 0) {
+                clearInterval(timerInterval); // Stop the timer
+                calculateScore(); // Calculate score when time is up
+            } else {
+                timeLeft--; // Decrease time by 1 second
+            }
+        }, 1000); // Update timer every second (1000 milliseconds)
+    }
+</script>
 
 <div class="container">
-    <h1>Math Quiz</h1>
-    
+    <h1>Time left<p></p>
+        <body onload="$('#settingsModal').modal('show')"><div id="timer">05:00</div>
+        </h1><br>
+    <!-- Timer display -->
+
     <div id="quiz">
         <!-- Questions will be dynamically inserted here -->
     </div>
@@ -144,7 +176,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="saveSoundPreference()">START</button>
+                <button type="button" class="btn btn-primary" onclick="saveSoundPreference(); startTimer();">START</button>
             </div>
         </div>
     </div>
@@ -210,6 +242,7 @@
 
 
 
+
 <!-- Modal for Prank Deal Message -->
 <div class="modal fade" id="dealMessageModal" tabindex="-1" role="dialog" aria-labelledby="dealMessageModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
@@ -218,7 +251,7 @@
                 <h5 class="modal-title" id="dealMessageModalLabel">😜 YOU WERE FOOLED!!! 🤪</h5>
             </div>
             <div class="modal-body">
-                <p>Well, to be honest with you, that's just not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
+                <p>Well, to be honest with you, that's not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" onclick="$('#dealMessageModal').modal('hide')">CONTINUE</button>
