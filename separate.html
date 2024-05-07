@@ -1,44 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capital Cities Quiz</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Math Quiz for Kids</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="separate.css">
 </head>
-<body>
-  <div id="quiz-container" class="container mt-5">
-    <h1 class="text-center mb-4">Capital Cities Quiz</h1>
-    <div id="question-container" class="mb-4">
-      <p id="question-text"></p>
-      <form id="answer-form">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="answer" value="A" id="optionA">
-          <label class="form-check-label" for="optionA" id="labelA"></label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="answer" value="B" id="optionB">
-          <label class="form-check-label" for="optionB" id="labelB"></label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="answer" value="C" id="optionC">
-          <label class="form-check-label" for="optionC" id="labelC"></label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="answer" value="D" id="optionD">
-          <label class="form-check-label" for="optionD" id="labelD"></label>
-        </div>
-      </form>
+<body onload="$('#settingsModal').modal('show')">
+
+<div class="container">
+    <h1>Math Quiz</h1>
+    
+    <div id="quiz">
+        <!-- Questions will be dynamically inserted here -->
     </div>
-    <button id="next-btn" class="btn btn-primary">Next Question</button>
-    <p id="feedback" class="mt-3"></p>
-  </div>
-  
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- Gear icons with different animations -->
+                <h5 class="modal-title" id="settingsModalLabel"><span class="gear-icon-left">⚙️</span> GAME SETTINGS <span class="gear-icon-right">⚙️</span></h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="playerName">Player's Name 🦸</label>
+                    <input type="text" class="form-control" id="playerName" placeholder="Enter your sweet name here...">
+                </div>
+
+                <p>Please select your sound preference:</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="soundPreference" id="soundOn" value="on" checked>
+                    <label class="form-check-label" for="soundOn">
+                        Sounds On 🔊
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="soundPreference" id="soundOff" value="off">
+                    <label class="form-check-label" for="soundOff">
+                        Sounds Off 🔇
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="saveSoundPreference()">START</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Incorrect Answer -->
+<div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="incorrectModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="incorrectModalLabel"> Solution Modal</h5>
+            </div>
+            <div class="modal-body">
+                <p>Sorry, your answer is incorrect! Below is the correct answer:<br><strong> <span id="correctAnswer" class="correct-answer"></span></p>
+            </div></strong>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Score Modal -->
+<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
+            </div>
+            <div class="modal-body">
+                <p id="score"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="repeatQuiz()">Repeat Quiz 🔁</button>
+                <a href="index.html" class="btn btn-secondary">Back to Homepage 🏡</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Custom JS -->
   <script src="separate.js"></script>
 </body>
