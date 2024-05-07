@@ -3,98 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capital Cities Quiz</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Fun Quiz</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif; /* playful cursive font */
-    }
-    .container {
-      margin-top: 50px;
-    }
-    h1 {
+      font-family: Arial, sans-serif;
       text-align: center;
     }
     .question {
+      font-size: 24px;
       margin-bottom: 20px;
     }
-    .btn {
-      margin-top: 10px;
+    .options button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
-<div class="container">
-  <h1>Capital Cities Quiz</h1>
-  <div class="question">
-    <h3 id="question"></h3>
-    <div id="options"></div>
-    <button onclick="checkAnswer()" class="btn btn-primary">Check Answer</button>
+  <h1>Fun Quiz</h1>
+  <div class="question" id="question">What is the capital of France?</div>
+  <div class="options">
+    <button onclick="checkAnswer('Paris')">Paris</button>
+    <button onclick="checkAnswer('London')">London</button>
+    <button onclick="checkAnswer('Berlin')">Berlin</button>
+    <button onclick="checkAnswer('Madrid')">Madrid</button>
   </div>
-  <div id="result"></div>
-</div>
 
-<script>
-  const questions = [
-    { question: "What is the capital of France?", options: ["London", "Berlin", "Paris", "Madrid"], answer: "Paris" },
-    { question: "What is the capital of Japan?", options: ["Beijing", "Seoul", "Tokyo", "Bangkok"], answer: "Tokyo" },
-    { question: "What is the capital of Brazil?", options: ["Buenos Aires", "São Paulo", "Rio de Janeiro", "Brasília"], answer: "Brasília" },
-    // Add more questions here
-  ];
-
-  let score = 0;
-  let currentQuestion = 0;
-
-  function askQuestion() {
-    const questionObj = questions[currentQuestion];
-    document.getElementById('question').textContent = questionObj.question;
-
-    const optionsDiv = document.getElementById('options');
-    optionsDiv.innerHTML = '';
-    questionObj.options.forEach((option, index) => {
-      const optionLabel = document.createElement('label');
-      optionLabel.innerHTML = `<input type="radio" name="answer" value="${option}"> ${option}<br>`;
-      optionsDiv.appendChild(optionLabel);
-    });
-  }
-
-  function checkAnswer() {
-    const selectedOption = document.querySelector('input[name="answer"]:checked');
-    if (!selectedOption) {
-      alert("Please select an option.");
-      return;
-    }
-    const userAnswer = selectedOption.value;
-    const correctAnswer = questions[currentQuestion].answer;
-
-    if (userAnswer === correctAnswer) {
-      speak("YES");
-      document.getElementById('result').innerHTML = '<p style="color:green;">YES</p>';
-      score++;
-    } else {
-      speak("NO");
-      document.getElementById('result').innerHTML = '<p style="color:red;">NO</p>';
+  <script>
+    function speak(text) {
+      var synth = window.speechSynthesis;
+      var utterance = new SpeechSynthesisUtterance();
+      utterance.text = text;
+      synth.speak(utterance);
     }
 
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-      askQuestion();
-    } else {
-      document.getElementById('question').textContent = "Quiz Completed!";
-      document.getElementById('options').style.display = 'none';
-      document.getElementById('result').innerHTML += '<p>Your score: ' + score + '/' + questions.length + '</p>';
+    function checkAnswer(answer) {
+      if (answer === 'Paris') {
+        speak('Yes, that is correct!');
+      } else {
+        speak('No, that is incorrect.');
+      }
     }
-  }
-
-  function speak(text) {
-    const speech = new SpeechSynthesisUtterance();
-    speech.text = text;
-    speechSynthesis.speak(speech);
-  }
-
-  window.onload = askQuestion;
-</script>
-
+  </script>
 </body>
 </html>
