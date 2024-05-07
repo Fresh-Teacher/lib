@@ -1,18 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     text-align: center;
   }
   
-  #quiz-container {
+  .container {
     max-width: 600px;
     margin: 0 auto;
   }
   
-  #question-container {
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  #quiz {
     margin-bottom: 20px;
   }
   
-  #feedback {
-    font-weight: bold;
+  #answer {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  
+  #result {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  #nextButton {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #score {
+    margin-top: 20px;
+    font-size: 24px;
   }
   

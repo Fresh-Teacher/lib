@@ -3,112 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Math Quiz for Kids</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <title>Capital Cities Quiz</title>
     <style>
         body {
-            font-family: 'Schoolbell', cursive;
-        }
-        .container {
+            font-family: cursive;
+            text-align: center;
             margin-top: 50px;
         }
         h1 {
-            text-align: center;
+            font-size: 36px;
         }
-        .question {
-            display: none;
+        #question {
+            font-size: 24px;
             margin-bottom: 20px;
         }
-        .btn-primary {
-            font-size: 18px;
-            margin-top: 10px; /* Add margin-top to space out the button */
-        }
-        .form-control {
-            margin-bottom: 10px; /* Add margin-bottom to space out the input field */
-        }
-        #scoreModal .modal-dialog {
-            max-width: 400px;
+        #answer {
+            font-size: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <h1>Capital Cities Quiz</h1>
+    <div id="question"></div>
+    <input type="text" id="userAnswer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="feedback"></div>
+    <div id="score"></div>
 
-<div class="container">
-    <h1>Fun Math Quiz for Kids</h1>
-    
-    <div id="quiz">
-        <div class="question" id="question1" style="display: block;">
-            <h3>Question 1: What is 2 + 2?</h3>
-            <input type="number" class="form-control" id="q1">
-            <button class="btn btn-primary btn-block" onclick="checkAnswer(4)">Next</button>
-        </div>
-        <div class="question" id="question2">
-            <h3>Question 2: What is 5 - 3?</h3>
-            <input type="number" class="form-control" id="q2">
-            <button class="btn btn-primary btn-block" onclick="checkAnswer(2)">Next</button>
-        </div>
-        <div class="question" id="question3">
-            <h3>Question 3: What is 4 * 6?</h3>
-            <input type="number" class="form-control" id="q3">
-            <button class="btn btn-primary btn-block" onclick="checkAnswer(24)">Submit</button>
-        </div>
-    </div>
-</div>
+    <script>
+        const questions = [
+            { question: "What is the capital city of France?", answer: "Paris" },
+            { question: "What is the capital city of Japan?", answer: "Tokyo" },
+            { question: "What is the capital city of Australia?", answer: "Canberra" },
+            // Add more questions here...
+        ];
 
-<!-- Score Modal -->
-<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p id="score"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+        let score = 0;
+        let currentQuestionIndex = 0;
 
-<script>
-    var currentQuestion = 1;
-
-    function checkAnswer(correctAnswer) {
-        var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
-        if (isNaN(userAnswer)) {
-            alert("Please provide an answer.");
-            return;
+        function askQuestion() {
+            document.getElementById("question").textContent = questions[currentQuestionIndex].question;
         }
-        
-        var isCorrect = userAnswer === correctAnswer;
-        if (isCorrect) {
-            speak("Yes");
-        } else {
-            speak("No");
+
+        function checkAnswer() {
+            const userAnswer = document.getElementById("userAnswer").value.trim();
+            const correctAnswer = questions[currentQuestionIndex].answer;
+
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                document.getElementById("feedback").textContent = "YES";
+                speakText("YES");
+                score++;
+            } else {
+                document.getElementById("feedback").textContent = "NO";
+                speakText("NO");
+            }
+
+            currentQuestionIndex++;
+            document.getElementById("userAnswer").value = "";
+
+            if (currentQuestionIndex < questions.length) {
+                askQuestion();
+            } else {
+                document.getElementById("question").textContent = "";
+                document.getElementById("userAnswer").style.display = "none";
+                document.querySelector("button").style.display = "none";
+                document.getElementById("feedback").textContent = "";
+                document.getElementById("score").textContent = `Your score: ${score}/${questions.length}`;
+            }
         }
-        
-        document.getElementById('question' + currentQuestion).style.display = 'none';
-        currentQuestion++;
-        if (currentQuestion <= 3) {
-            document.getElementById('question' + currentQuestion).style.display = 'block';
+
+        function speakText(text) {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            window.speechSynthesis.speak(speech);
         }
-    }
 
-    function speak(text) {
-        var utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
-    }
-</script>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+        window.onload = askQuestion;
+    </script>
 </body>
 </html>
