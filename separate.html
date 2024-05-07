@@ -55,7 +55,6 @@
         </div>
     </div>
 </div>
-
 <!-- Score Modal -->
 <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -75,6 +74,7 @@
         </div>
     </div>
 </div>
+
 
 <script>
     var currentQuestion = 1;
@@ -97,33 +97,12 @@
         currentQuestion++;
         if (currentQuestion <= 3) {
             document.getElementById('question' + currentQuestion).style.display = 'block';
-        } else {
-            calculateScore(); // Call calculateScore() when all questions are answered
         }
     }
 
     function speak(text) {
         var utterance = new SpeechSynthesisUtterance(text);
         window.speechSynthesis.speak(utterance);
-    }
-
-    function calculateScore() {
-        var q1 = parseInt(document.getElementById('q1').value);
-        var q2 = parseInt(document.getElementById('q2').value);
-        var q3 = parseInt(document.getElementById('q3').value);
-
-        if (isNaN(q1) || isNaN(q2) || isNaN(q3)) {
-            alert("Please answer all questions.");
-            return;
-        }
-
-        var score = (q1 === 4 ? 1 : 0) + (q2 === 2 ? 1 : 0) + (q3 === 24 ? 1 : 0);
-
-        document.getElementById('score').innerText = "You got " + score + " out of 3 correct!";
-        $('#scoreModal').modal('show');
-
-        // Speak the score
-        speak("Your score is " + score + " out of 3.");
     }
 </script>
 
