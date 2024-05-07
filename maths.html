@@ -152,7 +152,6 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <!-- Gear icons with different animations -->
                 <h5 class="modal-title" id="settingsModalLabel"><span class="gear-icon-left">⚙️</span> GAME SETTINGS <span class="gear-icon-right">⚙️</span></h5>
             </div>
             <div class="modal-body">
@@ -160,6 +159,17 @@
                     <label for="playerName">Player's Name 🦸</label>
                     <input type="text" class="form-control" id="playerName" placeholder="Enter your sweet name here...">
                 </div>
+
+                <div class="form-group">
+                    <label for="difficultyLevel">Difficulty Level:</label>
+                    <select class="form-control" id="difficultyLevel" required>
+                        <option value="" selected disabled>Choose Level</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                
 
                 <p>Please select your sound preference:</p>
                 <div class="form-check">
@@ -176,7 +186,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="saveSoundPreference(); startTimer();">START</button>
+                <button type="button" class="btn btn-primary" onclick="startQuiz()">START</button>
             </div>
         </div>
     </div>
@@ -279,44 +289,86 @@
 </div>
 
 <script>
-    // Array of questions
-    var questions = [
-        { text: "What is 2 + 2?", answer: 4 },
-        { text: "What is 5 - 3?", answer: 2 },
-        { text: "What is 4 * 6?", answer: 24 },
-        { text: "What is 10 / 2?", answer: 5 },
-        { text: "What is 3 squared?", answer: 9 },
-        { text: "What is 12 - 7?", answer: 5 },
-        { text: "What is 8 * 3?", answer: 24 },
-        { text: "What is 15 / 3?", answer: 5 },
-        { text: "What is 4 squared?", answer: 16 },
-        { text: "What is 9 - 6?", answer: 3 },
-        { text: "What is 7 * 4?", answer: 28 },
-        { text: "What is 18 / 3?", answer: 6 },
-        { text: "What is 5 squared?", answer: 25 },
-        { text: "What is 10 - 4?", answer: 6 },
-        { text: "What is 6 * 5?", answer: 30 },
-        { text: "What is 21 / 3?", answer: 7 },
-        { text: "What is 8 squared?", answer: 64 },
-        { text: "What is 12 - 9?", answer: 3 },
-        { text: "What is 9 * 4?", answer: 36 },
-        { text: "What is 30 / 5?", answer: 6 }
-    ];
+// Define soundPreference variable
+var soundPreference = '';
 
-    // Variable to store sound preference
-    var soundPreference = '';
+// Define arrays for different difficulty levels
+var easyQuestions = [
+{ text: "What is 2 + 2?", answer: 4 },
+    { text: "What is 5 + 3?", answer: 2 },
+    { text: "What is 4 + 6?", answer: 24 },
+    { text: "What is 10 + 2?", answer: 5 },
+      { text: "What is 2 + 2?", answer: 4 },
+    { text: "What is 5 + 3?", answer: 2 },
+    { text: "What is 4 + 6?", answer: 24 },
+    { text: "What is 10 + 2?", answer: 5 },
+    { text: "What is 3 + 10?", answer: 9 },
+    { text: "What is 12 - 7?", answer: 5 },
+    { text: "What is 8 - 3?", answer: 24 },
+    { text: "What is 15 - 3?", answer: 5 },
+    { text: "What is 4 - 8?", answer: 16 }
+];
 
-    // Variable to store player's name
-    var playerName = '';
+var mediumQuestions = [
+{ text: "What is 12 - 7?", answer: 5 },
+    { text: "What is 8 - 3?", answer: 24 },
+    { text: "What is 15 - 3?", answer: 5 },
+    { text: "What is 4 - 8?", answer: 16 },
+    { text: "What is 9 - 6?", answer: 3 },
+    { text: "What is 7 - 4?", answer: 28 },
+    { text: "What is 18 - 3?", answer: 6 },
+    { text: "What is 12 - 7?", answer: 5 },
+    { text: "What is 8 - 3?", answer: 24 },
+    { text: "What is 15 - 3?", answer: 5 },
+    { text: "What is 4 -1?", answer: 16 },
+    { text: "What is 9 - 6?", answer: 3 },
+    { text: "What is 7 - 4?", answer: 28 },
+    { text: "What is 18 - 3?", answer: 6 }
+];
 
-    // Function to save sound preference
-    function saveSoundPreference() {
-        var soundOn = document.getElementById('soundOn');
-        soundPreference = soundOn.checked ? soundOn.value : 'off';
-        saveSettings(); // Call saveSettings to set the player's name and other settings
+var hardQuestions = [
+    { text: "What is 5 / 8?", answer: 25 },
+    { text: "What is 10 / 4?", answer: 6 },
+    { text: "What is 6 / 5?", answer: 30 },
+    { text: "What is 21 / 3?", answer: 7 },
+    { text: "What is 8 / 2?", answer: 64 },
+    { text: "What is 12 / 9?", answer: 3 },
+    { text: "What is 9 / 4?", answer: 36 },
+    { text: "What is 30 / 5?", answer: 6 },
+    { text: "What is 5 / 5?", answer: 25 },
+    { text: "What is 10 / 4?", answer: 6 },
+    { text: "What is 6 / 5?", answer: 30 },
+    { text: "What is 21 / 3?", answer: 7 },
+    { text: "What is 8 / 3?", answer: 64 },
+    { text: "What is 12 / 9?", answer: 3 },
+    { text: "What is 9 / 4?", answer: 36 },
+    { text: "What is 30 / 5?", answer: 6 }
+];
+
+var selectedQuestions = []; // Array to store selected questions based on difficulty level
+
+// Function to start the quiz
+function startQuiz() {
+    var difficultyLevel = document.getElementById('difficultyLevel').value;
+    if (difficultyLevel === '') {
+        alert('Please select a difficulty level.');
+        return;
     }
 
-    function saveSettings() {
+    // Assign questions based on selected difficulty level
+    if (difficultyLevel === 'easy') {
+        selectedQuestions = easyQuestions;
+    } else if (difficultyLevel === 'medium') {
+        selectedQuestions = mediumQuestions;
+    } else if (difficultyLevel === 'hard') {
+        selectedQuestions = hardQuestions;
+    }
+
+    saveSettings(); // Call saveSettings to set the player's name and other settings
+}
+
+// Function to save settings
+function saveSettings() {
     var playerNameInput = document.getElementById('playerName');
     playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
@@ -332,54 +384,47 @@
         return;
     }
 
-    // Continue with saving settings if the name is valid
+    // Get sound preference
     var soundOn = document.getElementById('soundOn');
     soundPreference = soundOn.checked ? soundOn.value : 'off';
+
+    // Continue with starting the quiz if the name is valid
     $('#settingsModal').modal('hide');
     initializeQuiz();
 }
-   
 
-    // Function to play start sound
-    function playStartSound() {
-        var audio = new Audio('start.mp3');
-        audio.play();
+function initializeQuiz() {
+    // Start the timer
+    startTimer();
+
+    // Rest of your initialization code goes here
+    if (soundPreference === '') {
+        $('#settingsModal').modal('show');
+        return;
     }
-
-    // Function to select a random subset of questions
-    function selectRandomQuestions(numQuestions) {
-        var shuffledQuestions = questions.sort(() => Math.random() - 0.5); // Shuffle the questions array
-        return shuffledQuestions.slice(0, numQuestions);
+    var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
+    var quizElement = document.getElementById('quiz');
+    for (var i = 0; i < randomQuestions.length; i++) {
+        var question = randomQuestions[i];
+        var questionElement = document.createElement('div');
+        questionElement.className = 'question';
+        questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
+            '<p>' + question.text + '</p>' +
+            '<input type="number" class="form-control" id="q' + (i + 1) + '">' +
+            '<button class="btn btn-primary btn-block" onclick="checkAnswer(' + question.answer + ',' + (i + 1) + ')">Next</button>';
+        quizElement.appendChild(questionElement);
     }
-
-    // Function to initialize the quiz with random questions
-    function initializeQuiz() {
-        if (soundPreference === '') {
-            $('#settingsModal').modal('show');
-            return;
-        }
-        var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
-        var quizElement = document.getElementById('quiz');
-        for (var i = 0; i < randomQuestions.length; i++) {
-            var question = randomQuestions[i];
-            var questionElement = document.createElement('div');
-            questionElement.className = 'question';
-            questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
-                                         '<p>' + question.text + '</p>' +
-                                         '<input type="number" class="form-control" id="q' + (i + 1) + '">' +
-                                         '<button class="btn btn-primary btn-block" onclick="checkAnswer(' + question.answer + ',' + (i + 1) + ')">Next</button>';
-            quizElement.appendChild(questionElement);
-        }
-        // Show the first question
-        document.querySelector('.question').style.display = 'block';
-        if (soundPreference === 'on') {
-            playStartSound(); // Play start sound if sound preference is 'on'
-        }
+    // Show the first question
+    document.querySelector('.question').style.display = 'block';
+    if (soundPreference === 'on') {
+        playStartSound(); // Play start sound if sound preference is 'on'
     }
+}
 
-    var currentQuestion = 1;
 
-    var currentAudio = null; // Global variable to store the current audio element
+var currentQuestion = 1;
+
+var currentAudio = null; // Global variable to store the current audio element
 
 // Function to play audio for feedback
 function playAudio(isCorrect) {
@@ -402,14 +447,13 @@ function playAudio(isCorrect) {
     currentAudio = audio;
 }
 
-
 function checkAnswer(correctAnswer, questionNumber) {
     var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
     if (isNaN(userAnswer)) {
         alert("Please provide an answer.");
         return;
     }
-    
+
     var isCorrect = userAnswer === correctAnswer;
     if (soundPreference === 'on') {
         playAudio(isCorrect);
@@ -419,7 +463,7 @@ function checkAnswer(correctAnswer, questionNumber) {
         showIncorrectModal(correctAnswer); // Call showIncorrectModal when the answer is incorrect
         return;
     }
-    
+
     document.querySelector('.question:nth-child(' + questionNumber + ')').style.display = 'none'; // Hide the current question
     currentQuestion++;
     if (currentQuestion <= 10) {
@@ -428,7 +472,6 @@ function checkAnswer(correctAnswer, questionNumber) {
         calculateScore(); // Call calculateScore() when all questions are answered
     }
 }
-
 
 function nextQuestion() {
     $('#incorrectModal').modal('hide'); // Hide the incorrect answer modal
@@ -441,36 +484,40 @@ function nextQuestion() {
     }
 }
 
-
 function showIncorrectModal(correctAnswer) {
     document.getElementById('correctAnswer').innerText = correctAnswer;
     $('#incorrectModal').modal('show'); // Show the incorrect answer modal
 }
 
+// Function to select a random subset of questions
+function selectRandomQuestions(numQuestions) {
+    var shuffledQuestions = selectedQuestions.sort(() => Math.random() - 0.5); // Shuffle the questions array
+    return shuffledQuestions.slice(0, numQuestions);
+}
 
-    function calculateScore() {
-        var score = 0;
-        var totalQuestions = 10; // Update total questions to 10
-        for (var i = 1; i <= totalQuestions; i++) {
-            var userAnswer = parseInt(document.getElementById('q' + i).value);
-            if (!isNaN(userAnswer) && userAnswer === questions[i - 1].answer) {
-                score++;
-            }
+
+function calculateScore() {
+    var score = 0;
+    var totalQuestions = 10; // Update total questions to 10
+    for (var i = 1; i <= totalQuestions; i++) {
+        var userAnswer = parseInt(document.getElementById('q' + i).value);
+        if (!isNaN(userAnswer) && userAnswer === selectedQuestions[i - 1].answer) {
+            score++;
         }
-        
-        var audioFile = '';
-        var message = '';
+    }
 
-        if (score === 10) {
-            audioFile = 'omugezi.mp3';
-        } else if (score >= 8 && score < 10) {
-            audioFile = 'my lord.mp3';
-        } else if (score >= 3 && score <= 7) {
-            audioFile = 'kaweddemu.mp3';
-        } else {
-            audioFile = 'charles.mp3';
-        }
+    var audioFile = '';
+    var message = '';
 
+    if (score === 10) {
+        audioFile = 'omugezi.mp3';
+    } else if (score >= 8 && score < 10) {
+        audioFile = 'my lord.mp3';
+    } else if (score >= 3 && score <= 7) {
+        audioFile = 'kaweddemu.mp3';
+    } else {
+        audioFile = 'charles.mp3';
+    }
         var excellentMessages = [
         "Wow! Look at you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score, huh? Are you secretly a superhero in this subject? 🦸‍♂️",
     "Bravo, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10? You're crushing it! Keep shining bright like a star! ✨",
@@ -852,6 +899,13 @@ message = messageArray[randomIndex];
     function repeatQuiz() {
         location.reload();
     }
+
+    // Function to play start sound
+function playStartSound() {
+    var audio = new Audio('start.mp3');
+    audio.play();
+}
+
 </script>
 
 
