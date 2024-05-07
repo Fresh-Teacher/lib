@@ -247,15 +247,27 @@
 
     var currentQuestion = 1;
 
-//Function to play audio for feedback
+    var currentAudio = null; // Global variable to store the current audio element
+
+// Function to play audio for feedback
 function playAudio(isCorrect) {
+    // If there's already an audio playing, stop it
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0; // Reset the audio to the beginning
+    }
+
+    // Create a new audio element and set its source based on the correctness of the answer
     var audio = new Audio();
     if (isCorrect) {
         audio.src = 'kaweddemu.mp3';
     } else {
         audio.src = 'kufa.mp3';
     }
+
+    // Play the audio and store it in the currentAudio variable
     audio.play();
+    currentAudio = audio;
 }
 
 
