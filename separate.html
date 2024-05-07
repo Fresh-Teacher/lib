@@ -76,6 +76,9 @@
     </div>
 </div>
 
+<audio id="yesAudio" src="kaweddemu.mp3"></audio>
+<audio id="noAudio" src="kufa.mp3"></audio>
+
 <script>
     var currentQuestion = 1;
 
@@ -88,9 +91,9 @@
         
         var isCorrect = userAnswer === correctAnswer;
         if (isCorrect) {
-            speak("Yes");
+            playAudio('yesAudio');
         } else {
-            speak("No");
+            playAudio('noAudio');
         }
         
         document.getElementById('question' + currentQuestion).style.display = 'none';
@@ -100,9 +103,9 @@
         }
     }
 
-    function speak(text) {
-        var utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
+    function playAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.play();
     }
 </script>
 
