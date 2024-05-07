@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Cities Quiz</title>
-    <style>
-        body {
-            font-family: cursive;
-            text-align: center;
-            margin-top: 50px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        #question {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        #answer {
-            font-size: 20px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Cities Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* playful cursive font */
+    }
+    .container {
+      margin-top: 50px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .btn {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Capital Cities Quiz</h1>
-    <div id="question"></div>
-    <input type="text" id="userAnswer" placeholder="Enter your answer">
-    <button onclick="checkAnswer()">Submit</button>
-    <div id="feedback"></div>
-    <div id="score"></div>
 
-    <script>
-        const questions = [
-            { question: "What is the capital city of France?", answer: "Paris" },
-            { question: "What is the capital city of Japan?", answer: "Tokyo" },
-            { question: "What is the capital city of Australia?", answer: "Canberra" },
-            // Add more questions here...
-        ];
+<div class="container">
+  <h1>Capital Cities Quiz</h1>
+  <div class="question">
+    <h3 id="question"></h3>
+    <div id="options"></div>
+    <button onclick="checkAnswer()" class="btn btn-primary">Check Answer</button>
+  </div>
+  <div id="result"></div>
+</div>
 
-        let score = 0;
-        let currentQuestionIndex = 0;
+<script>
+  const questions = [
+    { question: "What is the capital of France?", options: ["London", "Berlin", "Paris", "Madrid"], answer: "Paris" },
+    { question: "What is the capital of Japan?", options: ["Beijing", "Seoul", "Tokyo", "Bangkok"], answer: "Tokyo" },
+    { question: "What is the capital of Brazil?", options: ["Buenos Aires", "São Paulo", "Rio de Janeiro", "Brasília"], answer: "Brasília" },
+    // Add more questions here
+  ];
 
-        function askQuestion() {
-            document.getElementById("question").textContent = questions[currentQuestionIndex].question;
-        }
+  let score = 0;
+  let currentQuestion = 0;
 
-        function checkAnswer() {
-            const userAnswer = document.getElementById("userAnswer").value.trim();
-            const correctAnswer = questions[currentQuestionIndex].answer;
+  function askQuestion() {
+    const questionObj = questions[currentQuestion];
+    document.getElementById('question').textContent = questionObj.question;
 
-            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-                document.getElementById("feedback").textContent = "YES";
-                speakText("YES");
-                score++;
-            } else {
-                document.getElementById("feedback").textContent = "NO";
-                speakText("NO");
-            }
+    const optionsDiv = document.getElementById('options');
+    optionsDiv.innerHTML = '';
+    questionObj.options.forEach((option, index) => {
+      const optionLabel = document.createElement('label');
+      optionLabel.innerHTML = `<input type="radio" name="answer" value="${option}"> ${option}<br>`;
+      optionsDiv.appendChild(optionLabel);
+    });
+  }
 
-            currentQuestionIndex++;
-            document.getElementById("userAnswer").value = "";
+  function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="answer"]:checked');
+    if (!selectedOption) {
+      alert("Please select an option.");
+      return;
+    }
+    const userAnswer = selectedOption.value;
+    const correctAnswer = questions[currentQuestion].answer;
 
-            if (currentQuestionIndex < questions.length) {
-                askQuestion();
-            } else {
-                document.getElementById("question").textContent = "";
-                document.getElementById("userAnswer").style.display = "none";
-                document.querySelector("button").style.display = "none";
-                document.getElementById("feedback").textContent = "";
-                document.getElementById("score").textContent = `Your score: ${score}/${questions.length}`;
-            }
-        }
+    if (userAnswer === correctAnswer) {
+      speak("YES");
+      document.getElementById('result').innerHTML = '<p style="color:green;">YES</p>';
+      score++;
+    } else {
+      speak("NO");
+      document.getElementById('result').innerHTML = '<p style="color:red;">NO</p>';
+    }
 
-        function speakText(text) {
-            const speech = new SpeechSynthesisUtterance();
-            speech.text = text;
-            speech.volume = 1;
-            speech.rate = 1;
-            speech.pitch = 1;
-            window.speechSynthesis.speak(speech);
-        }
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      askQuestion();
+    } else {
+      document.getElementById('question').textContent = "Quiz Completed!";
+      document.getElementById('options').style.display = 'none';
+      document.getElementById('result').innerHTML += '<p>Your score: ' + score + '/' + questions.length + '</p>';
+    }
+  }
 
-        window.onload = askQuestion;
-    </script>
+  function speak(text) {
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = text;
+    speechSynthesis.speak(speech);
+  }
+
+  window.onload = askQuestion;
+</script>
+
 </body>
 </html>
