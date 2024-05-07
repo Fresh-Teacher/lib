@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+ <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Welcome To Fresh Teacher's Library, one stop center for academic needs of Ugandan schools. Our core mandate is to apply creativity and come up with innovative solutions in Ugandas' education sector.">
     <meta name="keyword" content="Fresh Teacher's Library, www.freshteacheruganda.com, Schemes Of Work, Lesson Plans, Lesson Notes, Topical Questions, Luganda Translated Movies, Past Papers">
@@ -12,8 +12,8 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta property="og:site_name" content="Fresh Teacher's Library" />
     <meta property="og:image" content="https://2.bp.blogspot.com/-IEabwvLwNVY/XnccoVSvUgI/AAAAAAAAFro/mQPkBepUZpcNo1WG8trICTTg7unzwwXSgCK4BGAYYCw/s1600/SquareFit_20200322_064134.jpg" />
-   
-    <title>Fun Math Quiz for Kids</title>
+    
+    <title>Mathematics Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
     <style>
@@ -63,37 +63,75 @@
                 <p id="score"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="repeatQuiz()">Repeat Quiz</button>
-                <a href="index.html" class="btn btn-secondary">Back to Homepage</a>
+                <button type="button" class="btn btn-primary" onclick="repeatQuiz()">Repeat Quiz 🔁</button>
+                <a href="index.html" class="btn btn-secondary">Back to Homepage 🏠</a>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    // Array of questions
-    var questions = [
-        { text: "What is 2 + 2?", answer: 4 },
-        { text: "What is 5 - 3?", answer: 2 },
-        { text: "What is 4 * 6?", answer: 24 },
-        { text: "What is 10 / 2?", answer: 5 },
-        { text: "What is 3 squared?", answer: 9 },
-        { text: "What is 12 - 7?", answer: 5 },
-        { text: "What is 8 * 3?", answer: 24 },
-        { text: "What is 15 / 3?", answer: 5 },
-        { text: "What is 4 squared?", answer: 16 },
-        { text: "What is 9 - 6?", answer: 3 },
-        { text: "What is 7 * 4?", answer: 28 },
-        { text: "What is 18 / 3?", answer: 6 },
-        { text: "What is 5 squared?", answer: 25 },
-        { text: "What is 10 - 4?", answer: 6 },
-        { text: "What is 6 * 5?", answer: 30 },
-        { text: "What is 21 / 3?", answer: 7 },
-        { text: "What is 8 squared?", answer: 64 },
-        { text: "What is 12 - 9?", answer: 3 },
-        { text: "What is 9 * 4?", answer: 36 },
-        { text: "What is 30 / 5?", answer: 6 }
-    ];
+var questions = [];
+
+// Function to generate random integer between min and max (inclusive)
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Generate 10 random questions
+for (var i = 0; i < 10; i++) {
+    var num1 = getRandomInt(1, 20);
+    var num2 = getRandomInt(1, 20);
+    var operatorIndex = getRandomInt(0, 3);
+    var operator;
+    switch (operatorIndex) {
+        case 0:
+            operator = '+';
+            break;
+        case 1:
+            operator = '-';
+            break;
+        case 2:
+            operator = '*';
+            break;
+        case 3:
+            operator = '/';
+            break;
+        default:
+            console.error("Invalid operator index");
+            break;
+    }
+    var text, answer;
+
+    switch (operator) {
+        case '+':
+            text = "What is " + num1 + " + " + num2 + "?";
+            answer = num1 + num2;
+            break;
+        case '-':
+            text = "What is " + num1 + " - " + num2 + "?";
+            answer = num1 - num2;
+            break;
+        case '*':
+            text = "What is " + num1 + " * " + num2 + "?";
+            answer = num1 * num2;
+            break;
+        case '/':
+            // Ensure division is valid (no division by zero)
+            num2 = num2 === 0 ? 1 : num2;
+            text = "What is " + (num1 * num2) + " / " + num2 + "?";
+            answer = num1;
+            break;
+        default:
+            console.error("Invalid operator");
+            break;
+    }
+
+    questions.push({ text: text, answer: answer });
+}
+
+console.log(questions);
+
 
     // Function to select a random subset of questions
     function selectRandomQuestions(numQuestions) {
@@ -101,23 +139,22 @@
         return shuffledQuestions.slice(0, numQuestions);
     }
 
-// Function to initialize the quiz with random questions
-function initializeQuiz() {
-    var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
-    var quizElement = document.getElementById('quiz');
-    for (var i = 0; i < randomQuestions.length; i++) {
-        var question = randomQuestions[i];
-        var questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        questionElement.innerHTML = '<h3>' + question.text + '</h3>' +
-                                     '<input type="number" class="form-control" id="q' + (i + 1) + '">' +
-                                     '<button class="btn btn-primary btn-block" onclick="checkAnswer(' + question.answer + ',' + (i + 1) + ')">Next</button>';
-        quizElement.appendChild(questionElement);
+    // Function to initialize the quiz with random questions
+    function initializeQuiz() {
+        var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
+        var quizElement = document.getElementById('quiz');
+        for (var i = 0; i < randomQuestions.length; i++) {
+            var question = randomQuestions[i];
+            var questionElement = document.createElement('div');
+            questionElement.className = 'question';
+            questionElement.innerHTML = '<h3>' + question.text + '</h3>' +
+                                         '<input type="number" class="form-control" id="q' + (i + 1) + '">' +
+                                         '<button class="btn btn-primary btn-block" onclick="checkAnswer(' + question.answer + ',' + (i + 1) + ')">Next</button>';
+            quizElement.appendChild(questionElement);
+        }
+        // Show the first question
+        document.querySelector('.question').style.display = 'block';
     }
-    // Show the first question
-    document.querySelector('.question').style.display = 'block';
-}
-
 
     // Call initializeQuiz to start the quiz
     initializeQuiz();
@@ -153,35 +190,20 @@ function initializeQuiz() {
     }
 
     function calculateScore() {
-    var score = 0;
-    var totalQuestions = 10; // Update total questions to 10
-    for (var i = 1; i <= totalQuestions; i++) {
-        var userAnswer = parseInt(document.getElementById('q' + i).value);
-        if (!isNaN(userAnswer) && userAnswer === questions[i - 1].answer) {
-            score++;
+        var score = 0;
+        for (var i = 1; i <= 10; i++) {
+            var userAnswer = parseInt(document.getElementById('q' + i).value);
+            if (!isNaN(userAnswer) && userAnswer === questions[i - 1].answer) {
+                score++;
+            }
         }
+        
+        document.getElementById('score').innerText = "You got " + score + " out of 10 questions correctly!";
+        $('#scoreModal').modal('show');
+
+        // Speak the score
+        speak("Your score is " + score + " out of 10.");
     }
-    
-    var audioFile = '';
-    if (score >= 8) {
-        audioFile = 'omugezi.mp3';
-    } else if (score >= 5) {
-        audioFile = 'my lord.mp3';
-    } else if (score >= 3) {
-        audioFile = 'kaweddemu.mp3';
-    } else {
-        audioFile = 'charles.mp3';
-    }
-
-    // Play the appropriate audio
-    var audio = new Audio(audioFile);
-    audio.play();
-    
-    document.getElementById('score').innerText = "You got " + score + " out of 10 correct!"; // Update score text to reflect 10 questions
-    $('#scoreModal').modal('show');
-}
-
-
 
     function repeatQuiz() {
         location.reload();
