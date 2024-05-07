@@ -1,51 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fun Quiz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    .question {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    .options button {
-      font-size: 18px;
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Math Quiz for Kids</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Schoolbell', cursive;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            display: none;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            font-size: 18px;
+            margin-top: 10px; /* Add margin-top to space out the button */
+        }
+        .form-control {
+            margin-bottom: 10px; /* Add margin-bottom to space out the input field */
+        }
+        #scoreModal .modal-dialog {
+            max-width: 400px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Fun Quiz</h1>
-  <div class="question" id="question">What is the capital of France?</div>
-  <div class="options">
-    <button onclick="checkAnswer('Paris')">Paris</button>
-    <button onclick="checkAnswer('London')">London</button>
-    <button onclick="checkAnswer('Berlin')">Berlin</button>
-    <button onclick="checkAnswer('Madrid')">Madrid</button>
-  </div>
 
-  <script>
+<div class="container">
+    <h1>Fun Math Quiz for Kids</h1>
+    
+    <div id="quiz">
+        <div class="question" id="question1" style="display: block;">
+            <h3>Question 1: What is 2 + 2?</h3>
+            <input type="number" class="form-control" id="q1">
+            <button class="btn btn-primary btn-block" onclick="checkAnswer(4)">Next</button>
+        </div>
+        <div class="question" id="question2">
+            <h3>Question 2: What is 5 - 3?</h3>
+            <input type="number" class="form-control" id="q2">
+            <button class="btn btn-primary btn-block" onclick="checkAnswer(2)">Next</button>
+        </div>
+        <div class="question" id="question3">
+            <h3>Question 3: What is 4 * 6?</h3>
+            <input type="number" class="form-control" id="q3">
+            <button class="btn btn-primary btn-block" onclick="checkAnswer(24)">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Score Modal -->
+<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="score"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var currentQuestion = 1;
+
+    function checkAnswer(correctAnswer) {
+        var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
+        if (isNaN(userAnswer)) {
+            alert("Please provide an answer.");
+            return;
+        }
+        
+        var isCorrect = userAnswer === correctAnswer;
+        if (isCorrect) {
+            speak("Yes");
+        } else {
+            speak("No");
+        }
+        
+        document.getElementById('question' + currentQuestion).style.display = 'none';
+        currentQuestion++;
+        if (currentQuestion <= 3) {
+            document.getElementById('question' + currentQuestion).style.display = 'block';
+        }
+    }
+
     function speak(text) {
-      var synth = window.speechSynthesis;
-      var utterance = new SpeechSynthesisUtterance();
-      utterance.text = text;
-      synth.speak(utterance);
+        var utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
     }
+</script>
 
-    function checkAnswer(answer) {
-      if (answer === 'Paris') {
-        speak('Yes, that is correct!');
-      } else {
-        speak('No, that is incorrect.');
-      }
-    }
-  </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
