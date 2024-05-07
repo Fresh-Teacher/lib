@@ -123,9 +123,6 @@
     </div>
 </div>
 
-<audio id="yesAudio" src="kaweddemu.mp3"></audio>
-<audio id="noAudio" src="kufa.mp3"></audio>
-
 
 
 
@@ -250,7 +247,19 @@
 
     var currentQuestion = 1;
 
-    function checkAnswer(correctAnswer, questionNumber) {
+//Function to play audio for feedback
+function playAudio(isCorrect) {
+    var audio = new Audio();
+    if (isCorrect) {
+        audio.src = 'kaweddemu.mp3';
+    } else {
+        audio.src = 'kufa.mp3';
+    }
+    audio.play();
+}
+
+
+function checkAnswer(correctAnswer, questionNumber) {
     var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
     if (isNaN(userAnswer)) {
         alert("Please provide an answer.");
@@ -258,11 +267,14 @@
     }
     
     var isCorrect = userAnswer === correctAnswer;
-        if (isCorrect) {
-            playAudio('yesAudio');
-        } else {
-            playAudio('noAudio');
-        }
+    if (soundPreference === 'on') {
+        playAudio(isCorrect);
+    }
+
+    if (!isCorrect) {
+        showIncorrectModal(correctAnswer); // Call showIncorrectModal when the answer is incorrect
+        return;
+    }
     
     document.querySelector('.question:nth-child(' + questionNumber + ')').style.display = 'none'; // Hide the current question
     currentQuestion++;
@@ -272,6 +284,7 @@
         calculateScore(); // Call calculateScore() when all questions are answered
     }
 }
+
 
 function nextQuestion() {
     $('#incorrectModal').modal('hide'); // Hide the incorrect answer modal
@@ -291,10 +304,6 @@ function showIncorrectModal(correctAnswer) {
 }
 
 
-function playAudio(audioId) {
-        var audio = document.getElementById(audioId);
-        audio.play();
-    }
     function calculateScore() {
         var score = 0;
         var totalQuestions = 10; // Update total questions to 10
