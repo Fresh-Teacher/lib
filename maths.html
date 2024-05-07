@@ -140,18 +140,73 @@
             </div>
             <div class="modal-body">
                 <p>Sorry, your answer is incorrect! Below is the correct answer:<br><strong> <span id="correctAnswer" class="correct-answer"></span></p>
-            </div></strong>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" onclick="nextQuestion()">Next</button>
+                <button type="button" class="btn btn-danger" onclick="prankRepeatQuestion()">Repeat Question</button>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Modal for Prank Repeat Message -->
+<div class="modal fade" id="repeatPrankModal" tabindex="-1" role="dialog" aria-labelledby="repeatPrankModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-body">
+                <p>Hey <span id="playerNamePlaceholder"></span>, here's the deal: <br>You're just going to pay me shs. 10,000 to repeat the question for you. It's just our own little secret 🤫</p>
+                <button type="button" class="btn btn-success" onclick="acceptDeal()">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to handle prank repeat question button click
+    function prankRepeatQuestion() {
+        $('#repeatPrankModal').modal('show'); // Show the prank repeat modal
+        
+        // Play the prank audio
+        var audio = new Audio('mutwalo.mp3');
+        audio.play();
+        
+        // Insert player's name into the message
+        var playerName = document.getElementById('playerName').value;
+        document.getElementById('playerNamePlaceholder').innerText = playerName;
+    }
+    
+    // Function to handle accepting the prank deal
+    function acceptDeal() {
+        $('#repeatPrankModal').modal('hide'); // Hide the prank modal
+        
+        // Play the fool audio
+        var audio = new Audio('munanansi.mp3');
+        audio.play();
+        
+        // Show message modal
+        $('#dealMessageModal').modal('show');
+    }
+</script>
 
 
 
-
+<!-- Modal for Prank Deal Message -->
+<div class="modal fade" id="dealMessageModal" tabindex="-1" role="dialog" aria-labelledby="dealMessageModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dealMessageModalLabel">😜 YOU WERE FOOLED!!! 🤪</h5>
+            </div>
+            <div class="modal-body">
+                <p>Well, to be honest with you, that's just not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" onclick="$('#dealMessageModal').modal('hide')">CONTINUE</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Score Modal -->
 <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
