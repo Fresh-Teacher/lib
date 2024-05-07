@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome To Fresh Teacher's Library, one stop center for academic needs of Ugandan schools. Our core mandate is to apply creativity and come up with innovative solutions in Ugandas' education sector.">
+    <meta name="keyword" content="Fresh Teacher's Library, www.freshteacheruganda.com, Schemes Of Work, Lesson Plans, Lesson Notes, Topical Questions, Luganda Translated Movies, Past Papers">
+    <meta name="author" content="Fresh Teacher">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.jpg">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta property="og:site_name" content="Fresh Teacher's Library" />
+    <meta property="og:image" content="https://2.bp.blogspot.com/-IEabwvLwNVY/XnccoVSvUgI/AAAAAAAAFro/mQPkBepUZpcNo1WG8trICTTg7unzwwXSgCK4BGAYYCw/s1600/SquareFit_20200322_064134.jpg" />
+   
     <title>Fun Math Quiz for Kids</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
@@ -38,75 +48,143 @@
     <h1>Fun Math Quiz for Kids</h1>
     
     <div id="quiz">
-        <div class="question" id="question1" style="display: block;">
-            <h3>Question 1: What is 2 + 2?</h3>
-            <input type="number" class="form-control" id="q1">
-            <button class="btn btn-primary btn-block" onclick="nextQuestion()">Next</button>
-        </div>
-        <div class="question" id="question2">
-            <h3>Question 2: What is 5 - 3?</h3>
-            <input type="number" class="form-control" id="q2">
-            <button class="btn btn-primary btn-block" onclick="nextQuestion()">Next</button>
-        </div>
-        <div class="question" id="question3">
-            <h3>Question 3: What is 4 * 6?</h3>
-            <input type="number" class="form-control" id="q3">
-            <button class="btn btn-primary btn-block" onclick="calculateScore()">Submit</button>
-        </div>
+        <!-- Questions will be dynamically inserted here -->
     </div>
 </div>
 
 <!-- Score Modal -->
-<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 <p id="score"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="repeatQuiz()">Repeat Quiz</button>
+                <a href="index.html" class="btn btn-secondary">Back to Homepage</a>
             </div>
         </div>
     </div>
 </div>
 
 <script>
+    // Array of questions
+    var questions = [
+        { text: "What is 2 + 2?", answer: 4 },
+        { text: "What is 5 - 3?", answer: 2 },
+        { text: "What is 4 * 6?", answer: 24 },
+        { text: "What is 10 / 2?", answer: 5 },
+        { text: "What is 3 squared?", answer: 9 },
+        { text: "What is 12 - 7?", answer: 5 },
+        { text: "What is 8 * 3?", answer: 24 },
+        { text: "What is 15 / 3?", answer: 5 },
+        { text: "What is 4 squared?", answer: 16 },
+        { text: "What is 9 - 6?", answer: 3 },
+        { text: "What is 7 * 4?", answer: 28 },
+        { text: "What is 18 / 3?", answer: 6 },
+        { text: "What is 5 squared?", answer: 25 },
+        { text: "What is 10 - 4?", answer: 6 },
+        { text: "What is 6 * 5?", answer: 30 },
+        { text: "What is 21 / 3?", answer: 7 },
+        { text: "What is 8 squared?", answer: 64 },
+        { text: "What is 12 - 9?", answer: 3 },
+        { text: "What is 9 * 4?", answer: 36 },
+        { text: "What is 30 / 5?", answer: 6 }
+    ];
+
+    // Function to select a random subset of questions
+    function selectRandomQuestions(numQuestions) {
+        var shuffledQuestions = questions.sort(() => Math.random() - 0.5); // Shuffle the questions array
+        return shuffledQuestions.slice(0, numQuestions);
+    }
+
+// Function to initialize the quiz with random questions
+function initializeQuiz() {
+    var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
+    var quizElement = document.getElementById('quiz');
+    for (var i = 0; i < randomQuestions.length; i++) {
+        var question = randomQuestions[i];
+        var questionElement = document.createElement('div');
+        questionElement.className = 'question';
+        questionElement.innerHTML = '<h3>' + question.text + '</h3>' +
+                                     '<input type="number" class="form-control" id="q' + (i + 1) + '">' +
+                                     '<button class="btn btn-primary btn-block" onclick="checkAnswer(' + question.answer + ',' + (i + 1) + ')">Next</button>';
+        quizElement.appendChild(questionElement);
+    }
+    // Show the first question
+    document.querySelector('.question').style.display = 'block';
+}
+
+
+    // Call initializeQuiz to start the quiz
+    initializeQuiz();
+
     var currentQuestion = 1;
 
-    function nextQuestion() {
-        var answer = document.getElementById('q' + currentQuestion).value.trim();
-        if (answer === "") {
+    function checkAnswer(correctAnswer, questionNumber) {
+        var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
+        if (isNaN(userAnswer)) {
             alert("Please provide an answer.");
             return;
         }
         
-        document.getElementById('question' + currentQuestion).style.display = 'none';
+        var isCorrect = userAnswer === correctAnswer;
+        if (isCorrect) {
+            speak("Yes");
+        } else {
+            speak("No");
+        }
+        
+        document.querySelector('.question:nth-child(' + questionNumber + ')').style.display = 'none'; // Hide the current question
         currentQuestion++;
-        if (currentQuestion <= 3) {
-            document.getElementById('question' + currentQuestion).style.display = 'block';
+        if (currentQuestion <= 10) {
+            document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'block'; // Show the next question
+        } else {
+            calculateScore(); // Call calculateScore() when all questions are answered
         }
     }
 
+    function speak(text) {
+        var utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+    }
+
     function calculateScore() {
-        var q1 = parseInt(document.getElementById('q1').value);
-        var q2 = parseInt(document.getElementById('q2').value);
-        var q3 = parseInt(document.getElementById('q3').value);
-
-        if (isNaN(q1) || isNaN(q2) || isNaN(q3)) {
-            alert("Please answer all questions.");
-            return;
+    var score = 0;
+    var totalQuestions = 10; // Update total questions to 10
+    for (var i = 1; i <= totalQuestions; i++) {
+        var userAnswer = parseInt(document.getElementById('q' + i).value);
+        if (!isNaN(userAnswer) && userAnswer === questions[i - 1].answer) {
+            score++;
         }
+    }
+    
+    var audioFile = '';
+    if (score >= 8) {
+        audioFile = 'omugezi.mp3';
+    } else if (score >= 5) {
+        audioFile = 'my lord.mp3';
+    } else if (score >= 3) {
+        audioFile = 'kaweddemu.mp3';
+    } else {
+        audioFile = 'charles.mp3';
+    }
 
-        var score = (q1 === 4 ? 1 : 0) + (q2 === 2 ? 1 : 0) + (q3 === 24 ? 1 : 0);
+    // Play the appropriate audio
+    var audio = new Audio(audioFile);
+    audio.play();
+    
+    document.getElementById('score').innerText = "You got " + score + " out of 10 correct!"; // Update score text to reflect 10 questions
+    $('#scoreModal').modal('show');
+}
 
-        document.getElementById('score').innerText = "You got " + score + " out of 3 correct!";
-        $('#scoreModal').modal('show');
+
+
+    function repeatQuiz() {
+        location.reload();
     }
 </script>
 
