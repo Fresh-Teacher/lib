@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" href="/icon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Quiz Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
@@ -35,76 +35,95 @@
         body {
             font-family: 'Schoolbell', cursive;
         }
+
         .container {
             margin-top: 50px;
         }
+
         h1 {
             text-align: center;
         }
+
         .question {
             display: none;
             margin-bottom: 20px;
         }
+
         .btn-primary {
             font-size: 18px;
-            margin-top: 10px; /* Add margin-top to space out the button */
+            margin-top: 10px;
+            /* Add margin-top to space out the button */
         }
+
         .form-control {
-            margin-bottom: 10px; /* Add margin-bottom to space out the input field */
+            margin-bottom: 10px;
+            /* Add margin-bottom to space out the input field */
         }
+
         #scoreModal .modal-dialog {
             max-width: 400px;
         }
+
         /* CSS animation for gear icons */
         @keyframes rotateRight {
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
         }
+
         @keyframes rotateLeft {
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(-360deg);
             }
         }
+
         .gear-icon-left {
             display: inline-block;
-            animation: rotateLeft 2s infinite linear; /* Apply animation to rotate the gear icon to the left */
+            animation: rotateLeft 2s infinite linear;
+            /* Apply animation to rotate the gear icon to the left */
         }
+
         .gear-icon-right {
             display: inline-block;
-            animation: rotateRight 2s infinite linear; /* Apply animation to rotate the gear icon to the right */
+            animation: rotateRight 2s infinite linear;
+            /* Apply animation to rotate the gear icon to the right */
         }
+
         .correct-answer {
-    color: red;
-}
+            color: red;
+        }
 
-/* Define the heartbeat animation */
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  to {
-    transform: scale(1);
-  }
-}
+        /* Define the heartbeat animation */
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
 
-/* Apply the heartbeat animation to the button */
-.btn-repeat-question {
-  animation: heartbeat 1.5s infinite;
-}
-    #timer {
-        color: red;
-    }
+            50% {
+                transform: scale(1.1);
+            }
 
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Apply the heartbeat animation to the button */
+        .btn-repeat-question {
+            animation: heartbeat 1.5s infinite;
+        }
+
+        #timer {
+            color: red;
+        }
     </style>
 </head>
 
@@ -117,7 +136,7 @@
         var timeLeft = 300; // 5 minutes in seconds
 
         // Update the timer display every second
-        timerInterval = setInterval(function() {
+        timerInterval = setInterval(function () {
             var minutes = Math.floor(timeLeft / 60);
             var seconds = timeLeft % 60;
 
@@ -139,8 +158,10 @@
 <h5>LEVEL : <span id="difficultyLevelDisplay"></span></h5>
 <div class="container">
     <h1>TIME LEFT ⏰<p></p>
-        <body onload="$('#settingsModal').modal('show')"><div id="timer">05:00</div>
-        </h1><br>
+
+        <body onload="$('#settingsModal').modal('show')">
+            <div id="timer">05:00</div>
+    </h1><br>
     <!-- Timer display -->
 
     <div id="quiz">
@@ -149,11 +170,13 @@
 </div>
 
 <!-- Settings Modal -->
-<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="settingsModalLabel"><span class="gear-icon-left">⚙️</span> GAME SETTINGS <span class="gear-icon-right">⚙️</span></h5>
+                <h5 class="modal-title" id="settingsModalLabel"><span class="gear-icon-left">⚙️</span> GAME SETTINGS
+                    <span class="gear-icon-right">⚙️</span></h5>
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -167,10 +190,10 @@
                         <option value="" selected disabled>Choose Level</option>
                         <option value="easy">Junior Genius 🤪</option>
                         <option value="medium">Not so Dumb 😜</option>
-                        <option value="hard">Brain-Bender 🧠  </option>
+                        <option value="hard">Brain-Bender 🧠 </option>
                     </select>
                 </div>
-                
+
 
                 <p>Please select your sound preference:</p>
                 <div class="form-check">
@@ -194,30 +217,37 @@
 </div>
 
 <!-- Modal for Incorrect Answer -->
-<div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="incorrectModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="incorrectModalLabel"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="incorrectModalLabel"> Solution Modal</h5>
+                <h5 class="modal-title" id="incorrectModalLabel">Solution Modal</h5>
             </div>
             <div class="modal-body">
-                <p>Sorry, your answer is incorrect! Below is the correct answer:<br><strong> <span id="correctAnswer" class="correct-answer"></span></p>
+                <p>🙅🏿 INCORRECT ANSWER 🙅‍♂️</p>
+                <p><strong>Correct Answer:</strong> <span id="correctAnswer" class="correct-answer"></span></p>
+                <p><strong>Explanation:</strong> <span id="explanation"></span></p> <!-- New explanation field -->
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-repeat-question" onclick="prankRepeatQuestion()">Repeat Question</button>
+                <button type="button" class="btn btn-danger btn-repeat-question" onclick="prankRepeatQuestion()">Repeat
+                    Question</button>
                 <button type="button" class="btn btn-primary" onclick="nextQuestion()">Next</button>
             </div>
         </div>
     </div>
 </div>
 
+
 <!-- Modal for Prank Repeat Message -->
-<div class="modal fade" id="repeatPrankModal" tabindex="-1" role="dialog" aria-labelledby="repeatPrankModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="repeatPrankModal" tabindex="-1" role="dialog" aria-labelledby="repeatPrankModalLabel"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            
+
             <div class="modal-body">
-                <p>Hey <span id="playerNamePlaceholder"></span>, here's the deal: <br>You're just going to pay me shs. 10,000 to repeat the question for you. Shh... it's our little secret 🤫</p>
+                <p>Hey <span id="playerNamePlaceholder"></span>, here's the deal: <br>You're just going to pay me shs.
+                    10,000 to repeat the question for you. Shh... it's our little secret 🤫</p>
                 <button type="button" class="btn btn-success" onclick="acceptDeal()">PAY NOW</button>
             </div>
         </div>
@@ -225,28 +255,28 @@
 </div>
 
 <script>
-    
+
     // Function to handle prank repeat question button click
     function prankRepeatQuestion() {
         $('#repeatPrankModal').modal('show'); // Show the prank repeat modal
-        
+
         // Play the prank audio
         var audio = new Audio('mutwalo.mp3');
         audio.play();
-        
+
         // Insert player's name into the message
         var playerName = document.getElementById('playerName').value;
         document.getElementById('playerNamePlaceholder').innerText = playerName;
     }
-    
+
     // Function to handle accepting the prank deal
     function acceptDeal() {
         $('#repeatPrankModal').modal('hide'); // Hide the prank modal
-        
+
         // Play the fool audio
         var audio = new Audio('munanansi.mp3');
         audio.play();
-        
+
         // Show message modal
         $('#dealMessageModal').modal('show');
     }
@@ -256,24 +286,28 @@
 
 
 <!-- Modal for Prank Deal Message -->
-<div class="modal fade" id="dealMessageModal" tabindex="-1" role="dialog" aria-labelledby="dealMessageModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="dealMessageModal" tabindex="-1" role="dialog" aria-labelledby="dealMessageModalLabel"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="dealMessageModalLabel">😜I FOOLED YOU!!!🤪</h5>
             </div>
             <div class="modal-body">
-                <p>Well, to be honest with you, that's not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
+                <p>Well, to be honest with you, that's not how we do things here. 🤣 So, hurry up and continue with the
+                    quiz before you run out of time! ⏰ </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-warning" onclick="$('#dealMessageModal').modal('hide')">CONTINUE</button>
+                <button type="button" class="btn btn-warning"
+                    onclick="$('#dealMessageModal').modal('hide')">CONTINUE</button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Score Modal -->
-<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true"
+    data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -291,752 +325,786 @@
 </div>
 
 <script>
-// Define soundPreference variable
-var soundPreference = '';
+    // Define soundPreference variable
+    var soundPreference = '';
 
-  // Define arrays for different difficulty levels
-  var easyQuestions = [
-            { question: "Which ancient civilization thrived in East Africa around 1000 BC?", options: ["Egyptian civilization", "Mesopotamian civilization", "Nubian civilization", "Ghana civilization"], answer: "Nubian civilization" },
-            { question: "Who was the famous Kenyan environmental and political activist known for her Green Belt Movement?", options: ["Idi Amin", "Wangari Maathai", "Haile Selassie", "Jomo Kenyatta"], answer: "Wangari Maathai" },
-            { question: "Which European country established control over Kenya, Uganda, and Tanganyika in the late 19th century?", options: ["France", "Germany", "Italy", "Britain"], answer: "Britain" },
-            { 
-        question: "Which ancient civilization thrived in East Africa around 1000 BC?", 
-        options: ["Egyptian civilization", "Mesopotamian civilization", "Nubian civilization", "Ghana civilization"], 
-        answer: "Nubian civilization" 
-    },
-    { 
-        question: "Who was the famous Kenyan environmental and political activist known for her Green Belt Movement?", 
-        options: ["Idi Amin", "Wangari Maathai", "Haile Selassie", "Jomo Kenyatta"], 
-        answer: "Wangari Maathai" 
-    },
-    { 
-        question: "Which European country established control over Kenya, Uganda, and Tanganyika in the late 19th century?", 
-        options: ["France", "Germany", "Italy", "Britain"], 
-        answer: "Britain" 
-    },
-    { 
-        question: "What is the capital city of Kenya?", 
-        options: ["Nairobi", "Kampala", "Dar es Salaam", "Lagos"], 
-        answer: "Nairobi" 
-    },
-    { 
-        question: "Which mountain is the highest peak in Africa?", 
-        options: ["Mount Kilimanjaro", "Mount Kenya", "Mount Elgon", "Mount Stanley"], 
-        answer: "Mount Kilimanjaro" 
-    },
-    { 
-        question: "Which famous national park in Tanzania is known for its annual wildebeest migration?", 
-        options: ["Serengeti National Park", "Ngorongoro Conservation Area", "Tarangire National Park", "Ruaha National Park"], 
-        answer: "Serengeti National Park" 
-    },
-    { 
-        question: "What is the largest lake in Africa?", 
-        options: ["Lake Victoria", "Lake Tanganyika", "Lake Malawi", "Lake Turkana"], 
-        answer: "Lake Victoria" 
-    },
-    { 
-        question: "Which river forms part of the border between Kenya and Tanzania?", 
-        options: ["Nile River", "Zambezi River", "Congo River", "Tana River"], 
-        answer: "Tana River" 
-    }
-        ];
-
-        var mediumQuestions = [
-    { 
-        question: "What is the official language of Tanzania?", 
-        options: ["Swahili", "English", "Arabic", "French"], 
-        answer: "Swahili" 
-    },
-    { 
-        question: "Which island nation lies off the eastern coast of Africa and is known for its lemurs?", 
-        options: ["Madagascar", "Mauritius", "Seychelles", "Comoros"], 
-        answer: "Madagascar" 
-    },
-    { 
-        question: "What is the currency of Ethiopia?", 
-        options: ["Shilling", "Birr", "Cedi", "Kwacha"], 
-        answer: "Birr" 
-    },
-    { 
-        question: "Which famous archaeological site in Ethiopia is known for its ancient rock-cut churches?", 
-        options: ["Lalibela", "Gondar", "Aksum", "Axum"], 
-        answer: "Lalibela" 
-    },
-    { 
-        question: "Which city in Ethiopia is often referred to as the political capital of Africa due to its status as the headquarters of the African Union?", 
-        options: ["Addis Ababa", "Nairobi", "Kampala", "Djibouti City"], 
-        answer: "Addis Ababa" 
-    },
-    { 
-        question: "What is the name of the large desert in northern Kenya and southeastern Ethiopia?", 
-        options: ["Kalahari Desert", "Sahara Desert", "Gobi Desert", "Chalbi Desert"], 
-        answer: "Chalbi Desert" 
-    },
-    { 
-        question: "Which East African country is known as the 'Land of a Thousand Hills'?", 
-        options: ["Uganda", "Rwanda", "Burundi", "Tanzania"], 
-        answer: "Rwanda" 
-    },
-    { 
-        question: "What is the largest island in Lake Victoria?", 
-        options: ["Ukerewe Island", "Rubondo Island", "Buvuma Island", "Mfangano Island"], 
-        answer: "Ukerewe Island" 
-    },
-    { 
-        question: "Which Tanzanian island is famous for its historical role in the spice trade and its white sandy beaches?", 
-        options: ["Zanzibar", "Pemba", "Mafia", "Chumbe"], 
-        answer: "Zanzibar" 
-    },
-    { 
-        question: "What is the name of the Kenyan ethnic group known for their distinct tall and slender physique?", 
-        options: ["Maasai", "Kikuyu", "Luo", "Luhya"], 
-        answer: "Maasai" 
-    }
-];
-
-
-var hardQuestions= [
-    { 
-        question: "What is the official language of Tanzania?", 
-        options: ["Swahili", "English", "Arabic", "French"], 
-        answer: "Swahili" 
-    },
-    { 
-        question: "Which island nation lies off the eastern coast of Africa and is known for its lemurs?", 
-        options: ["Madagascar", "Mauritius", "Seychelles", "Comoros"], 
-        answer: "Madagascar" 
-    },
-    { 
-        question: "What is the currency of Ethiopia?", 
-        options: ["Shilling", "Birr", "Cedi", "Kwacha"], 
-        answer: "Birr" 
-    },
-    { 
-        question: "Which famous archaeological site in Ethiopia is known for its ancient rock-cut churches?", 
-        options: ["Lalibela", "Gondar", "Aksum", "Axum"], 
-        answer: "Lalibela" 
-    },
-    { 
-        question: "Which city in Ethiopia is often referred to as the political capital of Africa due to its status as the headquarters of the African Union?", 
-        options: ["Addis Ababa", "Nairobi", "Kampala", "Djibouti City"], 
-        answer: "Addis Ababa" 
-    },
-    { 
-        question: "What is the name of the large desert in northern Kenya and southeastern Ethiopia?", 
-        options: ["Kalahari Desert", "Sahara Desert", "Gobi Desert", "Chalbi Desert"], 
-        answer: "Chalbi Desert" 
-    },
-    { 
-        question: "Which East African country is known as the 'Land of a Thousand Hills'?", 
-        options: ["Uganda", "Rwanda", "Burundi", "Tanzania"], 
-        answer: "Rwanda" 
-    },
-    { 
-        question: "What is the largest island in Lake Victoria?", 
-        options: ["Ukerewe Island", "Rubondo Island", "Buvuma Island", "Mfangano Island"], 
-        answer: "Ukerewe Island" 
-    },
-    { 
-        question: "Which Tanzanian island is famous for its historical role in the spice trade and its white sandy beaches?", 
-        options: ["Zanzibar", "Pemba", "Mafia", "Chumbe"], 
-        answer: "Zanzibar" 
-    },
-    { 
-        question: "What is the name of the Kenyan ethnic group known for their distinct tall and slender physique?", 
-        options: ["Maasai", "Kikuyu", "Luo", "Luhya"], 
-        answer: "Maasai" 
-    }
-];
-
-
-var selectedQuestions = []; // Array to store selected questions based on difficulty level
-
-// Function to start the quiz
-function startQuiz() {
-    var difficultyLevel = document.getElementById('difficultyLevel').value;
-    if (difficultyLevel === '') {
-        alert('Please select a difficulty level.');
-        return;
-    }
-
-    // Assign questions based on selected difficulty level
-    if (difficultyLevel === 'easy') {
-        selectedQuestions = easyQuestions;
-    } else if (difficultyLevel === 'medium') {
-        selectedQuestions = mediumQuestions;
-    } else if (difficultyLevel === 'hard') {
-        selectedQuestions = hardQuestions;
-    }
-
-    saveSettings(); // Call saveSettings to set the player's name and other settings
+    // Define arrays for different difficulty levels
+    var easyQuestions = [
+    {
+  question: "Which ancient civilization thrived in East Africa around 1000 BC?",
+  options: ["Egyptian civilization", "Mesopotamian civilization", "Nubian civilization", "Ghana civilization"],
+  answer: "Nubian civilization",
+  explanation: "The Nubian civilization, also known as the Kingdom of Kush, thrived in East Africa around 1000 BC. It was situated along the Nile River in present-day Sudan and southern Egypt. The Nubians were known for their advanced architecture, such as the construction of pyramids and temples."
+},
+{
+  question: "Who was the famous Kenyan environmental and political activist known for her Green Belt Movement?",
+  options: ["Idi Amin", "Wangari Maathai", "Haile Selassie", "Jomo Kenyatta"],
+  answer: "Wangari Maathai",
+  explanation: "Wangari Maathai was a renowned Kenyan environmentalist and political activist known for her Green Belt Movement. She was awarded the Nobel Peace Prize in 2004 for her contribution to sustainable development, democracy, and peace. Maathai's movement focused on tree planting, environmental conservation, and women's rights."
+},
+{
+  question: "Which European country established control over Kenya, Uganda, and Tanganyika in the late 19th century?",
+  options: ["France", "Germany", "Italy", "Britain"],
+  answer: "Britain",
+  explanation: "Britain established control over Kenya, Uganda, and Tanganyika (present-day Tanzania) in the late 19th century during the period of European colonial expansion in Africa. This colonization had significant impacts on the social, political, and economic landscapes of these regions, including the introduction of British governance, infrastructure development, and exploitation of natural resources."
+},
+{
+  question: "What is the capital city of Kenya?",
+  options: ["Nairobi", "Kampala", "Dar es Salaam", "Lagos"],
+  answer: "Nairobi",
+  explanation: "The capital city of Kenya is Nairobi. It is the largest city in Kenya and serves as the country's political, economic, and cultural center. Nairobi is known for its diverse population, vibrant markets, and urban wildlife sanctuaries, such as Nairobi National Park."
+},
+{
+  question: "Which mountain is the highest peak in Africa?",
+  options: ["Mount Kilimanjaro", "Mount Kenya", "Mount Elgon", "Mount Stanley"],
+  answer: "Mount Kilimanjaro",
+  explanation: "Mount Kilimanjaro is the highest peak in Africa, standing at approximately 5,895 meters (19,341 feet) above sea level. Located in Tanzania, Kilimanjaro is a dormant volcano and is one of the most iconic natural landmarks on the continent. Its snow-capped summit attracts thousands of climbers and adventurers each year."
+},
+{
+  question: "Which famous national park in Tanzania is known for its annual wildebeest migration?",
+  options: ["Serengeti National Park", "Ngorongoro Conservation Area", "Tarangire National Park", "Ruaha National Park"],
+  answer: "Serengeti National Park",
+  explanation: "Serengeti National Park in Tanzania is renowned for hosting the annual wildebeest migration, one of the most spectacular wildlife events in the world. Millions of wildebeest, zebras, and other herbivores migrate across the vast plains of the Serengeti in search of water and grazing land, attracting predators and offering unparalleled opportunities for wildlife viewing."
+},
+{
+  question: "What is the largest lake in Africa?",
+  options: ["Lake Victoria", "Lake Tanganyika", "Lake Malawi", "Lake Turkana"],
+  answer: "Lake Victoria",
+  explanation: "Lake Victoria is the largest lake in Africa by surface area, covering approximately 68,800 square kilometers (26,600 square miles). It is shared by three countries: Kenya, Uganda, and Tanzania. Lake Victoria plays a vital role in the region's economy, providing fisheries, transportation routes, and hydroelectric power."
+},
+{
+  question: "Which river forms part of the border between Kenya and Tanzania?",
+  options: ["Nile River", "Zambezi River", "Congo River", "Tana River"],
+  answer: "Tana River",
+  explanation: "The Tana River forms part of the border between Kenya and Tanzania. It is the longest river in Kenya, flowing approximately 1,000 kilometers (620 miles) from the Aberdare Mountains to the Indian Ocean. The Tana River basin supports diverse ecosystems, agricultural activities, and hydroelectric projects."
 }
 
-// Function to save settings
-function saveSettings() {
-    var playerNameInput = document.getElementById('playerName');
-    playerName = playerNameInput.value.trim(); // Update the global playerName variable
+    ];
 
-    // Regular expression to validate the player name
-    var nameRegex = /^[a-zA-Z]+$/;
-
-    // Check if the player name is empty or contains invalid characters
-    if (playerName === '') {
-        alert('Please enter your name.');
-        return;
-    } else if (!nameRegex.test(playerName)) {
-        alert('Please enter a valid name (only letters are allowed with no spaces).');
-        return;
-    }
-
-      // Get the selected difficulty level
-      var difficultyLevel = document.getElementById('difficultyLevel').value;
-    var difficultyText = '';
-    if (difficultyLevel === 'easy') {
-        difficultyText = 'Junior Genius 🤪';
-    } else if (difficultyLevel === 'medium') {
-        difficultyText = 'Not so Dumb 😜';
-    } else if (difficultyLevel === 'hard') {
-        difficultyText = 'Brain-Bender 🧠';
-    }
-
-    // Update the displayed player name and difficulty level
-    document.getElementById('playerNameDisplay').innerText = playerName;
-    document.getElementById('difficultyLevelDisplay').innerText = difficultyText;
-
-
-    // Get sound preference
-    var soundOn = document.getElementById('soundOn');
-    soundPreference = soundOn.checked ? soundOn.value : 'off';
-
-    // Continue with starting the quiz if the name is valid
-    $('#settingsModal').modal('hide');
-    initializeQuiz();
+    var mediumQuestions = [
+    {
+  question: "What is the official language of Tanzania?",
+  options: ["Swahili", "English", "Arabic", "French"],
+  answer: "Swahili",
+  explanation: "The official language of Tanzania is Swahili. Swahili, also known as Kiswahili, is a Bantu language widely spoken across East Africa. It serves as the lingua franca in Tanzania and is used in government, education, media, and daily communication among various ethnic groups."
+},
+{
+  question: "Which island nation lies off the eastern coast of Africa and is known for its lemurs?",
+  options: ["Madagascar", "Mauritius", "Seychelles", "Comoros"],
+  answer: "Madagascar",
+  explanation: "Madagascar is the island nation that lies off the eastern coast of Africa and is renowned for its lemurs. It is the fourth largest island in the world and is famous for its unique biodiversity, including the diverse species of lemurs found nowhere else on Earth. Madagascar's ecosystems range from rainforests to deserts, making it a biodiversity hotspot."
+},
+{
+  question: "What is the currency of Ethiopia?",
+  options: ["Shilling", "Birr", "Cedi", "Kwacha"],
+  answer: "Birr",
+  explanation: "The currency of Ethiopia is the Birr. It is the official currency and is abbreviated as ETB. The Birr is issued and regulated by the National Bank of Ethiopia. It is used for all financial transactions within the country and is subdivided into 100 cents."
+},
+{
+  question: "Which famous archaeological site in Ethiopia is known for its ancient rock-cut churches?",
+  options: ["Lalibela", "Gondar", "Aksum", "Axum"],
+  answer: "Lalibela",
+  explanation: "Lalibela is the famous archaeological site in Ethiopia known for its ancient rock-cut churches. These churches, carved out of solid rock, are a UNESCO World Heritage Site and are considered one of the wonders of the world. Lalibela is a significant pilgrimage site for Ethiopian Orthodox Christians and attracts visitors from around the globe."
+},
+{
+  question: "Which city in Ethiopia is often referred to as the political capital of Africa due to its status as the headquarters of the African Union?",
+  options: ["Addis Ababa", "Nairobi", "Kampala", "Djibouti City"],
+  answer: "Addis Ababa",
+  explanation: "Addis Ababa is the city in Ethiopia often referred to as the political capital of Africa because it hosts the headquarters of the African Union (AU). The AU is a continental organization consisting of 55 member states, with its primary focus on promoting unity, peace, and development across Africa. Addis Ababa serves as a diplomatic hub and is home to various international organizations and embassies."
+},
+{
+  question: "What is the name of the large desert in northern Kenya and southeastern Ethiopia?",
+  options: ["Kalahari Desert", "Sahara Desert", "Gobi Desert", "Chalbi Desert"],
+  answer: "Chalbi Desert",
+  explanation: "The Chalbi Desert is the large desert in northern Kenya and southeastern Ethiopia. It is a part of the larger East African Rift Valley system and is characterized by arid and semi-arid conditions. The Chalbi Desert is sparsely populated and is known for its unique landscape, including dry lake beds and sand dunes."
+},
+{
+  question: "Which East African country is known as the 'Land of a Thousand Hills'?",
+  options: ["Uganda", "Rwanda", "Burundi", "Tanzania"],
+  answer: "Rwanda",
+  explanation: "Rwanda is known as the 'Land of a Thousand Hills.' This nickname is derived from Rwanda's hilly and mountainous terrain, which covers much of the country's landscape. Despite its small size, Rwanda is blessed with breathtaking scenery, including lush green hills, valleys, and volcanic mountains."
+},
+{
+  question: "What is the largest island in Lake Victoria?",
+  options: ["Ukerewe Island", "Rubondo Island", "Buvuma Island", "Mfangano Island"],
+  answer: "Ukerewe Island",
+  explanation: "Ukerewe Island is the largest island in Lake Victoria. Located in Tanzania, Ukerewe Island is known for its scenic beauty, rich culture, and fishing communities. It is a popular destination for tourists seeking to explore the lake's islands and experience the local way of life."
+},
+{
+  question: "Which Tanzanian island is famous for its historical role in the spice trade and its white sandy beaches?",
+  options: ["Zanzibar", "Pemba", "Mafia", "Chumbe"],
+  answer: "Zanzibar",
+  explanation: "Zanzibar is the Tanzanian island famous for its historical role in the spice trade and its white sandy beaches. Located off the coast of mainland Tanzania, Zanzibar was a key hub in the Indian Ocean trade routes, known for exporting spices such as cloves, cinnamon, and nutmeg. Today, it is a popular tourist destination renowned for its cultural heritage, pristine beaches, and vibrant markets."
+},
+{
+  question: "What is the name of the Kenyan ethnic group known for their distinct tall and slender physique?",
+  options: ["Maasai", "Kikuyu", "Luo", "Luhya"],
+  answer: "Maasai",
+  explanation: "The Maasai are the Kenyan ethnic group known for their distinct tall and slender physique. They are renowned for their rich cultural traditions, including pastoralism, beadwork, and warriorhood. The Maasai are easily recognizable by their distinctive attire, which includes colorful shukas (cloths) and intricate beadwork."
 }
 
-function initializeQuiz() {
-    // Start the timer
-    startTimer();
-
-    if (soundPreference === '') {
-        $('#settingsModal').modal('show');
-        return;
-    }
-
-    var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
-    var quizElement = document.getElementById('quiz');
-    for (var i = 0; i < randomQuestions.length; i++) {
-        var question = randomQuestions[i];
-        var questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
-    '<p>' + question.question + '</p>';  // Corrected from question.text to question.question
+    ];
 
 
-
-        // Create radio buttons for each option
-        question.options.forEach((option, index) => {
-            var optionInput = document.createElement('input');
-            optionInput.type = 'radio';
-            optionInput.name = 'option' + i;
-            optionInput.value = option;
-            optionInput.id = 'option' + i + '_' + index;
-
-            let optionLabel = document.createElement('label');
-            optionLabel.htmlFor = 'option' + i + '_' + index;
-            optionLabel.innerText = option;
-
-            questionElement.appendChild(optionInput);
-            questionElement.appendChild(optionLabel);
-            questionElement.appendChild(document.createElement('br'));
-        });
-
-        var nextButton = document.createElement('button');
-        nextButton.className = 'btn btn-primary btn-block';
-        nextButton.innerText = 'Next';
-        nextButton.onclick = (function(question, index) { // Use a closure to capture the current question and index
-        return function() {
-            checkAnswer(question.answer, index); // Pass the question answer and index to checkAnswer
-        };
-    })(question, i); // Immediately invoke the function with the current question and index
-
-    questionElement.appendChild(nextButton);
-    quizElement.appendChild(questionElement);
+    var hardQuestions = [
+    {
+  question: "What is the official language of Tanzania?",
+  options: ["Swahili", "English", "Arabic", "French"],
+  answer: "Swahili",
+  explanation: "Swahili is the official language of Tanzania. It is widely spoken and serves as a lingua franca in East Africa. Swahili, also known as Kiswahili, plays a crucial role in Tanzanian culture, education, and governance. It reflects Tanzania's diverse linguistic heritage and fosters national unity."
+},
+{
+  question: "Which island nation lies off the eastern coast of Africa and is known for its lemurs?",
+  options: ["Madagascar", "Mauritius", "Seychelles", "Comoros"],
+  answer: "Madagascar",
+  explanation: "Madagascar is the island nation lying off the eastern coast of Africa and is famous for its lemurs. As one of the world's biodiversity hotspots, Madagascar is home to a remarkable array of flora and fauna, including the iconic lemurs. These primates are unique to Madagascar and are found nowhere else on Earth."
+},
+{
+  question: "What is the currency of Ethiopia?",
+  options: ["Shilling", "Birr", "Cedi", "Kwacha"],
+  answer: "Birr",
+  explanation: "The currency of Ethiopia is the Birr. It is the official currency and is widely used for financial transactions across the country. The Birr is regulated by the National Bank of Ethiopia and plays a vital role in Ethiopia's economy, facilitating trade, investment, and economic development."
+},
+{
+  question: "Which famous archaeological site in Ethiopia is known for its ancient rock-cut churches?",
+  options: ["Lalibela", "Gondar", "Aksum", "Axum"],
+  answer: "Lalibela",
+  explanation: "Lalibela is the famous archaeological site in Ethiopia renowned for its ancient rock-cut churches. These churches, carved directly into the rock, are remarkable examples of medieval architecture and craftsmanship. Lalibela is a UNESCO World Heritage Site and a sacred pilgrimage destination for Ethiopian Orthodox Christians."
+},
+{
+  question: "Which city in Ethiopia is often referred to as the political capital of Africa due to its status as the headquarters of the African Union?",
+  options: ["Addis Ababa", "Nairobi", "Kampala", "Djibouti City"],
+  answer: "Addis Ababa",
+  explanation: "Addis Ababa, the capital city of Ethiopia, is often referred to as the political capital of Africa because it hosts the headquarters of the African Union (AU). Addis Ababa serves as a major diplomatic and political hub, bringing together leaders from across the continent to address regional and global challenges."
+},
+{
+  question: "What is the name of the large desert in northern Kenya and southeastern Ethiopia?",
+  options: ["Kalahari Desert", "Sahara Desert", "Gobi Desert", "Chalbi Desert"],
+  answer: "Chalbi Desert",
+  explanation: "The Chalbi Desert is the large desert located in northern Kenya and southeastern Ethiopia. It is characterized by arid and semi-arid conditions, with vast expanses of dry, sandy terrain. The Chalbi Desert is sparsely populated and supports unique flora and fauna adapted to its harsh environment."
+},
+{
+  question: "Which East African country is known as the 'Land of a Thousand Hills'?",
+  options: ["Uganda", "Rwanda", "Burundi", "Tanzania"],
+  answer: "Rwanda",
+  explanation: "Rwanda is known as the 'Land of a Thousand Hills.' This nickname reflects Rwanda's stunning landscape, characterized by rolling hills and verdant valleys. Despite its small size, Rwanda boasts breathtaking scenery and is renowned for its conservation efforts, cultural heritage, and vibrant communities."
+},
+{
+  question: "What is the largest island in Lake Victoria?",
+  options: ["Ukerewe Island", "Rubondo Island", "Buvuma Island", "Mfangano Island"],
+  answer: "Ukerewe Island",
+  explanation: "Ukerewe Island is the largest island in Lake Victoria, which is the largest lake in Africa. Located in Tanzania, Ukerewe Island is known for its natural beauty, diverse ecosystems, and vibrant communities. It serves as a vital resource for local livelihoods, tourism, and environmental conservation."
+},
+{
+  question: "Which Tanzanian island is famous for its historical role in the spice trade and its white sandy beaches?",
+  options: ["Zanzibar", "Pemba", "Mafia", "Chumbe"],
+  answer: "Zanzibar",
+  explanation: "Zanzibar is the Tanzanian island famous for its historical role in the spice trade and its pristine white sandy beaches. Located off the coast of mainland Tanzania, Zanzibar has a rich cultural heritage shaped by centuries of trade and maritime exploration. It is renowned for its aromatic spices, turquoise waters, and vibrant Swahili culture."
+},
+{
+  question: "What is the name of the Kenyan ethnic group known for their distinct tall and slender physique?",
+  options: ["Maasai", "Kikuyu", "Luo", "Luhya"],
+  answer: "Maasai",
+  explanation: "The Maasai are the Kenyan ethnic group known for their distinct tall and slender physique, as well as their rich cultural heritage. Traditionally pastoralists, the Maasai are renowned for their unique customs, colorful attire, and strong connection to their land and livestock. They have become iconic symbols of Kenyan culture and heritage."
 }
 
-    // Show the first question
-    document.querySelector('.question').style.display = 'block';
-    if (soundPreference === 'on') {
-        playStartSound(); // Play start sound if sound preference is 'on'
-    }
-}
+    ];
 
 
+    var selectedQuestions = []; // Array to store selected questions based on difficulty level
 
+    // Function to start the quiz
+    function startQuiz() {
+        var difficultyLevel = document.getElementById('difficultyLevel').value;
+        if (difficultyLevel === '') {
+            alert('Please select a difficulty level.');
+            return;
+        }
 
-var currentQuestion = 1;
+        // Assign questions based on selected difficulty level
+        if (difficultyLevel === 'easy') {
+            selectedQuestions = easyQuestions;
+        } else if (difficultyLevel === 'medium') {
+            selectedQuestions = mediumQuestions;
+        } else if (difficultyLevel === 'hard') {
+            selectedQuestions = hardQuestions;
+        }
 
-var currentAudio = null; // Global variable to store the current audio element
-
-// Function to play audio for feedback
-function playAudio(isCorrect) {
-    // If there's already an audio playing, stop it
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0; // Reset the audio to the beginning
-    }
-
-    // Create a new audio element and set its source based on the correctness of the answer
-    var audio = new Audio();
-    if (isCorrect) {
-        audio.src = 'mazima.mp3';
-    } else {
-        audio.src = 'alimba.mp3';
+        saveSettings(); // Call saveSettings to set the player's name and other settings
     }
 
-    // Play the audio and store it in the currentAudio variable
-    audio.play();
-    currentAudio = audio;
-}
-var userAnswers = []; // Array to store user's answers
+    // Function to save settings
+    function saveSettings() {
+        var playerNameInput = document.getElementById('playerName');
+        playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
-function checkAnswer(correctAnswer, questionIndex) {
-    var selectedOption = document.querySelector('input[name="option' + questionIndex + '"]:checked');
-    if (!selectedOption) {
-        alert("Please select an answer.");
-        return;
+        // Regular expression to validate the player name
+        var nameRegex = /^[a-zA-Z]+$/;
+
+        // Check if the player name is empty or contains invalid characters
+        if (playerName === '') {
+            alert('Please enter your name.');
+            return;
+        } else if (!nameRegex.test(playerName)) {
+            alert('Please enter a valid name (only letters are allowed with no spaces).');
+            return;
+        }
+
+        // Get the selected difficulty level
+        var difficultyLevel = document.getElementById('difficultyLevel').value;
+        var difficultyText = '';
+        if (difficultyLevel === 'easy') {
+            difficultyText = 'Junior Genius 🤪';
+        } else if (difficultyLevel === 'medium') {
+            difficultyText = 'Not so Dumb 😜';
+        } else if (difficultyLevel === 'hard') {
+            difficultyText = 'Brain-Bender 🧠';
+        }
+
+        // Update the displayed player name and difficulty level
+        document.getElementById('playerNameDisplay').innerText = playerName;
+        document.getElementById('difficultyLevelDisplay').innerText = difficultyText;
+
+
+        // Get sound preference
+        var soundOn = document.getElementById('soundOn');
+        soundPreference = soundOn.checked ? soundOn.value : 'off';
+
+        // Continue with starting the quiz if the name is valid
+        $('#settingsModal').modal('hide');
+        initializeQuiz();
     }
 
-    var userAnswer = selectedOption.value;
-    userAnswers.push(userAnswer); // Store the user's answer
-    var isCorrect = userAnswer === correctAnswer;
-    if (soundPreference === 'on') {
-        playAudio(isCorrect);
-    }
+    function initializeQuiz() {
+        // Start the timer
+        startTimer();
 
-    if (!isCorrect) {
-        showIncorrectModal(correctAnswer); // Call showIncorrectModal when the answer is incorrect
-        return;
-    }
+        if (soundPreference === '') {
+            $('#settingsModal').modal('show');
+            return;
+        }
 
-    document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none'; // Hide the current question
-    currentQuestion++;
-    if (currentQuestion <= 10) {
-        document.querySelector('.question:nth-child(' + (questionIndex + 2) + ')').style.display = 'block'; // Show the next question
-    } else {
-        calculateScore(); // Call calculateScore() when all questions are answered
-    }
-}
-
-function nextQuestion() {
-    $('#incorrectModal').modal('hide'); // Hide the incorrect answer modal
-    document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'none'; // Hide the current question
-    currentQuestion++;
-    if (currentQuestion <= 10) {
-        document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'block'; // Show the next question
-    } else {
-        calculateScore(); // Call calculateScore() when all questions are answered
-    }
-}
-
-function showIncorrectModal(correctAnswer) {
-    document.getElementById('correctAnswer').innerText = correctAnswer;
-    $('#incorrectModal').modal('show'); // Show the incorrect answer modal
-}
-
-// Function to select a random subset of questions
-function selectRandomQuestions(numQuestions) {
-    var shuffledQuestions = selectedQuestions.sort(() => Math.random() - 0.5); // Shuffle the questions array
-    return shuffledQuestions.slice(0, numQuestions);
-}
+        var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
+        var quizElement = document.getElementById('quiz');
+        for (var i = 0; i < randomQuestions.length; i++) {
+            var question = randomQuestions[i];
+            var questionElement = document.createElement('div');
+            questionElement.className = 'question';
+            questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
+                '<p>' + question.question + '</p>';  // Corrected from question.text to question.question
 
 
-function calculateScore() {
-    var score = 0;
-    var totalQuestions = selectedQuestions.length;
 
-    for (var i = 0; i < totalQuestions; i++) {
-        if (userAnswers[i] === selectedQuestions[i].answer) {
-            score++;
+            // Create radio buttons for each option
+            question.options.forEach((option, index) => {
+                var optionInput = document.createElement('input');
+                optionInput.type = 'radio';
+                optionInput.name = 'option' + i;
+                optionInput.value = option;
+                optionInput.id = 'option' + i + '_' + index;
+
+                let optionLabel = document.createElement('label');
+                optionLabel.htmlFor = 'option' + i + '_' + index;
+                optionLabel.innerText = option;
+
+                questionElement.appendChild(optionInput);
+                questionElement.appendChild(optionLabel);
+                questionElement.appendChild(document.createElement('br'));
+            });
+
+            var nextButton = document.createElement('button');
+            nextButton.className = 'btn btn-primary btn-block';
+            nextButton.innerText = 'Next';
+            nextButton.onclick = (function (question, index) { // Use a closure to capture the current question and index
+                return function () {
+                    checkAnswer(question.answer, index); // Pass the question answer and index to checkAnswer
+                };
+            })(question, i); // Immediately invoke the function with the current question and index
+
+            questionElement.appendChild(nextButton);
+            quizElement.appendChild(questionElement);
+        }
+
+        // Show the first question
+        document.querySelector('.question').style.display = 'block';
+        if (soundPreference === 'on') {
+            playStartSound(); // Play start sound if sound preference is 'on'
         }
     }
 
-    var audioFile = '';
-    var message = '';
 
-    if (score === 10) {
-        audioFile = 'omugezi.mp3';
-    } else if (score >= 8 && score < 10) {
-        audioFile = 'my lord.mp3';
-    } else if (score >= 3 && score <= 7) {
-        audioFile = 'kaweddemu.mp3';
-    } else {
-        audioFile = 'charles.mp3';
+
+
+    var currentQuestion = 1;
+
+    var currentAudio = null; // Global variable to store the current audio element
+
+    // Function to play audio for feedback
+    function playAudio(isCorrect) {
+        // If there's already an audio playing, stop it
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0; // Reset the audio to the beginning
+        }
+
+        // Create a new audio element and set its source based on the correctness of the answer
+        var audio = new Audio();
+        if (isCorrect) {
+            audio.src = 'mazima.mp3';
+        } else {
+            audio.src = 'alimba.mp3';
+        }
+
+        // Play the audio and store it in the currentAudio variable
+        audio.play();
+        currentAudio = audio;
     }
+    var userAnswers = []; // Array to store user's answers
+
+    // Function to check answer and display explanation
+    function checkAnswer(correctAnswer, questionIndex) {
+        var selectedOption = document.querySelector('input[name="option' + questionIndex + '"]:checked');
+        if (!selectedOption) {
+            alert("Please select an answer.");
+            return;
+        }
+
+        var userAnswer = selectedOption.value;
+        userAnswers.push(userAnswer); // Store the user's answer
+        var isCorrect = userAnswer === correctAnswer;
+        if (soundPreference === 'on') {
+            playAudio(isCorrect);
+        }
+
+        if (!isCorrect) {
+            var currentQuestionObj = selectedQuestions[questionIndex];
+            var explanation = currentQuestionObj.explanation;
+            showIncorrectModal(correctAnswer, explanation); // Call showIncorrectModal with explanation
+            return;
+        }
+
+        document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none'; // Hide the current question
+        currentQuestion++;
+        if (currentQuestion <= 10) {
+            document.querySelector('.question:nth-child(' + (questionIndex + 2) + ')').style.display = 'block'; // Show the next question
+        } else {
+            calculateScore(); // Call calculateScore() when all questions are answered
+        }
+    }
+
+    function nextQuestion() {
+        $('#incorrectModal').modal('hide'); // Hide the incorrect answer modal
+        document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'none'; // Hide the current question
+        currentQuestion++;
+        if (currentQuestion <= 10) {
+            document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'block'; // Show the next question
+        } else {
+            calculateScore(); // Call calculateScore() when all questions are answered
+        }
+    }
+
+    // Function to show incorrect modal with explanation
+    function showIncorrectModal(correctAnswer, explanation) {
+        document.getElementById('correctAnswer').innerText = correctAnswer;
+        document.getElementById('explanation').innerText = explanation; // Populate the explanation field
+        $('#incorrectModal').modal('show'); // Show the incorrect answer modal
+    }
+
+
+    // Function to select a random subset of questions
+    function selectRandomQuestions(numQuestions) {
+        var shuffledQuestions = selectedQuestions.sort(() => Math.random() - 0.5); // Shuffle the questions array
+        return shuffledQuestions.slice(0, numQuestions);
+    }
+
+
+    function calculateScore() {
+        var score = 0;
+        var totalQuestions = selectedQuestions.length;
+
+        for (var i = 0; i < totalQuestions; i++) {
+            if (userAnswers[i] === selectedQuestions[i].answer) {
+                score++;
+            }
+        }
+
+        var audioFile = '';
+        var message = '';
+
+        if (score === 10) {
+            audioFile = 'omugezi.mp3';
+        } else if (score >= 8 && score < 10) {
+            audioFile = 'my lord.mp3';
+        } else if (score >= 3 && score <= 7) {
+            audioFile = 'kaweddemu.mp3';
+        } else {
+            audioFile = 'charles.mp3';
+        }
         var excellentMessages = [
-        "Wow! Look at you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score, huh? Are you secretly a superhero in this subject? 🦸‍♂️",
-    "Bravo, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10? You're crushing it! Keep shining bright like a star! ✨",
-    "Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10/10! You're like a migical wizard! 🧙‍♂️",
-    "Amazing work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're on fire! 🔥",
-    "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! Keep up the phenomenal work! 👏",
-    "You're unstoppable, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're one real hell of a genius! 🌟",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score alert! You're acing this game! 🚨",
-    "No way, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're the champion! 🏆",
-    "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. A flawless performance! Keep up the fantastic work! 🌈",
-    "You're a wise prodigy, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? Keep dazzling us with your skills! 💡",
-    "Fantastic job, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You make this subject look easy! 😉",
-    "Impressive work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're a real whiz! 🎩",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10! You're rocking this quiz! 🚀",
-    "You're a super intelligent marvel, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? Keep up the incredible effort! 💫",
-    "Spectacular, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're in a league of your own! ⚡",
-    "Hats off to you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're a wise master of this subject matter! 🎓",
-    "You're setting the bar high, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? Keep up the awesome work! 🌟",
-    "Excellent job, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're a real legend! 🏅",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're making everyone proud! 👍",
-    "Superb, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? Keep up the fantastic performance! 🌟",
-    "You're crushing it, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're a talented rockstar! 🎸",
-    "Bravo, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're an intelligent wizard! 🧙‍♂️",
-    "Wow, " + playerName + "! You got " + score + " out of 10 correct. You aced it! 10 out of 10. You're unstoppable! 🌟",
-    "Incredible, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! 10 out of 10. You're on top of the world! 🌍",
-    "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. Flawless performance! 10 out of 10. You're a true champion! 🏆",
-    "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. You got every question right! 10 out of 10. You're a genius! 🧠",
-    "Spectacular, " + playerName + "! You got " + score + " out of 10 correct. You've mastered it! 10 out of 10. You're the mastermind! 💡",
-    "Marvelous, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a legend! 🌟",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. Outstanding job! 10 out of 10. You're unbeatable! 💪",
-    "Exceptional, " + playerName + "! You got " + score + " out of 10 correct. You're a star! 10 out of 10. You're truly remarkable! ✨",
-    "Mind-blowing, " + playerName + "! You got " + score + " out of 10 correct. You've outdone yourself! 10 out of 10. You're a prodigy! 🌟",
-    "Phenomenal, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 10 out of 10. You're the best! 🏅",
-    "Remarkable, " + playerName + "! You got " + score + " out of 10 correct. You're setting records! 10 out of 10. You're unstoppable! 🚀",
-    "Fantastic, " + playerName + "! You got " + score + " out of 10 correct. You've reached the top! 10 out of 10. You're a superstar! ⭐",
-    "Amazing, " + playerName + "! You got " + score + " out of 10 correct. You're a genius! 10 out of 10. You're destined for greatness! 🚀",
-    "Terrific, " + playerName + "! You got " + score + " out of 10 correct. You've made it! 10 out of 10. You're legendary! 🏆",
-    "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 10 out of 10. You're an inspiration! 🌟",
-    "Exceptional work, " + playerName + "! You got " + score + " out of 10 correct. You're brilliant! 10 out of 10. You're a role model! 👑",
-    "Exemplary performance, " + playerName + "! You got " + score + " out of 10 correct. You've aced it! 10 out of 10. You're extraordinary! 🎉",
-    "Top-notch, " + playerName + "! You got " + score + " out of 10 correct. You're a master! 10 out of 10. You're making history! 📜",
-    "Sensational, " + playerName + "! You got " + score + " out of 10 correct. You're unbeatable! 10 out of 10. You're a legend! 🌟",
-"Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're smashing it! 💥",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're cruisin'! 🚗",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
-    "Look at you go, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🚀",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. You're acing it like a boss! 💼",
-    "High five, " + playerName + "! You got " + score + " out of 10 correct. You're nailing it! 🖐️",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep slayin'! ⚔️",
-    "Hey, " + playerName + ", you're killin' it! " + score + " out of 10. Keep it up! 😎",
-    "Hey superstar, " + playerName + "! You got " + score + " out of 10 correct. You're shining bright! ✨",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're crushing it! 🎉",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🌯",
-    "You're doing awesome, " + playerName + "! You got " + score + " out of 10 correct. Keep the vibe! 🎶",
-    "Rock on, " + playerName + "! You got " + score + " out of 10 correct. You're rockin' the quiz! 🤘",
-    "Kudos, " + playerName + "! You got " + score + " out of 10 correct. You're the quiz master! 👑",
-    "Hey, " + playerName + ", you're nailing it! " + score + " out of 10. Keep the good times rollin'! 🎲",
-    "Well played, " + playerName + "! You got " + score + " out of 10 correct. You're a quiz wizard! 🧙‍♂️",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're crushin' it! 💪",
-    "Hey superstar, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🌟",
-    "Good going, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Hey, " + playerName + ", you absolutely crushed it! 10 out of 10. You're a nerdy whiz! 🧮",
-    "Dude, " + playerName + "! You got " + score + " out of 10 correct. You totally nailed it! 10 out of 10. You're on fire! 🔥",
-    "Nice one, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a legend! 🌟",
-    "Wow, " + playerName + "! You got " + score + " out of 10 correct. You totally aced it! 10 out of 10. You're unstoppable! 💪",
-    "No way, " + playerName + "! You got " + score + " out of 10 correct. You got every single one right! 10 out of 10. You're a genius! 🧠",
-    "Hey, " + playerName + ", that's incredible! 10 out of 10. You're a geeky genius! 🎓",
-    "Killer job, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're crushing it! 💥",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 10 out of 10. You're unstoppable! 🚀",
-    "Awesome work, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a rockstar! 🌟",
-    "Man, " + playerName + ", you're killing it! 10 out of 10. You're a legend! 🏆",
-    "Nailed it, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on top of your game! 💯",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a real prodigy! 🌟",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're unstoppable! 🚀",
-    "You're a genius, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on a roll! 🎲",
-    "Absolutely smashed it, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on top of the world! 🌍",
-    "Dang, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a now a master! 🔢",
-    "Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're a legend! 🌟",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. You're killing it! 10 out of 10. You're unstoppable! 💪",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're absolutely crushing it! 💥",
-    "Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. What's your secret? 💼",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're onto something here! 🔍",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. What's your next move? 🤔",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. What's your strategy? 🧠",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You've got this puzzle figured out! 🧩",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're cracking the code! 🔒",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 💡",
-    "Hey, " + playerName + ", that's awesome! " + score + " out of 10. What's your secret sauce? 🍔",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. You're unraveling mysteries! 🔍",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. What's your hidden talent? 🎩",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. You're uncovering secrets! 🕵️",
-    "Hey, " + playerName + ", way to go! " + score + " out of 10. What's your next discovery? 🔬",
-    "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. What's your next adventure? 🌟",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. What's your next big idea? 💡",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 🚀",
-    "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. What's your next masterpiece? 🎨",
-    "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. What's your next adventure? 🚀",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. What's your next big discovery? 🌟",
-    "Hey, " + playerName + ", not bad at all! " + score + " out of 10. What's your secret sauce? 🍔",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. What's your next move? 🤔",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. What's your strategy? 🧠",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. What's your secret weapon? 🔫",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. What's your winning formula? 🏆",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. What's your magic touch? ✨",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 🚀",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. What's your ace up your sleeve? 🃏",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. What's your secret to success? 🤫",
-    "Hey, " + playerName + ", that's awesome! " + score + " out of 10. What's your secret recipe? 🍲",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. What's your key to victory? 🔑",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. What's your secret sauce? 🍝",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. What's your secret ingredient? 🥇",
-    "Hey, " + playerName + ", way to go! " + score + " out of 10. What's your next big thing? 🚀",
-    "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. What's your next masterpiece? 🎨",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. What's your next revelation? 💡",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. What's your secret talent? 🎭",
-    "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. What's your secret weapon? 🔧",
-    "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. What's your next adventure? 🚀",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. What's your next big breakthrough? 🌟"
+            "Wow! Look at you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score, huh? Are you secretly a superhero in this subject? 🦸‍♂️",
+            "Bravo, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10? You're crushing it! Keep shining bright like a star! ✨",
+            "Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10/10! You're like a migical wizard! 🧙‍♂️",
+            "Amazing work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're on fire! 🔥",
+            "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! Keep up the phenomenal work! 👏",
+            "You're unstoppable, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're one real hell of a genius! 🌟",
+            "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score alert! You're acing this game! 🚨",
+            "No way, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're the champion! 🏆",
+            "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. A flawless performance! Keep up the fantastic work! 🌈",
+            "You're a wise prodigy, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? Keep dazzling us with your skills! 💡",
+            "Fantastic job, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You make this subject look easy! 😉",
+            "Impressive work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're a real whiz! 🎩",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10! You're rocking this quiz! 🚀",
+            "You're a super intelligent marvel, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? Keep up the incredible effort! 💫",
+            "Spectacular, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're in a league of your own! ⚡",
+            "Hats off to you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're a wise master of this subject matter! 🎓",
+            "You're setting the bar high, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? Keep up the awesome work! 🌟",
+            "Excellent job, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're a real legend! 🏅",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're making everyone proud! 👍",
+            "Superb, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? Keep up the fantastic performance! 🌟",
+            "You're crushing it, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're a talented rockstar! 🎸",
+            "Bravo, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're an intelligent wizard! 🧙‍♂️",
+            "Wow, " + playerName + "! You got " + score + " out of 10 correct. You aced it! 10 out of 10. You're unstoppable! 🌟",
+            "Incredible, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! 10 out of 10. You're on top of the world! 🌍",
+            "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. Flawless performance! 10 out of 10. You're a true champion! 🏆",
+            "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. You got every question right! 10 out of 10. You're a genius! 🧠",
+            "Spectacular, " + playerName + "! You got " + score + " out of 10 correct. You've mastered it! 10 out of 10. You're the mastermind! 💡",
+            "Marvelous, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a legend! 🌟",
+            "Impressive, " + playerName + "! You got " + score + " out of 10 correct. Outstanding job! 10 out of 10. You're unbeatable! 💪",
+            "Exceptional, " + playerName + "! You got " + score + " out of 10 correct. You're a star! 10 out of 10. You're truly remarkable! ✨",
+            "Mind-blowing, " + playerName + "! You got " + score + " out of 10 correct. You've outdone yourself! 10 out of 10. You're a prodigy! 🌟",
+            "Phenomenal, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 10 out of 10. You're the best! 🏅",
+            "Remarkable, " + playerName + "! You got " + score + " out of 10 correct. You're setting records! 10 out of 10. You're unstoppable! 🚀",
+            "Fantastic, " + playerName + "! You got " + score + " out of 10 correct. You've reached the top! 10 out of 10. You're a superstar! ⭐",
+            "Amazing, " + playerName + "! You got " + score + " out of 10 correct. You're a genius! 10 out of 10. You're destined for greatness! 🚀",
+            "Terrific, " + playerName + "! You got " + score + " out of 10 correct. You've made it! 10 out of 10. You're legendary! 🏆",
+            "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 10 out of 10. You're an inspiration! 🌟",
+            "Exceptional work, " + playerName + "! You got " + score + " out of 10 correct. You're brilliant! 10 out of 10. You're a role model! 👑",
+            "Exemplary performance, " + playerName + "! You got " + score + " out of 10 correct. You've aced it! 10 out of 10. You're extraordinary! 🎉",
+            "Top-notch, " + playerName + "! You got " + score + " out of 10 correct. You're a master! 10 out of 10. You're making history! 📜",
+            "Sensational, " + playerName + "! You got " + score + " out of 10 correct. You're unbeatable! 10 out of 10. You're a legend! 🌟",
+            "Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're smashing it! 💥",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're cruisin'! 🚗",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
+            "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
+            "Look at you go, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🚀",
+            "Whoa, " + playerName + "! You got " + score + " out of 10 correct. You're acing it like a boss! 💼",
+            "High five, " + playerName + "! You got " + score + " out of 10 correct. You're nailing it! 🖐️",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep slayin'! ⚔️",
+            "Hey, " + playerName + ", you're killin' it! " + score + " out of 10. Keep it up! 😎",
+            "Hey superstar, " + playerName + "! You got " + score + " out of 10 correct. You're shining bright! ✨",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're crushing it! 🎉",
+            "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🌯",
+            "You're doing awesome, " + playerName + "! You got " + score + " out of 10 correct. Keep the vibe! 🎶",
+            "Rock on, " + playerName + "! You got " + score + " out of 10 correct. You're rockin' the quiz! 🤘",
+            "Kudos, " + playerName + "! You got " + score + " out of 10 correct. You're the quiz master! 👑",
+            "Hey, " + playerName + ", you're nailing it! " + score + " out of 10. Keep the good times rollin'! 🎲",
+            "Well played, " + playerName + "! You got " + score + " out of 10 correct. You're a quiz wizard! 🧙‍♂️",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're crushin' it! 💪",
+            "Hey superstar, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🌟",
+            "Good going, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
+            "Hey, " + playerName + ", you absolutely crushed it! 10 out of 10. You're a nerdy whiz! 🧮",
+            "Dude, " + playerName + "! You got " + score + " out of 10 correct. You totally nailed it! 10 out of 10. You're on fire! 🔥",
+            "Nice one, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a legend! 🌟",
+            "Wow, " + playerName + "! You got " + score + " out of 10 correct. You totally aced it! 10 out of 10. You're unstoppable! 💪",
+            "No way, " + playerName + "! You got " + score + " out of 10 correct. You got every single one right! 10 out of 10. You're a genius! 🧠",
+            "Hey, " + playerName + ", that's incredible! 10 out of 10. You're a geeky genius! 🎓",
+            "Killer job, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're crushing it! 💥",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 10 out of 10. You're unstoppable! 🚀",
+            "Awesome work, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a rockstar! 🌟",
+            "Man, " + playerName + ", you're killing it! 10 out of 10. You're a legend! 🏆",
+            "Nailed it, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on top of your game! 💯",
+            "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a real prodigy! 🌟",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're unstoppable! 🚀",
+            "You're a genius, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on a roll! 🎲",
+            "Absolutely smashed it, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on top of the world! 🌍",
+            "Dang, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a now a master! 🔢",
+            "Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're a legend! 🌟",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. You're killing it! 10 out of 10. You're unstoppable! 💪",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're absolutely crushing it! 💥",
+            "Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
+            "Impressive, " + playerName + "! You got " + score + " out of 10 correct. What's your secret? 💼",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're onto something here! 🔍",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. What's your next move? 🤔",
+            "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
+            "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. What's your strategy? 🧠",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. You've got this puzzle figured out! 🧩",
+            "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're cracking the code! 🔒",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 💡",
+            "Hey, " + playerName + ", that's awesome! " + score + " out of 10. What's your secret sauce? 🍔",
+            "Good job, " + playerName + "! You got " + score + " out of 10 correct. You're unraveling mysteries! 🔍",
+            "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. What's your hidden talent? 🎩",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. You're uncovering secrets! 🕵️",
+            "Hey, " + playerName + ", way to go! " + score + " out of 10. What's your next discovery? 🔬",
+            "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. What's your next adventure? 🌟",
+            "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. What's your next big idea? 💡",
+            "Great job, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 🚀",
+            "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. What's your next masterpiece? 🎨",
+            "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. What's your next adventure? 🚀",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. What's your next big discovery? 🌟",
+            "Hey, " + playerName + ", not bad at all! " + score + " out of 10. What's your secret sauce? 🍔",
+            "Impressive, " + playerName + "! You got " + score + " out of 10 correct. What's your next move? 🤔",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. What's your strategy? 🧠",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. What's your secret weapon? 🔫",
+            "Yo, " + playerName + ", check you out! " + score + " out of 10. What's your winning formula? 🏆",
+            "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. What's your magic touch? ✨",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 🚀",
+            "Nice job, " + playerName + "! You got " + score + " out of 10 correct. What's your ace up your sleeve? 🃏",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. What's your secret to success? 🤫",
+            "Hey, " + playerName + ", that's awesome! " + score + " out of 10. What's your secret recipe? 🍲",
+            "Good job, " + playerName + "! You got " + score + " out of 10 correct. What's your key to victory? 🔑",
+            "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. What's your secret sauce? 🍝",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. What's your secret ingredient? 🥇",
+            "Hey, " + playerName + ", way to go! " + score + " out of 10. What's your next big thing? 🚀",
+            "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. What's your next masterpiece? 🎨",
+            "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. What's your next revelation? 💡",
+            "Great job, " + playerName + "! You got " + score + " out of 10 correct. What's your secret talent? 🎭",
+            "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. What's your secret weapon? 🔧",
+            "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. What's your next adventure? 🚀",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. What's your next big breakthrough? 🌟"
 
 
-];
+        ];
 
-var greatMessages = [
-"Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're smashing it! 💥",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're cruisin'! 🚗",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're rocking it! 🤘",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're doing great! 👍",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're on the right track! 🚀",
-    "Hey, " + playerName + ", that's awesome! " + score + " out of 10. You're smashing it! 💥",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. You're crushing it! 💥",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👏",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
-    "Hey, " + playerName + ", way to go! " + score + " out of 10. You're doing awesome! 🎉",
-    "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🚀",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're doing amazing! 🌟",
-    "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🎸",
-    "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. You're killing it! 💥",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "You're unstoppable, " + playerName + "! " + score + " out of 10. Keep it going! 🚀",
-    "Hey, " + playerName + ", that's fantastic! " + score + " out of 10. You're on a roll! 🌯",
-    "Bravo, " + playerName + "! " + score + " out of 10. You're a quiz champion! 🏆",
-    "You're crushing it, " + playerName + "! " + score + " out of 10. Keep up the awesome work! 💪",
-    "Outstanding, " + playerName + "! " + score + " out of 10. You're a quiz master! 🎓",
-    "Kudos to you, " + playerName + "! " + score + " out of 10. You're acing the quiz! 👍",
-    "Keep shining, " + playerName + "! " + score + " out of 10. You're a star! ✨",
-    "Wow, " + playerName + "! " + score + " out of 10. You're knocking it out of the park! ⚾",
-    "You're making it look easy, " + playerName + "! " + score + " out of 10. Keep up the great work! 👏",
-    "You're a force to be reckoned with, " + playerName + "! " + score + " out of 10. Keep it up! 💥",
-    "Absolutely smashing, " + playerName + "! " + score + " out of 10. You're a quiz whiz! 🧠",
-    "You're on fire, " + playerName + "! " + score + " out of 10. Keep the momentum going! 🔥",
-    "Hey there, " + playerName + "! " + score + " out of 10. You're doing amazing! 🌟",
-    "Way to go, " + playerName + "! " + score + " out of 10. You're a superstar! 🌟",
-    "You're nailing it, " + playerName + "! " + score + " out of 10. Keep up the great work! 👍",
-    "Phenomenal job, " + playerName + "! " + score + " out of 10. You're unstoppable! 💥",
-    "Keep up the fantastic work, " + playerName + "! " + score + " out of 10. You're a rockstar! 🎸",
-    "You're doing awesome, " + playerName + "! " + score + " out of 10. Keep it up! 🎉",
-    "Hey, " + playerName + ", you're a quiz superstar! " + score + " out of 10. Keep shining! 🌟",
-    "You're a quiz dynamo, " + playerName + "! " + score + " out of 10. Keep up the electrifying performance! ⚡",
-    "Fantastic work, " + playerName + "! " + score + " out of 10. You're on fire! 🔥",
-    "You're absolutely killing it, " + playerName + "! " + score + " out of 10. Keep up the amazing work! 💥",
-    "Incredible job, " + playerName + "! " + score + " out of 10. You're a quiz legend in the making! 🏅",
-    "You're a quiz wizard, " + playerName + "! " + score + " out of 10. Keep casting those correct answers! 🧙‍♂️",
-    "Outstanding performance, " + playerName + "! " + score + " out of 10. You're setting the bar high! 🚀",
-    "You're unstoppable, " + playerName + "! " + score + " out of 10. Keep up the unbeatable streak! 💪",
-    "Spectacular work, " + playerName + "! " + score + " out of 10. You're on a winning streak! 🌟",
-    "You're on a roll, " + playerName + "! " + score + " out of 10. Keep those correct answers coming! 🎲",
-    "Impressive stuff, " + playerName + "! " + score + " out of 10. You're making it look easy! 👏",
-    "You're smashing it, " + playerName + "! " + score + " out of 10. Keep up the phenomenal performance! 💥",
-    "Marvelous job, " + playerName + "! " + score + " out of 10. You're making us proud! 👍",
-    "You're a true quiz aficionado, " + playerName + "! " + score + " out of 10. Keep up the fantastic work! 🧠",
-    "Top-notch performance, " + playerName + "! " + score + " out of 10. You're a quiz virtuoso! 🎶",
-    "You're acing it, " + playerName + "! " + score + " out of 10. Keep up the stellar performance! 🌟",
-    "Brilliant work, " + playerName + "! " + score + " out of 10. You're on the path to quiz greatness! 🏆",
-    "You're absolutely crushing it, " + playerName + "! " + score + " out of 10. Keep up the phenomenal work! 💪",
-    "Magnificent job, " + playerName + "! " + score + " out of 10. You're leaving everyone else in the dust! 🚀",
-    "You're on fire, " + playerName + "! " + score + " out of 10. Keep up the blazing performance! 🔥",
-    "Exceptional performance, " + playerName + "! " + score + " out of 10. You're a shining star! ✨",
-    "You're absolutely slaying it, " + playerName + "! " + score + " out of 10. Keep up the amazing work! 💥"
-
-
-
-];
-
-var goodMessages = [
-"Not bad, " + playerName + ", not bad at all! 😎 Keep practicing, and you'll improve in no time!",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep pushing yourself, and you'll ace it next time! 💪",
-    "Lookin' good, " + playerName + "! You got " + score + " out of 10 correct. 😄 Keep up the good work!",
-    "Hey, " + playerName + ", you're makin' moves! 🚀 Keep it up!",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. 🎉 You're on the right track!",
-    "You're killin' it, " + playerName + "! You got " + score + " out of 10 correct. 🔥 Keep crushin' those tough problems!",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. 💫 You're doin' just fine!",
-    "Nice try, " + playerName + "! You got " + score + " out of 10 correct. 🙌 Every question is a step forward!",
-    "You're gettin' there, " + playerName + "! You got " + score + " out of 10 correct. 🌈 Keep practicin' those so called problems!",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. 🎈 Keep workin' hard!",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. 🎈 Keep practicin' those genius skills!",
-    "You're gettin' better, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep it up!",
-    "You're on fire, " + playerName + "! You got " + score + " out of 10 correct. 🔥 Keep pushin' yourself!",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. 🚀 You're doin' awesome!",
-    "You're doin' fantastic, " + playerName + "! You got " + score + " out of 10 correct. 🎉 Keep it goin'!",
-    "You're doin' great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep up the good work!",
-    "You're makin' progress, " + playerName + "! You got " + score + " out of 10 correct. 🚀 Keep goin'!",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. 🎈 You're makin' strides!",
-    "You're gettin' better, " + playerName + "! You got " + score + " out of 10 correct. 💫 Keep it up!",
-    "Look at you go, " + playerName + "! You got " + score + " out of 10 correct. You're soaring high! 🦅",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. You're making waves! 🌊",
-    "High five, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🎲",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep shining! ✨",
-    "Hey, " + playerName + ", you're killin' it! " + score + " out of 10. You're on fire! 🔥",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👍",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're on the right track! 🚂",
-    "You're smashing it, " + playerName + "! You got " + score + " out of 10 correct. Keep the momentum! 💥",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're on a winning streak! 🏆",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
-    "Awesome job, " + playerName + "! You got " + score + " out of 10 correct. You're on the rise! 🚀",
-    "Fantastic work, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "You're cruising, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🚗",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🌟",
-    "You're doing brilliantly, " + playerName + "! You got " + score + " out of 10 correct. Keep up the good work! 👏",
-    "Keep going strong, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🎉",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on the right path! 🛤️",
-    "You're on a winning streak, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
-    "Impressive work, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🌊",
-    "Hey, " + playerName + ", you're doing great! " + score + " out of 10. Keep it up! 🌟",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
-    "You're on a roll, " + playerName + "! You got " + score + " out of 10 correct. Keep going! 🎲",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're doing great! 👏",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're doing awesome! 🌟",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💥",
-    "You're on fire, " + playerName + "! You got " + score + " out of 10 correct. Keep the momentum! 🔥",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. You're doing fantastic! 👍",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're making waves! 🌊",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're doing amazing! 🌟",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🚀",
-    "Good stuff, " + playerName + "! You got " + score + " out of 10 correct. Keep going strong! 💪",
-    "You're doing amazing, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🎉",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👍",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're making strides! 🏃‍♂️",
-    "You're on a winning streak, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🏆",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 💥",
-    "You're on the right track, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🚀",
-    "You're crushing it, " + playerName + "! You got " + score + " out of 10 correct. Keep up the good work! 👊",
-    "You're doing awesome, " + playerName + "! You got " + score + " out of 10 correct. Keep rocking it! 🎸"
+        var greatMessages = [
+            "Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're smashing it! 💥",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're cruisin'! 🚗",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
+            "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
+            "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're rocking it! 🤘",
+            "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're doing great! 👍",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're on the right track! 🚀",
+            "Hey, " + playerName + ", that's awesome! " + score + " out of 10. You're smashing it! 💥",
+            "Good job, " + playerName + "! You got " + score + " out of 10 correct. You're crushing it! 💥",
+            "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👏",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
+            "Hey, " + playerName + ", way to go! " + score + " out of 10. You're doing awesome! 🎉",
+            "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🚀",
+            "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
+            "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're doing amazing! 🌟",
+            "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🎸",
+            "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. You're killing it! 💥",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
+            "You're unstoppable, " + playerName + "! " + score + " out of 10. Keep it going! 🚀",
+            "Hey, " + playerName + ", that's fantastic! " + score + " out of 10. You're on a roll! 🌯",
+            "Bravo, " + playerName + "! " + score + " out of 10. You're a quiz champion! 🏆",
+            "You're crushing it, " + playerName + "! " + score + " out of 10. Keep up the awesome work! 💪",
+            "Outstanding, " + playerName + "! " + score + " out of 10. You're a quiz master! 🎓",
+            "Kudos to you, " + playerName + "! " + score + " out of 10. You're acing the quiz! 👍",
+            "Keep shining, " + playerName + "! " + score + " out of 10. You're a star! ✨",
+            "Wow, " + playerName + "! " + score + " out of 10. You're knocking it out of the park! ⚾",
+            "You're making it look easy, " + playerName + "! " + score + " out of 10. Keep up the great work! 👏",
+            "You're a force to be reckoned with, " + playerName + "! " + score + " out of 10. Keep it up! 💥",
+            "Absolutely smashing, " + playerName + "! " + score + " out of 10. You're a quiz whiz! 🧠",
+            "You're on fire, " + playerName + "! " + score + " out of 10. Keep the momentum going! 🔥",
+            "Hey there, " + playerName + "! " + score + " out of 10. You're doing amazing! 🌟",
+            "Way to go, " + playerName + "! " + score + " out of 10. You're a superstar! 🌟",
+            "You're nailing it, " + playerName + "! " + score + " out of 10. Keep up the great work! 👍",
+            "Phenomenal job, " + playerName + "! " + score + " out of 10. You're unstoppable! 💥",
+            "Keep up the fantastic work, " + playerName + "! " + score + " out of 10. You're a rockstar! 🎸",
+            "You're doing awesome, " + playerName + "! " + score + " out of 10. Keep it up! 🎉",
+            "Hey, " + playerName + ", you're a quiz superstar! " + score + " out of 10. Keep shining! 🌟",
+            "You're a quiz dynamo, " + playerName + "! " + score + " out of 10. Keep up the electrifying performance! ⚡",
+            "Fantastic work, " + playerName + "! " + score + " out of 10. You're on fire! 🔥",
+            "You're absolutely killing it, " + playerName + "! " + score + " out of 10. Keep up the amazing work! 💥",
+            "Incredible job, " + playerName + "! " + score + " out of 10. You're a quiz legend in the making! 🏅",
+            "You're a quiz wizard, " + playerName + "! " + score + " out of 10. Keep casting those correct answers! 🧙‍♂️",
+            "Outstanding performance, " + playerName + "! " + score + " out of 10. You're setting the bar high! 🚀",
+            "You're unstoppable, " + playerName + "! " + score + " out of 10. Keep up the unbeatable streak! 💪",
+            "Spectacular work, " + playerName + "! " + score + " out of 10. You're on a winning streak! 🌟",
+            "You're on a roll, " + playerName + "! " + score + " out of 10. Keep those correct answers coming! 🎲",
+            "Impressive stuff, " + playerName + "! " + score + " out of 10. You're making it look easy! 👏",
+            "You're smashing it, " + playerName + "! " + score + " out of 10. Keep up the phenomenal performance! 💥",
+            "Marvelous job, " + playerName + "! " + score + " out of 10. You're making us proud! 👍",
+            "You're a true quiz aficionado, " + playerName + "! " + score + " out of 10. Keep up the fantastic work! 🧠",
+            "Top-notch performance, " + playerName + "! " + score + " out of 10. You're a quiz virtuoso! 🎶",
+            "You're acing it, " + playerName + "! " + score + " out of 10. Keep up the stellar performance! 🌟",
+            "Brilliant work, " + playerName + "! " + score + " out of 10. You're on the path to quiz greatness! 🏆",
+            "You're absolutely crushing it, " + playerName + "! " + score + " out of 10. Keep up the phenomenal work! 💪",
+            "Magnificent job, " + playerName + "! " + score + " out of 10. You're leaving everyone else in the dust! 🚀",
+            "You're on fire, " + playerName + "! " + score + " out of 10. Keep up the blazing performance! 🔥",
+            "Exceptional performance, " + playerName + "! " + score + " out of 10. You're a shining star! ✨",
+            "You're absolutely slaying it, " + playerName + "! " + score + " out of 10. Keep up the amazing work! 💥"
 
 
-];
 
-var tryHarderMessages = [
-"Hey there, " + playerName + "! You got " + score + " out of 10 correct. Looks like you had a little hiccup with " + score + " out of 10. No worries, even superheroes have their off days! 🦸‍♂️",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, even the best stumble sometimes. Dust yourself off and try again! 🤷‍♂️",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Nobody's perfect, right? Just consider this a warm-up round! 🔥",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Everyone takes a wrong turn now and then. Shake it off and let's give it another shot! 🚶‍♂️",
-    "Looks like " + playerName + " needs a little more practice with " + score + " out of 10. No worries, Rome wasn't built in a day! 🏛️",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't tell anyone. It'll be our little secret! 🤫",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's keeping score... oh wait! 😜",
-    "Looks like someone stumbled a bit, " + playerName + ". " + score + " out of 10. Don't worry, we'll keep your quiz score safe with us! 🤐",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It happens to the best of us. Maybe next time you'll get it right... or not! 😄",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we still think you're pretty cool. Just not 'quiz-master' cool yet! 😎",
-    "Looks like " + playerName + " hit a bump in the road with " + score + " out of 10. Don't worry, every stumble is a step forward... or something like that! 🚶‍♂️",
-    "Well, " + playerName + ", " + score + " out of 10. Not quite what we expected, but hey, surprises keep life interesting! 🎉",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we'll just pretend this never happened.  😅",
-    "Looks like " + playerName + " needs a little extra practice with " + score + " out of 10. It's alright, practice makes perfect... or so they say! 🎯",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's perfect. We'll just blame it on a glitch in the matrix! 🤖",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. No worries, we'll just chalk this up to a 'learning experience'. 📝",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly a gold medal performance, but hey, at least you tried! 🏅",
-    "Looks like someone needs to hit the books a bit harder, " + playerName + ". " + score + " out of 10. Don't worry, we've got plenty of books! 📚",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's judging... okay, maybe just a little! 😜",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this the 'practice round', shall we? 😅",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone forgot their thinking cap with " + score + " out of 10. Don't worry, we'll find it for you! 🎩",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't judge... much! 😉",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'work in progress', shall we? 🛠️",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we won't tell anyone. Just remember, WHAT HAPPENS IN THE QUIZ STAYS IN THE QUIZ! 🤫",
-    "Looks like " + playerName + " needs a bit more brain juice with " + score + " out of 10. Don't worry, we'll send some your way! 🧠💡",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we shall just pretend you performed like this because you were distracted by a passing squirrel! 🐿️",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't hold it against you... much! 😄",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs to brush up on their quiz skills! 🧹",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly what we expected, but hey, life is full of surprises! 🎁",
-    "Looks like " + playerName + " stumbled a bit with " + score + " out of 10. Don't worry, we've got plenty of band-aids! 🩹",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's all right, we won't judge... too harshly! 😉",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little extra study time! 📚",
-    "Looks like " + playerName + " took a wrong turn with " + score + " out of 10. Don't worry, seems like you lost your answers in the QuizLand. We'll help you find your way to them! 🗺️",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Not quite the result we were hoping for, but hey, there's always next time! 🔄",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'creative interpretation' of the quiz! 🎨",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's perfect... except maybe for quiz masters! 😜",
-    "Looks like someone's got a case of the quiz jitters, " + playerName + ". " + score + " out of 10. Don't worry, we've got plenty of virtual ice cream to help you chill out! 🍦",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we'll just chalk it up to a 'temporary lapse in brilliance'! 🤔",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little more coffee before their next quiz attempt! ☕",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
-"Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just warming up, right? 😄 Don't worry, you'll crush it next time!",
-    "Oh, " + playerName + ", it seems like you were just giving the others a chance to catch up! 😉 You've got this!",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble there, huh? No worries, you'll bounce back stronger! 💪",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just testing the waters! 💦 Keep going, you'll get there!",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things interesting? 😜 Don't worry, you'll ace it next time!",
-    "Aw, " + playerName + ", looks like you're just keeping us on our toes, right? 😉 Keep smiling, you'll do better!",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. Did you forget to bring your lucky charm today? 🍀 Don't worry, you'll bounce back!",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the game, right? 😄 Keep practicing, you'll get there!",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to give others a chance to catch up? 😉 Keep going, you're doing great!",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone got a little too excited! 😄 Keep trying, you'll improve!",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble, but no worries! Keep going, you're doing just fine! 😊",
-    "Aw, " + playerName + ", did you forget to put on your superhero cape today? 🦸‍♀️ Don't worry, you'll soar next time!",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things suspenseful? 😜 Keep practicing, you'll do better!",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the journey, right? 😄 Keep going, you'll reach your destination!",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone took a detour! 🗺️ Don't worry, you'll find your way back!",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone hit a little speed bump! 🚧 Keep going, you'll smooth it out!",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to add a little drama to the quiz? 😄 Keep trying, you're doing great!",
-    "Aw, " + playerName + ", looks like you're just keeping us entertained! 😉 Keep going, you'll do better!",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Did you misplace your lucky rabbit's foot? 🐰 Don't worry, luck is on your side next time!",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little hiccup, but no worries! Keep going, you're on the right track! 😊",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's okay to stumble sometimes. Shake it off and give it another shot! 💪",
-    "Don't worry, " + playerName + "! You got " + score + " out of 10 correct. Everyone has those days. Keep your head up and try again! 🙂",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you're just warming up. Get back in there and show 'em what you've got! 🔥",
-    "Aww, " + playerName + "! You got " + score + " out of 10 correct. Don't sweat it! Even superheroes have their off days. You'll bounce back stronger! 💫",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Rough day at school, huh? No worries! You've got this! 💼",
-    "Whoopsie-daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like today's not your day, but tomorrow's a whole new game! 🌟",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like the failure bugs got the best of you this time. Don't let 'em win! 🐛",
-    "Not your best day, " + playerName + ", but every stumble is just a stepping stone to success. Keep on stepping! 👣",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. No need to fret over a little hiccup. You're destined for greatness! 🌈",
-    "Chin up, " + playerName + "! You got " + score + " out of 10 correct. Every journey has its bumps. Yours just adds character to the adventure! 😊",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like you took a wrong turn on the educational tour. Time to detour and keep cruising! 🚗",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Not your best performance, but even the greatest stars have their cloudy days. Shine on! ✨",
-    "Bummer, " + playerName + "! You got " + score + " out of 10 correct. This stubborn subject got the best of you this time, but you'll bounce back stronger! 💪",
-    "Keep your spirits high, " + playerName + "! You got " + score + " out of 10 correct. A little setback is just a setup for a major comeback! 🚀",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Don't let a little stumble trip you up. Brush it off and keep on dancing! 💃",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you hit a speed bump on the study highway. Time to put the pedal to the metal and zoom past it! 🚀",
-    "Don't sweat it, " + playerName + "! You got " + score + " out of 10 correct. Even the greatest artists have their rough drafts. You're just refining your masterpiece! 🎨",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Not your best day in the quiz arena, but every setback is just a setup for a mighty comeback! 💥",
-    "No worries, " + playerName + "! You got " + score + " out of 10 correct. Even superheroes have their kryptonite moments. You'll rise again! 💫",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Not quite the result you wanted, but every stumble is just a step closer to success. Keep stepping! 👟",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone forgot their thinking cap with " + score + " out of 10. Don't worry, we'll find it for you! 🎩",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't judge... much! 😉",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'work in progress', shall we? 🛠️",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we won't tell anyone. Just remember, what happens in the quiz stays in the quiz! 🤫",
-    "Looks like " + playerName + " needs a bit more brain juice with " + score + " out of 10. Don't worry, we'll send some your way! 🧠💡",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we'll just pretend you were distracted by a passing squirrel! 🐿️",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't hold it against you... much! 😄",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs to brush up on their quiz skills! 🧹",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we won't judge... too harshly! 😉",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
-    "Looks like someone, well let me just mention their name point blank, " + ( playerName  )+ ", was just feeling a lil bit sleepy and couldn't concentrate during the quiz. Better sleep well next time, bro! 😴💤"
+        ];
 
-];
+        var goodMessages = [
+            "Not bad, " + playerName + ", not bad at all! 😎 Keep practicing, and you'll improve in no time!",
+            "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep pushing yourself, and you'll ace it next time! 💪",
+            "Lookin' good, " + playerName + "! You got " + score + " out of 10 correct. 😄 Keep up the good work!",
+            "Hey, " + playerName + ", you're makin' moves! 🚀 Keep it up!",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. 🎉 You're on the right track!",
+            "You're killin' it, " + playerName + "! You got " + score + " out of 10 correct. 🔥 Keep crushin' those tough problems!",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. 💫 You're doin' just fine!",
+            "Nice try, " + playerName + "! You got " + score + " out of 10 correct. 🙌 Every question is a step forward!",
+            "You're gettin' there, " + playerName + "! You got " + score + " out of 10 correct. 🌈 Keep practicin' those so called problems!",
+            "Good job, " + playerName + "! You got " + score + " out of 10 correct. 🎈 Keep workin' hard!",
+            "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. 🎈 Keep practicin' those genius skills!",
+            "You're gettin' better, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep it up!",
+            "You're on fire, " + playerName + "! You got " + score + " out of 10 correct. 🔥 Keep pushin' yourself!",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. 🚀 You're doin' awesome!",
+            "You're doin' fantastic, " + playerName + "! You got " + score + " out of 10 correct. 🎉 Keep it goin'!",
+            "You're doin' great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep up the good work!",
+            "You're makin' progress, " + playerName + "! You got " + score + " out of 10 correct. 🚀 Keep goin'!",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. 🎈 You're makin' strides!",
+            "You're gettin' better, " + playerName + "! You got " + score + " out of 10 correct. 💫 Keep it up!",
+            "Look at you go, " + playerName + "! You got " + score + " out of 10 correct. You're soaring high! 🦅",
+            "Whoa, " + playerName + "! You got " + score + " out of 10 correct. You're making waves! 🌊",
+            "High five, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🎲",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep shining! ✨",
+            "Hey, " + playerName + ", you're killin' it! " + score + " out of 10. You're on fire! 🔥",
+            "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👍",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're on the right track! 🚂",
+            "You're smashing it, " + playerName + "! You got " + score + " out of 10 correct. Keep the momentum! 💥",
+            "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're on a winning streak! 🏆",
+            "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
+            "Awesome job, " + playerName + "! You got " + score + " out of 10 correct. You're on the rise! 🚀",
+            "Fantastic work, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
+            "You're cruising, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🚗",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🌟",
+            "You're doing brilliantly, " + playerName + "! You got " + score + " out of 10 correct. Keep up the good work! 👏",
+            "Keep going strong, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🎉",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on the right path! 🛤️",
+            "You're on a winning streak, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
+            "Impressive work, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🌊",
+            "Hey, " + playerName + ", you're doing great! " + score + " out of 10. Keep it up! 🌟",
+            "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
+            "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
+            "You're on a roll, " + playerName + "! You got " + score + " out of 10 correct. Keep going! 🎲",
+            "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're doing great! 👏",
+            "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're doing awesome! 🌟",
+            "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💥",
+            "You're on fire, " + playerName + "! You got " + score + " out of 10 correct. Keep the momentum! 🔥",
+            "Impressive, " + playerName + "! You got " + score + " out of 10 correct. You're doing fantastic! 👍",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're making waves! 🌊",
+            "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're doing amazing! 🌟",
+            "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🚀",
+            "Good stuff, " + playerName + "! You got " + score + " out of 10 correct. Keep going strong! 💪",
+            "You're doing amazing, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🎉",
+            "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👍",
+            "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're making strides! 🏃‍♂️",
+            "You're on a winning streak, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🏆",
+            "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 💥",
+            "You're on the right track, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🚀",
+            "You're crushing it, " + playerName + "! You got " + score + " out of 10 correct. Keep up the good work! 👊",
+            "You're doing awesome, " + playerName + "! You got " + score + " out of 10 correct. Keep rocking it! 🎸"
+
+
+        ];
+
+        var tryHarderMessages = [
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Looks like you had a little hiccup with " + score + " out of 10. No worries, even superheroes have their off days! 🦸‍♂️",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, even the best stumble sometimes. Dust yourself off and try again! 🤷‍♂️",
+            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Nobody's perfect, right? Just consider this a warm-up round! 🔥",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Everyone takes a wrong turn now and then. Shake it off and let's give it another shot! 🚶‍♂️",
+            "Looks like " + playerName + " needs a little more practice with " + score + " out of 10. No worries, Rome wasn't built in a day! 🏛️",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't tell anyone. It'll be our little secret! 🤫",
+            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's keeping score... oh wait! 😜",
+            "Looks like someone stumbled a bit, " + playerName + ". " + score + " out of 10. Don't worry, we'll keep your quiz score safe with us! 🤐",
+            "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It happens to the best of us. Maybe next time you'll get it right... or not! 😄",
+            "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we still think you're pretty cool. Just not 'quiz-master' cool yet! 😎",
+            "Looks like " + playerName + " hit a bump in the road with " + score + " out of 10. Don't worry, every stumble is a step forward... or something like that! 🚶‍♂️",
+            "Well, " + playerName + ", " + score + " out of 10. Not quite what we expected, but hey, surprises keep life interesting! 🎉",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we'll just pretend this never happened.  😅",
+            "Looks like " + playerName + " needs a little extra practice with " + score + " out of 10. It's alright, practice makes perfect... or so they say! 🎯",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's perfect. We'll just blame it on a glitch in the matrix! 🤖",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. No worries, we'll just chalk this up to a 'learning experience'. 📝",
+            "Well, " + playerName + ", " + score + " out of 10. Not exactly a gold medal performance, but hey, at least you tried! 🏅",
+            "Looks like someone needs to hit the books a bit harder, " + playerName + ". " + score + " out of 10. Don't worry, we've got plenty of books! 📚",
+            "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's judging... okay, maybe just a little! 😜",
+            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this the 'practice round', shall we? 😅",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone forgot their thinking cap with " + score + " out of 10. Don't worry, we'll find it for you! 🎩",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't judge... much! 😉",
+            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'work in progress', shall we? 🛠️",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we won't tell anyone. Just remember, WHAT HAPPENS IN THE QUIZ STAYS IN THE QUIZ! 🤫",
+            "Looks like " + playerName + " needs a bit more brain juice with " + score + " out of 10. Don't worry, we'll send some your way! 🧠💡",
+            "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we shall just pretend you performed like this because you were distracted by a passing squirrel! 🐿️",
+            "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't hold it against you... much! 😄",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs to brush up on their quiz skills! 🧹",
+            "Well, " + playerName + ", " + score + " out of 10. Not exactly what we expected, but hey, life is full of surprises! 🎁",
+            "Looks like " + playerName + " stumbled a bit with " + score + " out of 10. Don't worry, we've got plenty of band-aids! 🩹",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's all right, we won't judge... too harshly! 😉",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little extra study time! 📚",
+            "Looks like " + playerName + " took a wrong turn with " + score + " out of 10. Don't worry, seems like you lost your answers in the QuizLand. We'll help you find your way to them! 🗺️",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Not quite the result we were hoping for, but hey, there's always next time! 🔄",
+            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'creative interpretation' of the quiz! 🎨",
+            "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's perfect... except maybe for quiz masters! 😜",
+            "Looks like someone's got a case of the quiz jitters, " + playerName + ". " + score + " out of 10. Don't worry, we've got plenty of virtual ice cream to help you chill out! 🍦",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we'll just chalk it up to a 'temporary lapse in brilliance'! 🤔",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little more coffee before their next quiz attempt! ☕",
+            "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just warming up, right? 😄 Don't worry, you'll crush it next time!",
+            "Oh, " + playerName + ", it seems like you were just giving the others a chance to catch up! 😉 You've got this!",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble there, huh? No worries, you'll bounce back stronger! 💪",
+            "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just testing the waters! 💦 Keep going, you'll get there!",
+            "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things interesting? 😜 Don't worry, you'll ace it next time!",
+            "Aw, " + playerName + ", looks like you're just keeping us on our toes, right? 😉 Keep smiling, you'll do better!",
+            "Oh no, " + playerName + "! You got " + score + " out of 10 correct. Did you forget to bring your lucky charm today? 🍀 Don't worry, you'll bounce back!",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the game, right? 😄 Keep practicing, you'll get there!",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to give others a chance to catch up? 😉 Keep going, you're doing great!",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone got a little too excited! 😄 Keep trying, you'll improve!",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble, but no worries! Keep going, you're doing just fine! 😊",
+            "Aw, " + playerName + ", did you forget to put on your superhero cape today? 🦸‍♀️ Don't worry, you'll soar next time!",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things suspenseful? 😜 Keep practicing, you'll do better!",
+            "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the journey, right? 😄 Keep going, you'll reach your destination!",
+            "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone took a detour! 🗺️ Don't worry, you'll find your way back!",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone hit a little speed bump! 🚧 Keep going, you'll smooth it out!",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to add a little drama to the quiz? 😄 Keep trying, you're doing great!",
+            "Aw, " + playerName + ", looks like you're just keeping us entertained! 😉 Keep going, you'll do better!",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. Did you misplace your lucky rabbit's foot? 🐰 Don't worry, luck is on your side next time!",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little hiccup, but no worries! Keep going, you're on the right track! 😊",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's okay to stumble sometimes. Shake it off and give it another shot! 💪",
+            "Don't worry, " + playerName + "! You got " + score + " out of 10 correct. Everyone has those days. Keep your head up and try again! 🙂",
+            "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you're just warming up. Get back in there and show 'em what you've got! 🔥",
+            "Aww, " + playerName + "! You got " + score + " out of 10 correct. Don't sweat it! Even superheroes have their off days. You'll bounce back stronger! 💫",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Rough day at school, huh? No worries! You've got this! 💼",
+            "Whoopsie-daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like today's not your day, but tomorrow's a whole new game! 🌟",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like the failure bugs got the best of you this time. Don't let 'em win! 🐛",
+            "Not your best day, " + playerName + ", but every stumble is just a stepping stone to success. Keep on stepping! 👣",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. No need to fret over a little hiccup. You're destined for greatness! 🌈",
+            "Chin up, " + playerName + "! You got " + score + " out of 10 correct. Every journey has its bumps. Yours just adds character to the adventure! 😊",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like you took a wrong turn on the educational tour. Time to detour and keep cruising! 🚗",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. Not your best performance, but even the greatest stars have their cloudy days. Shine on! ✨",
+            "Bummer, " + playerName + "! You got " + score + " out of 10 correct. This stubborn subject got the best of you this time, but you'll bounce back stronger! 💪",
+            "Keep your spirits high, " + playerName + "! You got " + score + " out of 10 correct. A little setback is just a setup for a major comeback! 🚀",
+            "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Don't let a little stumble trip you up. Brush it off and keep on dancing! 💃",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you hit a speed bump on the study highway. Time to put the pedal to the metal and zoom past it! 🚀",
+            "Don't sweat it, " + playerName + "! You got " + score + " out of 10 correct. Even the greatest artists have their rough drafts. You're just refining your masterpiece! 🎨",
+            "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Not your best day in the quiz arena, but every setback is just a setup for a mighty comeback! 💥",
+            "No worries, " + playerName + "! You got " + score + " out of 10 correct. Even superheroes have their kryptonite moments. You'll rise again! 💫",
+            "Hey, " + playerName + "! You got " + score + " out of 10 correct. Not quite the result you wanted, but every stumble is just a step closer to success. Keep stepping! 👟",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone forgot their thinking cap with " + score + " out of 10. Don't worry, we'll find it for you! 🎩",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't judge... much! 😉",
+            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'work in progress', shall we? 🛠️",
+            "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we won't tell anyone. Just remember, what happens in the quiz stays in the quiz! 🤫",
+            "Looks like " + playerName + " needs a bit more brain juice with " + score + " out of 10. Don't worry, we'll send some your way! 🧠💡",
+            "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we'll just pretend you were distracted by a passing squirrel! 🐿️",
+            "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't hold it against you... much! 😄",
+            "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs to brush up on their quiz skills! 🧹",
+            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we won't judge... too harshly! 😉",
+            "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
+            "Looks like someone, well let me just mention their name point blank, " + (playerName) + ", was just feeling a lil bit sleepy and couldn't concentrate during the quiz. Better sleep well next time, bro! 😴💤"
+
+        ];
 
 
         var messageArray;
-if (score === 10) {
-    messageArray = excellentMessages;
-} else if (score >= 8 && score < 10) {
-    messageArray = greatMessages;
-} else if (score >= 3 && score <= 7) {
-    messageArray = goodMessages;
-} else {
-    messageArray = tryHarderMessages;
-}
+        if (score === 10) {
+            messageArray = excellentMessages;
+        } else if (score >= 8 && score < 10) {
+            messageArray = greatMessages;
+        } else if (score >= 3 && score <= 7) {
+            messageArray = goodMessages;
+        } else {
+            messageArray = tryHarderMessages;
+        }
 
-var randomIndex = Math.floor(Math.random() * messageArray.length);
-message = messageArray[randomIndex];
+        var randomIndex = Math.floor(Math.random() * messageArray.length);
+        message = messageArray[randomIndex];
 
 
 
@@ -1045,7 +1113,7 @@ message = messageArray[randomIndex];
             var audio = new Audio(audioFile);
             audio.play();
         }
-        
+
         document.getElementById('score').innerText = message; // Display personalized message
         $('#scoreModal').modal('show');
     }
@@ -1055,10 +1123,10 @@ message = messageArray[randomIndex];
     }
 
     // Function to play start sound
-function playStartSound() {
-    var audio = new Audio('start.mp3');
-    audio.play();
-}
+    function playStartSound() {
+        var audio = new Audio('start.mp3');
+        audio.play();
+    }
 
 </script>
 
@@ -1068,4 +1136,5 @@ function playStartSound() {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
