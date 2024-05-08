@@ -226,40 +226,30 @@
 
 <script>
     
-// Function to handle prank repeat question button click
-function prankRepeatQuestion() {
-    $('#repeatPrankModal').modal('show'); // Show the prank repeat modal
-
-    // Play the prank audio if sound preference is 'on'
-    if (soundPreference === 'on') {
+    // Function to handle prank repeat question button click
+    function prankRepeatQuestion() {
+        $('#repeatPrankModal').modal('show'); // Show the prank repeat modal
+        
+        // Play the prank audio
         var audio = new Audio('mutwalo.mp3');
         audio.play();
+        
+        // Insert player's name into the message
+        var playerName = document.getElementById('playerName').value;
+        document.getElementById('playerNamePlaceholder').innerText = playerName;
     }
     
-    // Insert player's name into the message
-    var playerName = document.getElementById('playerName').value;
-    document.getElementById('playerNamePlaceholder').innerText = playerName;
-}
-
-// Function to handle accepting the prank deal
-function acceptDeal() {
-    $('#repeatPrankModal').modal('hide'); // Hide the prank modal
-
-    // Play the fool audio if sound preference is 'on'
-    if (soundPreference === 'on') {
+    // Function to handle accepting the prank deal
+    function acceptDeal() {
+        $('#repeatPrankModal').modal('hide'); // Hide the prank modal
+        
+        // Play the fool audio
         var audio = new Audio('munanansi.mp3');
         audio.play();
+        
+        // Show message modal
+        $('#dealMessageModal').modal('show');
     }
-    
-    // Show message modal
-    $('#dealMessageModal').modal('show');
-}
-
-// Function to handle radio button change event and update soundPreference variable
-$('input[name="soundPreference"]').change(function() {
-    soundPreference = $('input[name="soundPreference"]:checked').val();
-});
-
 </script>
 
 
@@ -273,7 +263,7 @@ $('input[name="soundPreference"]').change(function() {
                 <h5 class="modal-title" id="dealMessageModalLabel">😜 YOU WERE FOOLED!!! 🤪</h5>
             </div>
             <div class="modal-body">
-                <p>Are you sure you wanna pay money to cheat the quiz? 🤔 Well, to be honest with you, that's not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
+                <p>Well, to be honest with you, that's not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" onclick="$('#dealMessageModal').modal('hide')">CONTINUE</button>
