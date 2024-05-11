@@ -222,7 +222,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="incorrectModalLabel">🙅🏿 INCORRECT ANSWER 🙅‍♂️
+                <h5 class="modal-title" id="incorrectModalLabel">🙅🏿 INCORRECT ANSWER 🙅‍♂️</p>
                 </h5>
             </div>
             <div class="modal-body">
@@ -253,6 +253,52 @@
         </div>
     </div>
 </div>
+
+<!-- Modal for Simulation -->
+<div class="modal fade" id="simulationModal" tabindex="-1" role="dialog" aria-labelledby="simulationModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="simulationModalLabel">Matching Opponent</h5>
+            </div>
+            <div class="modal-body">
+                <div id="matchingStatus"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to simulate matching with an opponent
+    function simulateMatching() {
+        $('#settingsModal').modal('hide'); // Hide the settings modal
+        $('#simulationModal').modal('show'); // Show the simulation modal
+
+        // Simulate matching process with a delay
+        setTimeout(function() {
+            document.getElementById('matchingStatus').innerText = "Connecting you to an opponent...";
+        }, 1000);
+
+        setTimeout(function() {
+            document.getElementById('matchingStatus').innerText = "You have been linked to an opponent.";
+        }, 10000);
+
+        setTimeout(function() {
+            document.getElementById('matchingStatus').innerText = "GET READY";
+        }, 20000);
+
+        setTimeout(function() {
+            document.getElementById('matchingStatus').innerText = "GET SET";
+        }, 22000);
+
+        setTimeout(function() {
+            document.getElementById('matchingStatus').innerText = "START!";
+            $('#simulationModal').modal('hide'); // Hide the simulation modal
+            playStartSound(); // Play start sound
+            initializeQuiz(); // Initialize the quiz
+        }, 24000);
+    }
+</script>
 
 <script>
 
