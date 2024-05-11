@@ -350,7 +350,7 @@ function displayQuestion(question) {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="loadingModalLabel">Please wait as we link you to an opponent...</h5>
+                <h5 class="modal-title" id="loadingModalLabel">Please wait as we connect you to an opponent to play with...</h5>
             </div>
             <div class="modal-body">
                 <!-- Replace the text "Loading..." with the spinner -->
@@ -18408,10 +18408,12 @@ var statistics= [
 
     var selectedQuestions = []; // Array to store selected questions based on difficulty level
 
+    
  // Function to change the loading modal message
  function changeLoadingMessage(message) {
     document.getElementById('loadingModalLabel').innerText = message;
 }
+
 
 // Function to start the quiz
 function startQuiz() {
@@ -18423,23 +18425,22 @@ function startQuiz() {
 
     // Show loading modal
     $('#loadingModal').modal('show');
+// Change messages after intervals
+setTimeout(function () {
+    changeLoadingMessage('Congratulations! 🎉 We have found a perfect match for you...');
+}, 5000); // After 5 seconds
 
-    // Change messages after intervals
-    setTimeout(function () {
-        changeLoadingMessage('Congratulations, we have found a perfect match for you!');
-    }, 10000); // After 10 seconds
+setTimeout(function () {
+    changeLoadingMessage('REFRESHING QUIZ ⟳');
+}, 10000); // After 5 seconds
 
-    setTimeout(function () {
-        changeLoadingMessage('Get ready to begin the quiz!');
-    }, 20000); // After 20 seconds
 
-    // Delay starting the quiz by 10 seconds
-    setTimeout(function() {
-        $('#loadingModal').modal('hide'); // Hide loading modal after 10 seconds
-        // Call initializeQuiz only after the loading modal disappears
-        setTimeout(initializeQuiz, 1000); // Delay by 1 second to ensure modal animation completes
-    }, 30000); // 30 seconds delay
-
+// Delay starting the quiz by 10 seconds
+setTimeout(function() {
+    $('#loadingModal').modal('hide'); // Hide loading modal after 30 seconds
+    // Call initializeQuiz only after the loading modal disappears
+    setTimeout(initializeQuiz, 1000); // Delay by 1 second to ensure modal animation completes
+}, 15000); // 10 seconds delay
 
     // Assign questions based on selected topic
     if (topic === 'physicalQuantitiesandUnits') {
