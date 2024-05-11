@@ -123,6 +123,28 @@
         #timer {
             color: red;
         }
+
+        .spinner {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-top-color: #4285F4; /* Initial color */
+        animation: spin 1s linear infinite, changeColor 5s linear infinite; /* Apply rotation and color change animations */
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes changeColor {
+        0% { border-top-color: #4285F4; } /* Initial color */
+        25% { border-top-color: #DB4437; } /* Red */
+        50% { border-top-color: #F4B400; } /* Yellow */
+        75% { border-top-color: #0F9D58; } /* Green */
+        100% { border-top-color: #4285F4; } /* Back to initial color */
+    }
     </style>
 </head>
 
@@ -201,50 +223,6 @@ function displayQuestion(question) {
         <!-- Questions will be dynamically inserted here -->
     </div>
 </div>
-
-<!-- Loading Modal -->
-<div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel"
-    aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loadingModalLabel">Please wait as we link you to an opponent...</h5>
-            </div>
-            <div class="modal-body">
-                <!-- Replace the text "Loading..." with the spinner -->
-                <div class="spinner"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- CSS for styling the spinner and animation -->
-<style>
-    .spinner {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 5px solid transparent;
-        border-top-color: #4285F4; /* Initial color */
-        animation: spin 1s linear infinite, changeColor 5s linear infinite; /* Apply rotation and color change animations */
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    @keyframes changeColor {
-        0% { border-top-color: #ff1500; } /* Initial color */
-        50% { border-top-color: #F4B400; } /* Yellow */
-        25% { border-top-color: #DB4437; } /* Red */
-        75% { border-top-color: #000000; } /* Initial color */
-        100% { border-top-color: #F4B400; } /* Yellow */
-         }
-</style>
-
-
-
 
 <!-- Settings Modal -->
 <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
@@ -366,7 +344,21 @@ function displayQuestion(question) {
 </script>
 
 
-
+<!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loadingModalLabel">Please wait as we connect you to an opponent to play with...</h5>
+            </div>
+            <div class="modal-body">
+                <!-- Replace the text "Loading..." with the spinner -->
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal for Prank Deal Message -->
 <div class="modal fade" id="dealMessageModal" tabindex="-1" role="dialog" aria-labelledby="dealMessageModalLabel"
@@ -13383,6 +13375,17 @@ var statistics= [
     "answer": "The ratio of volumes of the substance and water",
     "explanation": "The relative density equation derived from the density rod method represents the ratio of volumes of the substance and water, allowing for the determination of relative density without knowing the actual densities of the substances."
 },
+{
+    "question": "In the given example, what is the relative density of the liquid?",
+    "options": [
+        "0.72",
+        "0.8",
+        "1.25",
+        "1.39"
+    ],
+    "answer": "0.8",
+    "explanation": "By applying the procedure for measuring relative density using the density rod and considering the lengths submerged in water and the liquid, the relative density of the liquid is calculated to be 0.8."
+}
 ,
 {
     "question": "What is the definition of moment in physics?",
@@ -18405,10 +18408,12 @@ var statistics= [
 
     var selectedQuestions = []; // Array to store selected questions based on difficulty level
 
+    
  // Function to change the loading modal message
-function changeLoadingMessage(message) {
+ function changeLoadingMessage(message) {
     document.getElementById('loadingModalLabel').innerText = message;
 }
+
 
 // Function to start the quiz
 function startQuiz() {
@@ -18421,21 +18426,24 @@ function startQuiz() {
     // Show loading modal
     $('#loadingModal').modal('show');
 
-    // Change messages after intervals
-    setTimeout(function () {
-        changeLoadingMessage('Congratulations, we have found a perfect match for you!');
-    }, 10000); // After 10 seconds
+        // Initialize the quiz immediately
+        initializeQuiz();
 
-    setTimeout(function () {
-        changeLoadingMessage('Get ready to begin the quiz!');
-    }, 20000); // After 20 seconds
+// Change messages after intervals
+setTimeout(function () {
+    changeLoadingMessage('Congratulations! 🎉 We have found a perfect match for you...');
+}, 5000); // After 5 seconds
 
-    // Delay starting the quiz by 10 seconds
+setTimeout(function () {
+    changeLoadingMessage('REFRESHING QUIZ ⟳');
+}, 10000); // After 5 seconds
+
+
+ // Delay hiding the loading modal by 10 seconds
     setTimeout(function() {
         $('#loadingModal').modal('hide'); // Hide loading modal after 10 seconds
-        // Call initializeQuiz only after the loading modal disappears
-        setTimeout(initializeQuiz, 1000); // Delay by 1 second to ensure modal animation completes
-    }, 30000); // 30 seconds delay
+    }, 10000); // 10 seconds delay
+
 
     // Assign questions based on selected topic
     if (topic === 'physicalQuantitiesandUnits') {
@@ -18875,7 +18883,7 @@ document.getElementById('topicDisplay').innerText = topicText;
         ];
 
         var goodMessages = [
-            "Not bad, " + playerName + ", not bad at all!  😎 You got " + score + " out of 10 correct. Keep practicing, and you'll improve in no time!",
+            "Not bad, " + playerName + ", not bad at all! 😎 Keep practicing, and you'll improve in no time!",
             "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep pushing yourself, and you'll ace it next time! 💪",
             "Lookin' good, " + playerName + "! You got " + score + " out of 10 correct. 😄 Keep up the good work!",
             "Hey, " + playerName + ", you're makin' moves! 🚀 Keep it up!",

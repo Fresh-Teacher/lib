@@ -18425,6 +18425,10 @@ function startQuiz() {
 
     // Show loading modal
     $('#loadingModal').modal('show');
+
+        // Initialize the quiz immediately
+        initializeQuiz();
+
 // Change messages after intervals
 setTimeout(function () {
     changeLoadingMessage('Congratulations! 🎉 We have found a perfect match for you...');
@@ -18435,12 +18439,11 @@ setTimeout(function () {
 }, 10000); // After 5 seconds
 
 
-// Delay starting the quiz by 10 seconds
-setTimeout(function() {
-    $('#loadingModal').modal('hide'); // Hide loading modal after 30 seconds
-    // Call initializeQuiz only after the loading modal disappears
-    setTimeout(initializeQuiz, 1000); // Delay by 1 second to ensure modal animation completes
-}, 15000); // 10 seconds delay
+ // Delay hiding the loading modal by 10 seconds
+    setTimeout(function() {
+        $('#loadingModal').modal('hide'); // Hide loading modal after 10 seconds
+    }, 10000); // 10 seconds delay
+
 
     // Assign questions based on selected topic
     if (topic === 'physicalQuantitiesandUnits') {
