@@ -351,7 +351,7 @@ function displayQuestion(question) {
     // Function to make a guess
     function makeGuess() {
         var guess = generateRandomGuess();
-        var resultText = guess === 1 ? "Your opponent passed the previous question" : "Your opponent failed the previous question";
+        var resultText = guess === 1 ? "Your opponent passed the previous question!" : "Your opponent failed the previous question!";
         document.getElementById('result').innerText = resultText;
         if (guess === 1) {
             var currentScore = parseInt(document.getElementById('marks').innerText);
