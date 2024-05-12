@@ -210,6 +210,11 @@ function displayQuestion(question) {
 </script>
 <h5>NAME : <span id="playerNameDisplay"></span></h5>
 <h5>TOPIC : <span id="topicDisplay"></span></h5>
+<h5>YOUR SCORE: <span id="scoreDisplay">0</span></h5>
+<h5>OPPONENT'S SCORE: <span id="marks">0</span></h5>
+<p id="result"></p>
+<div id="scoreboard"></div>
+
 
 <div class="container">
     <h1>TIME LEFT ⏰<p></p>
@@ -223,11 +228,6 @@ function displayQuestion(question) {
         <!-- Questions will be dynamically inserted here -->
     </div>
 </div>
-
-<div id="scoreboard">
-    <h5>Your Current Score: <span id="scoreDisplay">0</span></h5>
-</div>
-
 
 <!-- Settings Modal -->
 <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
@@ -318,6 +318,30 @@ function displayQuestion(question) {
 </div>
 
 
+</div>
+
+<script>
+    // Function to generate a random guess (0 for tail, 1 for face)
+    function generateRandomGuess() {
+        return Math.floor(Math.random() * 2);
+    }
+
+    // Function to update the scoreboard
+    function updateScoreboard(marks) {
+        document.getElementById('marks').innerText = marks;
+    }
+
+    // Function to make a guess
+    function makeGuess() {
+        var guess = generateRandomGuess();
+        var resultText = guess === 1 ? "Your opponent passed this question 😭" : "Your opponent failed this question 😁";
+        document.getElementById('result').innerText = resultText;
+        if (guess === 1) {
+            var currentScore = parseInt(document.getElementById('marks').innerText);
+            updateScoreboard(currentScore + 1);
+        }
+    }
+</script>
 
 <!-- Modal for Prank Repeat Message -->
 <div class="modal fade" id="repeatPrankModal" tabindex="-1" role="dialog" aria-labelledby="repeatPrankModalLabel"
@@ -18608,18 +18632,23 @@ document.getElementById('topicDisplay').innerText = topicText;
                 questionElement.appendChild(document.createElement('br'));
             });
 
-            var nextButton = document.createElement('button');
-            nextButton.className = 'btn btn-primary btn-block';
-            nextButton.innerText = 'Next';
-            nextButton.onclick = (function (question, index) { // Use a closure to capture the current question and index
-                return function () {
-                    checkAnswer(question.answer, index); // Pass the question answer and index to checkAnswer
-                };
-            })(question, i); // Immediately invoke the function with the current question and index
+// Modify the creation and functionality of the "Next" button
+var nextButton = document.createElement('button');
+nextButton.className = 'btn btn-primary btn-block';
+nextButton.innerText = 'Next';
+nextButton.onclick = (function (question, index) {
+    return function () {
+        checkAnswer(question.answer, index); // Pass the question answer and index to checkAnswer
 
-            questionElement.appendChild(nextButton);
-            quizElement.appendChild(questionElement);
-        }
+        // Delay the execution of the makeGuess function by 5 seconds
+        setTimeout(makeGuess, 3500);
+    };
+})(question, i); // Immediately invoke the function with the current question and index
+
+// Append the "Next" button to the question element
+questionElement.appendChild(nextButton);
+quizElement.appendChild(questionElement);
+
 
         // Show the first question
         document.querySelector('.question').style.display = 'block';
@@ -18628,7 +18657,7 @@ document.getElementById('topicDisplay').innerText = topicText;
         }
     }
 
-
+}
 
 
     var currentQuestion = 1;

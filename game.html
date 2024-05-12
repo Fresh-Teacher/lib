@@ -191,20 +191,20 @@ function displayQuestion(question) {
 <h5>TOPIC : <span id="topicDisplay"></span></h5>
 
 <div class="container">
-    <h1>TIME LEFT ⏰<p></p>
-
-        <body onload="$('#settingsModal').modal('show')">
-            <div id="timer">05:00</div>
-    </h1><br>
-    <!-- Timer display -->
-
+    <h1>TIME LEFT ⏰<p></p></h1><br>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>User Score</h3>
+            <h2 id="userScore">0</h2>
+        </div>
+        <div class="col-md-6">
+            <h3>Computer Score</h3>
+            <h2 id="computerScore">0</h2>
+        </div>
+    </div>
     <div id="quiz">
         <!-- Questions will be dynamically inserted here -->
     </div>
-</div>
-
-<div id="scoreboard">
-    <h5>Your Score: <span id="scoreDisplay">0</span></h5>
 </div>
 
 
@@ -593,8 +593,12 @@ document.getElementById('topicDisplay').innerText = topicText;
     }
     var userAnswers = []; // Array to store user's answers
 
-// Function to check answer and update score if correct
-function checkAnswer(correctAnswer, questionIndex) {
+    // Function to check answer and display explanation
+    var userScore = 0; // User's score
+var computerScore = 0; // Computer's score
+
+// Function to check answer and update scores
+function checkAnswerAndUpdateScores(correctAnswer, questionIndex) {
     var selectedOption = document.querySelector('input[name="option' + questionIndex + '"]:checked');
     if (!selectedOption) {
         alert("Please select an answer.");
@@ -615,8 +619,17 @@ function checkAnswer(correctAnswer, questionIndex) {
         return;
     }
 
-    // Update score if answer is correct
-    updateScore(1); // Increment score by 1
+    // Update user's score
+    userScore++;
+    document.getElementById('userScore').innerText = userScore;
+
+    // Simulate computer's score increment
+    var computerIncrement = Math.random() < 0.5; // 50% chance of incrementing
+    if (computerIncrement) {
+        computerScore++;
+        document.getElementById('computerScore').innerText = computerScore;
+    }
+
     document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none'; // Hide the current question
     currentQuestion++;
     if (currentQuestion <= 10) {
@@ -624,14 +637,6 @@ function checkAnswer(correctAnswer, questionIndex) {
     } else {
         calculateScore(); // Call calculateScore() when all questions are answered
     }
-}
-
-// Function to update the score
-function updateScore(points) {
-    var scoreDisplay = document.getElementById('scoreDisplay');
-    var currentScore = parseInt(scoreDisplay.innerText);
-    var newScore = currentScore + points;
-    scoreDisplay.innerText = newScore;
 }
 
 

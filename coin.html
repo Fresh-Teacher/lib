@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Probability Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #scoreboard {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Computer's Guess:</p>
+    <p id="result">-</p>
+    <button onclick="makeGuess()">Guess</button>
+    <div id="scoreboard">
+        SCORE: <span id="score">0</span>
+    </div>
+
+    <script>
+        // Function to generate a random guess (0 for tail, 1 for face)
+        function generateRandomGuess() {
+            return Math.floor(Math.random() * 2);
+        }
+
+        // Function to update the scoreboard
+        function updateScoreboard(score) {
+            document.getElementById('score').innerText = score;
+        }
+
+        // Function to make a guess
+        function makeGuess() {
+            var guess = generateRandomGuess();
+            var resultText = guess === 1 ? "Face" : "Tail";
+            document.getElementById('result').innerText = resultText;
+            if (guess === 1) {
+                var currentScore = parseInt(document.getElementById('score').innerText);
+                updateScoreboard(currentScore + 1);
+            }
+        }
+    </script>
+</body>
+</html>
