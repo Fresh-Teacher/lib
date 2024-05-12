@@ -283,21 +283,21 @@ function displayQuestion(question) {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="incorrectModalLabel">🙅🏿 INCORRECT ANSWER 🙅‍♂️
-                </h5>
+                <h5 class="modal-title" id="incorrectModalLabel">🙅🏿 INCORRECT ANSWER 🙅‍♂️</h5>
             </div>
             <div class="modal-body">
+                <p><strong>Question:</strong> <span id="question"></span></p> <!-- New question field -->
                 <p><strong>Correct Answer:</strong> <span id="correctAnswer" class="correct-answer"></span></p>
-                <p><strong>Explanation:</strong> <span id="explanation"></span></p> <!-- New explanation field -->
+                <p><strong>Explanation:</strong> <span id="explanation"></span></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-repeat-question" onclick="prankRepeatQuestion()">Repeat
-                    Question</button>
+                <button type="button" class="btn btn-danger btn-repeat-question" onclick="prankRepeatQuestion()">Repeat Question</button>
                 <button type="button" class="btn btn-primary" onclick="nextQuestion()">Next</button>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <!-- Modal for Prank Repeat Message -->
@@ -18465,22 +18465,26 @@ setTimeout(function () {
         saveSettings(); // Call saveSettings to set the player's name and other settings
     }
 
-    // Function to save settings
-    function saveSettings() {
-        var playerNameInput = document.getElementById('playerName');
-        playerName = playerNameInput.value.trim(); // Update the global playerName variable
+// Function to save settings
+function saveSettings() {
+    var playerNameInput = document.getElementById('playerName');
+    var playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
-        // Regular expression to validate the player name
-        var nameRegex = /^[a-zA-Z]+$/;
+    // Regular expression to validate the player name
+    var nameRegex = /^[\p{L}\p{M}'\- ,.&()]+$/u;
 
-        // Check if the player name is empty or contains invalid characters
-        if (playerName === '') {
-            alert('Please enter your name.');
-            return;
-        } else if (!nameRegex.test(playerName)) {
-            alert('Please enter a valid name (only letters are allowed with no spaces).');
-            return;
-        }
+    // Check if the player name is empty or contains invalid characters
+    if (playerName === '') {
+        alert('Please enter your name.');
+        return;
+    } else if (!nameRegex.test(playerName)) {
+        alert('Please enter a valid name (only letters, hyphens, and spaces are allowed).');
+        return;
+    
+
+    // Continue with saving settings if the name is valid
+    // Your further logic here...
+}
 
 // Get the selected topic
 var topic = document.getElementById('topic').value;
@@ -18622,12 +18626,15 @@ document.getElementById('topicDisplay').innerText = topicText;
             playAudio(isCorrect);
         }
 
+        
         if (!isCorrect) {
-            var currentQuestionObj = selectedQuestions[questionIndex];
-            var explanation = currentQuestionObj.explanation;
-            showIncorrectModal(correctAnswer, explanation); // Call showIncorrectModal with explanation
-            return;
-        }
+    var currentQuestionObj = selectedQuestions[questionIndex];
+    var question = currentQuestionObj.question; // Get the question text
+    var explanation = currentQuestionObj.explanation;
+    showIncorrectModal(question, correctAnswer, explanation); // Call showIncorrectModal with question, explanation
+    return;
+}
+
 
         document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none'; // Hide the current question
         currentQuestion++;
