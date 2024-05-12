@@ -224,6 +224,7 @@ function displayQuestion(question) {
     </div>
 </div>
 
+
 <!-- Settings Modal -->
 <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
     aria-hidden="true" data-backdrop="static" data-keyboard="false">
@@ -276,6 +277,19 @@ function displayQuestion(question) {
         </div>
     </div>
 </div>
+
+<!-- Modal for "Please wait" message -->
+<div class="modal fade" id="waitModal" tabindex="-1" role="dialog" aria-labelledby="waitModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Please wait, your opponent is playing...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Modal for Incorrect Answer -->
 <div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="incorrectModalLabel"
@@ -18471,11 +18485,11 @@ setTimeout(function () {
 
 // Function to save settings
 function saveSettings() {
-    var playerNameInput = document.getElementById('playerName');
-    var playerName = playerNameInput.value.trim(); // Update the global playerName variable
+        var playerNameInput = document.getElementById('playerName');
+        playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
     // Regular expression to validate the player name
-    var nameRegex = /^[\p{L}\p{M}'\- ,.&()]+$/u; // Allow letters, hyphens, and spaces and other language letters
+    var nameRegex = /^[a-zA-Z\- ]+$/; // Allow letters, hyphens, and spaces
 
     // Check if the player name is empty or contains invalid characters
     if (playerName === '') {
@@ -18486,6 +18500,43 @@ function saveSettings() {
         return;
     }
 
+
+    var playerScore = 0;
+var computerScore = 0;
+
+function checkAnswer(correctAnswer, questionIndex, isPlayer) {
+    // If it's the player's turn
+    if (isPlayer) {
+        // Handle player's answer
+        // Increment playerScore if correct
+        // Otherwise, increment computerScore
+        // Show opponent's turn modal
+        showOpponentTurnModal();
+    } else {
+        // Generate a random answer for the computer
+        var options = selectedQuestions[questionIndex].options;
+        var randomIndex = Math.floor(Math.random() * options.length);
+        var computerAnswer = options[randomIndex];
+
+        // Compare computer's answer with correctAnswer
+        // Increment computerScore if correct
+        // Otherwise, increment playerScore
+    }
+}
+
+function showOpponentTurnModal() {
+    $('#opponentTurnModal').modal('show');
+    setTimeout(function() {
+        $('#opponentTurnModal').modal('hide');
+        // Continue with the quiz
+    }, 3000);
+}
+
+// Update scoreboard
+function updateScoreboard() {
+    document.getElementById('playerScore').innerText = "Your Score: " + playerScore;
+    document.getElementById('computerScore').innerText = "Computer Score: " + computerScore;
+}
 
 // Get the selected topic
 var topic = document.getElementById('topic').value;
@@ -18612,36 +18663,45 @@ document.getElementById('topicDisplay').innerText = topicText;
     }
     var userAnswers = []; // Array to store user's answers
 
-    // Function to check answer and display explanation
     function checkAnswer(correctAnswer, questionIndex) {
-        var selectedOption = document.querySelector('input[name="option' + questionIndex + '"]:checked');
-        if (!selectedOption) {
-            alert("Please select an answer.");
-            return;
-        }
+    // Show the "Please wait" modal
+    $('#waitModal').modal('show');
 
-        var userAnswer = selectedOption.value;
-        userAnswers.push(userAnswer); // Store the user's answer
-        var isCorrect = userAnswer === correctAnswer;
-        if (soundPreference === 'on') {
-            playAudio(isCorrect);
-        }
+    // Hide the "Please wait" modal after 5 seconds
+    setTimeout(function() {
+        $('#waitModal').modal('hide');
+    }, 5000);
 
-        if (!isCorrect) {
-            var currentQuestionObj = selectedQuestions[questionIndex];
-            var explanation = currentQuestionObj.explanation;
-            showIncorrectModal(correctAnswer, explanation); // Call showIncorrectModal with explanation
-            return;
-        }
-
-        document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none'; // Hide the current question
-        currentQuestion++;
-        if (currentQuestion <= 10) {
-            document.querySelector('.question:nth-child(' + (questionIndex + 2) + ')').style.display = 'block'; // Show the next question
-        } else {
-            calculateScore(); // Call calculateScore() when all questions are answered
-        }
+    var selectedOption = document.querySelector('input[name="option' + questionIndex + '"]:checked');
+    if (!selectedOption) {
+        alert("Please select an answer.");
+        return;
     }
+
+    var userAnswer = selectedOption.value;
+    userAnswers.push(userAnswer);
+
+    var isCorrect = userAnswer === correctAnswer;
+    if (soundPreference === 'on') {
+        playAudio(isCorrect);
+    }
+
+    if (!isCorrect) {
+        var currentQuestionObj = selectedQuestions[questionIndex];
+        var explanation = currentQuestionObj.explanation;
+        showIncorrectModal(correctAnswer, explanation);
+        return;
+    }
+
+    document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none';
+    currentQuestion++;
+    if (currentQuestion <= 10) {
+        document.querySelector('.question:nth-child(' + (questionIndex + 2) + ')').style.display = 'block';
+    } else {
+        calculateScore();
+    }
+}
+
 
     function nextQuestion() {
         $('#incorrectModal').modal('hide'); // Hide the incorrect answer modal
