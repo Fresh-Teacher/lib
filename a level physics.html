@@ -18489,7 +18489,7 @@ function saveSettings() {
         playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
     // Regular expression to validate the player name
-    var nameRegex = /^[a-zA-Z\- ]+$/; // Allow letters, hyphens, and spaces
+    var nameRegex = /^[\p{L}\p{M}'\- ,.&()]+$/u;
 
     // Check if the player name is empty or contains invalid characters
     if (playerName === '') {
