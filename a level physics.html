@@ -145,6 +145,22 @@
         75% { border-top-color: #0F9D58; } /* Green */
         100% { border-top-color: #4285F4; } /* Back to initial color */
     }
+
+        /* Define the keyframes for rotating the globe */
+        @keyframes rotateGlobe {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Apply the animation to the globe emoji */
+    .globe-emoji {
+        display: inline-block;
+        animation: rotateGlobe 4s linear infinite; /* Adjust duration and timing function as needed */
+    }
     </style>
 </head>
 
@@ -186,27 +202,28 @@ function displayQuestion(question) {
 
     // Function to start the timer
     function startTimer() {
-        var timerDisplay = document.getElementById('timer');
-        var timeLeft = 300; // 5 minutes in seconds
+    var timerDisplay = document.getElementById('timer');
+    var timeLeft = 3600; // 60 minutes in seconds
 
-        // Update the timer display every second
-        timerInterval = setInterval(function () {
-            var minutes = Math.floor(timeLeft / 60);
-            var seconds = timeLeft % 60;
+    // Update the timer display every second
+    timerInterval = setInterval(function () {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
 
-            // Format minutes and seconds with leading zeros if needed
-            var formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
-            timerDisplay.textContent = formattedTime;
+        // Format minutes and seconds with leading zeros if needed
+        var formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+        timerDisplay.textContent = formattedTime;
 
-            // Check if time is up
-            if (timeLeft === 0) {
-                clearInterval(timerInterval); // Stop the timer
-                calculateScore(); // Calculate score when time is up
-            } else {
-                timeLeft--; // Decrease time by 1 second
-            }
-        }, 1000); // Update timer every second (1000 milliseconds)
-    }
+        // Check if time is up
+        if (timeLeft === 0) {
+            clearInterval(timerInterval); // Stop the timer
+            calculateScore(); // Calculate score when time is up
+        } else {
+            timeLeft--; // Decrease time by 1 second
+        }
+    }, 1000); // Update timer every second (1000 milliseconds)
+}
+
 </script>
 <h5>NAME : <span id="playerNameDisplay"></span></h5>
 <h5>TOPIC : <span id="topicDisplay"></span></h5>
@@ -420,7 +437,7 @@ function resetScores() {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="loadingModalLabel">Please wait as we connect you to an opponent to play with...</h5>
+                <h5 class="modal-title" id="loadingModalLabel">Please wait as we connect you to an opponent to play with <span class="globe-emoji">🌐</span></h5>
             </div>
             <div class="modal-body">
                 <!-- Replace the text "Loading..." with the spinner -->
@@ -18486,26 +18503,217 @@ var statistics= [
 
 // Function to start the quiz
 function startQuiz() {
+    var playerName = document.getElementById('playerName').value.trim(); // Get the player's name
+
+    // Check if the player's name is empty
+    if (playerName === '') {
+        alert('Please enter your name.'); // Show an alert message
+        return; // Exit the function if the name is empty
+    }
+
     var topic = document.getElementById('topic').value;
     if (topic === '') {
         alert('Please select a topic.');
         return;
     }
 
-    // Show loading modal
+    // Show loading modal only if all fields are filled
     $('#loadingModal').modal('show');
 
         // Initialize the quiz immediately
         initializeQuiz();
 
+        // Array list of names
+        var names = [
+    "AJIDRIRU SIAMAH",
+    "BOBOLI MUHAMMAD",
+    "MAWA RASHID",
+    "ATULE JACKLINE",
+    "ANGUCIA PALIMA ROSE",
+    "BAMUKE AKASA",
+    "EZANGU HAMID",
+    "AMANA NOAH",
+    "ANGUCIA AMANA MUNDUA",
+    "RASHID KASSIM",
+    "FUNGARO TAIRI",
+    "ALKEFA TAIRU",
+    "OKUMA SWALEH",
+    "KALSUM OTUKO ABBASI",
+    "SARAH BURAN",
+    "INGAMILE SWADIKI",
+    "IYOLE AZIZ",
+    "HASSAN AMIN ABDULAI",
+    "ONZI TOAH RAJABSON",
+    "OLEGA ZUBEIR DRANGU",
+    "AYIGA GODFREY",
+    "CHANDIGA WILSON",
+    "EVUMA WILSON TADARE",
+    "ALUMAI GODFREY",
+    "OKENGO GODFREY",
+    "ATOO JOAN",
+    "EKWANG NEKOMIAH",
+    "OKELLO SANTO",
+    "OWERA JERRY",
+    "OGWAL PAUL DULI",
+    "ASIANZU PEACE FIONAH",
+    "ATATIBO WILLIAM",
+    "ALARU NINA NOELLA DRAGUDI",
+    "DRILEONZI MORRISH",
+    "VUNI BENARD",
+    "TULITUKA NICHOLAS",
+    "KOBUSINGYE VIOLET",
+    "AKUGIZIBWE PHAZIL",
+    "IRUMBA TUGUME",
+    "MOOLI JIMMY",
+    "ATITIKIN PRISCILLA",
+    "NAKYEMA ESTHER",
+    "KAAMU EMMANUEL",
+    "MICHAEL OWEN",
+    "MUMBERE AMBROSE STUART",
+    "TAREMWA GILVASIO",
+    "BIGIRWA EDWARD",
+    "MUGUME ALLAN",
+    "TUMWEBAZE BRIAN",
+    "AKANDWANAHO SAMSON",
+    "NUWAMANYA JUSTUS",
+    "AYEBEMBERA PRECIOUS",
+    "BWAMBALE GERALD",
+    "AIJUKA BRUCE",
+    "AKANKWATSA CHRISTOPHER",
+    "NUWAHEREZA MANYIRE",
+    "OJIAMBO OWEN",
+    "ONYANGO FILEX MUGATI",
+    "JUMA HENRY JAMES",
+    "SSENABULYA ROBERT",
+    "OJAMBO ISSA",
+    "APIO JOSEPHINE BARBRA",
+    "OKUKU ANDREW MISAKI",
+    "OPIO GERALD PETER",
+    "AKENA NORBERT OKOT",
+    "OYOO BRIAN",
+    "OCAYA GEOFFREY",
+    "ATUKURI SAMANTHA",
+    "LAMUNYU PHILIP IGNATIUS",
+    "OCEN HOWARD",
+    "OPIYO GLEN",
+    "NYEKO RICHARD BURTON",
+    "ASIIMWE ANDREW",
+    "BUSINGE MARVIN",
+    "TUMWESIGE MARVIN OWEN",
+    "MUSIIME ELTON FAVOUR",
+    "BYONABYE MOSES",
+    "MUJUNI JUNIOR",
+    "TUMUHAISE UNITH",
+    "MUGANYIZI VICENT",
+    "WANKYA IVAN",
+    "NAIRUBA REBECCA",
+    "KALULU KALIMU",
+    "KAKANDE MARTIN",
+    "LWANGA NASSER",
+    "MAGANDA UMAR",
+    "MUSASIZI BRIAN",
+    "MUWANIKA JOHN VESTER",
+    "KASIMBAZI HILLARY CLINTON",
+    "MUKISA NICHOLUS",
+    "ISABIRYE GEOFREY",
+    "IBANDA BRIAN",
+    "MOGA HAITHAM",
+    "WASSWA PETER",
+    "KIBWIKA ELVIS",
+    "KAWANGUZI EMMANUEL",
+    "WALUKULI ABDU",
+    "AYEBARE SARAH",
+    "ARINAITWE MERVYN WALTER",
+    "TUKUNDANE INNOCENT JORDAN",
+    "AINEMBABAZI MIRACLE",
+    "NDUHUKIIRE ARONE",
+    "NATUMANYA GOODLUCK",
+    "NKWASIBWE SAMUEL",
+    "AKAKIKUNDA SHEILLAH",
+    "AKANJUNA BLESSING",
+    "HAPPY SIMON TUMWEBAZE",
+    "KABASINGUZI GORRET",
+    "ISINGOMA KIRUNGI FRANCIS",
+    "TUMUSIIME JOHNBOSCO",
+    "KICHONCHO FRANCIS",
+    "BUTIME TOM",
+    "BUNIHIZI PETER WALUSIMBI",
+    "KARUNGI PEACE MARIS",
+    "OKEDO EBAU KENNETH",
+    "EGETU MICHEAL",
+    "OCENG ISMAEL",
+    "OJWANG NICHOLAS",
+    "ERWENYU ISAAC",
+    "EMENYU ANTHONY",
+    "EYUTU EMMANUEL",
+    "BASHIR UMAR",
+    "SSERUMAGA ROGERS",
+    "AJUNA SARAH",
+    "ZANSANZE MILLY",
+    "NAMULEME AFIIFA LUSOKE",
+    "KAVUMA HAMZA",
+    "TINGURAGARA IDRIS",
+    "LUMUNYE SAMUEL",
+    "SSERUWU RAYMOND",
+    "NAKATO NAHIA NKINZI",
+    "NAKKU DAISY",
+    "SSETTUMBA MUSA",
+    "LUBEGA JONATHAN",
+    "NDIFUNA TEM ALI",
+    "SSENTONGO YASIN",
+    "MIREMBE ZOE",
+    "ASERU PATRICIA BYEKWASO",
+    "NABUKENYA RACHAEL",
+    "NGOBI SHAFICK",
+    "NABUWALA PETRINA",
+    "SSEBAGALA ALI",
+    "WALUSA JOSHUA",
+    "GEMAGAINE DANIEL",
+    "KALERA RICHARD ROGERS",
+    "TEIRA PRECIOUS TRICIA",
+    "NASAKA EUNICE",
+    "KAMALI IMMACULATE",
+    "KYAIRA SOLOMON",
+    "KATUSIIME BENARDATE",
+    "ABENAWE EMMANUEL",
+    "KABAGAMBE DANIEL",
+    "NATUKUNDA IVAN",
+    "AINOMUGISHA TAREMWA SAM",
+    "HABASA DAVID",
+    "TURYAGUMANAWE LOVIOUS A",
+    "TUMWESIGYE JULIANA",
+    "SUNDAY ROBERT",
+    "TUMWEBAZE FRANK",
+    "CHANCE JANET",
+    "NATUKUNDA NABOTH",
+    "ARINDA SIMAS",
+    "AKAMPURIRA VICTOR",
+    "MUGABE IVAN",
+    "KIPROTICH JACOB",
+    "CHEPKWURUI PETER",
+    "CHEBET NICOLE",
+    "MUGOYA DENIS",
+    "BWAMBALE ZYERIME",
+    "DEYA AINEA",
+    "MUHINDO AUGUSTINE",
+    "SAASI VIANNE CORONEL",
+    "BWAMBALE INNOCENT",
+    "KULE BARITAZALE",
+    "ASIMIRE PHIONAH MUZOORA",
+    "KOBUGABE TALENT",
+    "KULE ELIAS"
+];
+
+
+ // Get random name from the names array
+ var randomName = names[Math.floor(Math.random() * names.length)];
+
+
 // Change messages after intervals
 setTimeout(function () {
-    changeLoadingMessage('Congratulations! 🎉 We have found a perfect match for you...');
+changeLoadingMessage('Congratulations! 🎉 We have found a perfect match for you. You are going to play with ' + randomName);
 }, 5000); // After 5 seconds
 
-setTimeout(function () {
-    changeLoadingMessage('REFRESHING QUIZ ⟳');
-}, 10000); // After 5 seconds
 
 
  // Delay hiding the loading modal by 10 seconds
