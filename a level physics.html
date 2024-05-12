@@ -224,6 +224,10 @@ function displayQuestion(question) {
     </div>
 </div>
 
+<div id="scoreboard">
+    <h5>Your Current Score: <span id="scoreDisplay">0</span></h5>
+</div>
+
 
 <!-- Settings Modal -->
 <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
@@ -314,6 +318,7 @@ function displayQuestion(question) {
 </div>
 
 
+
 <!-- Modal for Prank Repeat Message -->
 <div class="modal fade" id="repeatPrankModal" tabindex="-1" role="dialog" aria-labelledby="repeatPrankModalLabel"
     aria-hidden="true" data-backdrop="static" data-keyboard="false">
@@ -330,6 +335,33 @@ function displayQuestion(question) {
 </div>
 
 <script>
+var playerScore = 0;
+var computerScore = 0;
+
+// Function to update the player's score
+function updateScore(scoreIncrement) {
+    playerScore += scoreIncrement;
+    document.getElementById('scoreDisplay').innerText = playerScore;
+}
+
+
+// Function to calculate computer's score (for demonstration purposes)
+function calculateComputerScore() {
+    // For demonstration, let's assume computer's score is randomly generated
+    computerScore = Math.floor(Math.random() * 11); // Random score between 0 and 10
+    updateScores();
+}
+
+// Function to reset scores
+function resetScores() {
+    playerScore = 0;
+    computerScore = 0;
+    updateScores();
+}
+
+// Example usage:
+// Call calculateComputerScore() whenever the computer answers a question
+// Call updateScores() whenever the player's score is updated
 
     // Function to handle prank repeat question button click
     function prankRepeatQuestion() {
@@ -399,9 +431,7 @@ function displayQuestion(question) {
     data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
-            </div>
+
             <div class="modal-body">
                 <p id="score"></p>
             </div>
@@ -412,6 +442,7 @@ function displayQuestion(question) {
         </div>
     </div>
 </div>
+
 
 <script>
     // Define soundPreference variable
@@ -18486,7 +18517,7 @@ setTimeout(function () {
 // Function to save settings
 function saveSettings() {
     var playerNameInput = document.getElementById('playerName');
-    var playerName = playerNameInput.value.trim(); // Update the global playerName variable
+     playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
     // Regular expression to validate the player name
     var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; //all languages alphabet name letters
@@ -18500,42 +18531,6 @@ function saveSettings() {
         return;
     }
 
-    var playerScore = 0;
-var computerScore = 0;
-
-function checkAnswer(correctAnswer, questionIndex, isPlayer) {
-    // If it's the player's turn
-    if (isPlayer) {
-        // Handle player's answer
-        // Increment playerScore if correct
-        // Otherwise, increment computerScore
-        // Show opponent's turn modal
-        showOpponentTurnModal();
-    } else {
-        // Generate a random answer for the computer
-        var options = selectedQuestions[questionIndex].options;
-        var randomIndex = Math.floor(Math.random() * options.length);
-        var computerAnswer = options[randomIndex];
-
-        // Compare computer's answer with correctAnswer
-        // Increment computerScore if correct
-        // Otherwise, increment playerScore
-    }
-}
-
-function showOpponentTurnModal() {
-    $('#opponentTurnModal').modal('show');
-    setTimeout(function() {
-        $('#opponentTurnModal').modal('hide');
-        // Continue with the quiz
-    }, 3000);
-}
-
-// Update scoreboard
-function updateScoreboard() {
-    document.getElementById('playerScore').innerText = "Your Score: " + playerScore;
-    document.getElementById('computerScore').innerText = "Computer Score: " + computerScore;
-}
 
 // Get the selected topic
 var topic = document.getElementById('topic').value;
@@ -18691,6 +18686,9 @@ document.getElementById('topicDisplay').innerText = topicText;
         showIncorrectModal(correctAnswer, explanation);
         return;
     }
+
+    // Update score if answer is correct
+    updateScore(1); // Increment score by 1
 
     document.querySelector('.question:nth-child(' + (questionIndex + 1) + ')').style.display = 'none';
     currentQuestion++;
