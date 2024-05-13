@@ -161,6 +161,84 @@
         display: inline-block;
         animation: rotateGlobe 4s linear infinite; /* Adjust duration and timing function as needed */
     }
+    #scoreboard {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  background: linear-gradient(to right, #ff5733, #ffbd33);
+  color: #fff;
+}
+
+#scoreDisplay {
+  font-size: 36px;
+  font-weight: bold;
+  color: #00ffff; /* Cyan */
+}
+
+#result {
+  font-size: 18px;
+  color: #ff00ff; /* Magenta */
+}
+
+#playerInfo {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  background: linear-gradient(to right, #ff00cc, #ff3300);
+  color: #fff;
+}
+
+#playerNameDisplay,
+#topicDisplay {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#playerNameDisplay {
+  color: #ffd700; /* Gold */
+}
+
+#topicDisplay {
+  color: #00ff00; /* Lime */
+}
+
+#modalContent {
+  background: linear-gradient(to right, #ffcc00, #ff6699, #66ff99, #a300a8); /* Your gradient colors */
+  color: #fff;
+  animation: wave 10s infinite linear alternate; /* Adjust animation duration and timing as needed */
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0; /* Start position */
+  }
+  100% {
+    background-position: 100% 0; /* End position */
+  }
+}
+
+
+#modalHeader {
+  background-color: #ff6699; /* Pink */
+}
+
+#modalBody {
+  background-color: #66ff99; /* Green */
+}
+
+#modalFooter {
+  background-color: #3399ff; /* Blue */
+}
+
+
     </style>
 </head>
 
@@ -225,9 +303,13 @@ function displayQuestion(question) {
 }
 
 </script>
-<center><h5>NAME : <span id="playerNameDisplay"></span></h5>
-<h5>TOPIC : <span id="topicDisplay"></span></h5></center>
-
+<center>
+    <div id="playerInfo">
+      <h5>NAME : <span id="playerNameDisplay"></span></h5>
+      <h5>TOPIC : <span id="topicDisplay"></span></h5>
+    </div>
+  </center>
+  
 
 <div class="container">
     <h1>TIME LEFT ⏰<p></p>
@@ -246,12 +328,12 @@ function displayQuestion(question) {
 <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
     aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" id="modalContent">
+            <div class="modal-header" id="modalHeader">
                 <h5 class="modal-title" id="settingsModalLabel"><span class="gear-icon-left">⚙️</span> GAME SETTINGS
                     <span class="gear-icon-right">⚙️</span></h5>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="modalBody">
                 <div class="form-group">
                     <label for="playerName">Player's Name 🦸</label>
                     <input type="text" class="form-control" id="playerName" placeholder="Enter your sweet name here...">
@@ -288,7 +370,7 @@ function displayQuestion(question) {
                     </label>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" id="modalFooter">
                 <button type="button" class="btn btn-primary" onclick="startQuiz()">START</button>
             </div>
         </div>
@@ -348,7 +430,7 @@ function displayQuestion(question) {
     // Function to make a guess
     function makeGuess() {
         var guess = generateRandomGuess();
-        var resultText = guess === 1 ? "Your opponent has passed the previous question!" : "Your opponent has failed the previous question!";
+        var resultText = guess === 1 ? "Your opponent has PASSED the previous question!" : "Your opponent has FAILED the previous question!";
         document.getElementById('result').innerText = resultText;
         if (guess === 1) {
             var currentScore = parseInt(document.getElementById('marks').innerText);
@@ -476,10 +558,14 @@ function resetScores() {
     </div>
 </div>
 
-<center><div id="scoreboard">
-    <h5>YOUR SCORE: <span id="scoreDisplay">0</span></h5>
-        <p id="result"></p>
-</div></center>
+<center>
+    <div id="scoreboard">
+        <h5>YOUR SCORE: <span id="scoreDisplay">0</span></h5>
+        <p id="result">Your opponent is waiting for you to start the quiz</p>
+      </div>
+      
+  </center>
+  
 
 <script>
     // Define soundPreference variable
@@ -18661,7 +18747,7 @@ function startQuiz() {
     "ASERU PATRICIA BYEKWASO",
     "NABUKENYA RACHAEL",
     "NGOBI SHAFICK",
-    "NABUWALA PETRINA",
+    "NABUWALA PATRINAH",
     "SSEBAGALA ALI",
     "WALUSA JOSHUA",
     "GEMAGAINE DANIEL",
