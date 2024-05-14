@@ -747,7 +747,7 @@ function startQuiz() {
 
 function saveSettings() {
     var playerNameInput = document.getElementById('playerName');
-    var playerName = playerNameInput.value.trim(); // Update the global playerName variable
+     playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
     // Regular expression to validate the player name
     var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; // all languages alphabet name letters
@@ -21793,7 +21793,7 @@ if (topic === 'physicalQuantitiesandUnits') {
 
     function saveSettings() {
     var playerNameInput = document.getElementById('playerName');
-     playerName = playerNameInput.value.trim(); // Update the global playerName variable
+      playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
     // Regular expression to validate the player name
     var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; // all languages alphabet name letters
@@ -21843,6 +21843,7 @@ if (topic === 'physicalQuantitiesandUnits') {
     }
 
     // Update the displayed player info
+    document.getElementById('playerNameDisplay').innerText = playerName;
     document.getElementById('classDisplay').innerText = selectedClass;
     document.getElementById('subjectDisplay').innerText = selectedSubject;
     document.getElementById('topicDisplay').innerText = topicText;
