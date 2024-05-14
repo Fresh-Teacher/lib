@@ -203,11 +203,35 @@
 }
 
 #playerNameDisplay {
+    font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: #ffd700; /* Gold */
 }
 
 #topicDisplay {
+    font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: #00ff00; /* Lime */
+}
+
+#subjectDisplay {
+    font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00fffb; /* Gold */
+}
+
+#classDisplay {
+    font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2b00ff; /* Lime */
 }
 
 #modalContent {
@@ -419,11 +443,11 @@ function displayQuestion(question) {
 <center>
     <div id="playerInfo">
       <h5>NAME : <span id="playerNameDisplay"></span></h5>
+      <h5>CLASS : <span id="classDisplay"></span></h5>
+      <h5>SUBJECT : <span id="subjectDisplay"></span></h5>
       <h5>TOPIC : <span id="topicDisplay"></span></h5>
     </div>
-  </center>
-  
-
+</center>
 <div class="container">
     <h1>TIME LEFT ⏰<p></p>
 
@@ -454,8 +478,13 @@ function displayQuestion(question) {
                     <label for="class">Class:</label>
                     <select class="form-control" id="class" onchange="loadSubjects()" required>
                         <option value="" selected disabled>Choose Class</option>
-                        <option value="class9">Class 9</option>
-                        <option value="class10">Class 10</option>
+                        <option value="senior1">Senior One</option>
+                        <option value="senior2">Senior Two</option>
+                        <option value="senior3">Senior Three</option>
+                        <option value="senior4">Senior Four</option>
+                        <option value="senior5">Senior Five</option>
+                        <option value="senior6">Senior Six</option>
+
                         <!-- Add more classes here if needed -->
                     </select>
                 </div>
@@ -618,7 +647,6 @@ function loadTopics() {
         topicDropdown.style.display = "block";
     }
 }
-
 function loadSubjects() {
     var classSelect = document.getElementById('class').value;
     var subjectDropdown = document.getElementById('subjectDropdown');
@@ -635,10 +663,18 @@ function loadSubjects() {
         // Display the subject dropdown and add options based on the selected class
         subjectDropdown.style.display = 'block';
         
-        if (classSelect === 'class9' || classSelect === 'class10') {
+        if (classSelect === 'senior1' || classSelect === 'senior2') {
             subjectSelect.innerHTML += '<option value="physics">Physics</option>';
             subjectSelect.innerHTML += '<option value="biology">Biology</option>';
-            // Add more subjects here if needed
+            // Add more subjects here if needed for these classes
+        } else if (classSelect === 'senior3' || classSelect === 'senior4') {
+            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
+            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
+            // Add more subjects here if needed for these classes
+        } else if (classSelect === 'senior5' || classSelect === 'senior6') {
+            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
+            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
+            // Add more subjects here if needed for these classes
         }
     } else {
         subjectDropdown.style.display = 'none';
@@ -676,6 +712,7 @@ function loadTopics() {
         topicsDropdown.style.display = 'none';
     }
 }
+
 
 function startQuiz() {
     var topic = document.getElementById('topic').value;
@@ -724,6 +761,14 @@ function saveSettings() {
         return;
     }
 
+    // Get the selected class
+    var classSelect = document.getElementById('class');
+    var selectedClass = classSelect.options[classSelect.selectedIndex].text;
+
+    // Get the selected subject
+    var subjectSelect = document.getElementById('subject');
+    var selectedSubject = subjectSelect.options[subjectSelect.selectedIndex].text;
+
     // Get the selected topic
     var topic = document.getElementById('topic').value;
     var topicText = '';
@@ -751,8 +796,10 @@ function saveSettings() {
         topicText = "Genetics";
     }
 
-    // Update the displayed player name and topic
+    // Update the displayed player info
     document.getElementById('playerNameDisplay').innerText = playerName;
+    document.getElementById('classDisplay').innerText = selectedClass;
+    document.getElementById('subjectDisplay').innerText = selectedSubject;
     document.getElementById('topicDisplay').innerText = topicText;
 }
 
@@ -21744,13 +21791,12 @@ if (topic === 'physicalQuantitiesandUnits') {
         saveSettings(); // Call saveSettings to set the player's name and other settings
     }
 
-// Function to save settings
-function saveSettings() {
+    function saveSettings() {
     var playerNameInput = document.getElementById('playerName');
      playerName = playerNameInput.value.trim(); // Update the global playerName variable
 
     // Regular expression to validate the player name
-    var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; //all languages alphabet name letters
+    var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; // all languages alphabet name letters
 
     // Check if the player name is empty or contains invalid characters
     if (playerName === '') {
@@ -21761,39 +21807,45 @@ function saveSettings() {
         return;
     }
 
+    // Get the selected class
+    var classSelect = document.getElementById('class');
+    var selectedClass = classSelect.options[classSelect.selectedIndex].text;
 
-// Get the selected topic
-var topic = document.getElementById('topic').value;
-var topicText = '';
+    // Get the selected subject
+    var subjectSelect = document.getElementById('subject');
+    var selectedSubject = subjectSelect.options[subjectSelect.selectedIndex].text;
 
-if (topic === 'physicalQuantitiesandUnits') {
-    topicText = 'Physical Quantities and Units';
-} else if (topic === 'kinematics') {
-    topicText = 'Kinematics';
-} else if (topic === 'vectorsAndScalars') {
-    topicText = 'Vectors and Scalars';
-} else if (topic === 'projectiles') {
-    topicText = 'Projectiles';
-} else if (topic === 'newtonsLawsOfMotion') {
-    topicText = 'Newton\'s Laws Of Motion';
-} else if (topic === 'linearMomentum') {
-    topicText = 'Linear Momentum';
-} else if (topic === 'solidFriction') {
-    topicText = 'Solid Friction';
-} else if (topic === 'workEnergyAndPower') {
-    topicText = 'Work, Energy And Power';
-} else if (topic === 'statistics') {
-    topicText = 'Statistics';
-} else if (topic === 'cellBiology') {
-    topicText = 'Cell Biology';
-} else if (topic === 'genetics') {
-    topicText = 'Genetics';
-}
+    // Get the selected topic
+    var topic = document.getElementById('topic').value;
+    var topicText = '';
+    if (topic === 'physicalQuantitiesandUnits') {
+        topicText = 'Physical Quantities and Units';
+    } else if (topic === 'kinematics') {
+        topicText = 'Kinematics';
+    } else if (topic === 'vectorsAndScalars') {
+        topicText = 'Vectors and Scalars';
+    } else if (topic === 'projectiles') {
+        topicText = 'Projectiles';
+    } else if (topic === 'newtonsLawsOfMotion') {
+        topicText = 'Newton\'s Laws Of Motion';
+    } else if (topic === 'linearMomentum') {
+        topicText = "Linear Momentum";
+    } else if (topic === 'solidFriction') {
+        topicText = 'Solid Friction';
+    } else if (topic === 'workEnergyAndPower') {
+        topicText = "Work, Energy And Power";
+    } else if (topic === 'statistics') {
+        topicText = "Statistics";
+    } else if (topic === 'cellBiology') {
+        topicText = "Cell Biology";
+    } else if (topic === 'genetics') {
+        topicText = "Genetics";
+    }
 
-// Update the displayed player name and topic
-document.getElementById('playerNameDisplay').innerText = playerName;
-document.getElementById('topicDisplay').innerText = topicText;
-
+    // Update the displayed player info
+    document.getElementById('classDisplay').innerText = selectedClass;
+    document.getElementById('subjectDisplay').innerText = selectedSubject;
+    document.getElementById('topicDisplay').innerText = topicText;
 
         // Get sound preference
         var soundOn = document.getElementById('soundOn');
