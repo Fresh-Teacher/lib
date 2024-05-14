@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Syllabus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Physics Syllabus</h1>
+
+        <div class="form-group mt-5">
+            <label for="class">Select Class:</label>
+            <select id="class" class="form-control">
+                <option value="" selected disabled>Select Class</option>
+                <option value="senior-one">Senior One</option>
+                <option value="senior-two">Senior Two</option>
+                <option value="senior-three">Senior Three</option>
+                <option value="senior-four">Senior Four</option>
+            </select>
+        </div>
+
+        <div id="term-selection" class="form-group" style="display: none;">
+            <label for="term">Select Term:</label>
+            <select id="term" class="form-control">
+                <option value="" selected disabled>Select Term</option>
+            </select>
+        </div>
+
+        <div id="theme-selection" class="form-group" style="display: none;">
+            <label for="theme">Select Theme:</label>
+            <select id="theme" class="form-control">
+                <option value="" selected disabled>Select Theme</option>
+            </select>
+        </div>
+
+        <div id="content" style="display: none;">
+            <h2>Content</h2>
+            <p id="content-details"></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const classes = {
+            "senior-one": {
+                "terms": ["Term 1", "Term 2", "Term 3"],
+                "themes": ["Introduction to Physics", "Mechanics and Properties of Matter", "Heat", "Light"]
+            },
+            "senior-two": {
+                "terms": ["Term 1", "Term 2", "Term 3"],
+                "themes": ["Mechanics and Properties of Matter", "Light", "Magnetism", "Electricity", "Earth and Space Physics"]
+            },
+            "senior-three": {
+                "terms": ["Term 1", "Term 2", "Term 3"],
+                "themes": ["Mechanics and Properties of Matter", "Light", "Waves", "Heat", "Earth and Space Physics"]
+            },
+            "senior-four": {
+                "terms": ["Term 1", "Term 2", "Term 3"],
+                "themes": ["Electricity", "Magnetism", "Electric Energy Distribution and Consumption", "Modern Physics"]
+            }
+        };
+
+        const classSelect = document.getElementById("class");
+        const termSelect = document.getElementById("term");
+        const themeSelect = document.getElementById("theme");
+        const contentDetails = document.getElementById("content-details");
+
+        classSelect.addEventListener("change", () => {
+            const selectedClass = classSelect.value;
+            const terms = classes[selectedClass].terms;
+            populateDropdown(termSelect, terms);
+            document.getElementById("term-selection").style.display = "block";
+            document.getElementById("theme-selection").style.display = "none";
+            document.getElementById("content").style.display = "none";
+        });
+
+        termSelect.addEventListener("change", () => {
+            const selectedClass = classSelect.value;
+            const selectedTerm = termSelect.value;
+            const themes = classes[selectedClass].themes;
+            populateDropdown(themeSelect, themes);
+            document.getElementById("theme-selection").style.display = "block";
+            document.getElementById("content").style.display = "none";
+        });
+
+        themeSelect.addEventListener("change", () => {
+            const selectedTheme = themeSelect.value;
+            contentDetails.textContent = `Selected Theme: ${selectedTheme}`;
+            document.getElementById("content").style.display = "block";
+        });
+
+        function populateDropdown(select, options) {
+            select.innerHTML = "";
+            options.forEach(option => {
+                const optionElem = document.createElement("option");
+                optionElem.value = option;
+                optionElem.textContent = option;
+                select.appendChild(optionElem);
+            });
+        }
+    </script>
+</body>
+</html>
