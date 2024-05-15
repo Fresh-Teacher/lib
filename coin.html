@@ -1,221 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>World Knowledge Quiz</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Schoolbell', cursive;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="path/to/your/bootstrap.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center">World Knowledge Quiz</h1>
-        <div class="text-center mb-3">
-            <label for="playerName">Enter your name:</label>
-            <input type="text" id="playerName" class="form-control w-50 mx-auto" placeholder="Your Name">
-            <div class="mt-3">
-                <label for="quizType">Choose a quiz:</label>
-                <select id="quizType" class="form-control w-50 mx-auto">
-                    <option value="cities">Cities of the World</option>
-                    <option value="countries">Countries in Continents</option>
-                    <option value="presidents">Presidents of Countries</option>
-                </select>
-            </div>
-            <button class="btn btn-primary mt-2" onclick="startQuiz()">Start Quiz</button>
+    <!-- Add your HTML content here -->
+    <input type="text" id="playerName" placeholder="Enter your name">
+    <select id="topic">
+        <option value="">Select a topic</option>
+        <option value="physicalQuantitiesandUnits">Physical Quantities and Units</option>
+        <option value="kinematics">Kinematics</option>
+        <option value="vectorsAndScalars">Vectors and Scalars</option>
+        <option value="projectiles">Projectiles</option>
+        <option value="newtonsLawsOfMotion">Newton's Laws of Motion</option>
+        <option value="linearMomentum">Linear Momentum</option>
+        <option value="solidFriction">Solid Friction</option>
+        <option value="workEnergyAndPower">Work, Energy, and Power</option>
+        <option value="statistics">Statistics</option>
+        <option value="cellBiology">Cell Biology</option>
+        <option value="genetics">Genetics</option>
+    </select>
+    <button onclick="startQuiz()">Start Quiz</button>
+
+    <div id="loadingModal" class="modal">
+        <div class="modal-content">
+            <p id="loadingMessage">Loading...</p>
         </div>
-        <div id="quiz" class="d-none">
-            <div id="questionContainer" class="text-center"></div>
-            <button id="nextButton" class="btn btn-primary mt-3 d-none" onclick="nextQuestion()">Next Question</button>
-        </div>
-        <div id="timer" class="text-center mt-3">60:00</div>
-        <div id="score" class="text-center mt-3">Score: 0</div>
     </div>
 
+    <div id="randomNamePlaceholder"></div>
+    <div id="opponentRandomName"></div>
+
     <script>
-        var cities = [
-            {
-                "question": "Which country is home to the city of Tokyo?",
-                "options": ["China", "Japan", "South Korea", "Thailand"],
-                "answer": "Japan"
-            },
-            {
-                "question": "Which country is home to the city of Sydney?",
-                "options": ["New Zealand", "Australia", "Canada", "United Kingdom"],
-                "answer": "Australia"
-            },
-            {
-                "question": "Which country is home to the city of Paris?",
-                "options": ["Germany", "France", "Italy", "Spain"],
-                "answer": "France"
-            },
-            {
-                "question": "Which country is home to the city of Moscow?",
-                "options": ["Ukraine", "Poland", "Russia", "Belarus"],
-                "answer": "Russia"
-            },
-            {
-                "question": "Which country is home to the city of Cairo?",
-                "options": ["Morocco", "South Africa", "Egypt", "Nigeria"],
-                "answer": "Egypt"
-            }
-        ];
-
-        var countries = [
-            {
-                "question": "Which continent is home to Brazil?",
-                "options": ["Africa", "Asia", "Europe", "South America"],
-                "answer": "South America"
-            },
-            {
-                "question": "Which continent is home to Germany?",
-                "options": ["Africa", "Asia", "Europe", "Australia"],
-                "answer": "Europe"
-            },
-            {
-                "question": "Which continent is home to Kenya?",
-                "options": ["Africa", "Asia", "South America", "North America"],
-                "answer": "Africa"
-            },
-            {
-                "question": "Which continent is home to Japan?",
-                "options": ["Africa", "Asia", "Europe", "South America"],
-                "answer": "Asia"
-            },
-            {
-                "question": "Which continent is home to Canada?",
-                "options": ["Africa", "Asia", "North America", "Australia"],
-                "answer": "North America"
-            }
-        ];
-
-        var presidents = [
-            {
-                "question": "Who is the president of the United States?",
-                "options": ["Joe Biden", "Donald Trump", "Barack Obama", "George Bush"],
-                "answer": "Joe Biden"
-            },
-            {
-                "question": "Who is the president of France?",
-                "options": ["Emmanuel Macron", "Francois Hollande", "Nicolas Sarkozy", "Jacques Chirac"],
-                "answer": "Emmanuel Macron"
-            },
-            {
-                "question": "Who is the president of Russia?",
-                "options": ["Vladimir Putin", "Dmitry Medvedev", "Boris Yeltsin", "Mikhail Gorbachev"],
-                "answer": "Vladimir Putin"
-            },
-            {
-                "question": "Who is the president of Brazil?",
-                "options": ["Jair Bolsonaro", "Michel Temer", "Dilma Rousseff", "Luiz Inácio Lula da Silva"],
-                "answer": "Jair Bolsonaro"
-            },
-            {
-                "question": "Who is the president of South Africa?",
-                "options": ["Cyril Ramaphosa", "Jacob Zuma", "Nelson Mandela", "Thabo Mbeki"],
-                "answer": "Cyril Ramaphosa"
-            }
-        ];
-
-        var questions = [];
-        var askedQuestions = [];
-        var score = 0;
-        var currentQuestionIndex = 0;
-        var timerInterval;
-        var timeLeft = 3600; // 60 minutes in seconds
-
-        function startQuiz() {
+        async function startQuiz() {
+            console.log('Starting quiz...');
             var playerName = document.getElementById('playerName').value.trim();
-            var quizType = document.getElementById('quizType').value;
-
+            
             if (playerName === '') {
                 alert('Please enter your name.');
                 return;
             }
 
-            if (quizType === 'cities') {
-                questions = cities;
-            } else if (quizType === 'countries') {
-                questions = countries;
-            } else if (quizType === 'presidents') {
-                questions = presidents;
-            }
-
-            document.querySelector('.text-center.mb-3').style.display = 'none';
-            document.getElementById('quiz').classList.remove('d-none');
-            startTimer();
-            loadQuestion();
-        }
-
-        function startTimer() {
-            var timerDisplay = document.getElementById('timer');
-            timerInterval = setInterval(function () {
-                var minutes = Math.floor(timeLeft / 60);
-                var seconds = timeLeft % 60;
-                var formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
-                timerDisplay.textContent = formattedTime;
-
-                if (timeLeft === 0) {
-                    clearInterval(timerInterval);
-                    alert('Time is up! Your score is ' + score);
-                } else {
-                    timeLeft--;
-                }
-            }, 1000);
-        }
-
-        function loadQuestion() {
-            if (currentQuestionIndex >= questions.length) {
-                clearInterval(timerInterval);
-                alert('Quiz finished! Your score is ' + score);
+            var topic = document.getElementById('topic').value;
+            if (topic === '') {
+                alert('Please select a topic.');
                 return;
             }
 
-            var questionData = questions[currentQuestionIndex];
-            var questionContainer = document.getElementById('questionContainer');
-            questionContainer.innerHTML = '<h3>' + questionData.question + '</h3>';
+            $('#loadingModal').modal('show');
 
-            questionData.options.forEach((option, index) => {
-                var optionInput = document.createElement('input');
-                optionInput.type = 'radio';
-                optionInput.name = 'option';
-                optionInput.value = option;
-                optionInput.id = 'option' + index;
+            console.log('Fetching questions for topic:', topic);
+            selectedQuestions = await fetchQuestions(topic);
 
-                var optionLabel = document.createElement('label');
-                optionLabel.htmlFor = 'option' + index;
-                optionLabel.innerText = option;
+            if (!selectedQuestions) {
+                alert('Failed to load questions for the selected topic.');
+                $('#loadingModal').modal('hide');
+                return;
+            }
 
-                questionContainer.appendChild(optionInput);
-                questionContainer.appendChild(optionLabel);
-                questionContainer.appendChild(document.createElement('br'));
-            });
+            console.log('Fetching names...');
+            var names = await fetchNames();
+            console.log('Fetched names:', names);
 
-            document.getElementById('nextButton').classList.remove('d-none');
+            if (!names || names.length === 0) {
+                alert('Failed to load names.');
+                $('#loadingModal').modal('hide');
+                return;
+            }
+
+            saveSettings();
+            initializeQuiz();
+            changeLoadingMessageWithRandomName(names);
         }
 
-        function nextQuestion() {
-            var selectedOption = document.querySelector('input[name="option"]:checked');
-            if (selectedOption) {
-                var answer = selectedOption.value;
-                if (answer === questions[currentQuestionIndex].answer) {
-                    score++;
-                    document.getElementById('score').textContent = 'Score: ' + score;
+        async function fetchQuestions(topic) {
+            try {
+                const response = await fetch(`${topic}.json`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
                 }
-                currentQuestionIndex++;
-                loadQuestion();
-            } else {
-                alert('Please select an answer.');
+                const data = await response.json();
+                console.log('Questions fetched successfully:', data);
+                return data;
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+                return null;
             }
         }
-    </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        async function fetchNames() {
+            try {
+                const response = await fetch('names.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const data = await response.json();
+                console.log('Names JSON:', data);
+                return data.names;
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+                return [];
+            }
+        }
+
+        // Shuffle function to shuffle the array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function changeLoadingMessageWithRandomName(names) {
+            console.log('Shuffling names...');
+            var shuffledNames = shuffleArray(names);
+
+            var randomName = shuffledNames[Math.floor(Math.random() * shuffledNames.length)];
+            console.log('Random name selected:', randomName);
+
+            setTimeout(function () {
+                changeLoadingMessage('Congratulations! 🎉 You are going to play this quiz with ' + randomName);
+            }, 5000);
+
+            document.getElementById('randomNamePlaceholder').innerText = randomName;
+            document.getElementById('opponentRandomName').innerText = randomName;
+
+            setTimeout(function() {
+                $('#loadingModal').modal('hide');
+            }, 10000);
+        }
+
+        function changeLoadingMessage(message) {
+            document.getElementById('loadingMessage').innerText = message;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Call initialize functions or any setup logic if needed
+        });
+    </script>
 </body>
 </html>
