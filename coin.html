@@ -591,7 +591,43 @@ quizElement.appendChild(questionElement);
 
     var currentAudio = null; // Global variable to store the current audio element
 
-  
+    var excellentMessages = [ 
+            "Wow! Look at you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score, huh? Are you secretly a superhero in this subject? 🦸‍♂️",
+                 "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score alert! You're acing this game! 🚨",
+            ]
+        var greatMessages =["Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10/10! You're like a migical wizard! 🧙‍♂️",
+            "Amazing work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're on fire! 🔥",
+         ]
+        var goodMessages =["Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! Keep up the phenomenal work! 👏",
+            "You're unstoppable, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're one real hell of a genius! 🌟",
+          ]
+        var tryHarderMessages = ["No way, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're the champion! 🏆",
+            "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. A flawless performance! Keep up the fantastic work! 🌈",
+]
+
+// Function to shuffle an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+var messageArray;
+if (score === 10) {
+    messageArray = shuffleArray(excellentMessages);
+} else if (score >= 8 && score < 10) {
+    messageArray = shuffleArray(greatMessages);
+} else if (score >= 3 && score <= 7) {
+    messageArray = shuffleArray(goodMessages);
+} else {
+    messageArray = shuffleArray(tryHarderMessages);
+}
+
+var randomIndex = Math.floor(Math.random() * messageArray.length);
+message = messageArray[randomIndex];
+
 </script>
 
 
