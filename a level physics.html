@@ -4087,11 +4087,16 @@ message = messageArray[randomIndex];
         location.reload();
     }
 
-    // Function to play start sound
-    function playStartSound() {
-        var audio = new Audio('start.mp3');
-        audio.play();
-    }
+// Function to play start sound
+function playStartSound() {
+    var audio = new Audio('start.mp3');
+    audio.play();
+    audio.addEventListener('ended', function() {
+        // Remove the audio element from the DOM after it finishes playing
+        audio.remove();
+    });
+}
+
 
 </script>
 
