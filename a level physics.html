@@ -664,7 +664,8 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="gp">GP </option>';
         subjectSelect.innerHTML += '<option value="history">History </option>';
         subjectSelect.innerHTML += '<option value="literature">Literature </option>';
-        subjectSelect.innerHTML += '<option value="mathematics">Mathematics </option>';
+        subjectSelect.innerHTML += '<option value="subMathematics">Sub-Maths </option>';
+        subjectSelect.innerHTML += '<option value="pureMathematics">Pure Maths </option>';
         subjectSelect.innerHTML += '<option value="physics">Physics </option>';
     } else if (classSelect === 'senior6') {
         // Subjects for Senior Six
@@ -687,7 +688,8 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="kiswahili">Kiswahili </option>';
         subjectSelect.innerHTML += '<option value="literature">Literature </option>';
         subjectSelect.innerHTML += '<option value="luganda">Luganda </option>';
-        subjectSelect.innerHTML += '<option value="mathematics">Mathematics </option>';
+        subjectSelect.innerHTML += '<option value="subMathematics">Sub-Maths </option>';
+        subjectSelect.innerHTML += '<option value="pureMathematics">Pure Maths </option>';
         subjectSelect.innerHTML += '<option value="mixed">Mixed </option>';
     }
 } else {
@@ -945,89 +947,283 @@ function loadTopics() {
             <option value="changesInPopulation">Changes in Population</option>
             <option value="associationsInBiologicalCommunities">Associations in Biological Communities</option>
             <option value="humansAndNaturalEnvironment">Humans and Natural Environment</option>`;
-    } else if (classSelect === 'senior5') {
+    } else if (subjectSelect === 'biology') {
+    // Topics for Biology
+    if (classSelect === 'senior5') {
+        // Senior Five Topics
         topicSelect.innerHTML += `
-        <option value="cellBiology">Cell Biology</option>
-            <option value="cellStructureAndMicroscopy">Cell Structure and Microscopy</option>
-            <option value="diversityOfSpecialisedCellsAndTissues">Diversity of Specialised Cells and Tissues</option>
-            <option value="chromosomes">Chromosomes</option>
-            <option value="cellDivisionAndChromosomeConcept">Cell Division and Chromosome Concept</option>
-            <option value="proteinSynthesis">Protein Synthesis</option>
-            <option value="chemicalsOfLife">Chemicals of Life</option>
-            <option value="acidsBasesAndSalts">Acids, Bases and Salts</option>
-            <option value="water">Water</option>
-            <option value="structureOfCarbohydrates">Structure of Carbohydrates</option>
-            <option value="structureOfLipids">Structure of Lipids</option>
-            <option value="structureOfProteins">Structure of Proteins</option>
-            <option value="vitamins">Vitamins</option>
-            <option value="enzymes">Enzymes</option>
-            <option value="cellPhysiology">Cell Physiology</option>
-            <option value="movementInAndOutOfCells">Movement In and Out of Cells</option>
-            <option value="levelsOfOrganisationAndDiversityOfLife">Levels of Organisation and Diversity of Life</option>
-            <option value="diversityOfLivingThings">Diversity of Living Things</option>
-            <option value="viruses">Viruses (Akaryotae)</option>
-            <option value="kingdomMonera">Kingdom Monera</option>
-            <option value="kingdomProtoctista">Kingdom Protoctista</option>
-            <option value="kingdomFungi">Kingdom Fungi</option>
-            <option value="kingdomPlantae">Kingdom Plantae</option>
-            <option value="kingdomAnimalia">Kingdom Animalia</option>
-            <option value="ecology">Ecology</option>
-            <option value="componentsOfTheEnvironment">Components of the Environment</option>
-            <option value="conceptOfEcosystem">Concept of Ecosystem</option>
-            <option value="populationAndNaturalResources">Population and Natural Resources</option>
-            <option value="interdependence">Interdependence</option>
-            <option value="effectsOfHumanActivitiesOnEcosystems">Effects of Human Activities on Ecosystems</option>
-            <option value="inheritanceAndEvolution">Inheritance and Evolution</option>
-            <option value="genetics">Genetics</option>
-            <option value="chromosomesAndGenes">Chromosomes and Genes</option>
-            <option value="variation">Variation</option>
-            <option value="populationGenetics">Population Genetics</option>
-            <option value="originOfLife">Origin of Life</option>
-            <option value="mechanismsOfEvolution">Mechanisms of Evolution</option>
-            <option value="evidenceOfEvolution">Evidence of Evolution</option>
-            <option value="selectionAndSpeciation">Selection and Speciation</option>
-            <option value="transport">Transport</option>
-            <option value="necessityForTransportSystems">Necessity for Transport Systems</option>
-            <option value="waterAsAMediumInPlantsAndAnimals">Water as a Medium in Plants and Animals</option>
-            <option value="circulatorySystemsInAnimals">Circulatory Systems in Animals</option>
-            <option value="defenceAgainstDiseases">Defence against Diseases</option>
-            <option value="vascularSystemOfFloweringPlants">Vascular System of Flowering Plants</option>
-            `;
+                <optgroup label="Cell Biology">
+                    <option value="cellStructureAndMicroscopy">Cell Structure and Microscopy</option>
+                    <option value="diversityOfSpecialisedCellsAndTissues">Diversity of Specialised Cells and Tissues</option>
+                    <option value="chromosomes">Chromosomes</option>
+                    <option value="cellDivisionAndChromosomeConcept">Cell Division and Chromosome Concept</option>
+                    <option value="proteinSynthesis">Protein Synthesis</option>
+                </optgroup>
+                <optgroup label="Chemicals of Life">
+                    <option value="acidsBasesAndSalts">Acids, Bases and Salts</option>
+                    <option value="water">Water</option>
+                    <option value="structureOfCarbohydrates">Structure of Carbohydrates</option>
+                    <option value="structureOfLipids">Structure of Lipids</option>
+                    <option value="structureOfProteins">Structure of Proteins</option>
+                    <option value="vitamins">Vitamins</option>
+                    <option value="enzymes">Enzymes</option>
+                </optgroup>
+            </optgroup>
+                <optgroup label="Cell Physiology">
+                    <option value="movementInAndOutOfCells">Movement In and Out of Cells</option>
+                </optgroup>
+                <optgroup label="Levels of Organisation and Diversity of Life">
+                    <option value="diversityOfLivingThings">Diversity of Living Things</option>
+                    <option value="viruses">Viruses (Akaryotae)</option>
+                    <option value="kingdomMonera">Kingdom Monera</option>
+                    <option value="kingdomProtoctista">Kingdom Protoctista</option>
+                    <option value="kingdomFungi">Kingdom Fungi</option>
+                    <option value="kingdomPlantae">Kingdom Plantae</option>
+                    <option value="kingdomAnimalia">Kingdom Animalia</option>
+                </optgroup>
+                <optgroup label="Ecology">
+                    <option value="componentsOfTheEnvironment">Components of the Environment</option>
+                    <option value="conceptOfEcosystem">Concept of Ecosystem</option>
+                    <option value="populationAndNaturalResources">Population and Natural Resources</option>
+                    <option value="interdependence">Interdependence</option>
+                    <option value="effectsOfHumanActivitiesOnEcosystems">Effects of Human Activities on Ecosystems</option>
+                </optgroup>
+            </optgroup>
+                <optgroup label="Inheritance and Evolution">
+                    <option value="genetics">Genetics</option>
+                    <option value="chromosomesAndGenes">Chromosomes and Genes</option>
+                    <option value="variation">Variation</option>
+                    <option value="populationGenetics">Population Genetics</option>
+                    <option value="originOfLife">Origin of Life</option>
+                    <option value="mechanismsOfEvolution">Mechanisms of Evolution</option>
+                    <option value="evidenceOfEvolution">Evidence of Evolution</option>
+                    <option value="selectionAndSpeciation">Selection and Speciation</option>
+                </optgroup>
+                <optgroup label="Transport">
+                    <option value="necessityForTransportSystems">Necessity for Transport Systems</option>
+                    <option value="waterAsAMediumInPlantsAndAnimals">Water as a Medium in Plants and Animals</option>
+                    <option value="circulatorySystemsInAnimals">Circulatory Systems in Animals</option>
+                    <option value="defenceAgainstDiseases">Defence against Diseases</option>
+                    <option value="vascularSystemOfFloweringPlants">Vascular System of Flowering Plants</option>
+                </optgroup>
+            </optgroup>`;
     } else if (classSelect === 'senior6') {
+        // Senior Six Topics
         topicSelect.innerHTML += `
-        <option value="nutrition">Nutrition</option>
-            <option value="autotrophicNutrition">Autotrophic Nutrition</option>
-            <option value="heterotrophism">Heterotrophism</option>
-            <option value="gaseousExchange">Gaseous Exchange</option>
-            <option value="principlesOfGaseousExchangeSystems">Principles of Gaseous Exchange Systems</option>
-            <option value="gaseousExchangeInPlants">Gaseous Exchange in Plants</option>
-            <option value="gaseousExchangeInAnimals">Gaseous Exchange in Animals</option>
-            <option value="respiration">Respiration</option>
-            <option value="generalPrinciplesOfHomeostasis">General Principles of Homeostasis</option>
-            <option value="regulationOfGlucose">Regulation of Glucose</option>
-            <option value="regulationOfRespiratoryGases">Regulation of Respiratory Gases</option>
-            <option value="temperatureRegulation">Temperature Regulation</option>
-            <option value="excretion">Excretion</option>
-            <option value="osmoregulation">Osmoregulation</option>
-            <option value="coordination">Coordination</option>
-            <option value="conceptsOfReceptionAndResponseInPlants">Concepts of Reception and Response in Plants</option>
-            <option value="plantHormones">Plant Hormones</option>
-            <option value="responseAndBehaviourInAnimals">Response and Behaviour in Animals</option>
-            <option value="generalPrinciplesOfReceptionAndResponseInAnimals">General Principles of Reception and Response in Animals</option>
-            <option value="nervousCoordinationInAnimals">Nervous Coordination in Animals</option>
-            <option value="hormonalCoordinationInAnimals">Hormonal Coordination in Animals</option>
-            <option value="supportAndMovement">Support and Movement</option>
-            <option value="supportSystemsInPlantsAndAnimals">Support Systems in Plants and Animals</option>
-            <option value="muscles">Muscles</option>
-            <option value="movementLocomotion">Movement/Locomotion</option>
-            <option value="reproductionGrowthAndDevelopment">Reproduction, Growth, and Development</option>
-            <option value="asexualReproduction">Asexual Reproduction</option>
-            <option value="sexualReproductionInAnimals">Sexual Reproduction in Animals</option>
-            <option value="sexualReproductionInLowerOrganismsAndPlants">Sexual Reproduction in Lower Organisms and Plants</option>
-            <option value="growthAndDevelopment">Growth and Development</option>            `;
+                <optgroup label="Nutrition">
+                    <option value="autotrophicNutrition">Autotrophic Nutrition</option>
+                    <option value="heterotrophism">Heterotrophism</option>
+                </optgroup>
+                <optgroup label="Gaseous Exchange">
+                    <option value="principlesOfGaseousExchangeSystems">Principles of Gaseous Exchange Systems</option>
+                    <option value="gaseousExchangeInPlants">Gaseous Exchange in Plants</option>
+                    <option value="gaseousExchangeInAnimals">Gaseous Exchange in Animals</option>
+                </optgroup>
+                <optgroup label="Respiration">
+                    <option value="respiration">Respiration</option>
+                </optgroup>
+                <optgroup label="Homeostasis">
+                    <option value="generalPrinciplesOfHomeostasis">General Principles of Homeostasis</option>
+                    <option value="regulationOfGlucose">Regulation of Glucose</option>
+                    <option value="regulationOfRespiratoryGases">Regulation of Respiratory Gases</option>
+                    <option value="temperatureRegulation">Temperature Regulation</option>
+                    <option value="excretion">Excretion</option>
+                    <option value="osmoregulation">Osmoregulation</option>
+                </optgroup>
+            </optgroup>
+                <optgroup label="Coordination">
+                    <option value="conceptsOfReceptionAndResponseInPlants">Concepts of Reception and Response in Plants</option>
+                    <option value="plantHormones">Plant Hormones</option>
+                    <option value="responseAndBehaviourInAnimals">Response and Behaviour in Animals</option>
+                    <option value="generalPrinciplesOfReceptionAndResponseInAnimals">General Principles of Reception and Response in Animals</option>
+                    <option value="nervousCoordinationInAnimals">Nervous Coordination in Animals</option>
+                    <option value="hormonalCoordinationInAnimals">Hormonal Coordination in Animals</option>
+                </optgroup>
+                <optgroup label="Support and Movement">
+                    <option value="supportSystemsInPlantsAndAnimals">Support Systems in Plants and Animals</option>
+                    <option value="muscles">Muscles</option>
+                    <option value="movementLocomotion">Movement / Locomotion</option>
+                </optgroup>
+                <optgroup label="Reproduction, Growth and Development">
+                    <option value="asexualReproduction">Asexual Reproduction</option>
+                    <option value="sexualReproductionInAnimals">Sexual Reproduction in Animals</option>
+                    <option value="sexualReproductionInLowerOrganismsAndPlants">Sexual Reproduction in Lower Organisms and Plants</option>
+                    <option value="growthAndDevelopment">Growth and Development</option>
+                </optgroup>
+          
+            </optgroup>`;
+        }
+    }
+    
+    // Add more topics for other classes as needed
+}
+if (subjectSelect === 'mathematics') {
+    // Topics for Mathematics
+    if (classSelect === 'senior1') {
+        // Senior One Topics
+        topicSelect.innerHTML += `
+            <option value="numberBases">Number Bases</option>
+            <option value="workingWithIntegers">Working with Integers</option>
+            <option value="fractionsPercentagesAndDecimals">Fractions, Percentages and Decimals</option>
+            <option value="rectangularCartesianCoordinatesIn2Dimensions">Rectangular Cartesian Coordinates in 2-Dimensions</option>
+            <option value="geometricConstructionsSkills">Geometric Constructions Skills</option>
+            <option value="sequenceAndPatterns">Sequence and Patterns</option>
+            <option value="bearings">Bearings</option>
+            <option value="generalAndAnglePropertiesOfGeometricFigures">General and Angle Properties of Geometric Figures</option>
+            <option value="dataCollectionAndPresentation">Data Collection and Presentation</option>
+            <option value="reflection">Reflection</option>
+            <option value="equationOfLinesAndCurves">Equation of Lines and Curves</option>
+            <option value="algebra1">Algebra 1</option>
+            <option value="businessArithmetic">Business Arithmetic</option>
+            <option value="timeAndTimeTables">Time and Time Tables</option>`;
+    } else if (classSelect === 'senior2') {
+        // Senior Two Topics
+        topicSelect.innerHTML += `
+            <option value="mappingsAndRelations">Mappings and Relations</option>
+            <option value="vectorsAndTranslation">Vectors and Translation</option>
+            <option value="graphs">Graphs</option>
+            <option value="numericalConcept1">Numerical Concept 1: (Indices and Logarithms)</option>
+            <option value="inequalitiesAndRegions">Inequalities and Regions</option>
+            <option value="algebra2">Algebra 2</option>
+            <option value="similaritiesAndEnlargement">Similarities and Enlargement</option>
+            <option value="circle">Circle</option>
+            <option value="rotation">Rotation</option>
+            <option value="lengthAndAreaPropertiesOf2DGeometricalFigures">Length and Area Properties of Two Dimensional Geometrical Figures</option>
+            <option value="netsAreasAndVolumesOfSolids">Nets, Areas and Volumes of Solids</option>
+            <option value="numericalConcept2">Numerical Concept 2 (Indices, Logarithms and Surds)</option>
+            <option value="setTheory">Set Theory</option>`;
+    } else if (classSelect === 'senior3') {
+        // Senior Three Topics
+        topicSelect.innerHTML += `
+            <option value="equationOfAStraightLine">Equation of a Straight Line</option>
+            <option value="trigonometry1">Trigonometry 1</option>
+            <option value="dataCollectionDisplay">Data Collection / Display</option>
+            <option value="vectors">Vectors</option>
+            <option value="ratiosAndProportions">Ratios and Proportions</option>
+            <option value="businessMathematics">Business Mathematics</option>
+            <option value="trigonometry2">Trigonometry 2</option>
+            <option value="matrices">Matrices</option>
+            <option value="matrixTransformations">Matrix Transformations</option>
+            <option value="simultaneousEquations">Simultaneous Equations</option>
+            <option value="probability">Probability</option>
+            <option value="quadraticEquations">Quadratic Equations</option>
+            <option value="circleProperties">Circle Properties</option>`;
+    } else if (classSelect === 'senior4') {
+        // Senior Four Topics
+        topicSelect.innerHTML += `
+            <option value="compositeFunctions">Composite Functions</option>
+            <option value="linearProgramming">Linear-Programming</option>
+            <option value="equationsAndInequalities">Equations and Inequalities</option>
+            <option value="loci">Loci</option>
+            <option value="linesAndPlanesInThreeDimensions">Lines and Planes in Three Dimensions</option>`;
     }
     // Add more topics for other classes as needed
 }
+if (subjectSelect === 'subMathematics') {
+    // Topics for Sub Mathematics
+    if (classSelect === 'senior5') {
+        // Senior Five Topics
+        topicSelect.innerHTML += `
+            <option value="matricesAndTheirApplications">Matrices and their Applications</option>
+            <option value="linearProgramming">Linear Programming</option>
+            <option value="quadratics">Quadratics</option>
+            <option value="statistics">Statistics</option>
+            <optgroup label="Statistics">
+                <option value="introductionToDataCollection">Introduction to Data Collection</option>
+                <option value="organisationOfData">Organisation of Data</option>
+                <option value="measuresOfCentralTendency">Measures of Central Tendency</option>
+                <option value="measuresOfVariation">Measures of Variation (Dispersion)</option>
+            </optgroup>
+            <option value="indicesLogarithmsAndSurds">Indices, Logarithms and Surds</option>
+            <optgroup label="Indices, Logarithms and Surds">
+                <option value="indices">Indices</option>
+                <option value="logarithms">Logarithms</option>
+                <option value="surds">Surds</option>
+            </optgroup>
+            <option value="series">Series</option>
+            <optgroup label="Series">
+                <option value="patternsAndSequences">Patterns and Sequences</option>
+                <option value="arithmeticProgression">Arithmetic Progression</option>
+                <option value="geometricProgression">Geometric Progression</option>
+            </optgroup>
+            <option value="permutationsAndCombinations">Permutations and Combinations</option>
+            <optgroup label="Permutations and Combinations">
+                <option value="permutations">Permutations</option>
+                <option value="combinations">Combinations</option>
+            </optgroup>
+            <option value="movingAverages">Moving Averages</option>
+            <option value="indexNumbers">Index Numbers</option>
+            <option value="scatterDiagramsAndCorrelations">Scatter Diagrams and Correlations</option>
+            <option value="vectors">Vectors</option>
+            <option value="trigonometry">Trigonometry</option>
+            <option value="probabilityTheory">Probability Theory</option>`;
+    } else if (classSelect === 'senior6') {
+        // Senior Six Topics
+        topicSelect.innerHTML += `
+            <option value="differentiation">Differentiation</option>
+            <optgroup label="Differentiation">
+                <option value="derivativeOfAFunction">Derivative of a Function</option>
+                <option value="maximisationAndMinimisation">Maximisation and Minimisation</option>
+                <option value="curveSketching">Curve Sketching</option>
+                <option value="displacementVelocityAndAcceleration">Displacement, Velocity and Acceleration</option>
+            </optgroup>
+            <option value="discreteRandomVariables">Discrete Random Variables</option>
+            <optgroup label="Discrete Random Variables">
+                <option value="binomialDistribution">Binomial Distribution</option>
+            </optgroup>
+            <option value="integration">Integration</option>
+            <optgroup label="Integration">
+                <option value="definiteAndIndefiniteIntegrals">Definite and Indefinite Integrals</option>
+                <option value="areaUnderACurve">Area under a Curve</option>
+                <option value="displacementVelocityAndAcceleration">Displacement, Velocity and Acceleration</option>
+            </optgroup>
+            <option value="continuousRandomVariables">Continuous Random Variables</option>
+            <option value="normalDistribution">Normal Distribution</option>
+            <option value="differentialEquations">Differential Equations</option>`;
+    }
+    // Add more topics for other classes as needed
+}
+ if (subjectSelect === 'pureMathematics') {
+        // Topics for Pure Mathematics
+        if (classSelect === 'senior5') {
+            // Senior Five Topics
+            topicSelect.innerHTML +=  `
+                    <option value="indicesLogarithmsSurds">Indices, Logarithms, and Surds</option>
+                    <option value="equations">Equations</option>
+                    <option value="polynomials">Polynomials</option>
+                    <option value="partialFractions">Partial Fractions</option>
+                    <option value="trigonometry">Trigonometry</option>
+                </optgroup>
+                    <option value="vectors">Vectors</option>
+                    <option value="coordinateGeometryI">Coordinate Geometry I</option>
+                    <option value="differentiationI">Differentiation I</option>
+                </optgroup>
+                    <option value="integrationI">Integration I</option>
+                    <option value="series">Series</option>
+                    <option value="permutationsCombinations">Permutations and Combinations</option>
+                    <option value="binomialTheorem">Binomial Theorem</option>
+                </optgroup>
+            `;
+        } else if (classSelect === 'senior6') {
+            // Senior Six Topics
+            topicSelect.innerHTML += `
+                    <option value="trigonometryCalculus">Trigonometry (Calculus)</option>
+                    <option value="exponentialLogarithmicFunctions">Exponential and Logarithmic Functions</option>
+                    <option value="maclaurinsTheorem">Maclaurin’s Theorem</option>
+                    <option value="integrationII">Integration II</option>
+                    <option value="differentialEquations">Differential Equations</option>
+                </optgroup>
+                    <option value="inequalities">Inequalities</option>
+                    <option value="furtherCurveSketching">Further Curve Sketching</option>
+                    <option value="coordinateGeometryII">Coordinate Geometry II</option>
+                    <option value="coordinateGeometryIII">Coordinate Geometry III (Conics)</option>
+                </optgroup>
+                    <option value="complexNumbers">Complex Numbers</option>
+                </optgroup>
+            `;
+        }
+    }
+    // Add other subjects as needed
 
     // Add more subjects and their topics for other classes as needed
 } else {
