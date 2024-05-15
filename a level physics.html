@@ -3446,6 +3446,31 @@ document.getElementById('opponentRandomName').innerText = randomName;
     }, 10000); // 10 seconds delay
 
 
+// Assign questions based on selected topic
+if (topic === 'physicalQuantitiesandUnits') {
+    selectedQuestions = physicalQuantitiesandUnits;
+} else if (topic === 'kinematics') {
+    selectedQuestions = kinematics;
+} else if (topic === 'vectorsAndScalars') {
+    selectedQuestions = vectorsAndScalars;
+} else if (topic === 'projectiles') {
+    selectedQuestions = projectiles;
+} else if (topic === 'newtonsLawsOfMotion') {
+    selectedQuestions = newtonsLawsOfMotion;
+} else if (topic === 'linearMomentum') {
+    selectedQuestions = linearMomentum;
+} else if (topic === 'solidFriction') {
+    selectedQuestions = solidFriction;
+} else if (topic === 'workEnergyAndPower') {
+    selectedQuestions = workEnergyAndPower;
+} else if (topic === 'statistics') {
+    selectedQuestions = statistics;
+} else if (topic === 'cellBiology') {
+    selectedQuestions = cellBiology;
+} else if (topic === 'genetics') {
+    selectedQuestions = genetics;
+}
+
         saveSettings(); // Call saveSettings to set the player's name and other settings
     }
 
@@ -3516,64 +3541,69 @@ document.getElementById('opponentRandomName').innerText = randomName;
     }
 
     function initializeQuiz() {
-    startTimer();
+        // Start the timer
+        startTimer();
 
-    if (soundPreference === '') {
-        $('#settingsModal').modal('show');
-        return;
+        if (soundPreference === '') {
+            $('#settingsModal').modal('show');
+            return;
+        }
+
+        var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
+        var quizElement = document.getElementById('quiz');
+        for (var i = 0; i < randomQuestions.length; i++) {
+            var question = randomQuestions[i];
+            var questionElement = document.createElement('div');
+            questionElement.className = 'question';
+            questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
+                '<p>' + question.question + '</p>';  // Corrected from question.text to question.question
+
+
+
+            // Create radio buttons for each option
+            question.options.forEach((option, index) => {
+                var optionInput = document.createElement('input');
+                optionInput.type = 'radio';
+                optionInput.name = 'option' + i;
+                optionInput.value = option;
+                optionInput.id = 'option' + i + '_' + index;
+
+                let optionLabel = document.createElement('label');
+                optionLabel.htmlFor = 'option' + i + '_' + index;
+                optionLabel.innerText = option;
+
+                questionElement.appendChild(optionInput);
+                questionElement.appendChild(optionLabel);
+                questionElement.appendChild(document.createElement('br'));
+            });
+
+// Modify the creation and functionality of the "Next" button
+var nextButton = document.createElement('button');
+nextButton.className = 'btn btn-primary btn-block';
+nextButton.innerText = 'Next';
+nextButton.onclick = (function (question, index) {
+    return function () {
+        checkAnswer(question.answer, index); // Pass the question answer and index to checkAnswer
+
+        // Delay the execution of the makeGuess function by 5 seconds
+        setTimeout(makeGuess, 3500);
+    };
+})(question, i); // Immediately invoke the function with the current question and index
+
+// Append the "Next" button to the question element
+questionElement.appendChild(nextButton);
+quizElement.appendChild(questionElement);
+
+
+        // Show the first question
+        document.querySelector('.question').style.display = 'block';
+        if (soundPreference === 'on') {
+            playStartSound(); // Play start sound if sound preference is 'on'
+        }
     }
 
-    var randomQuestions = selectRandomQuestions(10);
-    var quizElement = document.getElementById('quiz');
-    quizElement.innerHTML = ''; // Clear any existing content
-
-    for (var i = 0; i < randomQuestions.length; i++) {
-        var question = randomQuestions[i];
-        var questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
-            '<p>' + question.question + '</p>'; // Corrected from question.text to question.question
-
-        question.options.forEach((option, index) => {
-            var optionInput = document.createElement('input');
-            optionInput.type = 'radio';
-            optionInput.name = 'option' + i;
-            optionInput.value = option;
-            optionInput.id = 'option' + i + '_' + index;
-
-            let optionLabel = document.createElement('label');
-            optionLabel.htmlFor = 'option' + i + '_' + index;
-            optionLabel.innerText = option;
-
-            questionElement.appendChild(optionInput);
-            questionElement.appendChild(optionLabel);
-            questionElement.appendChild(document.createElement('br'));
-        });
-
-        var nextButton = document.createElement('button');
-        nextButton.className = 'btn btn-primary btn-block';
-        nextButton.innerText = 'Next';
-        nextButton.onclick = (function (question, index) {
-            return function () {
-                checkAnswer(question.answer, index);
-                setTimeout(makeGuess, 3500);
-            };
-        })(question, i);
-
-        questionElement.appendChild(nextButton);
-        quizElement.appendChild(questionElement);
-    }
-
-    document.querySelector('.question').style.display = 'block';
-    if (soundPreference === 'on') {
-        playStartSound();
-    }
 }
 
-function selectRandomQuestions(num) {
-    const shuffled = selectedQuestions.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
-}
 
     var currentQuestion = 1;
 
