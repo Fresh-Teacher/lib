@@ -659,6 +659,7 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship </option>';
     } else if (classSelect === 'senior5') {
         // Subjects for Senior Five
+        subjectSelect.innerHTML += '<option value="chemistry">Chemistry </option>';
         subjectSelect.innerHTML += '<option value="biology">Biology </option>';
         subjectSelect.innerHTML += '<option value="gp">GP </option>';
         subjectSelect.innerHTML += '<option value="history">History </option>';
@@ -694,8 +695,8 @@ function loadSubjects() {
 }
 }
 
-
 function loadTopics() {
+    var classSelect = document.getElementById('class').value;
     var subjectSelect = document.getElementById('subject').value;
     var topicsDropdown = document.getElementById('topicDropdown');
     var topicSelect = document.getElementById('topic');
@@ -704,28 +705,336 @@ function loadTopics() {
     topicSelect.innerHTML = '<option value="" selected disabled>Choose Topic</option>';
     
     if (subjectSelect) {
-        // Display the topics dropdown and add options based on the selected subject
-        topicsDropdown.style.display = 'block';
-        
-        if (subjectSelect === 'physics') {
-            topicSelect.innerHTML += '<option value="physicalQuantitiesandUnits">Physical Quantities and Units</option>';
-            topicSelect.innerHTML += '<option value="kinematics">Kinematics</option>';
-            topicSelect.innerHTML += '<option value="vectorsAndScalars">Vectors and Scalars</option>';
-            topicSelect.innerHTML += '<option value="projectiles">Projectiles</option>';
-            topicSelect.innerHTML += '<option value="newtonsLawsOfMotion">Newton\'s Laws of Motion</option>';
-            topicSelect.innerHTML += '<option value="linearMomentum">Linear Momentum</option>';
-            topicSelect.innerHTML += '<option value="solidFriction">Solid Friction</option>';
-            topicSelect.innerHTML += '<option value="workEnergyAndPower">Work, Energy And Power</option>';
-            topicSelect.innerHTML += '<option value="statistics">Statistics</option>';
-        } else if (subjectSelect === 'biology') {
-            topicSelect.innerHTML += '<option value="cellBiology">Cell Biology</option>';
-            topicSelect.innerHTML += '<option value="genetics">Genetics</option>';
-            // Add more topics here if needed
+    // Display the topics dropdown and add options based on the selected subject
+    topicsDropdown.style.display = 'block';
+    
+    if (subjectSelect === 'physics') {
+        // Topics for Physics
+        if (classSelect === 'senior1') {
+            topicSelect.innerHTML += `
+                <option value="introductionToPhysics">Introduction to Physics</option>
+                <option value="measurementsInPhysics">Measurements in Physics</option>
+                <option value="statesOfMatter">States of Matter</option>
+                <option value="effectsOfForces">Effects of Forces</option>
+                <option value="temperatureMeasurements">Temperature Measurements</option>
+                <option value="heatTransfer">Heat Transfer</option>
+                <option value="expansionOfSolidsLiquidsAndGases">Expansion of Solids, Liquids, and Gases</option>
+                <option value="natureOfLight">Nature of Light; Reflection of Light at Plane Surfaces</option>`;
+        } else if (classSelect === 'senior2') {
+            topicSelect.innerHTML += `
+                <option value="workEnergyAndPower">Work, Energy, and Power</option>
+                <option value="turningEffectOfForces">Turning Effect of Forces, Centre of Gravity, and Stability</option>
+                <option value="pressureInSolidsAndFluids">Pressure in Solids and Fluids</option>
+                <option value="mechanicalPropertiesOfMaterialsAndHookesLaw">Mechanical Properties of Materials and Hooke's Law</option>
+                <option value="reflectionOfLightAtCurvedSurfaces">Reflection of Light at Curved Surfaces</option>
+                <option value="magnetsAndMagneticFields">Magnets and Magnetic Fields</option>
+                <option value="electrostatics">Electrostatics</option>
+                <option value="theSolarSystem">The Solar System</option>`;
+        } else if (classSelect === 'senior3') {
+            topicSelect.innerHTML += `
+                <option value="linearAndNonLinearMotion">Linear and Non-Linear Motion</option>
+                <option value="refractionDispersionAndColour">Refraction, Dispersion, and Colour</option>
+                <option value="lensesAndOpticalInstruments">Lenses and Optical Instruments</option>
+                <option value="generalWaveProperties">General Wave Properties</option>
+                <option value="soundWaves">Sound Waves</option>
+                <option value="heatQuantitiesAndVapours">Heat Quantities and Vapours</option>
+                <option value="starsAndGalaxies">Stars and Galaxies</option>
+                <option value="satellitesAndCommunication">Satellites and Communication</option>`;
+        } else if (classSelect === 'senior4') {
+            topicSelect.innerHTML += `
+                <option value="introductionToCurrentElectricity">Introduction to Current Electricity</option>
+                <option value="voltageResistanceAndOhmsLaw">Voltage, Resistance, and Ohm's Law</option>
+                <option value="electromagneticEffects">Electromagnetic Effects</option>
+                <option value="electricEnergyDistributionAndConsumption">Electric Energy Distribution and Consumption</option>
+                <option value="atomicModels">Atomic Models</option>
+                <option value="nuclearProcesses">Nuclear Processes</option>
+                <option value="digitalElectronics">Digital Electronics</option>`;
         }
-    } else {
-        topicsDropdown.style.display = 'none';
+        else if (classSelect === 'senior5') {
+        topicSelect.innerHTML += `
+            <option value="reflectionOfLightAtAPlaneSurface">Reflection of Light at a Plane Surface</option>
+            <option value="reflectionOfLightAtCurvedSurfaces">Reflection of Light at Curved Surfaces</option>
+            <option value="refractionOfLightAtAPlaneSurface">Refraction of Light at a Plane Surface</option>
+            <option value="refractionOfLightThroughTriangularPrisms">Refraction of Light through Triangular Prisms</option>
+            <option value="refractionOfLightThroughAThinLens">Refraction of Light through a Thin Lens</option>
+            <option value="opticalInstruments">Optical Instruments</option>
+            <option value="physicalQuantitiesAndTheirUnits">Physical Quantities and their Units</option>
+            <option value="kinematics">Kinematics</option>
+            <option value="newtonsLawsOfMotion">Newton's Laws of Motion</option>
+            <option value="solidFriction">Solid Friction</option>
+            <option value="workEnergyAndPower">Work, Energy and Power</option>
+            <option value="statics">Statics</option>
+            <option value="fluidFlow">Fluid Flow</option>
+            <option value="mechanicalPropertiesOfMatter">Mechanical Properties of Matter</option>
+            <option value="surfaceTension">Surface Tension</option>
+            <option value="uniformMotionInACircle">Uniform Motion in a Circle</option>
+            <option value="gravitation">Gravitation</option>
+            <option value="simpleHarmonicMotion">Simple Harmonic Motion</option>
+            <option value="basicPropertiesOfWaves">Basic Properties of Waves</option>
+            <option value="waveTheory">Wave Theory</option>
+            <option value="interferenceOfWaves">Interference of Waves</option>
+            <option value="diffractionOfWaves">Diffraction of Waves</option>
+            <option value="stationaryWaves">Stationary Waves</option>
+            <option value="resonance">Resonance</option>
+            <option value="sound">Sound</option>
+            <option value="polarisationOfWaves">Polarisation of Waves</option>
+            <option value="thermometry">Thermometry</option>
+            <option value="specificHeat">Specific Heat</option>
+            <option value="changeOfState">Change of State</option>`;
+    } else if (classSelect === 'senior6') {
+        topicSelect.innerHTML += `
+            <option value="gasLaws">Gas Laws</option>
+            <option value="kineticTheoryOfGases">Kinetic Theory of Gases</option>
+            <option value="vapours">Vapours</option>
+            <option value="thermodynamics">Thermodynamics</option>
+            <option value="transferOfHeat">Transfer of Heat</option>
+            <option value="surveyOfEnergy">Survey of Energy</option>
+            <option value="electrostatics">Electrostatics</option>
+            <option value="electricField">Electric Field</option>
+            <option value="capacitors">Capacitors</option>
+            <option value="currentElectricity">Current Electricity</option>
+            <option value="cathodeRayOscilloscope">Cathode Ray Oscilloscope</option>
+            <option value="transistors">Transistors</option>
+            <option value="magnetismInMatter">Magnetism in Matter</option>
+            <option value="magneticEffectOfAnElectricCurrent">Magnetic Effect of an Electric Current</option>
+            <option value="forceOnACurrentCarryingConductor">Force on a Current Carrying Conductor</option>
+            <option value="electromagneticInduction">Electromagnetic Induction</option>
+            <option value="acCircuits">A.C. Circuits</option>
+            <option value="chargedParticles">Charged Particles</option>
+            <option value="quantumTheory">Quantum Theory</option>
+            <option value="nuclearPhysics">Nuclear Physics</option>
+            <option value="radioactivity">Radioactivity</option>`;
+ 
+        }
+        // Add more topics for other classes as needed
+    }        if (subjectSelect === 'chemistry') {
+        // Topics for Chemistry
+        if (classSelect === 'senior1') {
+            topicSelect.innerHTML += `
+                <option value="chemistryandSociety">Chemistry and Society</option>
+                <option value="experimentalChemistry">Experimental Chemistry</option>
+                <option value="statesandchangesofstatesofmatter">States and Changes of States of Matter</option>
+                <option value="usingmaterials">Using Materials</option>
+                <option value="temporaryandpermanentchanges">Temporary and Permanent Changes</option>
+                <option value="mixturesElementsandcompounds">Mixtures, Elements and Compounds</option>
+                <option value="air">Air</option>
+                <option value="water">Water</option>
+                <option value="rocksandMinerals">Rocks and Minerals</option>`;
+        } else if (classSelect === 'senior2') {
+            topicSelect.innerHTML += `
+                <option value="acidsandalkalis">Acids and Alkalis</option>
+                <option value="salts">Salts</option>
+                <option value="thePeriodicTable">The Periodic Table</option>
+                <option value="carbonintheEnvironment">Carbon in the Environment</option>
+                <option value="theReactivitySeries">The Reactivity Series</option>`;
+        } else if (classSelect === 'senior3') {
+            topicSelect.innerHTML += `
+                <option value="carboninLife">Carbon in Life</option>
+                <option value="structuresandBonds">Structures and Bonds</option>
+                <option value="formulaeStoichiometryandmoleconcept">Formulae, Stoichiometry and Mole Concept</option>
+                <option value="propertiesandStructuresofSubstances">Properties and Structures of Substances</option>
+                <option value="fossilFuels">Fossil Fuels</option>
+                <option value="chemicalreactions">Chemical Reactions</option>`;
+        } else if (classSelect === 'senior4') {
+            topicSelect.innerHTML += `
+                <option value="oxidationandReductionReactions">Oxidation and Reduction Reactions</option>
+                <option value="industrialProcesses">Industrial Processes</option>
+                <option value="trendsinthePeriodicTable">Trends in the Periodic Table</option>
+                <option value="energyChangesduringChemicalReactions">Energy Changes during Chemical Reactions</option>
+                <option value="chemicalforConsumers">Chemical for Consumers</option>
+                <option value="nuclearProcesses">Nuclear Processes</option>`;
+        } else if (classSelect === 'senior5') {
+            topicSelect.innerHTML += `
+            <option value="matter">Matter</option>
+                <option value="atomicStructureandPeriodicTable">Atomic Structure and Periodic Table</option>
+                <option value="structureandBonding">Structure and Bonding</option>
+                <option value="thermochemistryChemicalEnergeticsThermochemistry">Thermochemistry (Chemical Energetics (Thermochemistry))</option>
+                <option value="oxidationnumbers">Oxidation Numbers</option>
+                <option value="comparativestudyofphysicalandchemicalpropertiesofelementswithingroupsandperiods">Comparative Study of Physical and Chemical Properties of Elements within Groups and Periods</option>
+                <option value="period3">Period 3</option>
+                <option value="carbonskeletonandorganicfunctionalgroups">Carbon Skeleton and Organic Functional Groups</option>
+                <option value="functionalreactions">Functional Reactions</option>
+                <option value="homologousseriesproperties">Homologous Series Properties</option>
+                <option value="halogencompounds">Halogen Compounds</option>
+                <option value="alcohols">Alcohols</option>
+                <option value="manufactureofammonia">Manufacture of Ammonia</option>`;
+        } else if (classSelect === 'senior6') {
+            topicSelect.innerHTML += `
+            <option value="physcialandChemicalEquilibria">Physical and Chemical Equilibria</option>
+                <option value="chemicalkinetics">Chemical Kinetics</option>
+                <option value="electrochemistry">Electrochemistry</option>
+                <option value="thegroups">The Groups</option>
+                <option value="transitionseries">Transition Series</option>
+                <option value="phenols">Phenols</option>
+                <option value="carbonylcompounds">Carbonyl Compounds</option>
+                <option value="carboxylicacidsandderivatives">Carboxylic Acids and Derivatives</option>
+                <option value="nitrocompounds">Nitro Compounds</option>
+                <option value="polymers">Polymers</option>
+                <option value="soapanddetergentproduction">Soap and Detergent Production</option>`;
+     
+        }
+        // Add more topics for other classes as needed
+    } else if (subjectSelect === 'geography') {
+        // Topics for Geography
+        if (classSelect === 'senior1') {
+            topicSelect.innerHTML += `
+                <option value="physicalGeography">Physical Geography</option>
+                <option value="humanGeography">Human Geography</option>`;
+        } else if (classSelect === 'senior2') {
+            topicSelect.innerHTML += `
+                <option value="economicGeography">Economic Geography</option>
+                <option value="politicalGeography">Political Geography</option>`;
+        } else if (classSelect === 'senior3') {
+            topicSelect.innerHTML += `
+                <option value="environmentalGeography">Environmental Geography</option>
+                <option value="geopolitics">Geopolitics</option>`;
+        }
+        // Add more topics for other classes as needed
     }
+    if (subjectSelect === 'biology') {
+    // Topics for Biology
+    if (classSelect === 'senior1') {
+        topicSelect.innerHTML += `
+            <option value="introductionToBiology">Introduction to Biology</option>
+            <option value="cells">Cells</option>
+            <option value="classification">Classification</option>
+            <option value="insects">Insects</option>
+            <option value="floweringPlants">Flowering Plants</option>`;
+    } else if (classSelect === 'senior2') {
+        topicSelect.innerHTML += `
+            <option value="soilComposition">Soil Composition</option>
+            <option value="soilProperties">Physical and Chemical Properties of Soil</option>
+            <option value="soilErosionAndConservation">Soil Erosion and Conservation</option>
+            <option value="nitrogenCycle">The Nitrogen Cycle</option>
+            <option value="nutritionTypesAndCompounds">Nutrition Types and Nutrient Compounds</option>
+            <option value="nutritionInGreenPlants">Nutrition in Green Plants</option>
+            <option value="nutritionInAnimals">Nutrition in Animals</option>
+            <option value="nutritionInMould">Nutrition in a Mould</option>
+            <option value="movementInAndOutOfCells">Movement into and out of Cells</option>
+            <option value="transportInAnimals">Transport in Animals</option>
+            <option value="transportInPlants">Transport in Plants</option>`;
+    } else if (classSelect === 'senior3') {
+        topicSelect.innerHTML += `
+            <option value="gaseousExchange">Gaseous Exchange</option>
+            <option value="aerobicRespirationAndAnaerobicRespiration">Aerobic Respiration and Anaerobic Respiration</option>
+            <option value="excretionInLowerOrganisms">Excretion in Lower Organisms</option>
+            <option value="excretionInPlants">Excretion in Plants</option>
+            <option value="excretionInAnimals">Excretion in Animals</option>
+            <option value="receptionAndResponseInPlants">Reception and Response in Plants</option>
+            <option value="receptionAndResponseInAnimals">Reception and Response in Animals</option>
+            <option value="chemicalCoordinationInHumans">Chemical Coordination in Humans</option>
+            <option value="nervousCoordinationInHumans">Nervous Coordination in Humans</option>
+            <option value="receptorOrgansInMan">Receptor Organs in Man</option>
+            <option value="locomotionInVariousAnimals">Locomotion in Various Animals</option>
+            <option value="growthInPlantsAndAnimals">Growth in Plants and Animals</option>
+            <option value="developmentInPlantsAndAnimals">Development in Plants and Animals</option>`;
+    } else if (classSelect === 'senior4') {
+        topicSelect.innerHTML += `
+            <option value="asexualReproductionInLowerOrganisms">Asexual Reproduction in Lower Organisms</option>
+            <option value="asexualReproductionInPlants">Asexual Reproduction in Plants (Vegetative Reproduction)</option>
+            <option value="sexualReproductionInHumans">Sexual Reproduction in Humans</option>
+            <option value="sexualReproductionInPlants">Sexual Reproduction in Plants</option>
+            <option value="mitosisAndMeiosis">Mitosis and Meiosis</option>
+            <option value="geneticsAndMonohybridInheritance">Genetics and Monohybrid Inheritance</option>
+            <option value="appliedGenetics">Applied Genetics</option>
+            <option value="mutationAndVariation">Mutation and Variation</option>
+            <option value="evolution">Evolution</option>
+            <option value="ecology">Concept of Ecology</option>
+            <option value="foodChainsAndWebs">Food Chains and Food Webs</option>
+            <option value="samplingLivingOrganisms">Techniques for Sampling Living Organisms</option>
+            <option value="changesInPopulation">Changes in Population</option>
+            <option value="associationsInBiologicalCommunities">Associations in Biological Communities</option>
+            <option value="humansAndNaturalEnvironment">Humans and Natural Environment</option>`;
+    } else if (classSelect === 'senior5') {
+        topicSelect.innerHTML += `
+        <option value="cellBiology">Cell Biology</option>
+            <option value="cellStructureAndMicroscopy">Cell Structure and Microscopy</option>
+            <option value="diversityOfSpecialisedCellsAndTissues">Diversity of Specialised Cells and Tissues</option>
+            <option value="chromosomes">Chromosomes</option>
+            <option value="cellDivisionAndChromosomeConcept">Cell Division and Chromosome Concept</option>
+            <option value="proteinSynthesis">Protein Synthesis</option>
+            <option value="chemicalsOfLife">Chemicals of Life</option>
+            <option value="acidsBasesAndSalts">Acids, Bases and Salts</option>
+            <option value="water">Water</option>
+            <option value="structureOfCarbohydrates">Structure of Carbohydrates</option>
+            <option value="structureOfLipids">Structure of Lipids</option>
+            <option value="structureOfProteins">Structure of Proteins</option>
+            <option value="vitamins">Vitamins</option>
+            <option value="enzymes">Enzymes</option>
+            <option value="cellPhysiology">Cell Physiology</option>
+            <option value="movementInAndOutOfCells">Movement In and Out of Cells</option>
+            <option value="levelsOfOrganisationAndDiversityOfLife">Levels of Organisation and Diversity of Life</option>
+            <option value="diversityOfLivingThings">Diversity of Living Things</option>
+            <option value="viruses">Viruses (Akaryotae)</option>
+            <option value="kingdomMonera">Kingdom Monera</option>
+            <option value="kingdomProtoctista">Kingdom Protoctista</option>
+            <option value="kingdomFungi">Kingdom Fungi</option>
+            <option value="kingdomPlantae">Kingdom Plantae</option>
+            <option value="kingdomAnimalia">Kingdom Animalia</option>
+            <option value="ecology">Ecology</option>
+            <option value="componentsOfTheEnvironment">Components of the Environment</option>
+            <option value="conceptOfEcosystem">Concept of Ecosystem</option>
+            <option value="populationAndNaturalResources">Population and Natural Resources</option>
+            <option value="interdependence">Interdependence</option>
+            <option value="effectsOfHumanActivitiesOnEcosystems">Effects of Human Activities on Ecosystems</option>
+            <option value="inheritanceAndEvolution">Inheritance and Evolution</option>
+            <option value="genetics">Genetics</option>
+            <option value="chromosomesAndGenes">Chromosomes and Genes</option>
+            <option value="variation">Variation</option>
+            <option value="populationGenetics">Population Genetics</option>
+            <option value="originOfLife">Origin of Life</option>
+            <option value="mechanismsOfEvolution">Mechanisms of Evolution</option>
+            <option value="evidenceOfEvolution">Evidence of Evolution</option>
+            <option value="selectionAndSpeciation">Selection and Speciation</option>
+            <option value="transport">Transport</option>
+            <option value="necessityForTransportSystems">Necessity for Transport Systems</option>
+            <option value="waterAsAMediumInPlantsAndAnimals">Water as a Medium in Plants and Animals</option>
+            <option value="circulatorySystemsInAnimals">Circulatory Systems in Animals</option>
+            <option value="defenceAgainstDiseases">Defence against Diseases</option>
+            <option value="vascularSystemOfFloweringPlants">Vascular System of Flowering Plants</option>
+            `;
+    } else if (classSelect === 'senior6') {
+        topicSelect.innerHTML += `
+        <option value="nutrition">Nutrition</option>
+            <option value="autotrophicNutrition">Autotrophic Nutrition</option>
+            <option value="heterotrophism">Heterotrophism</option>
+            <option value="gaseousExchange">Gaseous Exchange</option>
+            <option value="principlesOfGaseousExchangeSystems">Principles of Gaseous Exchange Systems</option>
+            <option value="gaseousExchangeInPlants">Gaseous Exchange in Plants</option>
+            <option value="gaseousExchangeInAnimals">Gaseous Exchange in Animals</option>
+            <option value="respiration">Respiration</option>
+            <option value="generalPrinciplesOfHomeostasis">General Principles of Homeostasis</option>
+            <option value="regulationOfGlucose">Regulation of Glucose</option>
+            <option value="regulationOfRespiratoryGases">Regulation of Respiratory Gases</option>
+            <option value="temperatureRegulation">Temperature Regulation</option>
+            <option value="excretion">Excretion</option>
+            <option value="osmoregulation">Osmoregulation</option>
+            <option value="coordination">Coordination</option>
+            <option value="conceptsOfReceptionAndResponseInPlants">Concepts of Reception and Response in Plants</option>
+            <option value="plantHormones">Plant Hormones</option>
+            <option value="responseAndBehaviourInAnimals">Response and Behaviour in Animals</option>
+            <option value="generalPrinciplesOfReceptionAndResponseInAnimals">General Principles of Reception and Response in Animals</option>
+            <option value="nervousCoordinationInAnimals">Nervous Coordination in Animals</option>
+            <option value="hormonalCoordinationInAnimals">Hormonal Coordination in Animals</option>
+            <option value="supportAndMovement">Support and Movement</option>
+            <option value="supportSystemsInPlantsAndAnimals">Support Systems in Plants and Animals</option>
+            <option value="muscles">Muscles</option>
+            <option value="movementLocomotion">Movement/Locomotion</option>
+            <option value="reproductionGrowthAndDevelopment">Reproduction, Growth, and Development</option>
+            <option value="asexualReproduction">Asexual Reproduction</option>
+            <option value="sexualReproductionInAnimals">Sexual Reproduction in Animals</option>
+            <option value="sexualReproductionInLowerOrganismsAndPlants">Sexual Reproduction in Lower Organisms and Plants</option>
+            <option value="growthAndDevelopment">Growth and Development</option>            `;
+    }
+    // Add more topics for other classes as needed
 }
+
+    // Add more subjects and their topics for other classes as needed
+} else {
+    topicsDropdown.style.display = 'none';
+}}
+
+
 
 
 function startQuiz() {
