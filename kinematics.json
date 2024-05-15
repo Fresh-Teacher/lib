@@ -1,0 +1,788 @@
+[
+    
+    {
+        "question": "What is displacement in the context of linear motion?",
+        "options": [
+            "The total distance covered by a body",
+            "The rate of change of velocity",
+            "The distance covered by a body in a specified direction",
+            "The time taken by a body to cover a certain distance"
+        ],
+        "answer": "The distance covered by a body in a specified direction",
+        "explanation": "Displacement refers to the distance covered by a body in a specific direction, considering its initial and final positions."
+    },
+    {
+        "question": "Which of the following is the SI unit of displacement?",
+        "options": [
+            "Meters per second (m/s)",
+            "Meters per second squared (m/s^2)",
+            "Meters (m)",
+            "Seconds (s)"
+        ],
+        "answer": "Meters (m)",
+        "explanation": "Displacement is measured in meters (m) as it represents the length and direction between the initial and final positions of a moving object."
+    },
+    {
+        "question": "What does uniform velocity imply?",
+        "options": [
+            "Equal displacements within unequal time intervals",
+            "Equal displacements within equal time intervals",
+            "Unequal displacements within equal time intervals",
+            "Unequal displacements within unequal time intervals"
+        ],
+        "answer": "Equal displacements within equal time intervals",
+        "explanation": "Uniform velocity occurs when a body undergoes equal displacements within equal successive time intervals, regardless of the size of the time intervals."
+    },
+    {
+        "question": "In the context of linear motion, what is displacement?",
+        "options": [
+            "The change in velocity per unit time",
+            "The area under the velocity-time graph",
+            "The distance traveled by a body in a specific direction",
+            "The rate of change of displacement"
+        ],
+        "answer": "The distance traveled by a body in a specific direction",
+        "explanation": "Displacement represents the length and direction between the initial and final positions of a moving object."
+    },
+    {
+        "question": "Which of the following best defines displacement?",
+        "options": [
+            "The total distance covered by a body",
+            "The rate of change of displacement",
+            "The shortest distance between initial and final positions",
+            "The time taken for a body to move from one position to another"
+        ],
+        "answer": "The shortest distance between initial and final positions",
+        "explanation": "Displacement is the shortest distance and direction between the starting and ending positions of a moving object."
+    },
+    {
+        "question": "What distinguishes displacement from distance traveled?",
+        "options": [
+            "Displacement includes direction, while distance traveled does not",
+            "Displacement is always greater than distance traveled",
+            "Displacement is measured in kilometers, while distance traveled is measured in meters",
+            "Displacement represents the total path length, while distance traveled represents the shortest path"
+        ],
+        "answer": "Displacement includes direction, while distance traveled does not",
+        "explanation": "Displacement considers both the distance and direction between the initial and final positions, while distance traveled only accounts for the total path length."
+    },
+    {
+        "question": "Which of the following scenarios illustrates displacement?",
+        "options": [
+            "A car travels 10 kilometers north, then 5 kilometers south",
+            "A train moves at a constant speed for 2 hours",
+            "A cyclist rides in circles around a park",
+            "A runner completes 3 laps around a track"
+        ],
+        "answer": "A car travels 10 kilometers north, then 5 kilometers south",
+        "explanation": "Displacement accounts for the net change in position, considering both distance and direction. In this scenario, the car's displacement is 5 kilometers north."
+    },
+    {
+        "question": "What happens to displacement if an object moves in a straight line and then returns to its starting point?",
+        "options": [
+            "The displacement is zero",
+            "The displacement is equal to the distance traveled",
+            "The displacement is negative",
+            "The displacement is positive"
+        ],
+        "answer": "The displacement is zero",
+        "explanation": "Since displacement accounts for the shortest distance and direction between initial and final positions, returning to the starting point results in zero net displacement."
+    },
+    {
+        "question": "How is displacement different from distance traveled?",
+        "options": [
+            "Displacement is scalar, while distance traveled is vector",
+            "Displacement is the total path length, while distance traveled is the net change in position",
+            "Displacement includes direction, while distance traveled does not",
+            "Displacement is always greater than distance traveled"
+        ],
+        "answer": "Displacement includes direction, while distance traveled does not",
+        "explanation": "Displacement considers both the distance and direction between initial and final positions, whereas distance traveled only accounts for the total path length."
+    },
+    {
+        "question": "Which term refers to the total change in position of an object?",
+        "options": [
+            "Acceleration",
+            "Velocity",
+            "Distance",
+            "Displacement"
+        ],
+        "answer": "Displacement",
+        "explanation": "Displacement represents the net change in position, considering both distance and direction."
+    },
+    
+    {
+        "question": "What is velocity?",
+        "options": [
+            "The rate of change of displacement",
+            "The total distance traveled by an object",
+            "The speed of light in a vacuum",
+            "The acceleration of an object"
+        ],
+        "answer": "The rate of change of displacement",
+        "explanation": "Velocity represents the rate at which the displacement of an object changes over time, including both speed and direction."
+    },
+    {
+        "question": "Which of the following is the SI unit of velocity?",
+        "options": [
+            "Meters per second squared (m/s^2)",
+            "Meters (m)",
+            "Seconds (s)",
+            "Meters per second (m/s)"
+        ],
+        "answer": "Meters per second (m/s)",
+        "explanation": "Velocity is measured in meters per second (m/s) as it indicates the rate of change of displacement over time."
+    },
+    {
+        "question": "What does uniform velocity imply?",
+        "options": [
+            "Equal displacements within equal time intervals",
+            "Equal displacements within unequal time intervals",
+            "Unequal displacements within equal time intervals",
+            "Unequal displacements within unequal time intervals"
+        ],
+        "answer": "Equal displacements within equal time intervals",
+        "explanation": "Uniform velocity occurs when an object undergoes equal displacements within equal successive time intervals, regardless of the duration of the time intervals."
+    },
+    {
+        "question": "Which term best defines velocity?",
+        "options": [
+            "The total distance traveled by an object",
+            "The rate of change of velocity",
+            "The shortest distance between initial and final positions",
+            "The distance covered by an object in a specified direction"
+        ],
+        "answer": "The rate of change of displacement",
+        "explanation": "Velocity represents the rate at which the displacement of an object changes with respect to time, including both magnitude and direction."
+    },
+    {
+        "question": "In the context of linear motion, what is velocity?",
+        "options": [
+            "The change in velocity per unit time",
+            "The area under the velocity-time graph",
+            "The distance traveled by a body in a specific direction",
+            "The rate of change of displacement"
+        ],
+        "answer": "The rate of change of displacement",
+        "explanation": "Velocity indicates how fast the displacement of an object changes per unit time, including both speed and direction."
+    },
+    {
+        "question": "Which of the following scenarios illustrates velocity?",
+        "options": [
+            "A car travels 10 kilometers north, then 5 kilometers south",
+            "A train moves at a constant speed for 2 hours",
+            "A cyclist rides in circles around a park",
+            "A runner completes 3 laps around a track"
+        ],
+        "answer": "A car travels 10 kilometers north, then 5 kilometers south",
+        "explanation": "Velocity accounts for both the speed and direction of motion. In this scenario, the car's velocity includes both its speed and the direction of its movement."
+    },
+    {
+        "question": "What distinguishes velocity from speed?",
+        "options": [
+            "Velocity is always greater than speed",
+            "Velocity includes direction, while speed does not",
+            "Velocity is measured in kilometers per hour, while speed is measured in meters per second",
+            "Velocity is scalar, while speed is vector"
+        ],
+        "answer": "Velocity includes direction, while speed does not",
+        "explanation": "Velocity considers both the speed and direction of motion, while speed only indicates the magnitude of motion without regard to direction."
+    },
+    {
+        "question": "Which term refers to the change in velocity over time?",
+        "options": [
+            "Acceleration",
+            "Displacement",
+            "Distance",
+            "Velocity"
+        ],
+        "answer": "Acceleration",
+        "explanation": "Acceleration represents the change in velocity of an object per unit time, indicating how quickly the velocity of the object changes."
+    },
+    {
+        "question": "How does velocity differ from speed?",
+        "options": [
+            "Velocity is scalar, while speed is vector",
+            "Velocity represents the total path length, while speed represents the shortest path",
+            "Velocity is measured in kilometers per hour, while speed is measured in meters per second",
+            "Velocity includes direction, while speed does not"
+        ],
+        "answer": "Velocity includes direction, while speed does not",
+        "explanation": "Velocity accounts for both the speed and direction of motion, while speed only indicates the magnitude of motion without regard to direction."
+    },
+    {
+        "question": "What is the velocity of an object that moves 30 meters north in 10 seconds?",
+        "options": [
+            "3 m/s",
+            "30 m/s",
+            "10 m/s",
+            "300 m/s"
+        ],
+        "answer": "3 m/s",
+        "explanation": "Velocity is calculated by dividing the displacement by the time taken. In this case, the velocity is 30 meters divided by 10 seconds, resulting in 3 meters per second."
+    },
+    
+    {
+        "question": "What is uniform velocity?",
+        "options": [
+            "Velocity that changes over time",
+            "Velocity that remains constant over time",
+            "Velocity that varies in direction",
+            "Velocity that accelerates"
+        ],
+        "answer": "Velocity that remains constant over time",
+        "explanation": "Uniform velocity refers to the motion of an object where its velocity remains constant, meaning there is no change in speed or direction over time."
+    },
+    {
+        "question": "Which of the following best describes uniform velocity?",
+        "options": [
+            "Motion with varying speed and direction",
+            "Motion with constant speed and changing direction",
+            "Motion with constant speed and direction",
+            "Motion with changing speed and constant direction"
+        ],
+        "answer": "Motion with constant speed and direction",
+        "explanation": "Uniform velocity indicates motion where the speed and direction remain constant throughout the duration of the motion."
+    },
+    {
+        "question": "What characterizes uniform velocity?",
+        "options": [
+            "Accelerating motion",
+            "Changing speed",
+            "Changing direction",
+            "Constant speed and direction"
+        ],
+        "answer": "Constant speed and direction",
+        "explanation": "Uniform velocity implies motion where the speed of the object remains the same, and its direction does not change over time."
+    },
+    {
+        "question": "When does an object exhibit uniform velocity?",
+        "options": [
+            "When its velocity decreases over time",
+            "When its velocity increases over time",
+            "When its velocity remains constant over time",
+            "When its velocity varies randomly"
+        ],
+        "answer": "When its velocity remains constant over time",
+        "explanation": "An object demonstrates uniform velocity when its speed and direction do not change, meaning its velocity remains constant throughout its motion."
+    },
+    {
+        "question": "Which term describes the velocity of an object moving with uniform velocity?",
+        "options": [
+            "Acceleration",
+            "Deceleration",
+            "Uniform motion",
+            "Non-uniform motion"
+        ],
+        "answer": "Uniform motion",
+        "explanation": "Uniform velocity corresponds to uniform motion, where the object travels with constant speed and direction without any change."
+    },
+    {
+        "question": "What type of motion exhibits uniform velocity?",
+        "options": [
+            "Motion along a curved path",
+            "Motion with varying speed",
+            "Motion with varying direction",
+            "Motion along a straight path with constant speed"
+        ],
+        "answer": "Motion along a straight path with constant speed",
+        "explanation": "Uniform velocity is typically observed in motion along a straight path where the speed of the object remains constant over time."
+    },
+    {
+        "question": "In which scenario does an object experience uniform velocity?",
+        "options": [
+            "A car accelerating from rest",
+            "A train slowing down to stop",
+            "A bicycle moving at a constant speed",
+            "A rocket changing its direction"
+        ],
+        "answer": "A bicycle moving at a constant speed",
+        "explanation": "Uniform velocity occurs when an object maintains a constant speed and direction, as seen in the scenario of a bicycle moving steadily without any change in speed or direction."
+    },
+    {
+        "question": "Which statement accurately describes uniform velocity?",
+        "options": [
+            "Velocity that changes over time",
+            "Velocity that varies in direction",
+            "Velocity that accelerates",
+            "Velocity that remains constant over time"
+        ],
+        "answer": "Velocity that remains constant over time",
+        "explanation": "Uniform velocity denotes motion where the velocity of the object remains consistent, without any variation or change throughout the motion."
+    },
+    {
+        "question": "What happens to the speed of an object with uniform velocity?",
+        "options": [
+            "It increases over time",
+            "It decreases over time",
+            "It remains constant over time",
+            "It fluctuates randomly"
+        ],
+        "answer": "It remains constant over time",
+        "explanation": "In uniform velocity, the speed of the object remains constant and does not change as the object continues to move."
+    },
+    {
+        "question": "Which term describes the velocity of an object that travels at a constant speed?",
+        "options": [
+            "Uniform velocity",
+            "Variable velocity",
+            "Non-uniform velocity",
+            "Accelerated velocity"
+        ],
+        "answer": "Uniform velocity",
+        "explanation": "Uniform velocity refers to the motion of an object where its speed remains constant over time, indicating a steady and consistent rate of motion."
+    },
+    {
+        "question": "What is acceleration?",
+        "options": [
+            "Change in velocity over time",
+            "Change in displacement over time",
+            "Change in speed over distance",
+            "Change in direction over time"
+        ],
+        "answer": "Change in velocity over time",
+        "explanation": "Acceleration refers to the rate at which the velocity of an object changes over time. It can involve an increase or decrease in velocity, or a change in direction."
+    },
+    {
+        "question": "How is acceleration defined?",
+        "options": [
+            "Rate of change of displacement",
+            "Rate of change of speed",
+            "Rate of change of velocity",
+            "Rate of change of time"
+        ],
+        "answer": "Rate of change of velocity",
+        "explanation": "Acceleration is defined as the rate of change of velocity. It indicates how quickly the velocity of an object changes over a certain period of time."
+    },
+    {
+        "question": "When does an object experience acceleration?",
+        "options": [
+            "When its speed remains constant",
+            "When its speed decreases",
+            "When its velocity remains constant",
+            "When its direction changes"
+        ],
+        "answer": "When its velocity changes",
+        "explanation": "Acceleration occurs when there is a change in the velocity of an object, which can include changes in speed, direction, or both. It does not necessarily require a change in speed alone."
+    },
+    {
+        "question": "Which scenario demonstrates acceleration?",
+        "options": [
+            "A car moving at a constant speed on a straight road",
+            "A ball rolling down a frictionless slope",
+            "A rocket launching into space",
+            "A pendulum swinging back and forth"
+        ],
+        "answer": "A rocket launching into space",
+        "explanation": "Acceleration is evident in scenarios where the velocity of an object changes, such as a rocket launching into space where its speed increases over time, demonstrating positive acceleration."
+    },
+    {
+        "question": "What characterizes uniform acceleration?",
+        "options": [
+            "Constant change in velocity",
+            "Variable change in velocity",
+            "No change in velocity",
+            "Instantaneous change in velocity"
+        ],
+        "answer": "Constant change in velocity",
+        "explanation": "Uniform acceleration involves a constant rate of change in velocity over time. This means that the velocity of the object increases or decreases by the same amount in each unit of time."
+    },
+    {
+        "question": "In which situation does acceleration occur?",
+        "options": [
+            "A bicycle traveling at a constant speed",
+            "A book resting on a table",
+            "A car rounding a curve at a steady velocity",
+            "A car braking to a stop"
+        ],
+        "answer": "A car braking to a stop",
+        "explanation": "Acceleration is present when there is a change in the velocity of an object. In the scenario of a car braking to a stop, its velocity decreases over time, indicating negative acceleration."
+    },
+    {
+        "question": "Which term describes the motion of an object experiencing uniform acceleration?",
+        "options": [
+            "Non-uniform motion",
+            "Uniform motion",
+            "Variable motion",
+            "Uniformly accelerated motion"
+        ],
+        "answer": "Uniformly accelerated motion",
+        "explanation": "Uniform acceleration implies that the rate of change in velocity remains constant over time. This type of motion is referred to as uniformly accelerated motion."
+    },
+    {
+        "question": "What is the SI unit of acceleration?",
+        "options": [
+            "meters per second (m/s)",
+            "meters per second squared (m/s^2)",
+            "meters (m)",
+            "meters squared per second (m^2/s)"
+        ],
+        "answer": "meters per second squared (m/s^2)",
+        "explanation": "The SI unit of acceleration is meters per second squared (m/s^2). This unit represents the change in velocity per unit of time."
+    },
+    {
+        "question": "Which of the following indicates uniform acceleration?",
+        "options": [
+            "A car accelerating from rest",
+            "A car moving at a constant speed",
+            "A ball rolling down a hill",
+            "A pendulum swinging back and forth"
+        ],
+        "answer": "A car accelerating from rest",
+        "explanation": "Uniform acceleration involves a constant rate of change in velocity. A car accelerating from rest demonstrates uniform acceleration as its velocity increases uniformly over time."
+    },
+    {
+        "question": "When does an object experience negative acceleration?",
+        "options": [
+            "When its velocity increases",
+            "When its velocity decreases",
+            "When its speed remains constant",
+            "When its displacement changes"
+        ],
+        "answer": "When its velocity decreases",
+        "explanation": "Negative acceleration occurs when the velocity of an object decreases over time. It indicates a slowing down or deceleration of the object's motion."
+    },
+    
+    {
+        "question": "What does uniform acceleration mean?",
+        "options": [
+            "Acceleration that changes over time",
+            "Acceleration with a constant rate of change",
+            "Acceleration in the absence of gravity",
+            "Acceleration due to friction"
+        ],
+        "answer": "Acceleration with a constant rate of change",
+        "explanation": "Uniform acceleration refers to the type of acceleration where the rate of change of velocity remains constant over time. It implies that the velocity increases or decreases by the same amount in each unit of time."
+    },
+    {
+        "question": "Which of the following scenarios demonstrates uniform acceleration?",
+        "options": [
+            "A ball rolling on a flat surface",
+            "A car rounding a curve at varying speeds",
+            "A rocket launching into space",
+            "A pendulum swinging back and forth"
+        ],
+        "answer": "A rocket launching into space",
+        "explanation": "Uniform acceleration is evident in scenarios where the rate of change of velocity remains constant over time. A rocket launching into space experiences uniform acceleration as its velocity increases steadily due to the propulsion force."
+    },
+    {
+        "question": "In uniform acceleration, what remains constant?",
+        "options": [
+            "Velocity",
+            "Time",
+            "Displacement",
+            "Acceleration itself"
+        ],
+        "answer": "Acceleration itself",
+        "explanation": "Uniform acceleration implies that the rate of change of velocity remains constant over time. Therefore, in uniform acceleration, the acceleration itself remains constant."
+    },
+    {
+        "question": "What type of motion does uniform acceleration result in?",
+        "options": [
+            "Uniform motion",
+            "Non-uniform motion",
+            "Random motion",
+            "No motion"
+        ],
+        "answer": "Uniformly accelerated motion",
+        "explanation": "Uniform acceleration leads to a type of motion called uniformly accelerated motion. In this motion, the velocity of an object changes by the same amount in each unit of time."
+    },
+    {
+        "question": "Which equation describes motion under uniform acceleration?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "v = u + at",
+        "explanation": "The equation v = u + at describes the motion of an object under uniform acceleration. Here, 'v' is the final velocity, 'u' is the initial velocity, 'a' is the acceleration, and 't' is the time."
+    },
+    {
+        "question": "What is the acceleration of an object if its velocity changes by 4 m/s every second?",
+        "options": [
+            "4 m/s^2",
+            "8 m/s^2",
+            "16 m/s^2",
+            "2 m/s^2"
+        ],
+        "answer": "4 m/s^2",
+        "explanation": "If an object's velocity changes by 4 m/s every second, then its acceleration is 4 m/s^2. This indicates a uniform acceleration where the velocity changes by the same amount in each second."
+    },
+    {
+        "question": "How does uniform acceleration affect the velocity-time graph?",
+        "options": [
+            "It creates a horizontal line",
+            "It creates a straight line with positive slope",
+            "It creates a curve",
+            "It creates a straight line with negative slope"
+        ],
+        "answer": "It creates a straight line with positive slope",
+        "explanation": "Uniform acceleration results in a straight line with a positive slope on the velocity-time graph. The slope represents the constant rate of change of velocity over time, indicating uniform acceleration."
+    },
+    {
+        "question": "What is the velocity of an object after 5 seconds if it starts from rest and accelerates uniformly at 2 m/s^2?",
+        "options": [
+            "10 m/s",
+            "5 m/s",
+            "25 m/s",
+            "20 m/s"
+        ],
+        "answer": "10 m/s",
+        "explanation": "Using the equation v = u + at, where u is the initial velocity (0 m/s), a is the acceleration (2 m/s^2), and t is the time (5 s), we get v = 0 + (2 * 5) = 10 m/s. Therefore, the velocity of the object after 5 seconds is 10 m/s."
+    },
+    {
+        "question": "What happens to the velocity-time graph of an object under uniform acceleration as time increases?",
+        "options": [
+            "The slope decreases",
+            "The slope increases",
+            "The slope remains constant",
+            "The slope becomes negative"
+        ],
+        "answer": "The slope remains constant",
+        "explanation": "In uniform acceleration, the velocity-time graph of an object forms a straight line with a constant positive slope. As time increases, the slope of this line remains constant, reflecting the uniform rate of change of velocity."
+    },
+    {
+        "question": "If a car accelerates uniformly from 10 m/s to 30 m/s in 5 seconds, what is its acceleration?",
+        "options": [
+            "8 m/s^2",
+            "4 m/s^2",
+            "6 m/s^2",
+            "10 m/s^2"
+        ],
+        "answer": "4 m/s^2",
+        "explanation": "Using the equation a = (v - u) / t, where v is the final velocity (30 m/s), u is the initial velocity (10 m/s), and t is the time (5 s), we get a = (30 - 10) / 5 = 20 / 5 = 4 m/s^2. Therefore, the acceleration of the car is 4 m/s^2."
+    },
+    {
+        "question": "Which equation of motion relates initial velocity, final velocity, acceleration, and time?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "v = u + at",
+        "explanation": "The equation v = u + at relates the final velocity (v), initial velocity (u), acceleration (a), and time (t). It is one of the fundamental equations of motion used to describe the motion of objects under constant acceleration."
+    },
+    {
+        "question": "Which equation of motion calculates displacement when initial velocity, acceleration, and time are known?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "s = ut + (1/2)at^2",
+        "explanation": "The equation s = ut + (1/2)at^2 calculates displacement when the initial velocity (u), acceleration (a), and time (t) are known. It accounts for the initial velocity and the change in velocity over time due to acceleration."
+    },
+    {
+        "question": "Which equation of motion relates displacement, initial velocity, final velocity, and acceleration?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "v^2 = u^2 + 2as",
+        "explanation": "The equation v^2 = u^2 + 2as relates displacement (s), initial velocity (u), final velocity (v), and acceleration (a). It provides a way to calculate the final velocity or displacement of an object undergoing constant acceleration."
+    },
+    {
+        "question": "Which equation of motion calculates average velocity?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "v = (u + v)/2",
+        "explanation": "The equation v = (u + v)/2 calculates the average velocity of an object. It takes into account the initial velocity (u) and the final velocity (v) over a given time interval."
+    },
+    {
+        "question": "What does 'u' represent in the equations of motion?",
+        "options": [
+            "Final velocity",
+            "Acceleration",
+            "Displacement",
+            "Initial velocity"
+        ],
+        "answer": "Initial velocity",
+        "explanation": "'u' represents the initial velocity in the equations of motion. It signifies the velocity of an object at the beginning of its motion or the starting point of observation."
+    },
+    {
+        "question": "What does 'v' represent in the equations of motion?",
+        "options": [
+            "Final velocity",
+            "Acceleration",
+            "Displacement",
+            "Initial velocity"
+        ],
+        "answer": "Final velocity",
+        "explanation": "'v' represents the final velocity in the equations of motion. It signifies the velocity of an object at the end of its motion or the concluding point of observation."
+    },
+    {
+        "question": "What does 'a' represent in the equations of motion?",
+        "options": [
+            "Final velocity",
+            "Acceleration",
+            "Displacement",
+            "Initial velocity"
+        ],
+        "answer": "Acceleration",
+        "explanation": "'a' represents the acceleration in the equations of motion. It signifies the rate of change of velocity experienced by an object over time."
+    },
+    {
+        "question": "What does 's' represent in the equations of motion?",
+        "options": [
+            "Final velocity",
+            "Acceleration",
+            "Displacement",
+            "Initial velocity"
+        ],
+        "answer": "Displacement",
+        "explanation": "'s' represents displacement in the equations of motion. It signifies the change in position or the distance covered by an object during its motion."
+    },
+    {
+        "question": "Which equation of motion is derived from the concept of area under velocity-time graph?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "s = ut + (1/2)at^2",
+        "explanation": "The equation s = ut + (1/2)at^2 is derived from the concept of area under the velocity-time graph. It relates the displacement of an object to its initial velocity, time, and acceleration."
+    },
+    {
+        "question": "Which equation of motion is commonly used to solve problems involving motion under constant acceleration?",
+        "options": [
+            "v = u + at",
+            "v = u^2 + 2as",
+            "s = ut + (1/2)at^2",
+            "v = (u + v)/2"
+        ],
+        "answer": "v = u + at",
+        "explanation": "The equation v = u + at is commonly used to solve problems involving motion under constant acceleration. It provides a straightforward relationship between the final velocity, initial velocity, acceleration, and time."
+    },
+    {
+        "question": "What happens if the acceleration in the equations of motion is negative?",
+        "options": [
+            "The object decelerates",
+            "The object moves backward",
+            "The object accelerates",
+            "The object comes to rest"
+        ],
+        "answer": "The object decelerates",
+        "explanation": "If the acceleration in the equations of motion is negative, it indicates that the object is decelerating. In other words, its velocity is decreasing over time."
+    },
+    {
+        "question": "What is the acceleration due to gravity denoted by?",
+        "options": [
+            "a",
+            "v",
+            "g",
+            "h"
+        ],
+        "answer": "g",
+        "explanation": "Acceleration due to gravity is denoted by 'g' in equations involving motion under gravity. It represents the rate of change of velocity experienced by a freely falling body."
+    },
+    {
+        "question": "What is the value of acceleration due to gravity in most scenarios?",
+        "options": [
+            "9.81 m/s^2",
+            "10 m/s^2",
+            "8.81 m/s^2",
+            "11 m/s^2"
+        ],
+        "answer": "9.81 m/s^2",
+        "explanation": "In most scenarios near the Earth's surface, the value of acceleration due to gravity is approximately 9.81 m/s^2. This value is commonly used in calculations unless specified otherwise."
+    },
+    {
+        "question": "In motion under gravity, what does a negative value of 'g' represent?",
+        "options": [
+            "The object is accelerating upwards",
+            "The object is decelerating upwards",
+            "The object is accelerating downwards",
+            "The object is decelerating downwards"
+        ],
+        "answer": "The object is accelerating upwards",
+        "explanation": "In motion under gravity, a negative value of 'g' represents that the object is accelerating upwards. This indicates that the object is moving against the direction of gravity."
+    },
+    {
+        "question": "What does 'h' represent in motion under gravity?",
+        "options": [
+            "Final velocity",
+            "Initial velocity",
+            "Height",
+            "Time"
+        ],
+        "answer": "Height",
+        "explanation": "'h' represents the height in motion under gravity. It signifies the vertical distance above a reference point, such as the ground level or a specific location."
+    },
+    {
+        "question": "When a stone is thrown vertically upwards, what is the velocity with which it hits the ground?",
+        "options": [
+            "29 m/s",
+            "22.63 m/s",
+            "51 m/s",
+            "47.1 m/s"
+        ],
+        "answer": "29 m/s",
+        "explanation": "When a stone is thrown vertically upwards and hits the ground 5 seconds later, the velocity with which it hits the ground is 29 m/s. This velocity is calculated using equations of motion under gravity."
+    },
+    {
+        "question": "In the example of a stone thrown vertically upwards, what is the value of 'h'?",
+        "options": [
+            "29 m",
+            "22.63 m",
+            "19.5 m",
+            "0.7 m"
+        ],
+        "answer": "22.63 m",
+        "explanation": "In the example of a stone thrown vertically upwards and hitting the ground 5 seconds later, the value of 'h' is 22.63 meters. This represents the height above the ground level from which the stone was thrown."
+    },
+    {
+        "question": "When a stone is thrown vertically upwards, what is its initial velocity if it hits the ground with a speed of 51 m/s?",
+        "options": [
+            "47.1 m/s",
+            "22.63 m/s",
+            "15.4 m/s",
+            "19.5 m/s"
+        ],
+        "answer": "47.1 m/s",
+        "explanation": "When a stone is thrown vertically upwards and hits the ground with a speed of 51 m/s, its initial velocity is 47.1 m/s. This initial velocity is determined using equations of motion under gravity."
+    },
+    {
+        "question": "In the example of a stone thrown vertically upwards, what is the time taken for it to hit the ground?",
+        "options": [
+            "3.1 s",
+            "5 s",
+            "10 s",
+            "15 s"
+        ],
+        "answer": "3.1 s",
+        "explanation": "In the example of a stone thrown vertically upwards with a speed of 15 m/s, the time taken for it to hit the ground is approximately 3.1 seconds. This time is calculated using equations of motion under gravity."
+    },
+    {
+        "question": "When a ball is thrown vertically upwards with a speed of 15 m/s, what is its speed when it hits the ground?",
+        "options": [
+            "15.4 m/s",
+            "29 m/s",
+            "51 m/s",
+            "47.1 m/s"
+        ],
+        "answer": "15.4 m/s",
+        "explanation": "When a ball is thrown vertically upwards with a speed of 15 m/s and hits the ground, its speed is approximately 15.4 m/s. This speed is calculated using equations of motion under gravity."
+    },
+    {
+        "question": "What is the speed of a stone thrown vertically upwards if it lands on the ground 10 seconds later?",
+        "options": [
+            "15.4 m/s",
+            "29 m/s",
+            "51 m/s",
+            "47.1 m/s"
+        ],
+        "answer": "51 m/s",
+        "explanation": "If a stone thrown vertically upwards lands on the ground 10 seconds later with a speed of 51 m/s, its speed when it hits the ground is 51 m/s. This speed is calculated using equations of motion under gravity."
+    }
+
+]

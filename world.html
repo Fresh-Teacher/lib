@@ -37,90 +37,6 @@
     </div>
 
     <script>
-        var cities = [
-            {
-                "question": "Which country is home to the city of Tokyo?",
-                "options": ["China", "Japan", "South Korea", "Thailand"],
-                "answer": "Japan"
-            },
-            {
-                "question": "Which country is home to the city of Sydney?",
-                "options": ["New Zealand", "Australia", "Canada", "United Kingdom"],
-                "answer": "Australia"
-            },
-            {
-                "question": "Which country is home to the city of Paris?",
-                "options": ["Germany", "France", "Italy", "Spain"],
-                "answer": "France"
-            },
-            {
-                "question": "Which country is home to the city of Moscow?",
-                "options": ["Ukraine", "Poland", "Russia", "Belarus"],
-                "answer": "Russia"
-            },
-            {
-                "question": "Which country is home to the city of Cairo?",
-                "options": ["Morocco", "South Africa", "Egypt", "Nigeria"],
-                "answer": "Egypt"
-            }
-        ];
-
-        var countries = [
-            {
-                "question": "Which continent is home to Brazil?",
-                "options": ["Africa", "Asia", "Europe", "South America"],
-                "answer": "South America"
-            },
-            {
-                "question": "Which continent is home to Germany?",
-                "options": ["Africa", "Asia", "Europe", "Australia"],
-                "answer": "Europe"
-            },
-            {
-                "question": "Which continent is home to Kenya?",
-                "options": ["Africa", "Asia", "South America", "North America"],
-                "answer": "Africa"
-            },
-            {
-                "question": "Which continent is home to Japan?",
-                "options": ["Africa", "Asia", "Europe", "South America"],
-                "answer": "Asia"
-            },
-            {
-                "question": "Which continent is home to Canada?",
-                "options": ["Africa", "Asia", "North America", "Australia"],
-                "answer": "North America"
-            }
-        ];
-
-        var presidents = [
-            {
-                "question": "Who is the president of the United States?",
-                "options": ["Joe Biden", "Donald Trump", "Barack Obama", "George Bush"],
-                "answer": "Joe Biden"
-            },
-            {
-                "question": "Who is the president of France?",
-                "options": ["Emmanuel Macron", "Francois Hollande", "Nicolas Sarkozy", "Jacques Chirac"],
-                "answer": "Emmanuel Macron"
-            },
-            {
-                "question": "Who is the president of Russia?",
-                "options": ["Vladimir Putin", "Dmitry Medvedev", "Boris Yeltsin", "Mikhail Gorbachev"],
-                "answer": "Vladimir Putin"
-            },
-            {
-                "question": "Who is the president of Brazil?",
-                "options": ["Jair Bolsonaro", "Michel Temer", "Dilma Rousseff", "Luiz Inácio Lula da Silva"],
-                "answer": "Jair Bolsonaro"
-            },
-            {
-                "question": "Who is the president of South Africa?",
-                "options": ["Cyril Ramaphosa", "Jacob Zuma", "Nelson Mandela", "Thabo Mbeki"],
-                "answer": "Cyril Ramaphosa"
-            }
-        ];
-
         var questions = [];
         var askedQuestions = [];
         var score = 0;
@@ -128,7 +44,13 @@
         var timerInterval;
         var timeLeft = 3600; // 60 minutes in seconds
 
-        function startQuiz() {
+        async function fetchQuestions(quizType) {
+            const response = await fetch(quizType + '.json');
+            const data = await response.json();
+            return data;
+        }
+
+        async function startQuiz() {
             var playerName = document.getElementById('playerName').value.trim();
             var quizType = document.getElementById('quizType').value;
 
@@ -137,13 +59,7 @@
                 return;
             }
 
-            if (quizType === 'cities') {
-                questions = cities;
-            } else if (quizType === 'countries') {
-                questions = countries;
-            } else if (quizType === 'presidents') {
-                questions = presidents;
-            }
+            questions = await fetchQuestions(quizType);
 
             document.querySelector('.text-center.mb-3').style.display = 'none';
             document.getElementById('quiz').classList.remove('d-none');

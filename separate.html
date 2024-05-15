@@ -1,117 +1,626 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>A LEVEL PHYSICS QUIZ</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Math Quiz for Kids</title>
+    <title>A Level Physics Paper 1</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Indie Flower', cursive;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .question {
-            display: none;
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            font-size: 18px;
-            margin-top: 10px; /* Add margin-top to space out the button */
-        }
-        .form-control {
-            margin-bottom: 10px; /* Add margin-bottom to space out the input field */
-        }
-        #scoreModal .modal-dialog {
-            max-width: 400px;
-        }
-    </style>
+ 
 </head>
-<body>
-
-<div class="container">
-    <h1>Fun Math Quiz for Kids</h1>
-    
-    <div id="quiz">
-        <div class="question" id="question1" style="display: block;">
-            <h3>Question 1: What is 2 + 2?</h3>
-            <input type="number" class="form-control" id="q1">
-            <button class="btn btn-primary btn-block" onclick="checkAnswer(4)">Next</button>
-        </div>
-        <div class="question" id="question2">
-            <h3>Question 2: What is 5 - 3?</h3>
-            <input type="number" class="form-control" id="q2">
-            <button class="btn btn-primary btn-block" onclick="checkAnswer(2)">Next</button>
-        </div>
-        <div class="question" id="question3">
-            <h3>Question 3: What is 4 * 6?</h3>
-            <input type="number" class="form-control" id="q3">
-            <button class="btn btn-primary btn-block" onclick="checkAnswer(24)">Submit</button>
-        </div>
-    </div>
-</div>
-
-<!-- Score Modal -->
-<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p id="score"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<audio id="yesAudio" src="kaweddemu.mp3"></audio>
-<audio id="noAudio" src="kufa.mp3"></audio>
 
 <script>
-    var currentQuestion = 1;
+    // Define an array to store asked questions
+var askedQuestions = [];
 
-    function checkAnswer(correctAnswer) {
-        var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
-        if (isNaN(userAnswer)) {
-            alert("Please provide an answer.");
+// Function to select a random subset of questions
+function selectRandomQuestions(numQuestions) {
+    // Shuffle the selectedQuestions array
+    var shuffledQuestions = selectedQuestions.sort(() => Math.random() - 0.5);
+    
+    // Filter out questions that have already been asked
+    var randomQuestions = shuffledQuestions.filter(question => !askedQuestions.includes(question));
+    
+    // Return only the required number of random questions
+    return randomQuestions.slice(0, numQuestions);
+}
+
+// Function to initialize the quiz
+function initializeQuiz() {
+    // Start the timer and other initializations...
+    
+    // Select 10 random questions to start the quiz
+    var randomQuestions = selectRandomQuestions(10);
+
+    // Display the first question
+    displayQuestion(randomQuestions[0]);
+}
+
+// Function to display a question
+function displayQuestion(question) {
+    // Display the question and handle user interaction...
+    // After the question is answered, add it to the askedQuestions array.
+    askedQuestions.push(question);
+}
+
+    var timerInterval; // Variable to store the timer interval
+
+    // Function to start the timer
+    function startTimer() {
+    var timerDisplay = document.getElementById('timer');
+    var timeLeft = 3600; // 60 minutes in seconds
+
+    // Update the timer display every second
+    timerInterval = setInterval(function () {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+
+        // Format minutes and seconds with leading zeros if needed
+        var formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
+        timerDisplay.textContent = formattedTime;
+
+        // Check if time is up
+        if (timeLeft === 0) {
+            clearInterval(timerInterval); // Stop the timer
+            calculateScore(); // Calculate score when time is up
+        } else {
+            timeLeft--; // Decrease time by 1 second
+        }
+    }, 1000); // Update timer every second (1000 milliseconds)
+}
+
+</script>
+
+
+<script>
+ var topics = {
+    "physics": [
+    {
+            "name": "Physical Quantities and Units",
+            "value": "physicalQuantitiesandUnits"
+        },
+        {
+            "name": "Kinematics",
+            "value": "kinematics"
+        },
+        {
+            "name": "Vectors and Scalars",
+            "value": "vectorsAndScalars"
+        },
+        {
+            "name": "Projectiles",
+            "value": "projectiles"
+        },
+        {
+            "name": "Newton's Laws of Motion",
+            "value": "newtonsLawsOfMotion"
+        },
+        {
+            "name": "Linear Momentum",
+            "value": "linearMomentum"
+        },
+        {
+            "name": "Solid Friction",
+            "value": "solidFriction"
+        },
+        {
+            "name": "Work, Energy And Power",
+            "value": "workEnergyAndPower"
+        },
+        {
+            "name": "Statistics",
+            "value": "statistics"
+        }
+        // Add more physics topics here if needed
+    ],
+    "biology": [
+        {
+            "name": "Cell Biology",
+            "value": "cellBiology"
+        },
+        {
+            "name": "Genetics",
+            "value": "genetics"
+        },
+        // Add more biology topics here if needed
+    ]
+};
+
+function loadTopics() {
+    var subjectSelect = document.getElementById("subject");
+    var topicSelect = document.getElementById("topic");
+    var topicDropdown = document.getElementById("topicDropdown");
+    
+    // Get the selected subject
+    var subject = subjectSelect.value;
+    
+    // Clear previous topics
+    topicSelect.innerHTML = '<option value="" selected disabled>Choose Topic</option>';
+    
+    if (subject === "") {
+        topicDropdown.style.display = "none";
+    } else {
+        // Populate topics for the selected subject
+        topics[subject].forEach(function(topic) {
+            var option = document.createElement("option");
+            option.text = topic.name;
+            option.value = topic.value;
+            topicSelect.add(option);
+        });
+        
+        // Show topic dropdown
+        topicDropdown.style.display = "block";
+    }
+}
+function loadSubjects() {
+    var classSelect = document.getElementById('class').value;
+    var subjectDropdown = document.getElementById('subjectDropdown');
+    var subjectSelect = document.getElementById('subject');
+    var topicsDropdown = document.getElementById('topicDropdown');
+    var topicSelect = document.getElementById('topic');
+    
+    // Reset subjects and topics dropdowns
+    subjectSelect.innerHTML = '<option value="" selected disabled>Choose Subject</option>';
+    topicSelect.innerHTML = '<option value="" selected disabled>Choose Topic</option>';
+    topicsDropdown.style.display = 'none';
+    
+    if (classSelect) {
+        // Display the subject dropdown and add options based on the selected class
+        subjectDropdown.style.display = 'block';
+        
+        if (classSelect === 'senior1' || classSelect === 'senior2') {
+            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
+            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
+            // Add more subjects here if needed for these classes
+        } else if (classSelect === 'senior3' || classSelect === 'senior4') {
+            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
+            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
+            // Add more subjects here if needed for these classes
+        } else if (classSelect === 'senior5' || classSelect === 'senior6') {
+            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
+            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
+            // Add more subjects here if needed for these classes
+        }
+    } else {
+        subjectDropdown.style.display = 'none';
+    }
+}
+
+function loadTopics() {
+    var subjectSelect = document.getElementById('subject').value;
+    var topicsDropdown = document.getElementById('topicDropdown');
+    var topicSelect = document.getElementById('topic');
+    
+    // Reset topics dropdown
+    topicSelect.innerHTML = '<option value="" selected disabled>Choose Topic</option>';
+    
+    if (subjectSelect) {
+        // Display the topics dropdown and add options based on the selected subject
+        topicsDropdown.style.display = 'block';
+        
+        if (subjectSelect === 'physics') {
+            topicSelect.innerHTML += '<option value="physicalQuantitiesandUnits">Physical Quantities and Units</option>';
+            topicSelect.innerHTML += '<option value="kinematics">Kinematics</option>';
+            topicSelect.innerHTML += '<option value="vectorsAndScalars">Vectors and Scalars</option>';
+            topicSelect.innerHTML += '<option value="projectiles">Projectiles</option>';
+            topicSelect.innerHTML += '<option value="newtonsLawsOfMotion">Newton\'s Laws of Motion</option>';
+            topicSelect.innerHTML += '<option value="linearMomentum">Linear Momentum</option>';
+            topicSelect.innerHTML += '<option value="solidFriction">Solid Friction</option>';
+            topicSelect.innerHTML += '<option value="workEnergyAndPower">Work, Energy And Power</option>';
+            topicSelect.innerHTML += '<option value="statistics">Statistics</option>';
+        } else if (subjectSelect === 'biology') {
+            topicSelect.innerHTML += '<option value="cellBiology">Cell Biology</option>';
+            topicSelect.innerHTML += '<option value="genetics">Genetics</option>';
+            // Add more topics here if needed
+        }
+    } else {
+        topicsDropdown.style.display = 'none';
+    }
+}
+
+function startQuiz() {
+    var topic = document.getElementById('topic').value;
+    var selectedQuestions;
+
+    if (topic === 'physicalQuantitiesandUnits') {
+        selectedQuestions = physicalQuantitiesandUnits;
+    } else if (topic === 'kinematics') {
+        selectedQuestions = kinematics;
+    } else if (topic === 'vectorsAndScalars') {
+        selectedQuestions = vectorsAndScalars;
+    } else if (topic === 'projectiles') {
+        selectedQuestions = projectiles;
+    } else if (topic === 'newtonsLawsOfMotion') {
+        selectedQuestions = newtonsLawsOfMotion;
+    } else if (topic === 'linearMomentum') {
+        selectedQuestions = linearMomentum;
+    } else if (topic === 'solidFriction') {
+        selectedQuestions = solidFriction;
+    } else if (topic === 'workEnergyAndPower') {
+        selectedQuestions = workEnergyAndPower;
+    } else if (topic === 'statistics') {
+        selectedQuestions = statistics;
+    } else if (topic === 'cellBiology') {
+        selectedQuestions = cellBiology;
+    } else if (topic === 'genetics') {
+        selectedQuestions = genetics;
+    }
+
+    saveSettings(); // Call saveSettings to set the player's name and other settings
+}
+
+function saveSettings() {
+    var playerNameInput = document.getElementById('playerName');
+     playerName = playerNameInput.value.trim(); // Update the global playerName variable
+
+    // Regular expression to validate the player name
+    var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; // all languages alphabet name letters
+
+    // Check if the player name is empty or contains invalid characters
+    if (playerName === '') {
+        alert('Please enter your name.');
+        return;
+    } else if (!nameRegex.test(playerName)) {
+        alert('Please enter a valid name (only letters, hyphens, and spaces are allowed).');
+        return;
+    }
+
+    // Get the selected class
+    var classSelect = document.getElementById('class');
+    var selectedClass = classSelect.options[classSelect.selectedIndex].text;
+
+    // Get the selected subject
+    var subjectSelect = document.getElementById('subject');
+    var selectedSubject = subjectSelect.options[subjectSelect.selectedIndex].text;
+
+    // Get the selected topic
+    var topic = document.getElementById('topic').value;
+    var topicText = '';
+    if (topic === 'physicalQuantitiesandUnits') {
+        topicText = 'Physical Quantities and Units';
+    } else if (topic === 'kinematics') {
+        topicText = 'Kinematics';
+    } else if (topic === 'vectorsAndScalars') {
+        topicText = 'Vectors and Scalars';
+    } else if (topic === 'projectiles') {
+        topicText = 'Projectiles';
+    } else if (topic === 'newtonsLawsOfMotion') {
+        topicText = 'Newton\'s Laws Of Motion';
+    } else if (topic === 'linearMomentum') {
+        topicText = "Linear Momentum";
+    } else if (topic === 'solidFriction') {
+        topicText = 'Solid Friction';
+    } else if (topic === 'workEnergyAndPower') {
+        topicText = "Work, Energy And Power";
+    } else if (topic === 'statistics') {
+        topicText = "Statistics";
+    } else if (topic === 'cellBiology') {
+        topicText = "Cell Biology";
+    } else if (topic === 'genetics') {
+        topicText = "Genetics";
+    }
+
+    // Update the displayed player info
+    document.getElementById('playerNameDisplay').innerText = playerName;
+    document.getElementById('classDisplay').innerText = selectedClass;
+    document.getElementById('subjectDisplay').innerText = selectedSubject;
+    document.getElementById('topicDisplay').innerText = topicText;
+}
+
+</script>
+<center>
+    <div id="scoreboard">
+        <h5>YOUR CURRENT SCORE: <span id="scoreDisplay">0</span></h5>
+        <p id="result">Your opponent is waiting for you to start the quiz...</p>
+      </div>
+      
+  </center>
+  
+
+<script>
+    // Define soundPreference variable
+    var soundPreference = '';
+
+    // Define arrays for different topics
+    var physicalQuantitiesandUnits= [{
+        "question": "What is the basic unit of heredity?",
+        "options": [
+            "Gene",
+            "Chromosome",
+            "DNA",
+            "Protein"
+        ],
+        "answer": "Gene",
+        "explanation": "A gene is a segment of DNA that contains the instructions for the development of a specific trait or function in an organism."
+    },
+    {
+        "question": "Which type of RNA carries the genetic information from DNA to the ribosome?",
+        "options": [
+            "tRNA",
+            "rRNA",
+            "mRNA",
+            "siRNA"
+        ],
+        "answer": "mRNA",
+        "explanation": "Messenger RNA (mRNA) carries the genetic information from the DNA in the nucleus to the ribosome, where it is translated into protein."
+    },]; //
+    var kinematics = [{
+        "question": "What is the basic unit of heredity?",
+        "options": [
+            "Gene",
+            "Chromosome",
+            "DNA",
+            "Protein"
+        ],
+        "answer": "Gene",
+        "explanation": "A gene is a segment of DNA that contains the instructions for the development of a specific trait or function in an organism."
+    },
+    {
+        "question": "Which type of RNA carries the genetic information from DNA to the ribosome?",
+        "options": [
+            "tRNA",
+            "rRNA",
+            "mRNA",
+            "siRNA"
+        ],
+        "answer": "mRNA",
+        "explanation": "Messenger RNA (mRNA) carries the genetic information from the DNA in the nucleus to the ribosome, where it is translated into protein."
+    },]; 
+
+    var selectedQuestions = []; // Array to store selected questions based on difficulty level
+
+    
+ // Function to change the loading modal message
+ function changeLoadingMessage(message) {
+    document.getElementById('loadingModalLabel').innerText = message;
+}
+
+
+// Function to start the quiz
+function startQuiz() {
+    var playerName = document.getElementById('playerName').value.trim(); // Get the player's name
+
+    // Check if the player's name is empty
+    if (playerName === '') {
+        alert('Please enter your name.'); // Show an alert message
+        return; // Exit the function if the name is empty
+    }
+
+    var topic = document.getElementById('topic').value;
+    if (topic === '') {
+        alert('Please select a topic.');
+        return;
+    }
+
+    // Show loading modal only if all fields are filled
+    $('#loadingModal').modal('show');
+
+        // Initialize the quiz immediately
+        initializeQuiz();
+
+        // Array list of names
+        var names = ["AJIDRIRU SIAMAH",
+    "BOBOLI MUHAMMAD",
+    "MAWA RASHID",
+    "ATULE JACKLINE",
+    "ANGUCIA PALIMA ROSE",];
+
+// Shuffle function to shuffle the array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Get a shuffled copy of the names array
+var shuffledNames = shuffleArray(names);
+
+// Now you can select random names from the shuffled array
+var randomName = shuffledNames[Math.floor(Math.random() * shuffledNames.length)];
+
+
+// Assign questions based on selected topic
+if (topic === 'physicalQuantitiesandUnits') {
+    selectedQuestions = physicalQuantitiesandUnits;
+} else if (topic === 'kinematics') {
+    selectedQuestions = kinematics;
+} else if (topic === 'vectorsAndScalars') {
+    selectedQuestions = vectorsAndScalars;
+} else if (topic === 'projectiles') {
+    selectedQuestions = projectiles;
+} else if (topic === 'newtonsLawsOfMotion') {
+    selectedQuestions = newtonsLawsOfMotion;
+} else if (topic === 'linearMomentum') {
+    selectedQuestions = linearMomentum;
+} else if (topic === 'solidFriction') {
+    selectedQuestions = solidFriction;
+} else if (topic === 'workEnergyAndPower') {
+    selectedQuestions = workEnergyAndPower;
+} else if (topic === 'statistics') {
+    selectedQuestions = statistics;
+} else if (topic === 'cellBiology') {
+    selectedQuestions = cellBiology;
+} else if (topic === 'genetics') {
+    selectedQuestions = genetics;
+}
+
+        saveSettings(); // Call saveSettings to set the player's name and other settings
+    }
+
+    function saveSettings() {
+    var playerNameInput = document.getElementById('playerName');
+      playerName = playerNameInput.value.trim(); // Update the global playerName variable
+
+    // Regular expression to validate the player name
+    var nameRegex = /^[a-zA-Z\u00C0-\u017F\u0600-\u06FF\u0900-\u097F\u4E00-\u9FFF\p{L}\p{M}\-\s']+$/u; // all languages alphabet name letters
+
+    // Check if the player name is empty or contains invalid characters
+    if (playerName === '') {
+        alert('Please enter your name.');
+        return;
+    } else if (!nameRegex.test(playerName)) {
+        alert('Please enter a valid name (only letters, hyphens, and spaces are allowed).');
+        return;
+    }
+
+    // Get the selected class
+    var classSelect = document.getElementById('class');
+    var selectedClass = classSelect.options[classSelect.selectedIndex].text;
+
+    // Get the selected subject
+    var subjectSelect = document.getElementById('subject');
+    var selectedSubject = subjectSelect.options[subjectSelect.selectedIndex].text;
+
+    // Get the selected topic
+    var topic = document.getElementById('topic').value;
+    var topicText = '';
+    if (topic === 'physicalQuantitiesandUnits') {
+        topicText = 'Physical Quantities and Units';
+    } else if (topic === 'kinematics') {
+        topicText = 'Kinematics';
+    } else if (topic === 'vectorsAndScalars') {
+        topicText = 'Vectors and Scalars';
+    } else if (topic === 'projectiles') {
+        topicText = 'Projectiles';
+    } else if (topic === 'newtonsLawsOfMotion') {
+        topicText = 'Newton\'s Laws Of Motion';
+    } else if (topic === 'linearMomentum') {
+        topicText = "Linear Momentum";
+    } else if (topic === 'solidFriction') {
+        topicText = 'Solid Friction';
+    } else if (topic === 'workEnergyAndPower') {
+        topicText = "Work, Energy And Power";
+    } else if (topic === 'statistics') {
+        topicText = "Statistics";
+    } else if (topic === 'cellBiology') {
+        topicText = "Cell Biology";
+    } else if (topic === 'genetics') {
+        topicText = "Genetics";
+    }
+
+    // Update the displayed player info
+    document.getElementById('playerNameDisplay').innerText = playerName;
+    document.getElementById('classDisplay').innerText = selectedClass;
+    document.getElementById('subjectDisplay').innerText = selectedSubject;
+    document.getElementById('topicDisplay').innerText = topicText;
+
+        // Get sound preference
+        var soundOn = document.getElementById('soundOn');
+        soundPreference = soundOn.checked ? soundOn.value : 'off';
+
+        // Continue with starting the quiz if the name is valid
+        $('#settingsModal').modal('hide');
+        initializeQuiz();
+    }
+
+    function initializeQuiz() {
+        // Start the timer
+        startTimer();
+
+        if (soundPreference === '') {
+            $('#settingsModal').modal('show');
             return;
         }
-        
-        var isCorrect = userAnswer === correctAnswer;
-        if (isCorrect) {
-            playAudio('yesAudio');
-        } else {
-            playAudio('noAudio');
-        }
-        
-        document.getElementById('question' + currentQuestion).style.display = 'none';
-        currentQuestion++;
-        if (currentQuestion <= 3) {
-            document.getElementById('question' + currentQuestion).style.display = 'block';
+
+        var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
+        var quizElement = document.getElementById('quiz');
+        for (var i = 0; i < randomQuestions.length; i++) {
+            var question = randomQuestions[i];
+            var questionElement = document.createElement('div');
+            questionElement.className = 'question';
+            questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
+                '<p>' + question.question + '</p>';  // Corrected from question.text to question.question
+
+
+
+            // Create radio buttons for each option
+            question.options.forEach((option, index) => {
+                var optionInput = document.createElement('input');
+                optionInput.type = 'radio';
+                optionInput.name = 'option' + i;
+                optionInput.value = option;
+                optionInput.id = 'option' + i + '_' + index;
+
+                let optionLabel = document.createElement('label');
+                optionLabel.htmlFor = 'option' + i + '_' + index;
+                optionLabel.innerText = option;
+
+                questionElement.appendChild(optionInput);
+                questionElement.appendChild(optionLabel);
+                questionElement.appendChild(document.createElement('br'));
+            });
+
+// Modify the creation and functionality of the "Next" button
+var nextButton = document.createElement('button');
+nextButton.className = 'btn btn-primary btn-block';
+nextButton.innerText = 'Next';
+nextButton.onclick = (function (question, index) {
+    return function () {
+        checkAnswer(question.answer, index); // Pass the question answer and index to checkAnswer
+
+        // Delay the execution of the makeGuess function by 5 seconds
+        setTimeout(makeGuess, 3500);
+    };
+})(question, i); // Immediately invoke the function with the current question and index
+
+// Append the "Next" button to the question element
+questionElement.appendChild(nextButton);
+quizElement.appendChild(questionElement);
+
+
+        // Show the first question
+        document.querySelector('.question').style.display = 'block';
+        if (soundPreference === 'on') {
+            playStartSound(); // Play start sound if sound preference is 'on'
         }
     }
 
-    function playAudio(audioId) {
-        var audio = document.getElementById(audioId);
-        audio.play();
+
+        }
+        var excellentMessages = [            "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Everyone takes a wrong turn now and then. Shake it off and let's give it another shot! 🚶‍♂️",
+]; //
+        var greatMessages = [            "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Nobody's perfect, right? Just consider this a warm-up round! 🔥",
+]; //
+        var goodMessages = [            "Oops, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, even the best stumble sometimes. Dust yourself off and try again! 🤷‍♂️",
+];
+        var tryHarderMessages = [ "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Looks like you had a little hiccup with " + score + " out of 10. No worries, even superheroes have their off days! 🦸‍♂️",
+           ];
+// Function to shuffle an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+}
+
+var messageArray;
+if (score === 10) {
+    messageArray = shuffleArray(excellentMessages);
+} else if (score >= 8 && score < 10) {
+    messageArray = shuffleArray(greatMessages);
+} else if (score >= 3 && score <= 7) {
+    messageArray = shuffleArray(goodMessages);
+} else {
+    messageArray = shuffleArray(tryHarderMessages);
+}
+
+var randomIndex = Math.floor(Math.random() * messageArray.length);
+message = messageArray[randomIndex];
+
 </script>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

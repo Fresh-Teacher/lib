@@ -1,0 +1,881 @@
+[
+    {
+        "question": "What is a vector quantity?",
+        "options": [
+            "A quantity with magnitude only",
+            "A quantity with both magnitude and direction",
+            "A quantity with direction only",
+            "A quantity with no magnitude or direction"
+        ],
+        "answer": "A quantity with both magnitude and direction",
+        "explanation": "Vector quantities have both a numerical value (magnitude) and a direction. Examples include velocity, force, and acceleration."
+    },
+    {
+        "question": "Which of the following is a scalar quantity?",
+        "options": [
+            "Velocity",
+            "Force",
+            "Distance",
+            "Acceleration"
+        ],
+        "answer": "Distance",
+        "explanation": "Scalar quantities have magnitude only and do not have direction. Distance is an example of a scalar quantity."
+    },
+    {
+        "question": "What is an example of a vector quantity?",
+        "options": [
+            "Temperature",
+            "Speed",
+            "Weight",
+            "Displacement"
+        ],
+        "answer": "Displacement",
+        "explanation": "Displacement is a vector quantity because it has both magnitude (distance) and direction (the straight-line path from start to end)."
+    },
+    {
+        "question": "Which of the following is a scalar quantity?",
+        "options": [
+            "Momentum",
+            "Acceleration",
+            "Density",
+            "Velocity"
+        ],
+        "answer": "Density",
+        "explanation": "Density is a scalar quantity because it has magnitude only and does not have a specific direction."
+    },
+    {
+        "question": "What distinguishes a vector quantity from a scalar quantity?",
+        "options": [
+            "Direction",
+            "Magnitude",
+            "Both direction and magnitude",
+            "Neither direction nor magnitude"
+        ],
+        "answer": "Both direction and magnitude",
+        "explanation": "The key distinction between vector and scalar quantities is that vector quantities have both direction and magnitude, while scalar quantities have magnitude only."
+    },
+    {
+        "question": "Which of the following is NOT a vector quantity?",
+        "options": [
+            "Force",
+            "Temperature",
+            "Velocity",
+            "Momentum"
+        ],
+        "answer": "Temperature",
+        "explanation": "Temperature is a scalar quantity because it only has magnitude (the degree of hotness or coldness) and does not have direction."
+    },
+    {
+        "question": "What term describes a quantity with magnitude only?",
+        "options": [
+            "Vector quantity",
+            "Scalar quantity",
+            "Magnitude quantity",
+            "Directional quantity"
+        ],
+        "answer": "Scalar quantity",
+        "explanation": "Scalar quantities have magnitude only and do not have direction."
+    },
+    {
+        "question": "Which of the following is an example of a scalar quantity?",
+        "options": [
+            "Velocity",
+            "Displacement",
+            "Weight",
+            "Acceleration"
+        ],
+        "answer": "Weight",
+        "explanation": "Weight is a scalar quantity because it represents the magnitude of the gravitational force acting on an object."
+    },
+    {
+        "question": "What type of quantity has both magnitude and direction?",
+        "options": [
+            "Scalar quantity",
+            "Vector quantity",
+            "Magnitude quantity",
+            "Directional quantity"
+        ],
+        "answer": "Vector quantity",
+        "explanation": "Vector quantities have both magnitude and direction."
+    },
+    {
+        "question": "Which of the following is NOT a vector quantity?",
+        "options": [
+            "Acceleration",
+            "Velocity",
+            "Distance",
+            "Force"
+        ],
+        "answer": "Distance",
+        "explanation": "Distance is a scalar quantity because it only measures the extent of space between two points and does not have direction."
+    },
+    
+    {
+        "question": "Which of the following is an example of a scalar quantity?",
+        "options": [
+            "Velocity",
+            "Acceleration",
+            "Distance",
+            "Force"
+        ],
+        "answer": "Distance",
+        "explanation": "Distance is a scalar quantity as it only has magnitude and does not include direction."
+    },
+    {
+        "question": "What type of quantity is temperature?",
+        "options": [
+            "Vector",
+            "Scalar",
+            "Both vector and scalar",
+            "None of the above"
+        ],
+        "answer": "Scalar",
+        "explanation": "Temperature is a scalar quantity as it only represents the magnitude of thermal energy without direction."
+    },
+    {
+        "question": "Which of the following quantities is described only by its magnitude?",
+        "options": [
+            "Weight",
+            "Velocity",
+            "Acceleration",
+            "Power"
+        ],
+        "answer": "Power",
+        "explanation": "Power is a scalar quantity representing the rate at which work is done or energy is transferred per unit time."
+    },
+    {
+        "question": "What term refers to the amount of matter contained in an object?",
+        "options": [
+            "Distance",
+            "Velocity",
+            "Mass",
+            "Force"
+        ],
+        "answer": "Mass",
+        "explanation": "Mass is a scalar quantity representing the amount of matter contained in an object, measured in kilograms (kg)."
+    },
+    {
+        "question": "Which of the following quantities has only magnitude and no direction?",
+        "options": [
+            "Momentum",
+            "Acceleration",
+            "Displacement",
+            "Speed"
+        ],
+        "answer": "Speed",
+        "explanation": "Speed is a scalar quantity representing the magnitude of velocity, without any indication of direction."
+    },
+    {
+        "question": "What quantity represents the amount of space occupied by an object?",
+        "options": [
+            "Force",
+            "Velocity",
+            "Volume",
+            "Weight"
+        ],
+        "answer": "Volume",
+        "explanation": "Volume is a scalar quantity that represents the amount of space occupied by an object, typically measured in cubic meters (m^3)."
+    },
+    {
+        "question": "Which of the following is a scalar quantity related to electricity?",
+        "options": [
+            "Voltage",
+            "Current",
+            "Resistance",
+            "Power"
+        ],
+        "answer": "Resistance",
+        "explanation": "Resistance is a scalar quantity that measures the opposition to the flow of electric current in a circuit."
+    },
+    {
+        "question": "What term describes the intensity of a sound wave?",
+        "options": [
+            "Distance",
+            "Speed",
+            "Amplitude",
+            "Force"
+        ],
+        "answer": "Amplitude",
+        "explanation": "Amplitude is a scalar quantity that measures the maximum displacement of particles in a medium from their mean position when a sound wave passes through."
+    },
+    {
+        "question": "Which of the following quantities is represented only by its magnitude?",
+        "options": [
+            "Acceleration",
+            "Displacement",
+            "Time",
+            "Velocity"
+        ],
+        "answer": "Time",
+        "explanation": "Time is a scalar quantity that represents the duration or interval between two events, measured in seconds (s) or other units of time."
+    },
+    {
+        "question": "What quantity measures the amount of substance in a given volume?",
+        "options": [
+            "Density",
+            "Weight",
+            "Momentum",
+            "Force"
+        ],
+        "answer": "Density",
+        "explanation": "Density is a scalar quantity that measures the amount of substance (mass) in a given volume, typically expressed in kilograms per cubic meter (kg/m^3) or other appropriate units."
+    },
+    
+    {
+        "question": "Which of the following quantities is measured in degrees Celsius or Fahrenheit?",
+        "options": [
+            "Volume",
+            "Mass",
+            "Temperature",
+            "Distance"
+        ],
+        "answer": "Temperature",
+        "explanation": "Temperature is a scalar quantity measured in degrees Celsius (°C) or Fahrenheit (°F), representing the degree of hotness or coldness of an object or environment."
+    },
+    {
+        "question": "What quantity represents the amount of space occupied by a three-dimensional object?",
+        "options": [
+            "Mass",
+            "Distance",
+            "Volume",
+            "Density"
+        ],
+        "answer": "Volume",
+        "explanation": "Volume is a scalar quantity that measures the amount of space occupied by a three-dimensional object, typically measured in cubic meters (m^3) or cubic centimeters (cm^3)."
+    },
+    {
+        "question": "Which of the following quantities represents the amount of matter in an object?",
+        "options": [
+            "Speed",
+            "Energy",
+            "Mass",
+            "Power"
+        ],
+        "answer": "Mass",
+        "explanation": "Mass is a scalar quantity that represents the amount of matter contained in an object, typically measured in kilograms (kg) or grams (g)."
+    },
+    {
+        "question": "What term refers to the extent of space between two points?",
+        "options": [
+            "Volume",
+            "Density",
+            "Distance",
+            "Charge"
+        ],
+        "answer": "Distance",
+        "explanation": "Distance is a scalar quantity that measures the extent of space between two points or the length of a path between them, typically measured in meters (m) or kilometers (km)."
+    },
+    {
+        "question": "Which of the following is a scalar quantity representing the rate of motion?",
+        "options": [
+            "Energy",
+            "Power",
+            "Density",
+            "Speed"
+        ],
+        "answer": "Speed",
+        "explanation": "Speed is a scalar quantity representing the rate of motion or the distance covered per unit time, typically measured in meters per second (m/s) or kilometers per hour (km/h)."
+    },
+    {
+        "question": "What quantity represents the capacity to do work?",
+        "options": [
+            "Charge",
+            "Volume",
+            "Mass",
+            "Energy"
+        ],
+        "answer": "Energy",
+        "explanation": "Energy is a scalar quantity that represents the capacity to do work or produce heat, typically measured in joules (J) or other appropriate units."
+    },
+    {
+        "question": "Which of the following quantities represents the rate at which work is done or energy is transferred?",
+        "options": [
+            "Density",
+            "Mass",
+            "Charge",
+            "Power"
+        ],
+        "answer": "Power",
+        "explanation": "Power is a scalar quantity representing the rate at which work is done or energy is transferred per unit time, typically measured in watts (W) or horsepower (hp)."
+    },
+    {
+        "question": "What term refers to the fundamental property of matter that causes it to experience a force when placed in an electromagnetic field?",
+        "options": [
+            "Density",
+            "Charge",
+            "Temperature",
+            "Mass"
+        ],
+        "answer": "Charge",
+        "explanation": "Charge is a scalar quantity representing the fundamental property of matter that causes it to experience a force when placed in an electromagnetic field, typically measured in coulombs (C) or other appropriate units."
+    },
+    {
+        "question": "Which of the following quantities represents the mass per unit volume of a substance?",
+        "options": [
+            "Distance",
+            "Speed",
+            "Power",
+            "Density"
+        ],
+        "answer": "Density",
+        "explanation": "Density is a scalar quantity representing the mass per unit volume of a substance, typically measured in kilograms per cubic meter (kg/m^3) or grams per cubic centimeter (g/cm^3)."
+    },
+    {
+        "question": "What quantity represents the amount of matter contained in a specific volume?",
+        "options": [
+            "Energy",
+            "Temperature",
+            "Mass",
+            "Volume"
+        ],
+        "answer": "Mass",
+        "explanation": "Mass is a scalar quantity representing the amount of matter contained in a specific volume, typically measured in kilograms (kg) or grams (g)."
+    },
+    
+    {
+        "question": "What term refers to the effect of a force in a particular direction?",
+        "options": [
+            "Resultant",
+            "Component",
+            "Magnitude",
+            "Direction"
+        ],
+        "answer": "Component",
+        "explanation": "Components of a force in any direction represent its effect in that particular direction, contributing to the overall result of the force."
+    },
+    {
+        "question": "When resolving forces, what represents the horizontal component of a force?",
+        "options": [
+            "Resultant",
+            "Magnitude",
+            "Vertical component",
+            "Horizontal component"
+        ],
+        "answer": "Horizontal component",
+        "explanation": "The horizontal component of a force represents its effect in the horizontal direction when resolving forces."
+    },
+    {
+        "question": "Which of the following is the vertical component of a force when resolving forces?",
+        "options": [
+            "Resultant",
+            "Direction",
+            "Magnitude",
+            "Vertical component"
+        ],
+        "answer": "Vertical component",
+        "explanation": "The vertical component of a force represents its effect in the vertical direction when resolving forces."
+    },
+    {
+        "question": "In resolving forces, what is the term for the combined effect of multiple forces acting on an object?",
+        "options": [
+            "Component",
+            "Magnitude",
+            "Resultant",
+            "Direction"
+        ],
+        "answer": "Resultant",
+        "explanation": "The resultant is the combined effect of multiple forces acting on an object, considering both their magnitudes and directions."
+    },
+    {
+        "question": "What is the horizontal component of a force if the force is acting at an angle to the horizontal?",
+        "options": [
+            "Resultant",
+            "Direction",
+            "Vertical component",
+            "Horizontal component"
+        ],
+        "answer": "Horizontal component",
+        "explanation": "When a force acts at an angle to the horizontal, its horizontal component is determined by the cosine of the angle."
+    },
+    {
+        "question": "Which term refers to the effect of a force in the vertical direction?",
+        "options": [
+            "Magnitude",
+            "Vertical component",
+            "Resultant",
+            "Direction"
+        ],
+        "answer": "Vertical component",
+        "explanation": "The vertical component of a force represents its effect in the vertical direction when resolving forces."
+    },
+    {
+        "question": "When resolving forces, what quantity represents the overall magnitude of a force?",
+        "options": [
+            "Direction",
+            "Component",
+            "Resultant",
+            "Vertical component"
+        ],
+        "answer": "Resultant",
+        "explanation": "The resultant represents the overall magnitude of a force when resolving forces, considering all contributing components."
+    },
+    {
+        "question": "What term describes the measure of a force's size?",
+        "options": [
+            "Direction",
+            "Resultant",
+            "Magnitude",
+            "Vertical component"
+        ],
+        "answer": "Magnitude",
+        "explanation": "Magnitude refers to the measure of a force's size or strength, typically represented by a numerical value and a unit."
+    },
+    {
+        "question": "When resolving forces, what represents the net effect of all forces acting on an object?",
+        "options": [
+            "Vertical component",
+            "Horizontal component",
+            "Resultant",
+            "Magnitude"
+        ],
+        "answer": "Resultant",
+        "explanation": "The resultant represents the net effect of all forces acting on an object, considering both their magnitudes and directions."
+    },
+    {
+        "question": "What term refers to the angle between the direction of a force and a reference axis?",
+        "options": [
+            "Magnitude",
+            "Direction",
+            "Resultant",
+            "Component"
+        ],
+        "answer": "Direction",
+        "explanation": "Direction refers to the angle between the direction of a force and a reference axis, providing information about the force's orientation."
+    },
+    
+    {
+        "question": "What mathematical function is used to calculate the horizontal component of a force?",
+        "options": [
+            "Sine",
+            "Cosine",
+            "Tangent",
+            "Inverse"
+        ],
+        "answer": "Cosine",
+        "explanation": "The horizontal component of a force is calculated using the cosine function."
+    },
+    {
+        "question": "Which trigonometric ratio is applied to find the horizontal component?",
+        "options": [
+            "Sin",
+            "Cos",
+            "Tan",
+            "Cot"
+        ],
+        "answer": "Cos",
+        "explanation": "The horizontal component of a force is determined using the cosine function."
+    },
+    {
+        "question": "What symbol represents the horizontal component of a force?",
+        "options": [
+            "H",
+            "V",
+            "F",
+            "X"
+        ],
+        "answer": "H",
+        "explanation": "The horizontal component of a force is often represented by the symbol 'H' to denote its effect in the horizontal direction."
+    },
+    {
+        "question": "What does 'θ' represent in the expression for the horizontal component of a force?",
+        "options": [
+            "Magnitude",
+            "Angle",
+            "Resultant",
+            "Direction"
+        ],
+        "answer": "Angle",
+        "explanation": "In the expression for the horizontal component of a force, 'θ' represents the angle between the force and the horizontal axis."
+    },
+    {
+        "question": "When the angle 'θ' is 90 degrees, what is the horizontal component of the force?",
+        "options": [
+            "Zero",
+            "Maximum",
+            "Minimum",
+            "Undefined"
+        ],
+        "answer": "Zero",
+        "explanation": "When the angle 'θ' is 90 degrees (perpendicular to the horizontal axis), the horizontal component of the force becomes zero."
+    },
+    {
+        "question": "What happens to the horizontal component of a force when the angle 'θ' decreases?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Remains constant",
+            "Becomes zero"
+        ],
+        "answer": "Decreases",
+        "explanation": "As the angle 'θ' decreases (approaching zero), the horizontal component of the force decreases in magnitude."
+    },
+    {
+        "question": "How is the horizontal component of a force affected when the force vector is parallel to the horizontal axis?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Becomes zero",
+            "Remains constant"
+        ],
+        "answer": "Increases",
+        "explanation": "When the force vector is parallel to the horizontal axis (θ = 0), the horizontal component of the force reaches its maximum value."
+    },
+    {
+        "question": "What happens to the horizontal component of a force when the angle 'θ' exceeds 90 degrees?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Becomes zero",
+            "Remains constant"
+        ],
+        "answer": "Decreases",
+        "explanation": "When the angle 'θ' exceeds 90 degrees, the horizontal component of the force decreases in magnitude and eventually becomes zero."
+    },
+    {
+        "question": "What is the mathematical relationship between the horizontal component and the force magnitude?",
+        "options": [
+            "Directly proportional",
+            "Inversely proportional",
+            "No relationship",
+            "Exponential"
+        ],
+        "answer": "Directly proportional",
+        "explanation": "The horizontal component of a force is directly proportional to the force magnitude when the angle 'θ' remains constant."
+    },
+    {
+        "question": "Which term refers to the horizontal component of a force when resolving forces?",
+        "options": [
+            "Resultant",
+            "Direction",
+            "Vertical component",
+            "Horizontal component"
+        ],
+        "answer": "Horizontal component",
+        "explanation": "The horizontal component of a force represents its effect in the horizontal direction when resolving forces."
+    },
+    
+    {
+        "question": "What mathematical function is used to calculate the vertical component of a force?",
+        "options": [
+            "Sine",
+            "Cosine",
+            "Tangent",
+            "Inverse"
+        ],
+        "answer": "Sine",
+        "explanation": "The vertical component of a force is calculated using the sine function."
+    },
+    {
+        "question": "Which trigonometric ratio is applied to find the vertical component?",
+        "options": [
+            "Sin",
+            "Cos",
+            "Tan",
+            "Cot"
+        ],
+        "answer": "Sin",
+        "explanation": "The vertical component of a force is determined using the sine function."
+    },
+    {
+        "question": "What symbol represents the vertical component of a force?",
+        "options": [
+            "H",
+            "V",
+            "F",
+            "Y"
+        ],
+        "answer": "V",
+        "explanation": "The vertical component of a force is often represented by the symbol 'V' to denote its effect in the vertical direction."
+    },
+    {
+        "question": "What does 'θ' represent in the expression for the vertical component of a force?",
+        "options": [
+            "Magnitude",
+            "Angle",
+            "Resultant",
+            "Direction"
+        ],
+        "answer": "Angle",
+        "explanation": "In the expression for the vertical component of a force, 'θ' represents the angle between the force and the horizontal axis."
+    },
+    {
+        "question": "When the angle 'θ' is 0 degrees, what is the vertical component of the force?",
+        "options": [
+            "Zero",
+            "Maximum",
+            "Minimum",
+            "Undefined"
+        ],
+        "answer": "Maximum",
+        "explanation": "When the angle 'θ' is 0 degrees (parallel to the horizontal axis), the vertical component of the force reaches its maximum value."
+    },
+    {
+        "question": "What happens to the vertical component of a force when the angle 'θ' decreases?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Remains constant",
+            "Becomes zero"
+        ],
+        "answer": "Decreases",
+        "explanation": "As the angle 'θ' decreases (approaching 0), the vertical component of the force decreases in magnitude."
+    },
+    {
+        "question": "How is the vertical component of a force affected when the force vector is parallel to the vertical axis?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Becomes zero",
+            "Remains constant"
+        ],
+        "answer": "Becomes zero",
+        "explanation": "When the force vector is parallel to the vertical axis (θ = 90 degrees), the vertical component of the force becomes zero."
+    },
+    {
+        "question": "What happens to the vertical component of a force when the angle 'θ' exceeds 90 degrees?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Becomes zero",
+            "Remains constant"
+        ],
+        "answer": "Increases",
+        "explanation": "When the angle 'θ' exceeds 90 degrees, the vertical component of the force increases in magnitude and eventually reaches its maximum value."
+    },
+    {
+        "question": "What is the mathematical relationship between the vertical component and the force magnitude?",
+        "options": [
+            "Directly proportional",
+            "Inversely proportional",
+            "No relationship",
+            "Exponential"
+        ],
+        "answer": "Directly proportional",
+        "explanation": "The vertical component of a force is directly proportional to the force magnitude when the angle 'θ' remains constant."
+    },
+    {
+        "question": "Which term refers to the vertical component of a force when resolving forces?",
+        "options": [
+            "Resultant",
+            "Direction",
+            "Vertical component",
+            "Horizontal component"
+        ],
+        "answer": "Vertical component",
+        "explanation": "The vertical component of a force represents its effect in the vertical direction when resolving forces."
+    },
+    
+    {
+        "question": "What is relative motion?",
+        "options": [
+            "Motion of an object with respect to a stationary observer",
+            "Motion of an object with respect to a moving observer",
+            "Motion of an observer with respect to a stationary object",
+            "Motion of an observer with respect to a moving object"
+        ],
+        "answer": "Motion of an object with respect to a moving observer",
+        "explanation": "Relative motion refers to the motion of an object with respect to a moving observer."
+    },
+    {
+        "question": "When does relative motion occur between two objects?",
+        "options": [
+            "When both objects are stationary",
+            "When both objects are moving in the same direction",
+            "When both objects are moving at different speeds",
+            "When both objects are moving in opposite directions"
+        ],
+        "answer": "When both objects are moving at different speeds",
+        "explanation": "Relative motion occurs between two objects when they are moving at different speeds."
+    },
+    {
+        "question": "What is the velocity of one object relative to another?",
+        "options": [
+            "The velocity of the slower object",
+            "The velocity of the faster object",
+            "The velocity of the object in the opposite direction",
+            "The resultant velocity when the other appears stationary"
+        ],
+        "answer": "The resultant velocity when the other appears stationary",
+        "explanation": "The velocity of one object relative to another is the resultant velocity when the other appears stationary."
+    },
+    {
+        "question": "If a car overtakes another car on a highway, how is their relative motion perceived?",
+        "options": [
+            "Both cars appear stationary",
+            "Both cars appear to move in the same direction",
+            "Both cars appear to move in opposite directions",
+            "One car appears to move towards the other"
+        ],
+        "answer": "One car appears to move towards the other",
+        "explanation": "When a car overtakes another car on a highway, the overtaking car appears to move towards the other car."
+    },
+    {
+        "question": "What term describes the velocity of one object with respect to another?",
+        "options": [
+            "Relative velocity",
+            "Absolute velocity",
+            "Instantaneous velocity",
+            "Terminal velocity"
+        ],
+        "answer": "Relative velocity",
+        "explanation": "The velocity of one object with respect to another is termed as relative velocity."
+    },
+    {
+        "question": "How is the velocity of one object relative to another calculated?",
+        "options": [
+            "By subtracting their velocities",
+            "By adding their velocities",
+            "By multiplying their velocities",
+            "By dividing their velocities"
+        ],
+        "answer": "By subtracting their velocities",
+        "explanation": "The velocity of one object relative to another is calculated by subtracting their velocities."
+    },
+    {
+        "question": "What is the direction of relative motion when one object moves faster than the other?",
+        "options": [
+            "Opposite to the faster object",
+            "Same as the faster object",
+            "Opposite to the slower object",
+            "In the direction of the slower object"
+        ],
+        "answer": "Opposite to the slower object",
+        "explanation": "The direction of relative motion is opposite to the slower object when one object moves faster than the other."
+    },
+    {
+        "question": "How does relative motion change when both objects move at the same speed?",
+        "options": [
+            "Relative motion becomes zero",
+            "Relative motion doubles",
+            "Relative motion becomes infinite",
+            "Relative motion remains the same"
+        ],
+        "answer": "Relative motion becomes zero",
+        "explanation": "When both objects move at the same speed, their relative motion becomes zero."
+    },
+    {
+        "question": "What is the resultant velocity if two objects move in opposite directions?",
+        "options": [
+            "Sum of their velocities",
+            "Difference of their velocities",
+            "Product of their velocities",
+            "Average of their velocities"
+        ],
+        "answer": "Difference of their velocities",
+        "explanation": "The resultant velocity of two objects moving in opposite directions is the difference of their velocities."
+    },
+    {
+        "question": "What factor determines the direction of relative motion between two objects?",
+        "options": [
+            "Speed of the objects",
+            "Mass of the objects",
+            "Direction of motion",
+            "Resultant velocity"
+        ],
+        "answer": "Direction of motion",
+        "explanation": "The direction of relative motion between two objects is determined by their direction of motion."
+    },
+    
+    {
+        "question": "What is resultant velocity?",
+        "options": [
+            "The velocity of an object when it is at rest",
+            "The sum of velocities of multiple objects",
+            "The final velocity of an object after acceleration",
+            "A single velocity formed by combining multiple velocities"
+        ],
+        "answer": "A single velocity formed by combining multiple velocities",
+        "explanation": "Resultant velocity is a single velocity formed by combining multiple velocities."
+    },
+    {
+        "question": "When is resultant velocity used?",
+        "options": [
+            "When an object moves in a straight line",
+            "When multiple objects move together",
+            "When velocities need to be combined into one",
+            "When there is no motion"
+        ],
+        "answer": "When velocities need to be combined into one",
+        "explanation": "Resultant velocity is used when velocities need to be combined into one."
+    },
+    {
+        "question": "What are the two cases discussed for crossing a river?",
+        "options": [
+            "Upstream and downstream",
+            "Parallel and perpendicular",
+            "Horizontal and vertical",
+            "North and south"
+        ],
+        "answer": "Upstream: Shortest distance, velocity along the line connecting the start and endpoint. Perpendicular to the riverbank: Shortest time, velocity at an angle to the horizontal.",
+        "explanation": "The two cases discussed are upstream (shortest distance, velocity along the line connecting the start and endpoint) and perpendicular to the riverbank (shortest time, velocity at an angle to the horizontal)."
+    },
+    {
+        "question": "In crossing a river, what determines the direction of the resultant velocity?",
+        "options": [
+            "Speed of the river",
+            "Width of the river",
+            "Mass of the object",
+            "Direction of the course"
+        ],
+        "answer": "Direction of the course",
+        "explanation": "The direction of the resultant velocity in crossing a river is determined by the direction of the course."
+    },
+    {
+        "question": "What are some examples where resultant velocities are calculated?",
+        "options": [
+            "Resolving forces",
+            "Crossing a river",
+            "Throwing a ball",
+            "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "Resultant velocities are calculated in various scenarios, including resolving forces, crossing a river, and throwing a ball."
+    },
+   
+    {
+        "question": "What is the purpose of finding resultant velocities?",
+        "options": [
+            "To determine the final position of an object",
+            "To find the acceleration of an object",
+            "To calculate the total distance traveled",
+            "To determine the combined effect of multiple velocities"
+        ],
+        "answer": "To determine the combined effect of multiple velocities",
+        "explanation": "The purpose of finding resultant velocities is to determine the combined effect of multiple velocities."
+    },
+    {
+        "question": "What information is needed to calculate resultant velocities?",
+        "options": [
+            "Mass and volume",
+            "Distance and time",
+            "Velocities and angles",
+            "Force and energy"
+        ],
+        "answer": "Velocities and angles",
+        "explanation": "To calculate resultant velocities, velocities and angles are needed."
+    },
+    {
+        "question": "How are the cases of crossing a river related to finding resultant velocities?",
+        "options": [
+            "They illustrate different scenarios where resultant velocities are applied",
+            "They determine the speed of the river",
+            "They represent obstacles to calculating resultant velocities",
+            "They provide examples of random motion"
+        ],
+        "answer": "They illustrate different scenarios where resultant velocities are applied",
+        "explanation": "The cases of crossing a river illustrate different scenarios where resultant velocities are applied."
+    },
+    {
+        "question": "What role do angles play in calculating resultant velocities?",
+        "options": [
+            "They determine the shape of the river",
+            "They indicate the direction of the course",
+            "They represent the speed of the objects",
+            "They influence the mass of the object"
+        ],
+        "answer": "They indicate the direction of the course",
+        "explanation": "Angles indicate the direction of the course, which is crucial in calculating resultant velocities."
+    }
+
+
+]

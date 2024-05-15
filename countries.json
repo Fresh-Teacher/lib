@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Which continent is home to Brazil?",
+        "options": ["Africa", "Asia", "Europe", "South America"],
+        "answer": "South America"
+    },
+    {
+        "question": "Which continent is home to Germany?",
+        "options": ["Africa", "Asia", "Europe", "Australia"],
+        "answer": "Europe"
+    },
+    {
+        "question": "Which continent is home to Kenya?",
+        "options": ["Africa", "Asia", "South America", "North America"],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which continent is home to Japan?",
+        "options": ["Africa", "Asia", "Europe", "South America"],
+        "answer": "Asia"
+    },
+    {
+        "question": "Which continent is home to Canada?",
+        "options": ["Africa", "Asia", "North America", "Australia"],
+        "answer": "North America"
+    }
+]

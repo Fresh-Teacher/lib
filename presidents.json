@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Who is the president of the United States?",
+        "options": ["Joe Biden", "Donald Trump", "Barack Obama", "George Bush"],
+        "answer": "Joe Biden"
+    },
+    {
+        "question": "Who is the president of France?",
+        "options": ["Emmanuel Macron", "Francois Hollande", "Nicolas Sarkozy", "Jacques Chirac"],
+        "answer": "Emmanuel Macron"
+    },
+    {
+        "question": "Who is the president of Russia?",
+        "options": ["Vladimir Putin", "Dmitry Medvedev", "Boris Yeltsin", "Mikhail Gorbachev"],
+        "answer": "Vladimir Putin"
+    },
+    {
+        "question": "Who is the president of Brazil?",
+        "options": ["Jair Bolsonaro", "Michel Temer", "Dilma Rousseff", "Luiz Inácio Lula da Silva"],
+        "answer": "Jair Bolsonaro"
+    },
+    {
+        "question": "Who is the president of South Africa?",
+        "options": ["Cyril Ramaphosa", "Jacob Zuma", "Nelson Mandela", "Thabo Mbeki"],
+        "answer": "Cyril Ramaphosa"
+    }
+]

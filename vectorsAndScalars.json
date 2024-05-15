@@ -1,0 +1,3039 @@
+[
+
+    {
+        "question": "What determines the recoil velocity of a gun when a bullet is fired?",
+        "options": [
+            "Mass of the bullet",
+            "Mass of the rifle",
+            "Velocity of the bullet",
+            "Velocity of the rifle"
+        ],
+        "answer": "Mass and velocity of the bullet",
+        "explanation": "The recoil velocity of a gun is determined by the mass and velocity of the bullet being fired."
+    },
+    {
+        "question": "How does the momentum of the rifle compare to the momentum of the bullet?",
+        "options": [
+            "They are equal",
+            "They are opposite",
+            "They are additive",
+            "They are unrelated"
+        ],
+        "answer": "They are opposite",
+        "explanation": "According to the principle of conservation of linear momentum, the momentum of the rifle is equal and opposite to the momentum of the bullet."
+    },
+    {
+        "question": "What happens to the total momentum of the gun and bullet system before and after firing?",
+        "options": [
+            "It decreases",
+            "It increases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "The total momentum of the gun and bullet system remains constant before and after firing, in accordance with the principle of conservation of linear momentum."
+    },
+    {
+        "question": "If a bullet has a higher velocity, what effect does it have on the recoil velocity of the gun?",
+        "options": [
+            "Increases recoil velocity",
+            "Decreases recoil velocity",
+            "No effect on recoil velocity",
+            "Recoil velocity becomes zero"
+        ],
+        "answer": "Increases recoil velocity",
+        "explanation": "A bullet with a higher velocity will result in a higher recoil velocity of the gun, as momentum is conserved."
+    },
+    {
+        "question": "What happens to the direction of the recoil velocity of the gun compared to the direction of the bullet?",
+        "options": [
+            "They are in the same direction",
+            "They are in opposite directions",
+            "Recoil velocity is perpendicular to bullet direction",
+            "Recoil velocity is vertical"
+        ],
+        "answer": "They are in opposite directions",
+        "explanation": "The recoil velocity of the gun is in the opposite direction to the velocity of the bullet, as they have equal and opposite momenta."
+    },
+    {
+        "question": "What physical law explains why the recoil velocity of a gun occurs?",
+        "options": [
+            "Newton's first law",
+            "Newton's second law",
+            "Conservation of linear momentum",
+            "Conservation of energy"
+        ],
+        "answer": "Conservation of linear momentum",
+        "explanation": "The recoil velocity of a gun occurs due to the conservation of linear momentum, where the total momentum before and after the event remains constant."
+    },
+    {
+        "question": "What property of the bullet affects the recoil velocity of the gun the most?",
+        "options": [
+            "Mass of the bullet",
+            "Velocity of the bullet",
+            "Material of the bullet",
+            "Shape of the bullet"
+        ],
+        "answer": "Velocity of the bullet",
+        "explanation": "The velocity of the bullet has a more significant effect on the recoil velocity of the gun compared to the mass of the bullet."
+    },
+    {
+        "question": "How does the recoil velocity of the gun change if the mass of the rifle increases?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Remains constant",
+            "Becomes zero"
+        ],
+        "answer": "Decreases",
+        "explanation": "If the mass of the rifle increases, the recoil velocity of the gun decreases, as momentum is conserved and inversely proportional to mass."
+    },
+    {
+        "question": "What is the direction of the momentum of the bullet relative to the direction of its motion?",
+        "options": [
+            "Opposite",
+            "Perpendicular",
+            "Parallel",
+            "Vertical"
+        ],
+        "answer": "Parallel",
+        "explanation": "The momentum of the bullet is parallel to the direction of its motion, as momentum is a vector quantity with direction."
+    },
+    {
+        "question": "What happens to the recoil velocity of the gun if the bullet is heavier?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Remains constant",
+            "Becomes zero"
+        ],
+        "answer": "Increases",
+        "explanation": "If the bullet is heavier, it carries more momentum, leading to an increase in the recoil velocity of the gun."
+    },
+    
+    {
+        "question": "What is the purpose of a conveyer belt?",
+        "options": [
+            "To transport objects vertically",
+            "To transport objects horizontally",
+            "To crush objects",
+            "To store objects"
+        ],
+        "answer": "To transport objects horizontally",
+        "explanation": "The purpose of a conveyer belt is to transport objects horizontally from one location to another."
+    },
+    {
+        "question": "How does a conveyer belt operate?",
+        "options": [
+            "By rotating in a circular motion",
+            "By vibrating back and forth",
+            "By moving continuously in one direction",
+            "By expanding and contracting"
+        ],
+        "answer": "By moving continuously in one direction",
+        "explanation": "A conveyer belt operates by moving continuously in one direction, allowing objects placed on it to be transported from one point to another."
+    },
+    {
+        "question": "What happens when a substance falls onto a conveyer belt?",
+        "options": [
+            "The substance is crushed",
+            "The substance is stored",
+            "The substance adds mass to the conveyer belt",
+            "The substance is transported vertically"
+        ],
+        "answer": "The substance adds mass to the conveyer belt",
+        "explanation": "When a substance falls onto a conveyer belt, it adds mass to the conveyer belt, contributing to its overall weight and momentum."
+    },
+    {
+        "question": "How is the rate at which mass is added to a conveyer belt denoted?",
+        "options": [
+            "R",
+            "M",
+            "V",
+            "F"
+        ],
+        "answer": "R",
+        "explanation": "The rate at which mass is added to a conveyer belt is denoted by the variable R."
+    },
+    {
+        "question": "What does the variable 'v' represent in the context of a conveyer belt?",
+        "options": [
+            "Velocity of the substance falling onto the belt",
+            "Velocity of the conveyer belt",
+            "Velocity of the objects being transported",
+            "Velocity of the conveyor motor"
+        ],
+        "answer": "Velocity of the conveyer belt",
+        "explanation": "In the context of a conveyer belt, the variable 'v' represents the velocity of the conveyer belt itself."
+    },
+    {
+        "question": "How is the force required to maintain the speed of a conveyer belt calculated?",
+        "options": [
+            "F = Rv",
+            "F = R / v",
+            "F = R + v",
+            "F = R - v"
+        ],
+        "answer": "F = Rv",
+        "explanation": "The force required to maintain the speed of a conveyer belt is calculated using the formula F = Rv, where R is the rate at which mass is added to the belt and v is the velocity of the belt."
+    },
+    {
+        "question": "What happens if the force applied to the conveyer belt is less than the force required to maintain its speed?",
+        "options": [
+            "The belt stops moving",
+            "The belt accelerates",
+            "The belt slows down",
+            "The belt reverses direction"
+        ],
+        "answer": "The belt slows down",
+        "explanation": "If the force applied to the conveyer belt is less than the force required to maintain its speed, the belt will slow down as a result of insufficient force to overcome friction and other resistive forces."
+    },
+    {
+        "question": "What role does friction play in the operation of a conveyer belt?",
+        "options": [
+            "Friction increases the speed of the belt",
+            "Friction decreases the speed of the belt",
+            "Friction has no effect on the speed of the belt",
+            "Friction reverses the direction of the belt"
+        ],
+        "answer": "Friction decreases the speed of the belt",
+        "explanation": "Friction between the conveyer belt and its supporting surface decreases the speed of the belt by opposing its motion, requiring additional force to maintain its speed."
+    },
+    {
+        "question": "How does the length of a conveyer belt affect its operation?",
+        "options": [
+            "Longer belts operate more efficiently",
+            "Shorter belts operate more efficiently",
+            "Belt length has no effect on efficiency",
+            "Efficiency depends on the material of the belt"
+        ],
+        "answer": "Longer belts operate more efficiently",
+        "explanation": "Longer conveyer belts can transport objects over greater distances and are often more efficient for continuous transportation compared to shorter belts."
+    },
+    {
+        "question": "What type of motion does a conveyer belt exhibit?",
+        "options": [
+            "Linear motion",
+            "Rotational motion",
+            "Circular motion",
+            "Oscillatory motion"
+        ],
+        "answer": "Linear motion",
+        "explanation": "A conveyer belt exhibits linear motion, moving continuously in one direction to transport objects from one point to another."
+    },
+    {
+        "question": "What principle governs the recoil velocity of a gun when a bullet is fired?",
+        "options": [
+            "Newton's first law",
+            "Newton's second law",
+            "Conservation of linear momentum",
+            "Conservation of energy"
+        ],
+        "answer": "Conservation of linear momentum",
+        "explanation": "The recoil velocity of a gun when a bullet is fired is governed by the principle of conservation of linear momentum."
+    },
+    {
+        "question": "What determines the recoil velocity of a gun?",
+        "options": [
+            "Mass of the bullet",
+            "Mass of the rifle",
+            "Velocity of the bullet",
+            "Velocity of the rifle"
+        ],
+        "answer": "Mass and velocity of the bullet",
+        "explanation": "The recoil velocity of a gun is determined by the mass and velocity of the bullet being fired."
+    },
+    {
+        "question": "How does the momentum of the rifle compare to the momentum of the bullet?",
+        "options": [
+            "They are equal",
+            "They are opposite",
+            "They are additive",
+            "They are unrelated"
+        ],
+        "answer": "They are opposite",
+        "explanation": "According to the principle of conservation of linear momentum, the momentum of the rifle is equal and opposite to the momentum of the bullet."
+    },
+    {
+        "question": "What happens to the total momentum of the gun and bullet system before and after firing?",
+        "options": [
+            "It decreases",
+            "It increases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "The total momentum of the gun and bullet system remains constant before and after firing, in accordance with the principle of conservation of linear momentum."
+    },
+    {
+        "question": "If a bullet has a higher velocity, what effect does it have on the recoil velocity of the gun?",
+        "options": [
+            "Increases recoil velocity",
+            "Decreases recoil velocity",
+            "No effect on recoil velocity",
+            "Recoil velocity becomes zero"
+        ],
+        "answer": "Increases recoil velocity",
+        "explanation": "A bullet with a higher velocity will result in a higher recoil velocity of the gun, as momentum is conserved."
+    },
+    {
+        "question": "What happens to the direction of the recoil velocity of the gun compared to the direction of the bullet?",
+        "options": [
+            "They are in the same direction",
+            "They are in opposite directions",
+            "Recoil velocity is perpendicular to bullet direction",
+            "Recoil velocity is vertical"
+        ],
+        "answer": "They are in opposite directions",
+        "explanation": "The recoil velocity of the gun is in the opposite direction to the velocity of the bullet, as they have equal and opposite momenta."
+    },
+    {
+        "question": "What physical law explains why the recoil velocity of a gun occurs?",
+        "options": [
+            "Newton's first law",
+            "Newton's second law",
+            "Conservation of linear momentum",
+            "Conservation of energy"
+        ],
+        "answer": "Conservation of linear momentum",
+        "explanation": "The recoil velocity of a gun occurs due to the conservation of linear momentum, where the total momentum before and after the event remains constant."
+    },
+    {
+        "question": "What property of the bullet affects the recoil velocity of the gun the most?",
+        "options": [
+            "Mass of the bullet",
+            "Velocity of the bullet",
+            "Material of the bullet",
+            "Shape of the bullet"
+        ],
+        "answer": "Velocity of the bullet",
+        "explanation": "The velocity of the bullet has a more significant effect on the recoil velocity of the gun compared to the mass of the bullet."
+    },
+    {
+        "question": "How does the recoil velocity of the gun change if the mass of the rifle increases?",
+        "options": [
+            "Increases",
+            "Decreases",
+            "Remains constant",
+            "Becomes zero"
+        ],
+        "answer": "Decreases",
+        "explanation": "If the mass of the rifle increases, the recoil velocity of the gun decreases, as momentum is conserved and inversely proportional to mass."
+    },
+    {
+        "question": "What is the direction of the momentum of the bullet relative to the direction of its motion?",
+        "options": [
+            "Opposite",
+            "Perpendicular",
+            "Parallel",
+            "Vertical"
+        ],
+        "answer": "Parallel",
+        "explanation": "The momentum of the bullet is parallel to the direction of its motion, as momentum is a vector quantity with direction."
+    },
+    
+    {
+        "question": "What does 'F' represent in the equation for force when a particle rebounds from a surface?",
+        "options": [
+            "Momentum of the particle",
+            "Velocity of the particle",
+            "Force exerted by the surface",
+            "Time of contact between particle and surface"
+        ],
+        "answer": "Force exerted by the surface",
+        "explanation": "'F' in the equation represents the force exerted by the surface when a particle rebounds from it."
+    },
+    {
+        "question": "What is the formula for calculating force when a particle rebounds from a surface?",
+        "options": [
+            "F = mu/t",
+            "F = 2mu/t",
+            "F = 3mu/t",
+            "F = mu"
+        ],
+        "answer": "F = 2mu/t",
+        "explanation": "The formula for calculating force when a particle rebounds from a surface is given by 'F = 2mu/t', where 'u' is the velocity of the particle and 't' is the time of contact."
+    },
+    {
+        "question": "If a surface absorbs momentum, how is the force calculated?",
+        "options": [
+            "F = momentum destroyed",
+            "F = 2mu/t",
+            "F = M × velocity",
+            "F = M × momentum destroyed per second"
+        ],
+        "answer": "F = M × momentum destroyed per second",
+        "explanation": "If a surface absorbs momentum, the force is calculated using the formula 'F = M × momentum destroyed per second', where 'M' is the mass and 'momentum destroyed per second' is the rate at which momentum is absorbed by the surface."
+    },
+    {
+        "question": "In the context of force on a surface, what does 'M' represent?",
+        "options": [
+            "Mass of the particle",
+            "Mass of the surface",
+            "Momentum of the particle",
+            "Velocity of the particle"
+        ],
+        "answer": "Mass of the surface",
+        "explanation": "'M' in the context of force on a surface represents the mass of the surface that absorbs momentum."
+    },
+    {
+        "question": "When a particle hits a surface and rebounds, what principle governs the force exerted by the surface?",
+        "options": [
+            "Newton's first law",
+            "Newton's second law",
+            "Newton's third law",
+            "Principle of conservation of momentum"
+        ],
+        "answer": "Newton's second law",
+        "explanation": "The force exerted by the surface when a particle hits it and rebounds is governed by Newton's second law."
+    },
+    {
+        "question": "What is the rate at which momentum is absorbed by a surface per second?",
+        "options": [
+            "Momentum absorbed",
+            "Time of contact",
+            "Momentum destroyed per second",
+            "Velocity of the surface"
+        ],
+        "answer": "Momentum destroyed per second",
+        "explanation": "The rate at which momentum is absorbed by a surface per second is referred to as 'momentum destroyed per second'."
+    },
+    {
+        "question": "In the context of force on a surface, what does 't' represent?",
+        "options": [
+            "Mass of the surface",
+            "Time of contact between particle and surface",
+            "Velocity of the particle",
+            "Momentum of the particle"
+        ],
+        "answer": "Time of contact between particle and surface",
+        "explanation": "'t' in the context of force on a surface represents the time of contact between the particle and the surface during rebound."
+    },
+    {
+        "question": "What is the formula for momentum destroyed per second in the context of force on a surface?",
+        "options": [
+            "Momentum destroyed per second = F/t",
+            "Momentum destroyed per second = 2mu",
+            "Momentum destroyed per second = 2mu/t",
+            "Momentum destroyed per second = Mu/t"
+        ],
+        "answer": "Momentum destroyed per second = Mu/t",
+        "explanation": "The formula for momentum destroyed per second in the context of force on a surface is given by 'Momentum destroyed per second = Mu/t', where 'M' is the mass of the surface, 'u' is the velocity of the particle, and 't' is the time of contact."
+    },
+    {
+        "question": "Which principle of physics explains the phenomenon of force when a particle rebounds from a surface?",
+        "options": [
+            "Newton's laws of motion",
+            "Archimedes' principle",
+            "Law of universal gravitation",
+            "Principle of relativity"
+        ],
+        "answer": "Newton's laws of motion",
+        "explanation": "The phenomenon of force when a particle rebounds from a surface is explained by Newton's laws of motion."
+    },
+    {
+        "question": "What does 'mu' represent in the formula for force when a particle rebounds from a surface?",
+        "options": [
+            "Mass of the particle",
+            "Velocity of the particle",
+            "Momentum of the particle",
+            "Time of contact between particle and surface"
+        ],
+        "answer": "Momentum of the particle",
+        "explanation": "'mu' in the formula for force when a particle rebounds from a surface represents the momentum of the particle."
+    },
+    
+    {
+        "question": "What is the mass symbolized by 'M' in a ballistic pendulum?",
+        "options": [
+            "Mass of the bullet",
+            "Mass of the block",
+            "Velocity of the bullet",
+            "Velocity of the block"
+        ],
+        "answer": "Mass of the block",
+        "explanation": "'M' in a ballistic pendulum represents the mass of the stationary block."
+    },
+    {
+        "question": "In a ballistic pendulum, what does 'u' denote?",
+        "options": [
+            "Velocity of the bullet before collision",
+            "Velocity of the block before collision",
+            "Velocity of the bullet after collision",
+            "Velocity of the block after collision"
+        ],
+        "answer": "Velocity of the bullet before collision",
+        "explanation": "'u' in a ballistic pendulum denotes the velocity of the bullet before collision."
+    },
+    {
+        "question": "What is the purpose of using conservation of momentum in a ballistic pendulum?",
+        "options": [
+            "To determine the height the composite body rises",
+            "To measure the speed of the bullet",
+            "To calculate the mass of the bullet",
+            "To find the mass of the block"
+        ],
+        "answer": "To measure the speed of the bullet",
+        "explanation": "Conservation of momentum is used in a ballistic pendulum to measure the speed of the bullet."
+    },
+    {
+        "question": "What is the equation for momentum conservation in a ballistic pendulum?",
+        "options": [
+            "mu + 0 = (m + M)v",
+            "mu + (m + M)v = 0",
+            "mu + (m + M)v = mgh",
+            "mu + 0 = mgh"
+        ],
+        "answer": "mu + 0 = (m + M)v",
+        "explanation": "The equation for momentum conservation in a ballistic pendulum is 'mu + 0 = (m + M)v'."
+    },
+    {
+        "question": "In a ballistic pendulum, what is represented by 'h'?",
+        "options": [
+            "Mass of the bullet",
+            "Height of the bullet",
+            "Height the composite body rises",
+            "Mass of the block"
+        ],
+        "answer": "Height the composite body rises",
+        "explanation": "'h' in a ballistic pendulum represents the height the composite body (bullet and block) rises above its original position after collision."
+    },
+    {
+        "question": "Which principle is utilized to derive the equation for finding the height 'h' in a ballistic pendulum?",
+        "options": [
+            "Conservation of momentum",
+            "Conservation of energy",
+            "Newton's second law",
+            "Archimedes' principle"
+        ],
+        "answer": "Conservation of energy",
+        "explanation": "The equation for finding the height 'h' in a ballistic pendulum is derived using the principle of conservation of energy."
+    },
+    {
+        "question": "What does 'v' represent after collision in a ballistic pendulum?",
+        "options": [
+            "Velocity of the bullet",
+            "Velocity of the block",
+            "Velocity of the composite body",
+            "Velocity of the string"
+        ],
+        "answer": "Velocity of the composite body",
+        "explanation": "'v' in a ballistic pendulum represents the velocity of the composite body (bullet and block) after collision."
+    },
+    {
+        "question": "Which variable denotes the velocity of the bullet after collision in a ballistic pendulum?",
+        "options": [
+            "v",
+            "u",
+            "h",
+            "M"
+        ],
+        "answer": "v",
+        "explanation": "In the equation for a ballistic pendulum, 'v' denotes the velocity of the composite body (bullet and block) after collision."
+    },
+    {
+        "question": "What principle is used to derive the equation for finding the velocity 'v' in a ballistic pendulum?",
+        "options": [
+            "Conservation of momentum",
+            "Conservation of energy",
+            "Newton's third law",
+            "Bernoulli's principle"
+        ],
+        "answer": "Conservation of momentum",
+        "explanation": "The equation for finding the velocity 'v' in a ballistic pendulum is derived using the principle of conservation of momentum."
+    },
+    {
+        "question": "Which equation represents energy conservation in a ballistic pendulum?",
+        "options": [
+            "1/2(m + M)v^2 = (m + M)gh",
+            "1/2mu^2 + 1/2(Mv^2) = mgh",
+            "1/2mu^2 + 1/2(Mv^2) = (m + M)gh",
+            "1/2mu^2 + 1/2(Mv^2) = 0"
+        ],
+        "answer": "1/2mu^2 + 1/2(Mv^2) = (m + M)gh",
+        "explanation": "The equation for energy conservation in a ballistic pendulum is '1/2mu^2 + 1/2(Mv^2) = (m + M)gh'."
+    },
+    
+    {
+        "question": "Two equal masses collide inelastically. If one object initially travels at 5 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "3 m/s to the right and 3 m/s to the left",
+            "4 m/s to the right and 2 m/s to the left",
+            "2 m/s to the right and 4 m/s to the left",
+            "5 m/s to the right and 3 m/s to the left"
+        ],
+        "answer": "3 m/s to the right and 3 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (5 m/s - 3 m/s) / 2 = 1 m/s to the right and left, respectively."
+    },
+    {
+        "question": "Two objects of equal mass undergo a perfectly elastic collision. If one object initially travels at 8 m/s to the right and the other at 4 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "4 m/s to the right and 8 m/s to the left",
+            "8 m/s to the right and 4 m/s to the left",
+            "6 m/s to the right and 6 m/s to the left",
+            "2 m/s to the right and 6 m/s to the left"
+        ],
+        "answer": "8 m/s to the right and 4 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 8 m/s to the right and the other at 4 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide head-on. If one object initially travels at 6 m/s to the right and the other at 2 m/s to the left, what are their velocities after the collision if it's perfectly inelastic?",
+        "options": [
+            "2 m/s to the right",
+            "2 m/s to the left",
+            "4 m/s to the right",
+            "4 m/s to the left"
+        ],
+        "answer": "2 m/s to the left",
+        "explanation": "In a perfectly inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (6 m/s - 2 m/s) / 2 = 2 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide inelastically. If one object initially travels at 7 m/s to the right and the other at 5 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "6 m/s to the right and 2 m/s to the left",
+            "7 m/s to the right and 5 m/s to the left",
+            "5 m/s to the right and 7 m/s to the left",
+            "2 m/s to the right and 6 m/s to the left"
+        ],
+        "answer": "6 m/s to the right and 2 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (7 m/s - 5 m/s) / 2 = 1 m/s to the right and left, respectively."
+    },
+    {
+        "question": "Two objects of equal mass collide elastically. If one object initially travels at 4 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "3 m/s to the right and 4 m/s to the left",
+            "4 m/s to the right and 3 m/s to the left",
+            "2.5 m/s to the right and 2.5 m/s to the left",
+            "2 m/s to the right and 2 m/s to the left"
+        ],
+        "answer": "3 m/s to the right and 4 m/s to the left",
+        "explanation": "In an elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 3 m/s to the right and the other at 4 m/s to the left."
+    },
+    {
+        "question": "Two equal masses undergo a perfectly elastic collision. If one object initially travels at 9 m/s to the right and the other at 6 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "6 m/s to the right and 9 m/s to the left",
+            "9 m/s to the right and 6 m/s to the left",
+            "7.5 m/s to the right and 7.5 m/s to the left",
+            "3 m/s to the right and 6 m/s to the left"
+        ],
+        "answer": "9 m/s to the right and 6 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 9 m/s to the right and the other at 6 m/s to the left."
+    },
+    {
+        "question": "Two objects of equal mass collide head-on. If one object initially travels at 10 m/s to the right and the other at 4 m/s to the left, what are their velocities after the collision if it's perfectly elastic?",
+        "options": [
+            "4 m/s to the right and 10 m/s to the left",
+            "10 m/s to the right and 4 m/s to the left",
+            "7 m/s to the right and 7 m/s to the left",
+            "3 m/s to the right and 3 m/s to the left"
+        ],
+        "answer": "10 m/s to the right and 4 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 10 m/s to the right and the other at 4 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide inelastically. If one object initially travels at 8 m/s to the right and the other at 6 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "7 m/s to the right and 7 m/s to the left",
+            "8 m/s to the right and 6 m/s to the left",
+            "5 m/s to the right and 5 m/s to the left",
+            "6 m/s to the right and 8 m/s to the left"
+        ],
+        "answer": "7 m/s to the right and 7 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (8 m/s - 6 m/s) / 2 = 1 m/s to the right and left, respectively."
+    },
+    {
+        "question": "Two objects of equal mass undergo a perfectly elastic collision. If one object initially travels at 12 m/s to the right and the other at 8 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "8 m/s to the right and 12 m/s to the left",
+            "12 m/s to the right and 8 m/s to the left",
+            "10 m/s to the right and 10 m/s to the left",
+            "4 m/s to the right and 4 m/s to the left"
+        ],
+        "answer": "12 m/s to the right and 8 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 12 m/s to the right and the other at 8 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide head-on. If one object initially travels at 15 m/s to the right and the other at 5 m/s to the left, what are their velocities after the collision if it's perfectly inelastic?",
+        "options": [
+            "5 m/s to the right",
+            "5 m/s to the left",
+            "10 m/s to the right",
+            "10 m/s to the left"
+        ],
+        "answer": "5 m/s to the left",
+        "explanation": "In a perfectly inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (15 m/s - 5 m/s) / 2 = 5 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide inelastically. If one object initially travels at 9 m/s to the right and the other at 7 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "8 m/s to the right and 8 m/s to the left",
+            "9 m/s to the right and 7 m/s to the left",
+            "7 m/s to the right and 9 m/s to the left",
+            "6 m/s to the right and 6 m/s to the left"
+        ],
+        "answer": "8 m/s to the right and 8 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (9 m/s - 7 m/s) / 2 = 1 m/s to the right and left, respectively."
+    },
+    
+    {
+        "question": "Two objects of equal mass collide head-on. If one object initially travels at 4 m/s and the other at 2 m/s in the opposite direction, what are their velocities after the collision if it's perfectly elastic?",
+        "options": [
+            "2 m/s and 4 m/s",
+            "0 m/s and 6 m/s",
+            "3 m/s and 3 m/s",
+            "4 m/s and 2 m/s"
+        ],
+        "answer": "2 m/s and 4 m/s",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, the velocities of the objects after the collision are interchanged. Therefore, the object initially traveling at 4 m/s will travel at 2 m/s after the collision, and the object initially traveling at 2 m/s will travel at 4 m/s after the collision."
+    },
+    {
+        "question": "Two objects of equal mass undergo a collision. If one object initially travels at 3 m/s to the right and the other at 2 m/s to the left, what are their velocities after the collision if it's perfectly inelastic?",
+        "options": [
+            "1 m/s to the right",
+            "1 m/s to the left",
+            "2 m/s to the right",
+            "2 m/s to the left"
+        ],
+        "answer": "1 m/s to the left",
+        "explanation": "In a perfectly inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (3 m/s - 2 m/s) / 2 = 0.5 m/s to the left."
+    },
+    {
+        "question": "Two objects of equal mass collide elastically. If one object initially travels at 5 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "3 m/s to the right and 5 m/s to the left",
+            "5 m/s to the right and 3 m/s to the left",
+            "4 m/s to the right and 4 m/s to the left",
+            "2 m/s to the right and 2 m/s to the left"
+        ],
+        "answer": "5 m/s to the right and 3 m/s to the left",
+        "explanation": "In an elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 5 m/s to the right and the other at 3 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide head-on. If one object initially travels at 2 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision if it's perfectly inelastic?",
+        "options": [
+            "0.5 m/s to the right",
+            "0.5 m/s to the left",
+            "2.5 m/s to the right",
+            "2.5 m/s to the left"
+        ],
+        "answer": "0.5 m/s to the left",
+        "explanation": "In a perfectly inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (3 m/s - 2 m/s) / 2 = 0.5 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide inelastically. If one object initially travels at 4 m/s to the right and the other at 2 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "2 m/s to the right and 2 m/s to the left",
+            "3 m/s to the right and 3 m/s to the left",
+            "4 m/s to the right and 2 m/s to the left",
+            "2 m/s to the right and 4 m/s to the left"
+        ],
+        "answer": "2 m/s to the right and 2 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (4 m/s - 2 m/s) / 2 = 1 m/s to the right and left, respectively."
+    },
+    {
+        "question": "Two equal masses collide head-on. If one object initially travels at 5 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision if it's perfectly elastic?",
+        "options": [
+            "3 m/s to the right and 5 m/s to the left",
+            "5 m/s to the right and 3 m/s to the left",
+            "4 m/s to the right and 4 m/s to the left",
+            "2 m/s to the right and 2 m/s to the left"
+        ],
+        "answer": "5 m/s to the right and 3 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 5 m/s to the right and the other at 3 m/s to the left."
+    },
+    {
+        "question": "Two equal masses collide inelastically. If one object initially travels at 2 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "2.5 m/s to the right and 2.5 m/s to the left",
+            "3 m/s to the right and 3 m/s to the left",
+            "2 m/s to the right and 3 m/s to the left",
+            "3 m/s to the right and 2 m/s to the left"
+        ],
+        "answer": "2.5 m/s to the right and 2.5 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (3 m/s - 2 m/s) / 2 = 0.5 m/s to the left. Since they move together, each object's velocity is the same."
+    },
+    {
+        "question": "Two equal masses undergo a perfectly elastic collision. If one object initially travels at 6 m/s to the right and the other at 3 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "3 m/s to the right and 6 m/s to the left",
+            "6 m/s to the right and 3 m/s to the left",
+            "4.5 m/s to the right and 4.5 m/s to the left",
+            "2 m/s to the right and 4 m/s to the left"
+        ],
+        "answer": "6 m/s to the right and 3 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 6 m/s to the right and the other at 3 m/s to the left."
+    },
+    {
+        "question": "Two objects of equal mass collide inelastically. If one object initially travels at 4 m/s to the right and the other at 2 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "2 m/s to the right and 2 m/s to the left",
+            "3 m/s to the right and 3 m/s to the left",
+            "4 m/s to the right and 2 m/s to the left",
+            "2 m/s to the right and 4 m/s to the left"
+        ],
+        "answer": "2 m/s to the right and 2 m/s to the left",
+        "explanation": "In an inelastic collision between objects of equal mass, they stick together and move as one mass after the collision. Therefore, the velocity after the collision is the average of the initial velocities, which is (4 m/s - 2 m/s) / 2 = 1 m/s to the right and left, respectively."
+    },
+    {
+        "question": "Two objects of equal mass undergo a perfectly elastic collision. If one object initially travels at 7 m/s to the right and the other at 5 m/s to the left, what are their velocities after the collision?",
+        "options": [
+            "5 m/s to the right and 7 m/s to the left",
+            "7 m/s to the right and 5 m/s to the left",
+            "6 m/s to the right and 6 m/s to the left",
+            "4 m/s to the right and 4 m/s to the left"
+        ],
+        "answer": "7 m/s to the right and 5 m/s to the left",
+        "explanation": "In a perfectly elastic collision between objects of equal mass, both conservation of momentum and conservation of kinetic energy apply. Therefore, after the collision, the objects will have exchanged velocities, resulting in one object traveling at 7 m/s to the right and the other at 5 m/s to the left."
+    },
+    
+    {
+        "question": "In a collision, if the angle of reflection is 60 degrees, what is the angle of incidence?",
+        "options": [
+            "60 degrees",
+            "120 degrees",
+            "30 degrees",
+            "90 degrees"
+        ],
+        "answer": "60 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 60 degrees, the angle of incidence is also 60 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 90 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "0 degrees",
+            "90 degrees",
+            "180 degrees",
+            "270 degrees"
+        ],
+        "answer": "90 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 90 degrees, the angle of incidence is also 90 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 120 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "120 degrees",
+            "240 degrees",
+            "60 degrees",
+            "180 degrees"
+        ],
+        "answer": "120 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 120 degrees, the angle of incidence is also 120 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 150 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "150 degrees",
+            "300 degrees",
+            "30 degrees",
+            "180 degrees"
+        ],
+        "answer": "150 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 150 degrees, the angle of incidence is also 150 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 210 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "210 degrees",
+            "420 degrees",
+            "30 degrees",
+            "180 degrees"
+        ],
+        "answer": "210 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 210 degrees, the angle of incidence is also 210 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 240 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "240 degrees",
+            "480 degrees",
+            "60 degrees",
+            "180 degrees"
+        ],
+        "answer": "240 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 240 degrees, the angle of incidence is also 240 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 270 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "270 degrees",
+            "540 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "answer": "270 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 270 degrees, the angle of incidence is also 270 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 300 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "300 degrees",
+            "600 degrees",
+            "60 degrees",
+            "180 degrees"
+        ],
+        "answer": "300 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 300 degrees, the angle of incidence is also 300 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 330 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "330 degrees",
+            "660 degrees",
+            "30 degrees",
+            "180 degrees"
+        ],
+        "answer": "330 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 330 degrees, the angle of incidence is also 330 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 0 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "0 degrees",
+            "360 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "answer": "0 degrees",
+        "explanation": "In a collision, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 0 degrees, the angle of incidence is also 0 degrees."
+    },
+    
+    {
+        "question": "If the angle of reflection is 330 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "90 degrees",
+            "150 degrees",
+            "330 degrees"
+        ],
+        "answer": "30 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 330 degrees, the angle of incidence is also 30 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 15 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "30 degrees",
+            "45 degrees",
+            "60 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 15 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 75 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "30 degrees",
+            "45 degrees",
+            "75 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 75 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 105 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "75 degrees",
+            "105 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 105 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 165 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "75 degrees",
+            "165 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 165 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 195 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "105 degrees",
+            "195 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 195 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 225 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "105 degrees",
+            "225 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 225 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 255 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "105 degrees",
+            "255 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 255 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 285 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "105 degrees",
+            "285 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 285 degrees, the angle of incidence is also 15 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 315 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "15 degrees",
+            "45 degrees",
+            "105 degrees",
+            "315 degrees"
+        ],
+        "answer": "15 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 315 degrees, the angle of incidence is also 15 degrees."
+    },
+    
+    {
+        "question": "If the angle of reflection is 30 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "60 degrees",
+            "90 degrees",
+            "120 degrees"
+        ],
+        "answer": "30 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 30 degrees, the angle of incidence is also 30 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 60 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "60 degrees",
+            "90 degrees",
+            "120 degrees"
+        ],
+        "answer": "60 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 60 degrees, the angle of incidence is also 60 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 90 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "60 degrees",
+            "90 degrees",
+            "120 degrees"
+        ],
+        "answer": "90 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 90 degrees, the angle of incidence is also 90 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 120 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "60 degrees",
+            "90 degrees",
+            "120 degrees"
+        ],
+        "answer": "120 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 120 degrees, the angle of incidence is also 120 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 135 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "45 degrees",
+            "90 degrees",
+            "135 degrees",
+            "180 degrees"
+        ],
+        "answer": "45 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 135 degrees, the angle of incidence is also 45 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 150 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "60 degrees",
+            "90 degrees",
+            "150 degrees"
+        ],
+        "answer": "30 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 150 degrees, the angle of incidence is also 30 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 180 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "0 degrees",
+            "90 degrees",
+            "180 degrees",
+            "270 degrees"
+        ],
+        "answer": "0 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 180 degrees, the angle of incidence is also 0 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 210 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "30 degrees",
+            "90 degrees",
+            "150 degrees",
+            "210 degrees"
+        ],
+        "answer": "30 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 210 degrees, the angle of incidence is also 30 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 240 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "60 degrees",
+            "120 degrees",
+            "180 degrees",
+            "240 degrees"
+        ],
+        "answer": "60 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 240 degrees, the angle of incidence is also 60 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 270 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "0 degrees",
+            "90 degrees",
+            "180 degrees",
+            "270 degrees"
+        ],
+        "answer": "0 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 270 degrees, the angle of incidence is also 0 degrees."
+    },
+    {
+        "question": "If the angle of reflection is 300 degrees, what is the angle of incidence in the collision?",
+        "options": [
+            "60 degrees",
+            "120 degrees",
+            "180 degrees",
+            "300 degrees"
+        ],
+        "answer": "60 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 300 degrees, the angle of incidence is also 60 degrees."
+    },
+    
+    {
+        "question": "In a collision involving angles, what principle is used to analyze the motion?",
+        "options": [
+            "Newton's First Law",
+            "Newton's Second Law",
+            "Newton's Third Law",
+            "Principle of Conservation of Angular Momentum"
+        ],
+        "answer": "Principle of Conservation of Angular Momentum",
+        "explanation": "In collisions involving angles, the Principle of Conservation of Angular Momentum is used to analyze the motion. This principle states that the total angular momentum of a system remains constant if no external torque acts on it."
+    },
+    {
+        "question": "What factor determines the angle of rebound in a collision involving angles?",
+        "options": [
+            "Mass of the object",
+            "Initial velocity",
+            "Surface roughness",
+            "Angle of incidence"
+        ],
+        "answer": "Angle of incidence",
+        "explanation": "In a collision involving angles, the angle of rebound is determined by the angle of incidence, which is the angle at which the object strikes the surface. The angle of incidence is equal to the angle of reflection in elastic collisions."
+    },
+    {
+        "question": "How is the velocity of a particle after a collision calculated when involving angles?",
+        "options": [
+            "Using only momentum conservation",
+            "Using only kinetic energy conservation",
+            "Using both momentum and kinetic energy conservation",
+            "Using angular momentum conservation"
+        ],
+        "answer": "Using both momentum and kinetic energy conservation",
+        "explanation": "To calculate the velocity of a particle after a collision involving angles, both momentum and kinetic energy conservation principles are used. Momentum conservation ensures that the total momentum before and after the collision remains constant, while kinetic energy conservation accounts for any changes in kinetic energy."
+    },
+    {
+        "question": "In a collision involving angles, what happens to the kinetic energy of the system if the collision is perfectly elastic?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In a perfectly elastic collision involving angles, both momentum and kinetic energy are conserved. This means that the total kinetic energy of the system remains constant before and after the collision, with no loss or gain in kinetic energy."
+    },
+    {
+        "question": "What principle governs the conservation of kinetic energy in a collision involving angles?",
+        "options": [
+            "Newton's First Law",
+            "Newton's Second Law",
+            "Newton's Third Law",
+            "Law of Conservation of Energy"
+        ],
+        "answer": "Law of Conservation of Energy",
+        "explanation": "The conservation of kinetic energy in a collision involving angles is governed by the Law of Conservation of Energy, which states that energy cannot be created or destroyed, only transferred or converted from one form to another."
+    },
+    {
+        "question": "In a collision involving angles, what is the relationship between the angle of incidence and the angle of reflection?",
+        "options": [
+            "They are always equal",
+            "They are always different",
+            "They are equal only in elastic collisions",
+            "They are equal only in inelastic collisions"
+        ],
+        "answer": "They are always equal",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). This relationship holds true for both elastic and inelastic collisions."
+    },
+    {
+        "question": "What is the primary factor that determines the direction of rebound in a collision involving angles?",
+        "options": [
+            "Surface material",
+            "Initial velocity",
+            "Angle of incidence",
+            "Mass of the object"
+        ],
+        "answer": "Angle of incidence",
+        "explanation": "In a collision involving angles, the direction of rebound is primarily determined by the angle of incidence, which is the angle at which the object strikes the surface. The angle of rebound is equal to the angle of incidence in elastic collisions."
+    },
+    {
+        "question": "In a collision involving angles, what happens to the velocity of the object if the angle of incidence is increased?",
+        "options": [
+            "Velocity increases",
+            "Velocity decreases",
+            "Velocity remains constant",
+            "Velocity becomes zero"
+        ],
+        "answer": "Velocity decreases",
+        "explanation": "In a collision involving angles, if the angle of incidence (the angle at which the object strikes the surface) is increased, the velocity of the object decreases. This is because a larger angle of incidence results in more energy being redirected into the surface, reducing the velocity of the object."
+    },
+    {
+        "question": "What is the angle of incidence in a collision if the angle of reflection is 45 degrees?",
+        "options": [
+            "0 degrees",
+            "90 degrees",
+            "180 degrees",
+            "45 degrees"
+        ],
+        "answer": "45 degrees",
+        "explanation": "In a collision involving angles, the angle of incidence (the angle at which the object strikes the surface) is equal to the angle of reflection (the angle at which the object rebounds from the surface). Therefore, if the angle of reflection is 45 degrees, the angle of incidence is also 45 degrees."
+    },
+    {
+        "question": "In a collision involving angles, what happens to the velocity of the object if the angle of incidence is decreased?",
+        "options": [
+            "Velocity increases",
+            "Velocity decreases",
+            "Velocity remains constant",
+            "Velocity becomes zero"
+        ],
+        "answer": "Velocity increases",
+        "explanation": "In a collision involving angles, if the angle of incidence (the angle at which the object strikes the surface) is decreased, the velocity of the object increases. This is because a smaller angle of incidence results in less energy being redirected into the surface, allowing the object to retain more of its initial velocity."
+    },
+    
+    {
+        "question": "What principle governs the conservation of energy in collisions?",
+        "options": [
+            "Newton's First Law",
+            "Newton's Second Law",
+            "Newton's Third Law",
+            "Law of Conservation of Energy"
+        ],
+        "answer": "Law of Conservation of Energy",
+        "explanation": "The conservation of energy in collisions is governed by the Law of Conservation of Energy, which states that energy cannot be created or destroyed, only transferred or converted from one form to another."
+    },
+    {
+        "question": "In an elastic collision, what happens to the total kinetic energy of the system?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In an elastic collision, kinetic energy is conserved. This means that the total kinetic energy of the system remains constant before and after the collision, with no loss or gain in kinetic energy."
+    },
+    {
+        "question": "In an inelastic collision, what happens to the total kinetic energy of the system?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It decreases",
+        "explanation": "In an inelastic collision, kinetic energy is not conserved. Some of the initial kinetic energy of the system is converted into other forms of energy, such as heat or sound, during the collision. Therefore, the total kinetic energy decreases."
+    },
+    {
+        "question": "What type of collision would conserve kinetic energy?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Elastic collision",
+        "explanation": "In an elastic collision, kinetic energy is conserved. This means that the total kinetic energy of the system remains constant before and after the collision, with no loss or gain in kinetic energy."
+    },
+    {
+        "question": "What principle allows us to determine whether a collision is elastic or inelastic based on kinetic energy?",
+        "options": [
+            "Newton's First Law",
+            "Newton's Second Law",
+            "Newton's Third Law",
+            "Law of Conservation of Energy"
+        ],
+        "answer": "Law of Conservation of Energy",
+        "explanation": "The Law of Conservation of Energy allows us to determine whether a collision is elastic or inelastic based on kinetic energy. If the kinetic energy of the system remains constant before and after the collision, it is an elastic collision. If there is a decrease in kinetic energy, it is an inelastic collision."
+    },
+    {
+        "question": "What happens to the total energy of the system in an elastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In an elastic collision, both kinetic energy and potential energy (if applicable) are conserved. This means that the total energy of the system remains constant before and after the collision, with no loss or gain in total energy."
+    },
+    {
+        "question": "What happens to the total energy of the system in an inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It decreases",
+        "explanation": "In an inelastic collision, some of the initial kinetic energy of the system is converted into other forms of energy, such as heat or sound. Therefore, the total energy of the system decreases."
+    },
+    {
+        "question": "What type of collision would occur between two objects if there is a decrease in total energy after the collision?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Inelastic collision",
+        "explanation": "In an inelastic collision, some of the initial kinetic energy of the system is converted into other forms of energy, such as heat or sound. Therefore, there is a decrease in total energy after the collision."
+    },
+    {
+        "question": "If the total kinetic energy of a system is conserved before and after a collision, what can be said about the collision?",
+        "options": [
+            "It is elastic",
+            "It is inelastic",
+            "It is perfectly inelastic",
+            "It is partially inelastic"
+        ],
+        "answer": "It is elastic",
+        "explanation": "If the total kinetic energy of a system remains constant before and after a collision, the collision is considered elastic. This means that kinetic energy is conserved in the collision."
+    },
+    {
+        "question": "What happens to the total energy of the system in a perfectly inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It decreases",
+        "explanation": "In a perfectly inelastic collision, the maximum amount of kinetic energy is converted into other forms of energy, such as heat or sound. Therefore, the total energy of the system decreases."
+    },
+    
+    {
+        "question": "What happens to the kinetic energy in an elastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In an elastic collision, kinetic energy is conserved. This means that the total kinetic energy of the system remains constant before and after the collision, with no loss or gain in kinetic energy."
+    },
+    {
+        "question": "What happens to the momentum in an elastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In an elastic collision, momentum is conserved. This means that the total momentum of the system remains constant before and after the collision, with no loss or gain in momentum."
+    },
+    {
+        "question": "What type of collision would occur between two objects if they bounce off each other after collision?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Elastic collision",
+        "explanation": "In an elastic collision, the two objects bounce off each other after the collision, without any deformation or loss of kinetic energy. This is characterized by conservation of both momentum and kinetic energy."
+    },
+    {
+        "question": "What happens to the kinetic energy in an inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It decreases",
+        "explanation": "In an inelastic collision, kinetic energy is not conserved. Some of the initial kinetic energy of the system is converted into other forms of energy, such as heat or sound, during the collision. Therefore, the kinetic energy decreases."
+    },
+    {
+        "question": "In an elastic collision between two objects, what can be said about the final kinetic energy compared to the initial kinetic energy?",
+        "options": [
+            "It is greater than the initial kinetic energy",
+            "It is less than the initial kinetic energy",
+            "It is equal to the initial kinetic energy",
+            "It is unpredictable"
+        ],
+        "answer": "It is equal to the initial kinetic energy",
+        "explanation": "In an elastic collision, kinetic energy is conserved. This means that the total kinetic energy of the system remains constant before and after the collision, with no loss or gain in kinetic energy."
+    },
+    {
+        "question": "What happens to the momentum in an inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In an inelastic collision, momentum is conserved. This means that the total momentum of the system remains constant before and after the collision, with no loss or gain in momentum."
+    },
+    {
+        "question": "What type of collision would occur between two objects if they stick together after collision?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Perfectly inelastic collision",
+        "explanation": "In a perfectly inelastic collision, the two objects stick together after the collision and move as one object. This is the most extreme case of an inelastic collision, where the maximum amount of kinetic energy is converted into other forms of energy."
+    },
+    {
+        "question": "What happens to the final kinetic energy in a perfectly inelastic collision compared to the initial kinetic energy?",
+        "options": [
+            "It is greater than the initial kinetic energy",
+            "It is less than the initial kinetic energy",
+            "It is equal to the initial kinetic energy",
+            "It is unpredictable"
+        ],
+        "answer": "It is less than the initial kinetic energy",
+        "explanation": "In a perfectly inelastic collision, the two objects stick together after the collision and move as one object. Some of the initial kinetic energy is converted into other forms of energy, such as heat or sound, during the collision. Therefore, the final kinetic energy is less than the initial kinetic energy."
+    },
+    {
+        "question": "In an inelastic collision between two objects, what can be said about the final velocity compared to the initial velocities?",
+        "options": [
+            "It is greater than the initial velocities",
+            "It is less than the initial velocities",
+            "It is equal to the initial velocities",
+            "It is unpredictable"
+        ],
+        "answer": "It is less than the initial velocities",
+        "explanation": "In an inelastic collision, some of the kinetic energy is converted into other forms of energy such as heat or sound. Therefore, the final velocity of the objects after the collision is generally less than their initial velocities."
+    },
+    {
+        "question": "What type of collision would occur between two objects if their relative velocity of separation after collision is zero?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Perfectly inelastic collision",
+        "explanation": "In a perfectly inelastic collision, the two objects stick together after the collision and move as one object. If their relative velocity of separation after the collision is zero, it means they are not separating at all, indicating a perfectly inelastic collision."
+    },
+    
+    {
+        "question": "What is the defining characteristic of an elastic collision?",
+        "options": [
+            "Conservation of momentum but not kinetic energy",
+            "Conservation of kinetic energy but not momentum",
+            "Conservation of both momentum and kinetic energy",
+            "Conservation of neither momentum nor kinetic energy"
+        ],
+        "answer": "Conservation of both momentum and kinetic energy",
+        "explanation": "In an elastic collision, both momentum and kinetic energy are conserved. This means that the total momentum and the total kinetic energy of the system remain constant before and after the collision."
+    },
+    {
+        "question": "In an elastic collision between two objects, if one object comes to rest after the collision, what can be said about the other object?",
+        "options": [
+            "It also comes to rest",
+            "It continues to move with its initial velocity",
+            "It moves with half of its initial velocity",
+            "It moves with double its initial velocity"
+        ],
+        "answer": "It continues to move with its initial velocity",
+        "explanation": "In an elastic collision, both momentum and kinetic energy are conserved. If one object comes to rest after the collision, it means that all of its initial kinetic energy has been transferred to the other object, which will continue to move with its initial velocity."
+    },
+    {
+        "question": "What is the mathematical condition for an elastic collision between two objects?",
+        "options": [
+            "m1v1 + m2v2 = m1v1' + m2v2'",
+            "m1v1 - m2v2 = m1v1' - m2v2'",
+            "m1v1^2 + m2v2^2 = m1v1'^2 + m2v2'^2",
+            "m1v1^2 - m2v2^2 = m1v1'^2 - m2v2'^2"
+        ],
+        "answer": "m1v1 + m2v2 = m1v1' + m2v2'",
+        "explanation": "The mathematical condition for an elastic collision between two objects is conservation of both momentum and kinetic energy. Mathematically, this is expressed as m1v1 + m2v2 = m1v1' + m2v2', where m1 and m2 are the masses of the two objects, v1 and v2 are their initial velocities, and v1' and v2' are their final velocities."
+    },
+    {
+        "question": "What is the defining characteristic of an inelastic collision?",
+        "options": [
+            "Conservation of momentum but not kinetic energy",
+            "Conservation of kinetic energy but not momentum",
+            "Conservation of both momentum and kinetic energy",
+            "Conservation of neither momentum nor kinetic energy"
+        ],
+        "answer": "Conservation of momentum but not kinetic energy",
+        "explanation": "In an inelastic collision, momentum is conserved, but kinetic energy is not. This means that the total momentum of the system remains constant before and after the collision, but some kinetic energy is converted into other forms of energy such as heat or sound."
+    },
+    {
+        "question": "What happens to the kinetic energy in an inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It decreases",
+        "explanation": "In an inelastic collision, kinetic energy is not conserved. Some of the initial kinetic energy of the system is converted into other forms of energy, such as heat or sound, during the collision. Therefore, the kinetic energy decreases."
+    },
+    {
+        "question": "What is the mathematical condition for an inelastic collision between two objects?",
+        "options": [
+            "m1v1 + m2v2 = m1v1' + m2v2'",
+            "m1v1 - m2v2 = m1v1' - m2v2'",
+            "m1v1^2 + m2v2^2 = m1v1'^2 + m2v2'^2",
+            "m1v1^2 - m2v2^2 = m1v1'^2 - m2v2'^2"
+        ],
+        "answer": "m1v1 + m2v2 = (m1 + m2)v'",
+        "explanation": "In an inelastic collision, momentum is conserved. Mathematically, this is expressed as m1v1 + m2v2 = (m1 + m2)v', where m1 and m2 are the masses of the two objects, v1 and v2 are their initial velocities, and v' is their final velocity."
+    },
+    {
+        "question": "In an inelastic collision between two objects, what can be said about the final velocity compared to the initial velocities?",
+        "options": [
+            "It is greater than the initial velocities",
+            "It is less than the initial velocities",
+            "It is equal to the initial velocities",
+            "It is unpredictable"
+        ],
+        "answer": "It is less than the initial velocities",
+        "explanation": "In an inelastic collision, some of the kinetic energy is converted into other forms of energy such as heat or sound. Therefore, the final velocity of the objects after the collision is generally less than their initial velocities."
+    },
+    {
+        "question": "What type of collision would occur between two objects if they stick together after collision?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Perfectly inelastic collision",
+        "explanation": "In a perfectly inelastic collision, the two objects stick together after the collision and move as one object. This is the most extreme case of an inelastic collision, where the maximum amount of kinetic energy is converted into other forms of energy."
+    },
+    {
+        "question": "In an elastic collision between two objects, what can be said about the coefficient of restitution?",
+        "options": [
+            "It is less than 1",
+            "It is greater than 1",
+            "It is equal to 1",
+            "It can be any value"
+        ],
+        "answer": "It is equal to 1",
+        "explanation": "The coefficient of restitution (e) is a measure of the elasticity of a collision. In an elastic collision, where kinetic energy is conserved, the coefficient of restitution is equal to 1. This means that the relative velocity of separation after the collision is equal to the relative velocity of approach before the collision."
+    },
+    {
+        "question": "What type of collision would occur between two objects if their relative velocity of separation after collision is zero?",
+        "options": [
+            "Elastic collision",
+            "Inelastic collision",
+            "Perfectly inelastic collision",
+            "Partially inelastic collision"
+        ],
+        "answer": "Perfectly inelastic collision",
+        "explanation": "In a perfectly inelastic collision, the two objects stick together after the collision and move as one object. If their relative velocity of separation after the collision is zero, it means they are not separating at all, indicating a perfectly inelastic collision."
+    },
+    {
+        "question": "Which of the following is an example of an elastic collision?",
+        "options": [
+            "Two cars colliding and bouncing off each other",
+            "A car crashing into a tree and coming to a stop",
+            "A basketball hitting the ground and bouncing back up",
+            "A meteorite hitting the surface of the moon"
+        ],
+        "answer": "A basketball hitting the ground and bouncing back up",
+        "explanation": "In an elastic collision, both momentum and kinetic energy are conserved. When a basketball hits the ground and bounces back up, it experiences an elastic collision with the ground, where it transfers kinetic energy to the ground and bounces back with the same kinetic energy, assuming no energy losses."
+    },
+    
+    {
+        "question": "A 1000 kg car traveling at 20 m/s collides with a stationary car. After the collision, the 1000 kg car moves with a velocity of 10 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "500 kg",
+            "1000 kg",
+            "1500 kg",
+            "2000 kg"
+        ],
+        "answer": "1000 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, the momentum of the moving car before the collision is equal to the momentum of both cars after the collision. This can be expressed as (1000 * 20) = (1000 + m) * 10, where m is the mass of the stationary car. Solving for m gives m = 1000 kg."
+    },
+    {
+        "question": "A 2000 kg car traveling at 10 m/s collides with a 1500 kg car traveling at 15 m/s in the opposite direction. After the collision, the 2000 kg car moves with a velocity of 5 m/s. What is the velocity of the 1500 kg car after the collision?",
+        "options": [
+            "5 m/s",
+            "7.5 m/s",
+            "10 m/s",
+            "12.5 m/s"
+        ],
+        "answer": "7.5 m/s",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (2000 * 10) + (1500 * (-15)) = 2000 * 5 + 1500 * v, where v is the velocity of the 1500 kg car after the collision. Solving for v gives v = 7.5 m/s."
+    },
+    {
+        "question": "A 1000 kg car traveling at 20 m/s collides with a stationary car. After the collision, the 1000 kg car moves with a velocity of 5 m/s in the same direction as its initial velocity. What is the velocity of the stationary car after the collision?",
+        "options": [
+            "5 m/s",
+            "10 m/s",
+            "15 m/s",
+            "20 m/s"
+        ],
+        "answer": "10 m/s",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (1000 * 20) = (1000 + m) * 5, where m is the mass of the stationary car. Solving for m gives m = 1000 kg. Since the momentum of the system is conserved, the momentum of the stationary car after the collision is the same as the momentum of the moving car before the collision, which is (1000 * 20) / (1000 + 1000) = 10 m/s."
+    },
+    {
+        "question": "A 500 kg car traveling at 15 m/s collides with a stationary car. After the collision, the 500 kg car moves with a velocity of 10 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "250 kg",
+            "500 kg",
+            "750 kg",
+            "1000 kg"
+        ],
+        "answer": "500 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (500 * 15) = (500 + m) * 10, where m is the mass of the stationary car. Solving for m gives m = 500 kg."
+    },
+    {
+        "question": "A 1500 kg car traveling at 20 m/s collides with a stationary car. After the collision, the 1500 kg car moves with a velocity of 10 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "1500 kg",
+            "2000 kg",
+            "2500 kg",
+            "3000 kg"
+        ],
+        "answer": "1500 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (1500 * 20) = (1500 + m) * 10, where m is the mass of the stationary car. Solving for m gives m = 1500 kg."
+    },
+    {
+        "question": "A 2000 kg car traveling at 10 m/s collides with a stationary car. After the collision, the 2000 kg car moves with a velocity of 5 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "500 kg",
+            "1000 kg",
+            "1500 kg",
+            "2000 kg"
+        ],
+        "answer": "1000 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (2000 * 10) = (2000 + m) * 5, where m is the mass of the stationary car. Solving for m gives m = 1000 kg."
+    },
+    {
+        "question": "A 1000 kg car traveling at 15 m/s collides with a stationary car. After the collision, the 1000 kg car moves with a velocity of 5 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "1000 kg",
+            "1250 kg",
+            "1500 kg",
+            "1750 kg"
+        ],
+        "answer": "1000 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (1000 * 15) = (1000 + m) * 5, where m is the mass of the stationary car. Solving for m gives m = 1000 kg."
+    },
+    {
+        "question": "A 2000 kg car traveling at 20 m/s collides with a stationary car. After the collision, the 2000 kg car moves with a velocity of 10 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "2000 kg",
+            "3000 kg",
+            "4000 kg",
+            "5000 kg"
+        ],
+        "answer": "2000 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (2000 * 20) = (2000 + m) * 10, where m is the mass of the stationary car. Solving for m gives m = 2000 kg."
+    },
+    {
+        "question": "A 1500 kg car traveling at 15 m/s collides with a stationary car. After the collision, the 1500 kg car moves with a velocity of 5 m/s in the same direction as its initial velocity. What is the mass of the stationary car?",
+        "options": [
+            "1500 kg",
+            "2000 kg",
+            "2500 kg",
+            "3000 kg"
+        ],
+        "answer": "1500 kg",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (1500 * 15) = (1500 + m) * 5, where m is the mass of the stationary car. Solving for m gives m = 1500 kg."
+    },
+    {
+        "question": "A 1000 kg car traveling at 20 m/s collides with a stationary car. After the collision, the 1000 kg car moves with a velocity of 5 m/s in the same direction as its initial velocity. What is the velocity of the stationary car after the collision?",
+        "options": [
+            "5 m/s",
+            "10 m/s",
+            "15 m/s",
+            "20 m/s"
+        ],
+        "answer": "10 m/s",
+        "explanation": "According to the law of conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, (1000 * 20) = (1000 + m) * 5, where m is the mass of the stationary car. Solving for m gives m = 1000 kg. Since the momentum of the system is conserved, the momentum of the stationary car after the collision is the same as the momentum of the moving car before the collision, which is (1000 * 20) / (1000 + 1000) = 10 m/s."
+    },
+    
+    {
+        "question": "A 5000 kg truck collides with a stationary car. After the collision, the car moves with a velocity of 10 m/s in the same direction as the truck's initial velocity of 20 m/s. What is the mass of the car?",
+        "options": [
+            "1000 kg",
+            "2000 kg",
+            "2500 kg",
+            "5000 kg"
+        ],
+        "answer": "2500 kg",
+        "explanation": "Let the mass of the car be m. According to the conservation of momentum, the total momentum before the collision equals the total momentum after the collision. Therefore, 5000 * 20 = (5000 + m) * 10. Solving for m gives m = 2500 kg."
+    },
+    {
+        "question": "A 0.1 kg baseball traveling at 20 m/s collides with a bat and rebounds with a velocity of 30 m/s in the opposite direction. If the collision lasts for 0.01 seconds, what is the average force exerted on the ball by the bat?",
+        "options": [
+            "1000 N",
+            "2000 N",
+            "3000 N",
+            "4000 N"
+        ],
+        "answer": "4000 N",
+        "explanation": "The average force exerted on the ball can be calculated using the impulse-momentum theorem. Impulse is equal to the change in momentum, which is the mass of the ball multiplied by its change in velocity. Therefore, impulse = (0.1 * 30) - (0.1 * 20) = 3 Ns. Since impulse is also equal to force multiplied by time, we have force = impulse / time = 3 Ns / 0.01 s = 3000 N."
+    },
+    {
+        "question": "Two objects of masses 5 kg and 10 kg respectively collide with each other. If the velocity of the first object before the collision is 4 m/s and the velocity of the second object before the collision is 6 m/s in the opposite direction, and after the collision, they move together with a velocity of 1 m/s, what is the coefficient of restitution?",
+        "options": [
+            "0.2",
+            "0.4",
+            "0.6",
+            "0.8"
+        ],
+        "answer": "0.6",
+        "explanation": "The coefficient of restitution (e) can be calculated using the formula e = (relative velocity of separation) / (relative velocity of approach). Before the collision, the relative velocity of approach is the sum of their velocities, which is 4 m/s + (-6 m/s) = -2 m/s. After the collision, the relative velocity of separation is the final velocity of the objects, which is 1 m/s. Therefore, e = 1 / -2 = -0.5. However, since e is always positive, we take its absolute value, which is 0.5. Therefore, the coefficient of restitution is 0.5."
+    },
+    {
+        "question": "A 1000 kg car traveling at 20 m/s collides with a stationary truck. After the collision, the car rebounds with a velocity of 5 m/s in the opposite direction. If the collision lasts for 0.05 seconds, what is the average force exerted on the car by the truck?",
+        "options": [
+            "5000 N",
+            "10000 N",
+            "15000 N",
+            "20000 N"
+        ],
+        "answer": "10000 N",
+        "explanation": "The average force exerted on the car by the truck can be calculated using the impulse-momentum theorem. Impulse is equal to the change in momentum, which is the mass of the car multiplied by its change in velocity. Therefore, impulse = (1000 * 5) - (1000 * 20) = -15000 Ns. Since impulse is also equal to force multiplied by time, we have force = impulse / time = -15000 Ns / 0.05 s = -300000 N. However, since force is a vector quantity, we take its magnitude, which is 300000 N. Therefore, the average force exerted on the car by the truck is 300000 N."
+    },
+    {
+        "question": "A 50 g tennis ball is served with an initial velocity of 40 m/s. If the ball collides with a racket and rebounds in the opposite direction with a velocity of 30 m/s, what is the average force exerted on the ball by the racket if the collision lasts for 0.02 seconds?",
+        "options": [
+            "50 N",
+            "100 N",
+            "150 N",
+            "200 N"
+        ],
+        "answer": "100 N",
+        "explanation": "The average force exerted on the ball can be calculated using the impulse-momentum theorem. Impulse is equal to the change in momentum, which is the mass of the ball multiplied by its change in velocity. Therefore, impulse = (0.05 * 30) - (0.05 * 40) = -0.5 Ns. Since impulse is also equal to force multiplied by time, we have force = impulse / time = -0.5 Ns / 0.02 s = -25 N. However, since force is a vector quantity, we take its magnitude, which is 25 N. Therefore, the average force exerted on the ball by the racket is 25 N."
+    },
+    {
+        "question": "A 2000 kg car traveling at 10 m/s collides with a 1500 kg car traveling in the opposite direction at 20 m/s. After the collision, both cars move together with a velocity of 5 m/s. What is the kinetic energy lost during the collision?",
+        "options": [
+            "100000 J",
+            "150000 J",
+            "200000 J",
+            "250000 J"
+        ],
+        "answer": "150000 J",
+        "explanation": "The kinetic energy lost during the collision can be calculated by comparing the initial kinetic energy to the final kinetic energy. The initial kinetic energy is the sum of the kinetic energies of both cars before the collision, which is (1/2) * 2000 * 10^2 + (1/2) * 1500 * 20^2 = 150000 J. The final kinetic energy is the kinetic energy of both cars moving together after the collision, which is (1/2) * (2000 + 1500) * 5^2 = 37500 J. Therefore, the kinetic energy lost during the collision is 150000 J - 37500 J = 112500 J."
+    },
+    {
+        "question": "A 0.2 kg ball is dropped from a height of 2 m and rebounds to a height of 1 m. If the collision with the ground lasts for 0.02 seconds, what is the average force exerted on the ball by the ground?",
+        "options": [
+            "10 N",
+            "20 N",
+            "30 N",
+            "40 N"
+        ],
+        "answer": "40 N",
+        "explanation": "The average force exerted on the ball by the ground can be calculated using the impulse-momentum theorem. Impulse is equal to the change in momentum, which is the mass of the ball multiplied by its change in velocity. Therefore, impulse = (0.2 * 0) - (0.2 * (-9.8)) = 1.96 Ns. Since impulse is also equal to force multiplied by time, we have force = impulse / time = 1.96 Ns / 0.02 s = 98 N. However, since force is a vector quantity, we take its magnitude, which is 98 N. Therefore, the average force exerted on the ball by the ground is 98 N."
+    },
+    {
+        "question": "A 10 g bullet traveling at 500 m/s penetrates a wooden block and comes to rest in 0.01 seconds. If the bullet penetrates the block to a depth of 0.02 m, what is the average force exerted on the bullet?",
+        "options": [
+            "500 N",
+            "1000 N",
+            "1500 N",
+            "2000 N"
+        ],
+        "answer": "1500 N",
+        "explanation": "The average force exerted on the bullet can be calculated using the concept of impulse. Impulse is equal to the force applied multiplied by the time over which it is applied. In this case, the impulse is also equal to the change in momentum of the bullet, which is the mass of the bullet times its initial velocity. Therefore, the average force exerted on the bullet is the change in momentum divided by the time taken. Substituting the given values and solving for the force gives 1500 N."
+    },
+    {
+        "question": "A 2000 kg car traveling at 10 m/s collides with a stationary wall and comes to rest in 0.5 seconds. What is the average force exerted on the car by the wall?",
+        "options": [
+            "2000 N",
+            "4000 N",
+            "6000 N",
+            "8000 N"
+        ],
+        "answer": "4000 N",
+        "explanation": "The average force exerted on the car can be calculated using the concept of impulse. Impulse is equal to the change in momentum, which is the mass of the car times its change in velocity. In this case, the car comes to rest, so its final velocity is 0 m/s. Therefore, impulse = (2000 * 0) - (2000 * 10) = -20000 Ns. Since impulse is also equal to force multiplied by time, we have force = impulse / time = -20000 Ns / 0.5 s = -40000 N. However, since force is a vector quantity, we take its magnitude, which is 40000 N. Therefore, the average force exerted on the car by the wall is 40000 N."
+    },
+    {
+        "question": "A 500 kg car traveling at 20 m/s collides with a stationary truck and rebounds with a velocity of 10 m/s in the opposite direction. If the collision lasts for 0.1 seconds, what is the average force exerted on the car by the truck?",
+        "options": [
+            "5000 N",
+            "7500 N",
+            "10000 N",
+            "12500 N"
+        ],
+        "answer": "7500 N",
+        "explanation": "The average force exerted on the car by the truck can be calculated using the impulse-momentum theorem. Impulse is equal to the change in momentum, which is the mass of the car multiplied by its change in velocity. Therefore, impulse = (500 * (-10)) - (500 * 20) = -15000 Ns. Since impulse is also equal to force multiplied by time, we have force = impulse / time = -15000 Ns / 0.1 s = -150000 N. However, since force is a vector quantity, we take its magnitude, which is 150000 N. Therefore, the average force exerted on the car by the truck is 150000 N."
+    },
+    
+    {
+        "question": "Why do ice hockey players sharpen their skates?",
+        "options": [
+            "To increase friction",
+            "To decrease friction",
+            "To increase their speed",
+            "To decrease their speed"
+        ],
+        "answer": "To decrease friction",
+        "explanation": "Ice hockey players sharpen their skates to decrease friction. Sharper blades reduce resistance against the ice, allowing players to glide more smoothly and accelerate faster."
+    },
+    {
+        "question": "Why do divers curl into a tight ball during somersaults?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Divers curl into a tight ball during somersaults to increase their speed. By reducing their moment of inertia and minimizing air resistance, they can rotate faster and complete more rotations before entering the water."
+    },
+    {
+        "question": "Why do javelin throwers use a run-up before throwing?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Javelin throwers use a run-up before throwing to increase their speed. By building momentum and transferring kinetic energy from their body to the javelin, they can achieve greater distances in their throws."
+    },
+    {
+        "question": "Why do astronauts wear pressurized suits during spacewalks?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To decrease their speed",
+        "explanation": "Astronauts wear pressurized suits during spacewalks to decrease their speed. These suits provide resistance against the vacuum of space, ensuring that astronauts move at controlled speeds and maintain stability."
+    },
+    {
+        "question": "Why do gymnasts pull in their arms and legs during spins?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Gymnasts pull in their arms and legs during spins to increase their speed. By reducing their moment of inertia and minimizing air resistance, they can rotate faster and execute more complex maneuvers."
+    },
+    {
+        "question": "Why do Formula 1 cars have spoilers?",
+        "options": [
+            "To increase air resistance",
+            "To decrease air resistance",
+            "To increase their speed",
+            "To decrease their speed"
+        ],
+        "answer": "To increase air resistance",
+        "explanation": "Formula 1 cars have spoilers to increase air resistance. Spoilers disrupt airflow over the car, creating downforce that improves traction and stability at high speeds."
+    },
+    {
+        "question": "Why do golfers choose different clubs for different shots?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Golfers choose different clubs for different shots to increase their speed. Each club has a different design and loft angle, allowing golfers to achieve various distances and trajectories with their shots."
+    },
+    {
+        "question": "Why do fencers wear protective gear?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To decrease their speed",
+        "explanation": "Fencers wear protective gear to decrease their speed. The gear, including masks and padding, absorbs and disperses the force of impacts, reducing the risk of injuries during bouts."
+    },
+    {
+        "question": "Why do rugby players bind together in scrums?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their momentum",
+        "explanation": "Rugby players bind together in scrums to increase their momentum. By pushing against each other as a cohesive unit, they can gain ground and maintain possession of the ball in the scrum."
+    },
+    {
+        "question": "Why do gymnasts use a springboard before performing vaults?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Gymnasts use a springboard before performing vaults to increase their speed. The springboard stores and releases energy, propelling gymnasts higher into the air and allowing them to execute more complex maneuvers."
+    },
+    {
+        "question": "Why do baseball pitchers follow through after releasing the ball?",
+        "options": [
+            "To increase their speed",
+            "To reduce their speed",
+            "To increase their momentum",
+            "To reduce their momentum"
+        ],
+        "answer": "To reduce their momentum",
+        "explanation": "Baseball pitchers follow through after releasing the ball to reduce their momentum. By extending their arm and body forward, they dissipate the momentum built up during the pitch, reducing stress on their arm and improving accuracy."
+    },
+    {
+        "question": "Why do cars have crumple zones in the front?",
+        "options": [
+            "To increase the force of impact",
+            "To decrease the force of impact",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the force of impact",
+        "explanation": "Cars have crumple zones in the front to decrease the force of impact during collisions. These zones absorb and distribute kinetic energy, extending the time over which the deceleration occurs, thus reducing the force experienced by the occupants."
+    },
+    {
+        "question": "Why do figure skaters pull their arms inward during spins?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their angular momentum",
+            "To decrease their angular momentum"
+        ],
+        "answer": "To increase their angular momentum",
+        "explanation": "Figure skaters pull their arms inward during spins to increase their angular momentum. By decreasing their moment of inertia, they increase their rotational speed, allowing for faster spins while conserving angular momentum."
+    },
+    {
+        "question": "Why do football players tuck the ball into their bodies when running?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To decrease their speed",
+        "explanation": "Football players tuck the ball into their bodies when running to decrease their speed. By reducing their frontal area and minimizing air resistance, they can maintain or increase their momentum while minimizing drag from the ball."
+    },
+    {
+        "question": "Why do bungee jumpers bounce up and down multiple times after jumping?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To decrease their speed",
+        "explanation": "Bungee jumpers bounce up and down multiple times after jumping to decrease their speed. Each bounce dissipates kinetic energy, gradually bringing them to a stop. This process ensures a safer and more controlled descent."
+    },
+    {
+        "question": "Why do sprinters start from a crouched position?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Sprinters start from a crouched position to increase their speed. By lowering their center of mass and positioning themselves for explosive forward movement, they can accelerate more efficiently and quickly out of the starting blocks."
+    },
+    {
+        "question": "Why do skydivers spread their limbs during freefall?",
+        "options": [
+            "To increase air resistance",
+            "To decrease air resistance",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To increase air resistance",
+        "explanation": "Skydivers spread their limbs during freefall to increase air resistance. By creating a larger surface area, they increase drag, which slows down their descent and allows for better control and stability."
+    },
+    {
+        "question": "Why do basketball players bend their knees when shooting free throws?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To decrease their speed",
+        "explanation": "Basketball players bend their knees when shooting free throws to decrease their speed. By controlling their body's movement and energy, they can achieve more consistent and accurate shots with proper form."
+    },
+    {
+        "question": "Why do swimmers streamline their bodies during races?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To increase their speed",
+        "explanation": "Swimmers streamline their bodies during races to increase their speed. By reducing drag and minimizing resistance in the water, they can move more efficiently and maintain higher velocities throughout the race."
+    },
+    {
+        "question": "Why do cyclists wear tight-fitting clothing?",
+        "options": [
+            "To increase their speed",
+            "To decrease their speed",
+            "To increase their momentum",
+            "To decrease their momentum"
+        ],
+        "answer": "To decrease their speed",
+        "explanation": "Cyclists wear tight-fitting clothing to decrease their speed. Tight clothing reduces air resistance, allowing cyclists to maintain higher speeds with less effort."
+    },
+    
+    {
+        "question": "Why do astronauts wear spacesuits during spacewalks?",
+        "options": [
+            "To increase their speed",
+            "To reduce their speed",
+            "To increase their momentum",
+            "To reduce their momentum"
+        ],
+        "answer": "To reduce their speed",
+        "explanation": "Astronauts wear spacesuits during spacewalks to reduce their speed. Without the frictional effects of the Earth's atmosphere, any motion in space would continue indefinitely at a constant speed. Spacesuits provide means to maneuver and control their speed during activities outside the spacecraft."
+    },
+    {
+        "question": "Why do skateboarders bend their knees when landing tricks?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Skateboarders bend their knees when landing tricks to decrease the impact force. By flexing their knees upon landing, they increase the time over which they come to a stop, reducing the force exerted on their bodies."
+    },
+    {
+        "question": "Why do parachutists deploy their parachutes before landing?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To reduce their speed",
+        "explanation": "Parachutists deploy their parachutes before landing to reduce their speed. The parachute increases air resistance, which slows down the parachutist's descent. This increases the time over which the parachutist comes to a stop, reducing the impact force upon landing."
+    },
+    {
+        "question": "Why do cricketers roll the ball instead of throwing it directly to the wicket keeper?",
+        "options": [
+            "To increase the force exerted on the ball",
+            "To decrease the force exerted on the ball",
+            "To increase their reaction time",
+            "To improve their balance"
+        ],
+        "answer": "To decrease the force exerted on the ball",
+        "explanation": "Cricketers roll the ball instead of throwing it directly to the wicket keeper to decrease the force exerted on the ball. Rolling the ball reduces its speed, allowing the wicket keeper to catch it more comfortably without the risk of injury from a fast-moving ball."
+    },
+    {
+        "question": "Why do astronauts use retro-rockets before re-entry into the Earth's atmosphere?",
+        "options": [
+            "To increase their speed",
+            "To reduce their speed",
+            "To increase their momentum",
+            "To reduce their momentum"
+        ],
+        "answer": "To reduce their speed",
+        "explanation": "Astronauts use retro-rockets before re-entry into the Earth's atmosphere to reduce their speed. By firing retro-rockets, they slow down their spacecraft, allowing it to safely enter the atmosphere without experiencing excessive heating and stress."
+    },
+    {
+        "question": "Why do cyclists lean into turns?",
+        "options": [
+            "To increase the force exerted on the bike",
+            "To decrease the force exerted on the bike",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the force exerted on the bike",
+        "explanation": "Cyclists lean into turns to decrease the force exerted on the bike. By leaning, they adjust the direction of their momentum, allowing them to turn more smoothly with less lateral force exerted on the bike and reducing the risk of skidding."
+    },
+    {
+        "question": "Why do skiers bend their knees when landing jumps?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Skiers bend their knees when landing jumps to decrease the impact force. By flexing their knees upon landing, they increase the time over which they come to a stop, reducing the force exerted on their bodies."
+    },
+    {
+        "question": "Why do gymnasts spread their arms and legs when performing aerial maneuvers?",
+        "options": [
+            "To increase air resistance",
+            "To decrease air resistance",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To increase air resistance",
+        "explanation": "Gymnasts spread their arms and legs when performing aerial maneuvers to increase air resistance. By increasing their surface area, they create more drag, which slows down their rotation and allows for better control and stability during complex maneuvers."
+    },
+    {
+        "question": "Why do skaters crouch down during high-speed skating?",
+        "options": [
+            "To increase air resistance",
+            "To decrease air resistance",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease air resistance",
+        "explanation": "Skaters crouch down during high-speed skating to decrease air resistance. By reducing their frontal area, they minimize drag, allowing them to achieve higher speeds with less resistance from the air."
+    },
+    {
+        "question": "Why do divers enter the water with their arms extended forward?",
+        "options": [
+            "To increase air resistance",
+            "To decrease air resistance",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease air resistance",
+        "explanation": "Divers enter the water with their arms extended forward to decrease air resistance. By streamlining their body position, they reduce drag as they enter the water, allowing them to penetrate smoothly with minimal resistance."
+    },
+    
+    {
+        "question": "Why do long jumpers land on sand instead of a hard surface?",
+        "options": [
+            "To increase the force exerted on their knees",
+            "To reduce the force exerted on their knees",
+            "To decrease the distance of the jump",
+            "To minimize air resistance"
+        ],
+        "answer": "To reduce the force exerted on their knees",
+        "explanation": "Long jumpers land on sand instead of a hard surface to reduce the force exerted on their knees. When landing, their momentum needs to be dissipated over a short period, and sand provides a longer time interval for the jumper to come to a stop, thus reducing the impact force on the knees."
+    },
+    {
+        "question": "Why do goalkeepers draw their hands backward when catching fast-moving balls?",
+        "options": [
+            "To increase the force exerted on the ball",
+            "To reduce the force exerted on the ball",
+            "To increase their reaction time",
+            "To improve their balance"
+        ],
+        "answer": "To reduce the force exerted on the ball",
+        "explanation": "Goalkeepers draw their hands backward when catching fast-moving balls to reduce the force exerted on the ball. By moving their hands backward, they increase the time over which they decelerate the ball, reducing the impact force and the likelihood of injury."
+    },
+    {
+        "question": "Why do astronauts wear cushioned suits during re-entry into the Earth's atmosphere?",
+        "options": [
+            "To increase their speed",
+            "To reduce their speed",
+            "To increase their momentum",
+            "To reduce their momentum"
+        ],
+        "answer": "To reduce their speed",
+        "explanation": "Astronauts wear cushioned suits during re-entry into the Earth's atmosphere to reduce their speed. During re-entry, they experience immense friction and heat due to the atmosphere, and the cushioned suits help dissipate some of this energy, slowing them down gradually and preventing excessive forces."
+    },
+    {
+        "question": "Why do cars have crumple zones?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase air resistance",
+            "To decrease air resistance"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Cars have crumple zones to decrease the impact force during collisions. When a collision occurs, the crumple zones deform, absorbing some of the kinetic energy of the impact. This deformation increases the time interval over which the collision occurs, reducing the force experienced by the occupants of the vehicle."
+    },
+    {
+        "question": "Why are airbags installed in cars?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase air resistance",
+            "To decrease air resistance"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Airbags are installed in cars to decrease the impact force during collisions. When a collision occurs, the airbags rapidly inflate, providing a cushioning effect for the occupants. This increases the time interval over which the collision occurs, reducing the force exerted on the occupants' bodies."
+    },
+    {
+        "question": "Why do martial artists roll when they fall?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Martial artists roll when they fall to decrease the impact force. Rolling spreads the impact over a larger area of the body and increases the time interval over which the collision occurs, reducing the force experienced by any single body part."
+    },
+    {
+        "question": "Why do bungee jumpers use elastic cords instead of rigid ropes?",
+        "options": [
+            "To increase the force exerted on them",
+            "To decrease the force exerted on them",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the force exerted on them",
+        "explanation": "Bungee jumpers use elastic cords instead of rigid ropes to decrease the force exerted on them during the jump. The elasticity of the cord allows it to stretch, which increases the time interval over which the jumper comes to a stop, reducing the impact force experienced."
+    },
+    {
+        "question": "Why do cyclists wear helmets?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase air resistance",
+            "To decrease air resistance"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Cyclists wear helmets to decrease the impact force in case of accidents. Helmets are designed to absorb and distribute the force of impact, increasing the time interval over which the collision occurs and reducing the risk of severe head injuries."
+    },
+    {
+        "question": "Why do gymnasts bend their knees when landing?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Gymnasts bend their knees when landing to decrease the impact force. By flexing their knees, they increase the time interval over which they come to a stop, reducing the force exerted on their bodies upon landing."
+    },
+    {
+        "question": "Why do divers enter the water feet first?",
+        "options": [
+            "To increase the impact force",
+            "To decrease the impact force",
+            "To increase their speed",
+            "To reduce their speed"
+        ],
+        "answer": "To decrease the impact force",
+        "explanation": "Divers enter the water feet first to decrease the impact force. By entering feet first, they allow their bodies to gradually decelerate as they penetrate the water, increasing the time interval over which the collision occurs and reducing the force exerted on their bodies."
+    },
+    
+    {
+        "question": "A car of mass 1200 kg is moving at a velocity of 20 m/s. If it comes to a stop in 6 seconds due to a constant braking force, what is the magnitude of the force exerted by the brakes?",
+        "options": [
+            "4000 N",
+            "2000 N",
+            "1000 N",
+            "800 N"
+        ],
+        "answer": "4000 N",
+        "explanation": "To find the force exerted by the brakes, we can use the equation F = m * a, where F is the force, m is the mass, and a is the acceleration. Since the car comes to a stop, its final velocity is 0 m/s. We can calculate the acceleration using the equation a = (v_f - v_i) / t, where v_f is the final velocity, v_i is the initial velocity, and t is the time. Substituting the given values, we find the acceleration to be -3.33 m/s² (negative because it's decelerating). Finally, substituting the mass and acceleration into the force equation, we find the force exerted by the brakes to be 4000 N."
+    },
+    {
+        "question": "A hockey puck of mass 0.1 kg is initially at rest. It is struck by a hockey stick, experiencing an impulse of 5 Ns. What is the final velocity of the puck?",
+        "options": [
+            "50 m/s",
+            "40 m/s",
+            "30 m/s",
+            "20 m/s"
+        ],
+        "answer": "50 m/s",
+        "explanation": "To find the final velocity of the hockey puck, we can use the impulse-momentum theorem, which states that impulse is equal to the change in momentum. Since impulse is force multiplied by time, and momentum is mass multiplied by velocity, we can rearrange the equation to solve for velocity. Substituting the given values, we find the final velocity of the puck to be 50 m/s."
+    },
+    {
+        "question": "A golf ball with a mass of 0.05 kg is hit by a club and experiences an impulse of 2.5 Ns. What is the change in velocity of the ball?",
+        "options": [
+            "50 m/s",
+            "40 m/s",
+            "30 m/s",
+            "20 m/s"
+        ],
+        "answer": "50 m/s",
+        "explanation": "The change in velocity of the golf ball can be calculated using the impulse-momentum theorem, which states that impulse is equal to the change in momentum. Since impulse is force multiplied by time, and momentum is mass multiplied by velocity, we can rearrange the equation to solve for velocity change. Substituting the given values, we get a change in velocity of 50 m/s."
+    },
+    {
+        "question": "A car of mass 1500 kg is traveling at a velocity of 30 m/s. If it collides with a stationary car of mass 2000 kg and both move together after the collision, what is their final velocity?",
+        "options": [
+            "10 m/s",
+            "15 m/s",
+            "20 m/s",
+            "25 m/s"
+        ],
+        "answer": "15 m/s",
+        "explanation": "To solve this problem, we use the principle of conservation of momentum, which states that the total momentum before a collision is equal to the total momentum after the collision in the absence of external forces. The total momentum before the collision is the sum of the momentum of the moving car and the momentum of the stationary car. After the collision, the two cars move together, so their combined mass moves with the same velocity. We can calculate the final velocity using the equation for momentum, substituting the given values."
+    },
+    {
+        "question": "A baseball pitcher throws a ball with a mass of 0.15 kg, applying an average force of 250 N over a distance of 2 m. What is the final velocity of the ball?",
+        "options": [
+            "60 m/s",
+            "50 m/s",
+            "40 m/s",
+            "30 m/s"
+        ],
+        "answer": "60 m/s",
+        "explanation": "The final velocity of the baseball can be calculated using the work-energy principle, which states that the work done on an object is equal to the change in its kinetic energy. Since work is force multiplied by distance, and kinetic energy is 0.5 times mass times velocity squared, we can rearrange the equation to solve for velocity. Substituting the given values, we find the final velocity of the ball to be 60 m/s."
+    },
+    {
+        "question": "A hammer of mass 2.5 kg strikes a nail with a velocity of 20 m/s and comes to rest in 0.05 seconds. What is the average force exerted on the nail?",
+        "options": [
+            "1000 N",
+            "800 N",
+            "600 N",
+            "400 N"
+        ],
+        "answer": "1000 N",
+        "explanation": "The average force exerted on the nail can be calculated using the concept of impulse. Impulse is equal to the change in momentum, which is equal to the mass of the hammer times its initial velocity. Since impulse is also equal to force multiplied by time, we can rearrange the equation to solve for force. Substituting the given values, we find the average force exerted on the nail to be 1000 N."
+    },
+    {
+        "question": "A football of mass 0.5 kg is kicked with an average force of 300 N over a distance of 0.5 m. What is the final velocity of the football?",
+        "options": [
+            "30 m/s",
+            "20 m/s",
+            "15 m/s",
+            "10 m/s"
+        ],
+        "answer": "20 m/s",
+        "explanation": "The final velocity of the football can be calculated using the work-energy principle, which states that the work done on an object is equal to the change in its kinetic energy. Since work is force multiplied by distance, and kinetic energy is 0.5 times mass times velocity squared, we can rearrange the equation to solve for velocity. Substituting the given values, we find the final velocity of the football to be 20 m/s."
+    },
+    {
+        "question": "A rocket of mass 2000 kg accelerates from rest to a velocity of 100 m/s in 5 seconds. What is the average force exerted on the rocket?",
+        "options": [
+            "10000 N",
+            "8000 N",
+            "6000 N",
+            "4000 N"
+        ],
+        "answer": "8000 N",
+        "explanation": "To find the average force exerted on the rocket, we can use Newton's second law, which states that force is equal to mass multiplied by acceleration. Since the rocket accelerates uniformly, we can use the equation a = (v_f - v_i) / t to find the acceleration. Substituting the given values, we find the acceleration to be 20 m/s². Finally, substituting the mass and acceleration into the force equation, we find the average force exerted on the rocket to be 8000 N."
+    },
+    {
+        "question": "A car of mass 1000 kg collides with a stationary truck of mass 3000 kg. If the car rebounds with a velocity of 10 m/s in the opposite direction after the collision, what is the velocity of the truck?",
+        "options": [
+            "-10 m/s",
+            "-5 m/s",
+            "0 m/s",
+            "5 m/s"
+        ],
+        "answer": "-5 m/s",
+        "explanation": "To solve this problem, we use the principle of conservation of momentum, which states that the total momentum before a collision is equal to the total momentum after the collision in the absence of external forces. The total momentum before the collision is the sum of the momentum of the car and the momentum of the truck, and after the collision, the total momentum is the sum of their individual momentums. We can set up an equation using these principles to solve for the velocity of the truck."
+    },
+    {
+        "question": "A car of mass 1500 kg traveling at a velocity of 20 m/s collides with a stationary car of mass 1200 kg. If the cars stick together after the collision, what is their final velocity?",
+        "options": [
+            "4 m/s",
+            "8 m/s",
+            "12 m/s",
+            "16 m/s"
+        ],
+        "answer": "8 m/s",
+        "explanation": "To solve this problem, we use the principle of conservation of momentum, which states that the total momentum before a collision is equal to the total momentum after the collision in the absence of external forces. The total momentum before the collision is the sum of the momentum of the moving car and the momentum of the stationary car, and after the collision, the two cars move together with the same final velocity. We can calculate the final velocity using the equation for momentum, substituting the given values."
+    },
+    {
+        "question": "A bowling ball of mass 5 kg rolls down a lane with an initial velocity of 2 m/s. If it comes to a stop after traveling 5 meters, what is the average force of friction acting on it?",
+        "options": [
+            "10 N",
+            "20 N",
+            "30 N",
+            "40 N"
+        ],
+        "answer": "20 N",
+        "explanation": "To find the average force of friction acting on the bowling ball, we can use the work-energy principle, which states that the work done by friction is equal to the change in kinetic energy. Since the ball comes to a stop, its final velocity is 0 m/s. We can calculate the change in kinetic energy using the equation ΔKE = KE_final - KE_initial, where KE is 0.5 times mass times velocity squared. The work done by friction is equal to the negative change in kinetic energy, and since work is force multiplied by distance, we can rearrange the equation to solve for force. Substituting the given values, we find the average force of friction to be 20 N."
+    },
+    
+    {
+        "question": "A tennis ball with a mass of 0.06 kg is struck by a racket and experiences an impulse of 3 Ns. What is the change in velocity of the ball?",
+        "options": [
+            "50 m/s",
+            "40 m/s",
+            "30 m/s",
+            "20 m/s"
+        ],
+        "answer": "50 m/s",
+        "explanation": "The change in velocity of the tennis ball can be calculated using the impulse-momentum theorem, which states that impulse is equal to the change in momentum. Since impulse is force multiplied by time, and momentum is mass multiplied by velocity, we can rearrange the equation to solve for velocity change. Substituting the given values, we get a change in velocity of 50 m/s."
+    },
+    {
+        "question": "A truck of mass 2000 kg is moving at a velocity of 20 m/s. If it comes to a stop in 10 seconds due to a constant braking force, what is the magnitude of the force exerted by the brakes?",
+        "options": [
+            "4000 N",
+            "2000 N",
+            "1000 N",
+            "800 N"
+        ],
+        "answer": "4000 N",
+        "explanation": "To find the force exerted by the brakes, we can use the equation F = m * a, where F is the force, m is the mass, and a is the acceleration. Since the truck comes to a stop, its final velocity is 0 m/s. We can calculate the acceleration using the equation a = (v_f - v_i) / t, where v_f is the final velocity, v_i is the initial velocity, and t is the time. Substituting the given values, we find the acceleration to be -2 m/s² (negative because it's decelerating). Finally, substituting the mass and acceleration into the force equation, we find the force exerted by the brakes to be 4000 N."
+    },
+    {
+        "question": "A car of mass 1200 kg collides with a stationary car of mass 800 kg. If the two cars move together after the collision with a velocity of 6 m/s, what was the initial velocity of the moving car?",
+        "options": [
+            "15 m/s",
+            "12 m/s",
+            "9 m/s",
+            "6 m/s"
+        ],
+        "answer": "9 m/s",
+        "explanation": "To solve this problem, we use the principle of conservation of momentum, which states that the total momentum before a collision is equal to the total momentum after the collision in the absence of external forces. The total momentum before the collision is the sum of the momentum of the moving car and the momentum of the stationary car. After the collision, the two cars move together, so their combined mass moves with the same velocity. We can calculate the initial velocity of the moving car using the equation for momentum, substituting the given values."
+    },
+    {
+        "question": "A hammer of mass 1.5 kg strikes a nail with a velocity of 10 m/s and comes to rest in 0.1 seconds. What is the average force exerted on the nail?",
+        "options": [
+            "150 N",
+            "120 N",
+            "100 N",
+            "80 N"
+        ],
+        "answer": "150 N",
+        "explanation": "The average force exerted on the nail can be calculated using the concept of impulse. Impulse is equal to the change in momentum, which is equal to the mass of the hammer times its initial velocity. Since impulse is also equal to force multiplied by time, we can rearrange the equation to solve for force. Substituting the given values, we find the average force exerted on the nail to be 150 N."
+    },
+    {
+        "question": "A hockey puck of mass 0.15 kg is initially at rest. It is struck by a hockey stick, experiencing an impulse of 7.5 Ns. What is the final velocity of the puck?",
+        "options": [
+            "50 m/s",
+            "40 m/s",
+            "30 m/s",
+            "20 m/s"
+        ],
+        "answer": "50 m/s",
+        "explanation": "To find the final velocity of the hockey puck, we can use the impulse-momentum theorem, which states that impulse is equal to the change in momentum. Since impulse is force multiplied by time, and momentum is mass multiplied by velocity, we can rearrange the equation to solve for velocity. Substituting the given values, we find the final velocity of the puck to be 50 m/s."
+    },
+    {
+        "question": "A golf ball with a mass of 0.045 kg is hit by a club and experiences an impulse of 2 Ns. What is the change in velocity of the ball?",
+        "options": [
+            "44.4 m/s",
+            "33.3 m/s",
+            "22.2 m/s",
+            "11.1 m/s"
+        ],
+        "answer": "44.4 m/s",
+        "explanation": "The change in velocity of the golf ball can be calculated using the impulse-momentum theorem, which states that impulse is equal to the change in momentum. Since impulse is force multiplied by time, and momentum is mass multiplied by velocity, we can rearrange the equation to solve for velocity change. Substituting the given values, we get a change in velocity of 44.4 m/s."
+    },
+    {
+        "question": "A car of mass 1500 kg is traveling at a velocity of 25 m/s. If it collides with a stationary car of mass 2000 kg and both move together after the collision, what is their final velocity?",
+        "options": [
+            "10 m/s",
+            "15 m/s",
+            "20 m/s",
+            "25 m/s"
+        ],
+        "answer": "15 m/s",
+        "explanation": "To solve this problem, we use the principle of conservation of momentum, which states that the total momentum before a collision is equal to the total momentum after the collision in the absence of external forces. The total momentum before the collision is the sum of the momentum of the moving car and the momentum of the stationary car. After the collision, the two cars move together, so their combined mass moves with the same velocity. We can calculate the final velocity using the equation for momentum, substituting the given values."
+    },
+    {
+        "question": "A tennis player serves a ball with a mass of 0.05 kg, applying an average force of 100 N over a distance of 2 m. What is the final velocity of the ball?",
+        "options": [
+            "40 m/s",
+            "20 m/s",
+            "10 m/s",
+            "5 m/s"
+        ],
+        "answer": "20 m/s",
+        "explanation": "The final velocity of the tennis ball can be calculated using the work-energy principle, which states that the work done on an object is equal to the change in its kinetic energy. Since work is force multiplied by distance, and kinetic energy is 0.5 times mass times velocity squared, we can rearrange the equation to solve for velocity. Substituting the given values, we find the final velocity of the ball to be 20 m/s."
+    },
+    {
+        "question": "A baseball pitcher throws a ball with a mass of 0.15 kg, applying an average force of 200 N over a distance of 3 m. What is the final velocity of the ball?",
+        "options": [
+            "40 m/s",
+            "30 m/s",
+            "20 m/s",
+            "10 m/s"
+        ],
+        "answer": "40 m/s",
+        "explanation": "The final velocity of the baseball can be calculated using the work-energy principle, which states that the work done on an object is equal to the change in its kinetic energy. Since work is force multiplied by distance, and kinetic energy is 0.5 times mass times velocity squared, we can rearrange the equation to solve for velocity. Substituting the given values, we find the final velocity of the ball to be 40 m/s."
+    },
+    {
+        "question": "A hammer of mass 2 kg strikes a nail with a velocity of 15 m/s and comes to rest in 0.05 seconds. What is the average force exerted on the nail?",
+        "options": [
+            "600 N",
+            "400 N",
+            "300 N",
+            "200 N"
+        ],
+        "answer": "600 N",
+        "explanation": "The average force exerted on the nail can be calculated using the concept of impulse. Impulse is equal to the change in momentum, which is equal to the mass of the hammer times its initial velocity. Since impulse is also equal to force multiplied by time, we can rearrange the equation to solve for force. Substituting the given values, we find the average force exerted on the nail to be 600 N."
+    },
+    
+    {
+        "question": "A person jumps off a boat onto a dock. How does this illustrate the principle of impulse?",
+        "options": [
+            "The person experiences a sudden change in momentum due to the force exerted by the dock",
+            "The person and the dock exert equal and opposite forces on each other",
+            "The person's velocity remains constant throughout the jump",
+            "The dock provides a cushioning effect to minimize the force experienced by the person"
+        ],
+        "answer": "The person experiences a sudden change in momentum due to the force exerted by the dock",
+        "explanation": "When a person jumps off a boat onto a dock, they experience a sudden change in momentum due to the force exerted by the dock. This change in momentum is the impulse experienced by the person."
+    },
+    {
+        "question": "A goalkeeper saves a soccer ball by deflecting it with their hands. How does this illustrate the principle of impulse?",
+        "options": [
+            "The goalkeeper applies a force to change the direction of the ball",
+            "The ball exerts a force on the goalkeeper's hands",
+            "The momentum of the ball remains constant",
+            "The goalkeeper's hands absorb all the kinetic energy of the ball"
+        ],
+        "answer": "The goalkeeper applies a force to change the direction of the ball",
+        "explanation": "When a goalkeeper saves a soccer ball by deflecting it with their hands, they apply a force to change the direction of the ball. This force over time results in an impulse, which alters the ball's momentum."
+    },
+    {
+        "question": "A baseball player catches a ball while running. How does this illustrate the principle of impulse?",
+        "options": [
+            "The player experiences a sudden change in momentum due to the force exerted by the ball",
+            "The ball changes its velocity to match the player's",
+            "The player and the ball exert equal and opposite forces on each other",
+            "The player's velocity remains constant throughout the catch"
+        ],
+        "answer": "The player experiences a sudden change in momentum due to the force exerted by the ball",
+        "explanation": "When a baseball player catches a ball while running, they experience a sudden change in momentum due to the force exerted by the ball. This change in momentum is the impulse experienced by the player."
+    },
+    {
+        "question": "A car airbag deploys during a collision. How does this illustrate the principle of impulse?",
+        "options": [
+            "The airbag absorbs the momentum of the occupants",
+            "The occupants exert a force on the airbag",
+            "The car experiences a sudden change in velocity",
+            "The airbag increases the kinetic energy of the occupants"
+        ],
+        "answer": "The airbag absorbs the momentum of the occupants",
+        "explanation": "During a collision, a car airbag deploys to absorb the momentum of the occupants. By doing so, it increases the time over which the force is exerted, reducing the impact force and minimizing injuries, illustrating the principle of impulse."
+    },
+    {
+        "question": "A diver lands in a pool from a diving board. How does this illustrate the principle of impulse?",
+        "options": [
+            "The water exerts a force on the diver to change their direction",
+            "The diver exerts a force on the water",
+            "The diver's momentum remains constant",
+            "The diving board absorbs all the kinetic energy of the diver"
+        ],
+        "answer": "The water exerts a force on the diver to change their direction",
+        "explanation": "When a diver lands in a pool from a diving board, the water exerts a force on the diver to change their direction and bring them to a stop. This force over time results in an impulse, affecting the diver's momentum."
+    },
+    {
+        "question": "A cricket player catches a fast-moving ball with their hand. How does this illustrate the principle of impulse?",
+        "options": [
+            "The ball changes its direction to match the player's",
+            "The player's hand exerts a force on the ball to stop it",
+            "The player's hand absorbs all the momentum of the ball",
+            "The player's hand experiences a sudden change in momentum"
+        ],
+        "answer": "The player's hand exerts a force on the ball to stop it",
+        "explanation": "When a cricket player catches a fast-moving ball with their hand, their hand exerts a force on the ball to stop it. This force over time results in an impulse, altering the ball's momentum and bringing it to a stop."
+    },
+    {
+        "question": "A boxer punches a punching bag. How does this illustrate the principle of impulse?",
+        "options": [
+            "The punching bag exerts a force on the boxer's fist",
+            "The boxer's fist exerts a force on the punching bag",
+            "The boxer's fist experiences a sudden change in momentum",
+            "The punching bag's velocity remains constant"
+        ],
+        "answer": "The boxer's fist exerts a force on the punching bag",
+        "explanation": "When a boxer punches a punching bag, their fist exerts a force on the bag, causing it to accelerate and move. This force over time results in an impulse, affecting the bag's momentum and causing it to swing."
+    },
+    {
+        "question": "A car collides with a barrier, and the airbags deploy. How does this illustrate the principle of impulse?",
+        "options": [
+            "The barrier exerts a force on the car to change its direction",
+            "The airbags exert a force on the occupants to stop their motion",
+            "The car experiences a sudden change in velocity",
+            "The airbags increase the kinetic energy of the car"
+        ],
+        "answer": "The airbags exert a force on the occupants to stop their motion",
+        "explanation": "During a collision, when a car collides with a barrier, the airbags deploy to exert a force on the occupants, stopping their motion gradually. This gradual deceleration reduces the impact force, illustrating the principle of impulse."
+    },
+    {
+        "question": "A basketball player jumps to block a shot. How does this illustrate the principle of impulse?",
+        "options": [
+            "The player's momentum remains constant throughout the jump",
+            "The player exerts a force on the ball to change its direction",
+            "The player's muscles exert a force to accelerate their body upward",
+            "The ball exerts a force on the player to push them back"
+        ],
+        "answer": "The player's muscles exert a force to accelerate their body upward",
+        "explanation": "When a basketball player jumps to block a shot, their muscles exert a force to accelerate their body upward. This force over time results in an impulse, allowing the player to reach the necessary height for blocking the shot."
+    },
+    {
+        "question": "A gymnast lands on a mat after performing a flip. How does this illustrate the principle of impulse?",
+        "options": [
+            "The gymnast's momentum remains constant throughout the flip",
+            "The mat exerts a force on the gymnast to stop their motion",
+            "The gymnast exerts a force on the mat",
+            "The mat absorbs all the kinetic energy of the gymnast"
+        ],
+        "answer": "The mat exerts a force on the gymnast to stop their motion",
+        "explanation": "When a gymnast lands on a mat after performing a flip, the mat exerts a force on the gymnast to stop their motion gradually. This force over time results in an impulse, reducing the impact force and minimizing injuries."
+    },
+    
+    {
+        "question": "A 5000 kg truck traveling at 20 m/s collides with a stationary car of mass 2000 kg. If the collision is perfectly inelastic, what is their final velocity?",
+        "options": [
+            "10 m/s",
+            "15 m/s",
+            "20 m/s",
+            "25 m/s"
+        ],
+        "answer": "10 m/s",
+        "explanation": "In a perfectly inelastic collision, the total momentum before the collision is equal to the total momentum after the collision. Therefore, the combined mass of the truck and car (7000 kg) times their final velocity equals the momentum before the collision (5000 kg * 20 m/s). Solving for the final velocity gives 10 m/s."
+    },
+    {
+        "question": "A tennis player hits a 0.1 kg tennis ball with a racket, giving it an initial velocity of 10 m/s in the opposite direction. If the impulse imparted to the ball is 2 N*s, how long did the racket exert force on the ball?",
+        "options": [
+            "0.2 s",
+            "0.5 s",
+            "1 s",
+            "2 s"
+        ],
+        "answer": "0.2 s",
+        "explanation": "Impulse is defined as the change in momentum, and it is equal to the force applied multiplied by the time over which it is applied. In this case, the impulse is given as 2 N*s, and the force is what the player exerts on the ball. By rearranging the equation for impulse and solving for time, we find that the time is 0.2 seconds."
+    },
+    {
+        "question": "A 1000 kg car traveling at 20 m/s collides with a 2000 kg truck traveling in the same direction at 10 m/s. After the collision, the car and truck move together. What is their final velocity?",
+        "options": [
+            "6.67 m/s",
+            "10 m/s",
+            "12 m/s",
+            "15 m/s"
+        ],
+        "answer": "10 m/s",
+        "explanation": "Since the car and truck move together after the collision, it's a perfectly inelastic collision. In such a collision, the final velocity of the combined mass is determined by the conservation of momentum. The total momentum before the collision equals the total momentum after. So, (1000 kg * 20 m/s) + (2000 kg * 10 m/s) = (total mass * final velocity). Solving for the final velocity gives 10 m/s."
+    },
+    {
+        "question": "A 50 g bullet is fired from a gun with a velocity of 200 m/s. If the gun has a mass of 2 kg, what is the recoil velocity of the gun?",
+        "options": [
+            "0.25 m/s",
+            "0.5 m/s",
+            "1 m/s",
+            "4 m/s"
+        ],
+        "answer": "1 m/s",
+        "explanation": "In this scenario, the bullet and the gun together form a system. According to the conservation of momentum, the total momentum before the bullet is fired equals the total momentum after the bullet is fired. Therefore, (mass of bullet * velocity of bullet) = (mass of gun * recoil velocity of gun). Substituting the given values and solving for the recoil velocity of the gun gives 1 m/s."
+    },
+    {
+        "question": "A 1000 kg car traveling at 10 m/s collides head-on with a 2000 kg truck traveling at 5 m/s in the opposite direction. After the collision, both vehicles come to a stop. What is the impulse experienced by the car during the collision?",
+        "options": [
+            "5000 N*s",
+            "10000 N*s",
+            "15000 N*s",
+            "20000 N*s"
+        ],
+        "answer": "15000 N*s",
+        "explanation": "Impulse is the change in momentum, and it's a vector quantity. In this problem, the impulse experienced by the car is the change in its momentum, which is equal to the initial momentum minus the final momentum. The initial momentum is (mass of car * velocity of car) and the final momentum is zero since the car comes to a stop. Therefore, the impulse experienced by the car is equal to its initial momentum, which is (1000 kg * 10 m/s), giving a value of 10000 N*s. However, since the car's velocity changes direction, the impulse is a negative value. So, the magnitude of the impulse is 10000 N*s, but considering the direction change, the total impulse experienced by the car is 15000 N*s."
+    },
+    {
+        "question": "A 5000 kg truck traveling at 15 m/s collides with a stationary car of mass 2000 kg. If the collision is completely inelastic, what is their final velocity?",
+        "options": [
+            "3 m/s",
+            "5 m/s",
+            "8 m/s",
+            "10 m/s"
+        ],
+        "answer": "5 m/s",
+        "explanation": "In a completely inelastic collision, the two objects stick together after the collision and move as a single mass. So, the final velocity of the combined mass can be found using the principle of conservation of momentum. The total momentum before the collision is (mass of truck * velocity of truck), and this is equal to the total momentum after the collision, which is (total mass * final velocity). Substituting the given values and solving for the final velocity gives 5 m/s."
+    },
+    {
+        "question": "A tennis player serves a 0.2 kg tennis ball with a racket, giving it an initial velocity of 30 m/s. If the impulse imparted to the ball is 6 N*s, what was the average force exerted on the ball?",
+        "options": [
+            "30 N",
+            "60 N",
+            "90 N",
+            "120 N"
+        ],
+        "answer": "30 N",
+        "explanation": "Impulse is equal to the force applied multiplied by the time over which it is applied. In this case, the impulse is given as 6 N*s, and the time is the duration over which the force was applied. The average force exerted on the ball can be calculated by dividing the impulse by the time. Given that the impulse is 6 N*s and the time is not provided, the average force exerted on the ball is 30 N."
+    },
+    {
+        "question": "A 1000 kg car traveling at 15 m/s collides with a 2000 kg truck traveling at 10 m/s in the same direction. After the collision, the truck moves forward at 5 m/s. What is the final velocity of the car?",
+        "options": [
+            "2 m/s",
+            "3 m/s",
+            "4 m/s",
+            "5 m/s"
+        ],
+        "answer": "5 m/s",
+        "explanation": "Since the truck moves forward after the collision while the car's velocity decreases, this is an inelastic collision. In such a collision, momentum is conserved. So, the initial momentum of the system is equal to the final momentum of the system. The initial momentum is the sum of the momenta of the car and truck before the collision, and the final momentum is the momentum of the truck after the collision. Setting these equal and solving for the final velocity of the car gives 5 m/s."
+    },
+    {
+        "question": "A bullet of mass 0.05 kg strikes a wooden block and comes to rest in 0.01 seconds. If the bullet penetrates the block to a depth of 0.02 meters, what is the average force exerted on the bullet?",
+        "options": [
+            "10 N",
+            "20 N",
+            "30 N",
+            "40 N"
+        ],
+        "answer": "20 N",
+        "explanation": "The average force exerted on the bullet can be calculated using the concept of impulse. Impulse is equal to the force applied multiplied by the time over which it is applied. In this case, the impulse is also equal to the change in momentum of the bullet, which is the mass of the bullet times its initial velocity. Therefore, the average force exerted on the bullet is the change in momentum divided by the time taken. Substituting the given values and solving for the force gives 20 N."
+    },
+    {
+        "question": "A 5000 kg truck traveling at 10 m/s collides head-on with a 2000 kg car traveling at 20 m/s in the opposite direction. After the collision, the car moves forward at 5 m/s. What is the final velocity of the truck?",
+        "options": [
+            "2 m/s",
+            "3 m/s",
+            "4 m/s",
+            "5 m/s"
+        ],
+        "answer": "3 m/s",
+        "explanation": "Since the car moves forward after the collision while the truck's velocity decreases, this is an inelastic collision. In such a collision, momentum is conserved. So, the initial momentum of the system is equal to the final momentum of the system. The initial momentum is the sum of the momenta of the truck and car before the collision, and the final momentum is the momentum of the car after the collision. Setting these equal and solving for the final velocity of the truck gives 3 m/s."
+    },
+    
+    {
+        "question": "What is the defining characteristic of an elastic collision?",
+        "options": [
+            "Conservation of momentum only",
+            "Conservation of kinetic energy only",
+            "Conservation of both momentum and kinetic energy",
+            "Loss of both momentum and kinetic energy"
+        ],
+        "answer": "Conservation of both momentum and kinetic energy",
+        "explanation": "In an elastic collision, both momentum and kinetic energy are conserved. This means that the total kinetic energy of the system before the collision is equal to the total kinetic energy after the collision."
+    },
+    {
+        "question": "What happens to the kinetic energy in an inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains unchanged",
+            "It is converted to potential energy"
+        ],
+        "answer": "It decreases",
+        "explanation": "In an inelastic collision, kinetic energy is not conserved. Some of the kinetic energy is transformed into other forms of energy, such as heat or sound, resulting in a decrease in the overall kinetic energy of the system."
+    },
+    {
+        "question": "Which of the following scenarios is an example of an elastic collision?",
+        "options": [
+            "Two cars colliding and sticking together",
+            "A ball bouncing off the ground",
+            "Two billiard balls colliding and rebounding",
+            "A car crashing into a tree"
+        ],
+        "answer": "Two billiard balls colliding and rebounding",
+        "explanation": "In an elastic collision, objects bounce off each other without any loss of kinetic energy. When two billiard balls collide and rebound, conserving both momentum and kinetic energy, it is an example of an elastic collision."
+    },
+    {
+        "question": "Which of the following statements about inelastic collisions is true?",
+        "options": [
+            "They always result in a loss of mass",
+            "They always result in a loss of kinetic energy",
+            "They always result in a loss of momentum",
+            "They always result in a loss of velocity"
+        ],
+        "answer": "They always result in a loss of kinetic energy",
+        "explanation": "Inelastic collisions result in a loss of kinetic energy, which is usually converted into other forms such as heat, sound, or deformation. However, momentum is still conserved in these collisions."
+    },
+    {
+        "question": "Which of the following best describes a perfectly inelastic collision?",
+        "options": [
+            "Objects stick together after collision",
+            "Objects rebound after collision",
+            "Objects move in opposite directions after collision",
+            "Objects move with different speeds after collision"
+        ],
+        "answer": "Objects stick together after collision",
+        "explanation": "In a perfectly inelastic collision, the two objects stick together after the collision and move as a single mass. This type of collision maximizes the loss of kinetic energy."
+    },
+    {
+        "question": "What happens to the kinetic energy in a perfectly inelastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains unchanged",
+            "It is converted to potential energy"
+        ],
+        "answer": "It decreases",
+        "explanation": "In a perfectly inelastic collision, kinetic energy is not conserved. Some of the kinetic energy is transformed into other forms of energy, such as heat or deformation, resulting in a decrease in the overall kinetic energy of the system."
+    },
+    {
+        "question": "Which of the following scenarios is an example of an inelastic collision?",
+        "options": [
+            "A basketball bouncing off the ground",
+            "Two magnets repelling each other",
+            "A clay ball thrown against a wall and sticking to it",
+            "A car skidding on ice"
+        ],
+        "answer": "A clay ball thrown against a wall and sticking to it",
+        "explanation": "In this scenario, the clay ball loses kinetic energy upon impact and sticks to the wall, making it an example of an inelastic collision."
+    },
+    {
+        "question": "What is the main difference between elastic and inelastic collisions?",
+        "options": [
+            "Elastic collisions conserve momentum, but inelastic collisions do not",
+            "Elastic collisions conserve kinetic energy, but inelastic collisions do not",
+            "Elastic collisions involve only solid objects, while inelastic collisions involve fluids",
+            "Elastic collisions always result in deformation, but inelastic collisions do not"
+        ],
+        "answer": "Elastic collisions conserve kinetic energy, but inelastic collisions do not",
+        "explanation": "The key difference between elastic and inelastic collisions is that elastic collisions conserve both momentum and kinetic energy, whereas inelastic collisions conserve momentum but not kinetic energy."
+    },
+    {
+        "question": "Which of the following statements is true for both elastic and inelastic collisions?",
+        "options": [
+            "Total momentum is conserved",
+            "Total kinetic energy is conserved",
+            "Objects always rebound after collision",
+            "Objects always stick together after collision"
+        ],
+        "answer": "Total momentum is conserved",
+        "explanation": "Both elastic and inelastic collisions conserve total momentum. This means that the total momentum of the system before the collision is equal to the total momentum after the collision."
+    },
+    {
+        "question": "In which type of collision does the kinetic energy of the system remain unchanged?",
+        "options": [
+            "Elastic collisions",
+            "Inelastic collisions",
+            "Perfectly inelastic collisions",
+            "Completely inelastic collisions"
+        ],
+        "answer": "Elastic collisions",
+        "explanation": "In elastic collisions, the kinetic energy of the system remains unchanged. This means that the total kinetic energy of the system before the collision is equal to the total kinetic energy after the collision."
+    },
+    
+    {
+        "question": "What is impulse equal to?",
+        "options": [
+            "The change in velocity",
+            "The product of force and time",
+            "The product of mass and velocity",
+            "The product of force and velocity"
+        ],
+        "answer": "The product of force and time",
+        "explanation": "Impulse is defined as the product of force and the time over which the force acts. It is equal to the change in momentum of an object."
+    },
+    {
+        "question": "Is impulse a scalar or vector quantity?",
+        "options": [
+            "Scalar",
+            "Vector"
+        ],
+        "answer": "Vector",
+        "explanation": "Impulse is a vector quantity because it has both magnitude and direction, just like momentum."
+    },
+    {
+        "question": "What is the effect of an impulse on an object's momentum?",
+        "options": [
+            "It decreases the momentum",
+            "It increases the momentum",
+            "It reverses the direction of momentum",
+            "It changes the object's mass"
+        ],
+        "answer": "It increases the momentum",
+        "explanation": "An impulse increases an object's momentum. This is because impulse is equal to the change in momentum."
+    },
+    {
+        "question": "Which of the following statements about conservation of momentum is true?",
+        "options": [
+            "It only applies to elastic collisions",
+            "It only applies to collisions between solid objects",
+            "It applies to all types of collisions",
+            "It does not apply to collisions involving liquids or gases"
+        ],
+        "answer": "It applies to all types of collisions",
+        "explanation": "Conservation of momentum applies to all types of collisions, including elastic and inelastic collisions, provided there are no external forces acting on the system."
+    },
+    {
+        "question": "What happens to the total momentum of a system in the absence of external forces?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "According to the principle of conservation of momentum, in the absence of external forces, the total momentum of a system remains constant."
+    },
+    {
+        "question": "In a collision between two objects, if one object experiences an impulse, what happens to the other object's momentum?",
+        "options": [
+            "It decreases",
+            "It increases",
+            "It remains unchanged",
+            "It becomes zero"
+        ],
+        "answer": "It remains unchanged",
+        "explanation": "In a collision, if one object experiences an impulse, there is an equal and opposite impulse acting on the other object, resulting in no change in its momentum."
+    },
+    {
+        "question": "What is the relationship between impulse and the change in momentum?",
+        "options": [
+            "Impulse is equal to the change in velocity",
+            "Impulse is equal to the change in mass",
+            "Impulse is equal to the change in momentum",
+            "Impulse is equal to the change in kinetic energy"
+        ],
+        "answer": "Impulse is equal to the change in momentum",
+        "explanation": "Impulse is defined as the change in momentum of an object. Mathematically, it is expressed as Impulse = Change in Momentum."
+    },
+    {
+        "question": "Which of the following is NOT a factor that affects impulse?",
+        "options": [
+            "Force applied",
+            "Time duration of force application",
+            "Mass of the object",
+            "Initial velocity of the object"
+        ],
+        "answer": "Initial velocity of the object",
+        "explanation": "The initial velocity of an object does not affect the impulse experienced by the object. Impulse depends on the force applied and the duration of force application."
+    },
+    {
+        "question": "When is momentum conserved in a collision?",
+        "options": [
+            "Only in perfectly elastic collisions",
+            "Only in perfectly inelastic collisions",
+            "In all types of collisions",
+            "Only in collisions involving solids"
+        ],
+        "answer": "In all types of collisions",
+        "explanation": "Conservation of momentum applies to all types of collisions, including perfectly elastic, perfectly inelastic, and partially elastic collisions, as long as no external forces act on the system."
+    },
+    {
+        "question": "Which of the following scenarios violates the conservation of momentum?",
+        "options": [
+            "A car collides with a stationary object and comes to rest",
+            "Two billiard balls collide and move off together",
+            "A rocket launches into space",
+            "A ball bounces off a wall"
+        ],
+        "answer": "A car collides with a stationary object and comes to rest",
+        "explanation": "In this scenario, the total momentum before the collision is not equal to the total momentum after the collision, violating the conservation of momentum principle."
+    },
+
+    {
+        "question": "What is momentum?",
+        "options": [
+            "The product of force and time",
+            "The product of mass and acceleration",
+            "The product of mass and velocity",
+            "The product of velocity and time"
+        ],
+        "answer": "The product of mass and velocity",
+        "explanation": "Momentum is defined as the product of an object's mass and its velocity. It is a vector quantity, meaning it has both magnitude and direction."
+    },
+    {
+        "question": "Which of the following statements about momentum is true?",
+        "options": [
+            "Momentum is a scalar quantity",
+            "Momentum depends only on the magnitude of velocity",
+            "Momentum depends only on the direction of velocity",
+            "Momentum is conserved only in elastic collisions"
+        ],
+        "answer": "Momentum depends only on the direction of velocity",
+        "explanation": "Momentum is a vector quantity, meaning it depends not only on the magnitude but also on the direction of velocity."
+    },
+    {
+        "question": "What is impulse?",
+        "options": [
+            "The change in velocity",
+            "The product of mass and velocity",
+            "The change in momentum",
+            "The product of force and time"
+        ],
+        "answer": "The change in momentum",
+        "explanation": "Impulse is defined as the change in momentum of an object. It is calculated as the product of force and the time over which the force acts."
+    },
+    {
+        "question": "How is impulse related to force and time?",
+        "options": [
+            "Impulse equals force divided by time",
+            "Impulse equals force times time",
+            "Impulse equals force minus time",
+            "Impulse equals force plus time"
+        ],
+        "answer": "Impulse equals force times time",
+        "explanation": "Impulse is equal to the product of force and the time for which the force acts. Mathematically, it is expressed as Impulse = Force × Time."
+    },
+    {
+        "question": "What does conservation of momentum state?",
+        "options": [
+            "The total energy of a system is conserved",
+            "The total momentum of a system remains constant",
+            "The kinetic energy of a system is conserved",
+            "The total mass of a system remains constant"
+        ],
+        "answer": "The total momentum of a system remains constant",
+        "explanation": "Conservation of momentum states that in the absence of external forces, the total momentum of a system of colliding objects remains constant."
+    },
+    {
+        "question": "Which scenario best represents conservation of momentum?",
+        "options": [
+            "A moving object comes to rest due to friction",
+            "A moving object collides with another and both move off together",
+            "A moving object loses velocity over time",
+            "A stationary object suddenly starts moving"
+        ],
+        "answer": "A moving object collides with another and both move off together",
+        "explanation": "In a collision where two objects move off together after colliding, momentum is conserved as there are no external forces acting on the system."
+    },
+    {
+        "question": "In the absence of external forces, what happens to the total momentum of colliding objects?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "According to the principle of conservation of momentum, in the absence of external forces, the total momentum of colliding objects remains constant."
+    },
+    {
+        "question": "Which quantity is conserved in elastic collisions?",
+        "options": [
+            "Mass",
+            "Velocity",
+            "Momentum",
+            "Energy"
+        ],
+        "answer": "Momentum",
+        "explanation": "In elastic collisions, both momentum and kinetic energy are conserved."
+    },
+    {
+        "question": "What happens to the kinetic energy in an elastic collision?",
+        "options": [
+            "It increases",
+            "It decreases",
+            "It remains constant",
+            "It becomes zero"
+        ],
+        "answer": "It remains constant",
+        "explanation": "In an elastic collision, kinetic energy remains constant before and after the collision, provided no external forces act on the system."
+    },
+    {
+        "question": "Which statement best describes impulse in terms of force and time?",
+        "options": [
+            "Impulse is the ratio of force to time",
+            "Impulse is the product of force and time",
+            "Impulse is the difference between force and time",
+            "Impulse is the sum of force and time"
+        ],
+        "answer": "Impulse is the product of force and time",
+        "explanation": "Impulse is defined as the product of force and the time over which the force acts. It is equal to the change in momentum of an object."
+    }
+]

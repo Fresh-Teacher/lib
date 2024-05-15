@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Which country is home to the city of Tokyo?",
+        "options": ["China", "Japan", "South Korea", "Thailand"],
+        "answer": "Japan"
+    },
+    {
+        "question": "Which country is home to the city of Sydney?",
+        "options": ["New Zealand", "Australia", "Canada", "United Kingdom"],
+        "answer": "Australia"
+    },
+    {
+        "question": "Which country is home to the city of Paris?",
+        "options": ["Germany", "France", "Italy", "Spain"],
+        "answer": "France"
+    },
+    {
+        "question": "Which country is home to the city of Moscow?",
+        "options": ["Ukraine", "Poland", "Russia", "Belarus"],
+        "answer": "Russia"
+    },
+    {
+        "question": "Which country is home to the city of Cairo?",
+        "options": ["Morocco", "South Africa", "Egypt", "Nigeria"],
+        "answer": "Egypt"
+    }
+]

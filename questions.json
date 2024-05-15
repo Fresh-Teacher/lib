@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Which city is known as the 'Big Apple'?",
+        "options": ["Los Angeles", "New York City", "Chicago", "Miami"],
+        "answer": "New York City"
+    },
+    {
+        "question": "Which city is famous for its canals and is known as the 'Venice of the North'?",
+        "options": ["Bruges", "Stockholm", "Amsterdam", "Hamburg"],
+        "answer": "Amsterdam"
+    },
+    {
+        "question": "Which city is the capital of Japan?",
+        "options": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "Which city is home to the Eiffel Tower?",
+        "options": ["Rome", "Paris", "Berlin", "Madrid"],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which city is known for its Opera House and Harbour Bridge?",
+        "options": ["Sydney", "Melbourne", "Perth", "Brisbane"],
+        "answer": "Sydney"
+    }
+]
