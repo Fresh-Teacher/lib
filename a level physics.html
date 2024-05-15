@@ -4091,10 +4091,11 @@ message = messageArray[randomIndex];
 function playStartSound() {
     var audio = new Audio('start.mp3');
     audio.play();
-    audio.addEventListener('ended', function() {
-        // Remove the audio element from the DOM after it finishes playing
-        audio.remove();
-    });
+    
+    // Stop audio playback after 3 seconds
+    setTimeout(function() {
+        audio.pause();
+    }, 5000);
 }
 
 
