@@ -4087,17 +4087,11 @@ message = messageArray[randomIndex];
         location.reload();
     }
 
-// Function to play start sound
-function playStartSound() {
-    var audio = new Audio('start.mp3');
-    audio.play();
-    
-    // Stop audio playback after 3 seconds
-    setTimeout(function() {
-        audio.pause();
-    }, 5000);
-}
-
+    // Function to play start sound
+    function playStartSound() {
+        var audio = new Audio('start.mp3');
+        audio.play();
+    }
 
 </script>
 
