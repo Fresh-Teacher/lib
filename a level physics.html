@@ -485,6 +485,7 @@ function displayQuestion(question) {
                         <option value="senior5">Senior Five</option>
                         <option value="senior6">Senior Six</option>
 
+
                         <!-- Add more classes here if needed -->
                     </select>
                 </div>
@@ -566,59 +567,6 @@ function displayQuestion(question) {
 </div>
 
 <script>
- var topics = {
-    "physics": [
-    {
-            "name": "Physical Quantities and Units",
-            "value": "physicalQuantitiesandUnits"
-        },
-        {
-            "name": "Kinematics",
-            "value": "kinematics"
-        },
-        {
-            "name": "Vectors and Scalars",
-            "value": "vectorsAndScalars"
-        },
-        {
-            "name": "Projectiles",
-            "value": "projectiles"
-        },
-        {
-            "name": "Newton's Laws of Motion",
-            "value": "newtonsLawsOfMotion"
-        },
-        {
-            "name": "Linear Momentum",
-            "value": "linearMomentum"
-        },
-        {
-            "name": "Solid Friction",
-            "value": "solidFriction"
-        },
-        {
-            "name": "Work, Energy And Power",
-            "value": "workEnergyAndPower"
-        },
-        {
-            "name": "Statistics",
-            "value": "statistics"
-        }
-        // Add more physics topics here if needed
-    ],
-    "biology": [
-        {
-            "name": "Cell Biology",
-            "value": "cellBiology"
-        },
-        {
-            "name": "Genetics",
-            "value": "genetics"
-        },
-        // Add more biology topics here if needed
-    ]
-};
-
 function loadTopics() {
     var subjectSelect = document.getElementById("subject");
     var topicSelect = document.getElementById("topic");
@@ -657,27 +605,95 @@ function loadSubjects() {
     topicSelect.innerHTML = '<option value="" selected disabled>Choose Topic</option>';
     topicsDropdown.style.display = 'none';
     
-    if (classSelect) {
-        // Display the subject dropdown and add options based on the selected class
-        subjectDropdown.style.display = 'block';
-        
-        if (classSelect === 'senior1' || classSelect === 'senior2') {
-            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
-            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
-            // Add more subjects here if needed for these classes
-        } else if (classSelect === 'senior3' || classSelect === 'senior4') {
-            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
-            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
-            // Add more subjects here if needed for these classes
-        } else if (classSelect === 'senior5' || classSelect === 'senior6') {
-            subjectSelect.innerHTML += '<option value="physics">Physics</option>';
-            subjectSelect.innerHTML += '<option value="biology">Biology</option>';
-            // Add more subjects here if needed for these classes
-        }
-    } else {
-        subjectDropdown.style.display = 'none';
+   if (classSelect) {
+    // Display the subject dropdown and add options based on the selected class
+    subjectDropdown.style.display = 'block';
+    
+    if (classSelect === 'senior1' || classSelect === 'senior2') {
+        // Subjects for Senior One and Senior Two
+        subjectSelect.innerHTML += '<option value="kiswahili">Kiswahili Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="latin">Latin Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="literature">Literature Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="luganda">Luganda Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="mathematics">Mathematics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="physics">Physics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="signlanguage">Sign Language Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="td">TD Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="agriculture">Agriculture Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="arabic">Arabic Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="art">Art Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="biology">Biology Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="chemistry">Chemistry Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="commerce">Commerce Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="cre">CRE Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="english">English Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="fn">FN Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="french">French Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="geography">Geography Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="german">German Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="history">History Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ict">ICT Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ire">IRE Lesson Notes</option>';
+    } else if (classSelect === 'senior3' || classSelect === 'senior4') {
+        // Subjects for Senior Three and Senior Four
+        subjectSelect.innerHTML += '<option value="fn">FN Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="geography">Geography Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="history">History Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ict">ICT Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ire">IRE Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="kiswahili">Kiswahili Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="latin">Latin Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="literature">Literature Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="luganda">Luganda Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="mathematics">Mathematics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="physics">Physics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="td">TD Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="agriculture">Agriculture Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="art">Art Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="biology">Biology Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="chemistry">Chemistry Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="commerce">Commerce Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="cre">CRE Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="english">English Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship Lesson Notes</option>';
+    } else if (classSelect === 'senior5') {
+        // Subjects for Senior Five
+        subjectSelect.innerHTML += '<option value="biology">Biology Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="gp">GP Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="history">History Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="literature">Literature Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="mathematics">Mathematics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="physics">Physics Lesson Notes</option>';
+    } else if (classSelect === 'senior6') {
+        // Subjects for Senior Six
+        subjectSelect.innerHTML += '<option value="physics">Physics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="td">TD Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="agriculture">Agriculture Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="art">Art Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="biology">Biology Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="chemistry">Chemistry Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="divinity">Divinity Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="economics">Economics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="english">English Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="geography">Geography Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="gp">GP Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="history">History Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ict">ICT Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ips">IPS Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="ire">IRE Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="kiswahili">Kiswahili Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="literature">Literature Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="luganda">Luganda Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="mathematics">Mathematics Lesson Notes</option>';
+        subjectSelect.innerHTML += '<option value="mixed">Mixed Lesson Notes</option>';
     }
+} else {
+    subjectDropdown.style.display = 'none';
 }
+}
+
 
 function loadTopics() {
     var subjectSelect = document.getElementById('subject').value;
