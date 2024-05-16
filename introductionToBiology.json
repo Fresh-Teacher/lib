@@ -1,0 +1,753 @@
+[
+    {
+        "question": "If the eyepiece is marked x15 and the magnification of the objective lens is x40, what is the total magnification of the microscope?",
+        "options": ["400", "500", "600", "700"],
+        "answer": "600",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 15 x 40 = 600."
+    },
+    {
+        "question": "What is the total magnification if the eyepiece is x10 and the objective lens is x60?",
+        "options": ["600", "700", "800", "900"],
+        "answer": "600",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 10 x 60 = 600."
+    },
+    {
+        "question": "Calculate the total magnification for an eyepiece of x20 and an objective lens of x20.",
+        "options": ["200", "300", "400", "500"],
+        "answer": "400",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 20 x 20 = 400."
+    },
+    {
+        "question": "If the eyepiece is x12 and the objective lens is x25, what is the total magnification?",
+        "options": ["200", "250", "300", "400"],
+        "answer": "300",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 12 x 25 = 300."
+    },
+    {
+        "question": "What is the total magnification for an eyepiece of x6 and an objective lens of x30?",
+        "options": ["150", "160", "170", "180"],
+        "answer": "180",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 6 x 30 = 180."
+    },
+    {
+        "question": "Calculate the total magnification if the eyepiece is x8 and the objective lens is x15.",
+        "options": ["100", "110", "120", "130"],
+        "answer": "120",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 8 x 15 = 120."
+    },
+    {
+        "question": "If the eyepiece is x5 and the objective lens is x50, what is the total magnification?",
+        "options": ["200", "250", "300", "350"],
+        "answer": "250",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 5 x 50 = 250."
+    },
+    {
+        "question": "What is the total magnification for an eyepiece of x10 and an objective lens of x30?",
+        "options": ["200", "250", "300", "350"],
+        "answer": "300",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 10 x 30 = 300."
+    },
+    {
+        "question": "Calculate the total magnification for an eyepiece of x7 and an objective lens of x20.",
+        "options": ["100", "120", "140", "160"],
+        "answer": "140",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 7 x 20 = 140."
+    },
+    {
+        "question": "If the eyepiece is x10 and the objective lens is x25, what is the total magnification?",
+        "options": ["200", "250", "300", "350"],
+        "answer": "250",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 10 x 25 = 250."
+    },
+    {
+        "question": "If the eyepiece is marked x10 and the magnification of the objective lens is x50, what is the total magnification of the microscope?",
+        "options": ["400", "500", "600", "700"],
+        "answer": "500",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 10 x 50 = 500."
+    },
+    {
+        "question": "What is the total magnification if the eyepiece is x15 and the objective lens is x20?",
+        "options": ["200", "250", "300", "400"],
+        "answer": "300",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 15 x 20 = 300."
+    },
+    {
+        "question": "Calculate the total magnification for an eyepiece of x10 and an objective lens of x100.",
+        "options": ["500", "1000", "1500", "2000"],
+        "answer": "1000",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 10 x 100 = 1000."
+    },
+    {
+        "question": "If the eyepiece is x5 and the objective lens is x20, what is the total magnification?",
+        "options": ["50", "75", "100", "125"],
+        "answer": "100",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 5 x 20 = 100."
+    },
+    {
+        "question": "What is the total magnification for an eyepiece of x12 and an objective lens of x30?",
+        "options": ["300", "320", "360", "400"],
+        "answer": "360",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 12 x 30 = 360."
+    },
+    {
+        "question": "Calculate the total magnification if the eyepiece is x6 and the objective lens is x40.",
+        "options": ["240", "250", "260", "270"],
+        "answer": "240",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 6 x 40 = 240."
+    },
+    {
+        "question": "What is the total magnification for an eyepiece of x20 and an objective lens of x10?",
+        "options": ["100", "200", "300", "400"],
+        "answer": "200",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 20 x 10 = 200."
+    },
+    {
+        "question": "If the eyepiece is x8 and the objective lens is x25, what is the total magnification?",
+        "options": ["180", "190", "200", "210"],
+        "answer": "200",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 8 x 25 = 200."
+    },
+    {
+        "question": "Calculate the total magnification for an eyepiece of x7 and an objective lens of x15.",
+        "options": ["100", "105", "110", "115"],
+        "answer": "105",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 7 x 15 = 105."
+    },
+    {
+        "question": "What is the total magnification if the eyepiece is x25 and the objective lens is x4?",
+        "options": ["100", "110", "120", "130"],
+        "answer": "100",
+        "explanation": "Using the formula Magnification = magnification of the eyepiece lens x magnification of the objective lens, the calculation is 25 x 4 = 100."
+    },
+    {
+        "question": "Calculate the magnification of an object that is 4 cm tall and appears 16 cm tall under a microscope.",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 16 cm / 4 cm = 4."
+    },
+    {
+        "question": "An object of 10 cm appears to be 50 cm under magnification. What is the magnification?",
+        "options": ["4", "5", "6", "7"],
+        "answer": "5",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 50 cm / 10 cm = 5."
+    },
+    {
+        "question": "If an object measuring 6 cm appears 18 cm tall, what is the magnification?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 18 cm / 6 cm = 3."
+    },
+    {
+        "question": "What is the magnification if an object is 5 cm tall and its image is 25 cm tall?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "5",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 25 cm / 5 cm = 5."
+    },
+    {
+        "question": "An object of 8 cm is magnified to 32 cm. What is the magnification?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 32 cm / 8 cm = 4."
+    },
+    {
+        "question": "Calculate the magnification of an object that is 7 cm tall if its image appears to be 21 cm tall.",
+        "options": ["2", "3", "4", "5"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 21 cm / 7 cm = 3."
+    },
+    {
+        "question": "What is the magnification if an object is 11 cm tall and its image is 44 cm tall?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 44 cm / 11 cm = 4."
+    },
+    {
+        "question": "An object measuring 2 cm appears as 8 cm under a microscope. What is the magnification?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 8 cm / 2 cm = 4."
+    },
+    {
+        "question": "If an object of 3 cm appears 12 cm tall, what is the magnification?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 12 cm / 3 cm = 4."
+    },
+    {
+        "question": "What is the magnification if an object is 9 cm tall and its image is 27 cm tall?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 27 cm / 9 cm = 3."
+    },
+    {
+        "question": "Calculate the magnification of an object that is 5 cm tall if its image appears to be 15 cm tall.",
+        "options": ["3", "2", "4", "1.5"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 15 cm / 5 cm = 3."
+    },
+    {
+        "question": "An image appears to be 50 cm tall when the actual object is 25 cm tall. What is the magnification?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "2",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 50 cm / 25 cm = 2."
+    },
+    {
+        "question": "If an object that is 8 cm tall appears to be 32 cm tall, what is the magnification?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 32 cm / 8 cm = 4."
+    },
+    {
+        "question": "Calculate the magnification of an object that is 2 cm tall and whose image appears to be 10 cm tall.",
+        "options": ["4", "5", "6", "3"],
+        "answer": "5",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 10 cm / 2 cm = 5."
+    },
+    {
+        "question": "An object of 3 cm appears as 9 cm in a microscope. What is the magnification?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 9 cm / 3 cm = 3."
+    },
+    {
+        "question": "If the actual size of an object is 4 cm and its image size is 20 cm, what is the magnification?",
+        "options": ["5", "4", "3", "6"],
+        "answer": "5",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 20 cm / 4 cm = 5."
+    },
+    {
+        "question": "An object is 6 cm tall and its magnified image is 24 cm tall. Calculate the magnification.",
+        "options": ["2", "3", "4", "5"],
+        "answer": "4",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 24 cm / 6 cm = 4."
+    },
+    {
+        "question": "Calculate the magnification if an object is 7 cm tall and its image is 35 cm tall.",
+        "options": ["4", "5", "6", "3"],
+        "answer": "5",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 35 cm / 7 cm = 5."
+    },
+    {
+        "question": "What is the magnification if the actual size of an object is 12 cm and its image size is 36 cm?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 36 cm / 12 cm = 3."
+    },
+    {
+        "question": "An object measuring 9 cm appears as 27 cm under a microscope. What is the magnification?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "3",
+        "explanation": "Using the formula Magnification = Size of image / Size of object, the calculation is 27 cm / 9 cm = 3."
+    },
+    {
+        "question": "What is the function of the coarse adjustment knob on a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To carry the microscope", "To focus the specimen under low power"],
+        "answer": "To focus the specimen under low power",
+        "explanation": "The coarse adjustment knob on a compound light microscope is used to bring the specimen into general focus under low power."
+    },
+    {
+        "question": "What is the function of the fine adjustment knob on a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To bring the specimen into sharp focus", "To carry the microscope"],
+        "answer": "To bring the specimen into sharp focus",
+        "explanation": "The fine adjustment knob on a compound light microscope is used for precise focusing, bringing the specimen into sharp, clear focus."
+    },
+    {
+        "question": "What role do objective lenses play in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To magnify the specimen", "To reflect light onto the specimen"],
+        "answer": "To magnify the specimen",
+        "explanation": "Objective lenses in a compound light microscope magnify the specimen being observed, and they come in different magnifications such as low, medium, and high power."
+    },
+    {
+        "question": "How does an electron microscope differ from a compound light microscope?",
+        "options": ["Uses a beam of electrons instead of light", "Uses glass lenses instead of mirrors", "Magnifies objects less than light microscopes", "Is smaller and less complex than light microscopes"],
+        "answer": "Uses a beam of electrons instead of light",
+        "explanation": "An electron microscope uses a beam of electrons to view objects, providing much higher magnification and resolution than a compound light microscope."
+    },
+    {
+        "question": "What is the magnification calculation formula for a compound light microscope?",
+        "options": ["Eyepiece magnification + objective lens magnification", "Eyepiece magnification - objective lens magnification", "Eyepiece magnification × objective lens magnification", "Objective lens magnification ÷ eyepiece magnification"],
+        "answer": "Eyepiece magnification × objective lens magnification",
+        "explanation": "The total magnification of a compound light microscope is calculated by multiplying the magnification of the eyepiece lens by the magnification of the objective lens."
+    },
+    {
+        "question": "What is the primary use of a compound light microscope in biology?",
+        "options": ["To view large objects at a distance", "To view detailed structures of small specimens", "To measure the mass of specimens", "To synthesize biological samples"],
+        "answer": "To view detailed structures of small specimens",
+        "explanation": "A compound light microscope is primarily used in biology to view detailed structures of small specimens that are not visible to the naked eye."
+    },
+    {
+        "question": "Why is proper care important for a microscope?",
+        "options": ["To ensure accurate measurements", "To prevent damage to the delicate instrument", "To enhance the speed of observations", "To improve the aesthetic appearance"],
+        "answer": "To prevent damage to the delicate instrument",
+        "explanation": "Proper care of a microscope is essential to prevent damage to this delicate and expensive instrument, ensuring it remains functional and accurate."
+    },
+    {
+        "question": "What is the function of the stand/base in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To provide support and stability", "To magnify the specimen"],
+        "answer": "To provide support and stability",
+        "explanation": "The stand or base of a compound light microscope provides support and stability, ensuring that the microscope remains steady during use."
+    },
+    {
+        "question": "How should a microscope be carried to ensure its safety?",
+        "options": ["By holding the barrel", "By holding the stage and mirror", "By using both hands, one on the arm and one under the base", "By holding the objective lenses"],
+        "answer": "By using both hands, one on the arm and one under the base",
+        "explanation": "A microscope should be carried with both hands, one holding the arm and the other supporting the base, to prevent accidents and ensure safety."
+    },
+    {
+        "question": "What is the importance of the diaphragm in a compound light microscope?",
+        "options": ["To magnify the specimen", "To concentrate light", "To hold the eyepiece", "To regulate the amount of light passing through the specimen"],
+        "answer": "To regulate the amount of light passing through the specimen",
+        "explanation": "The diaphragm in a compound light microscope is crucial for regulating the amount of light passing through the specimen, which helps in enhancing contrast and clarity." 
+    },
+    {
+        "question": "What is a hand lens used for in biology?",
+        "options": ["To view microscopic organisms", "To magnify small objects", "To regulate light intensity", "To hold glass slides"],
+        "answer": "To magnify small objects",
+        "explanation": "A hand lens is used in biology to magnify small objects, making them easier to observe and study."
+    },
+    {
+        "question": "What are the types of microscopes commonly used in biology?",
+        "options": ["Electron microscope and compound light microscope", "X-ray microscope and scanning microscope", "Fluorescence microscope and confocal microscope", "Phase-contrast microscope and dark-field microscope"],
+        "answer": "Electron microscope and compound light microscope",
+        "explanation": "The two types of microscopes commonly used in biology are electron microscopes, which use electron beams, and compound light microscopes, which use visible light."
+    },
+    {
+        "question": "What are the primary functions of the eye piece in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To view the specimen", "To carry the microscope"],
+        "answer": "To view the specimen",
+        "explanation": "The eye piece in a compound light microscope is used to view the specimen, magnifying the image produced by the objective lenses."
+    },
+    {
+        "question": "Why is the barrel important in a compound light microscope?",
+        "options": ["To regulate light intensity", "To support the microscope", "To concentrate light", "To hold the objective lenses"],
+        "answer": "To support the microscope",
+        "explanation": "The barrel of a compound light microscope provides support for the eye piece and objective lenses, ensuring stability during use."
+    },
+    {
+        "question": "What is the function of the nose piece/turret in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To carry the microscope", "To hold the objective lenses"],
+        "answer": "To hold the objective lenses",
+        "explanation": "The nose piece/turret in a compound light microscope holds the objective lenses in position and can be rotated to select the desired magnification."
+    },
+    {
+        "question": "Why is the stage important in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To view the specimen", "To carry the microscope"],
+        "answer": "To hold glass slides",
+        "explanation": "The stage in a compound light microscope is used to hold glass slides or specimens for observation."
+    },
+    {
+        "question": "What is the function of the mirror in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To view the specimen", "To carry the microscope"],
+        "answer": "To reflect light",
+        "explanation": "The mirror in a compound light microscope reflects light from an external source, directing it through the specimen."
+    },
+    {
+        "question": "Why is the diaphragm important in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To view the specimen", "To carry the microscope"],
+        "answer": "To regulate light intensity",
+        "explanation": "The diaphragm in a compound light microscope regulates the amount of light passing through the specimen, controlling brightness and contrast."
+    },
+    {
+        "question": "What is the function of the condenser in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To concentrate light", "To view the specimen"],
+        "answer": "To concentrate light",
+        "explanation": "The condenser in a compound light microscope concentrates the light reflected by the mirror through the specimen, enhancing illumination."
+    },
+    {
+        "question": "Why is the arm important in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To carry the microscope", "To support the microscope"],
+        "answer": "To carry the microscope",
+        "explanation": "The arm of a compound light microscope is used for carrying and transporting the microscope."
+    },
+    {
+        "question": "What is the function of the clip in a compound light microscope?",
+        "options": ["To hold glass slides", "To regulate light intensity", "To carry the microscope", "To focus the specimen"],
+        "answer": "To hold glass slides",
+        "explanation": "The clip in a compound light microscope is used to secure glass slides or specimens onto the stage for observation."
+    },
+    {
+        "question": "What is nutrition/feeding?",
+        "options": ["Process of obtaining food from the environment", "Process of synthesizing food from sunlight", "Process of storing energy in the body", "Process of breaking down food for energy"],
+        "answer": "Process of obtaining food from the environment",
+        "explanation": "Nutrition/feeding is the process by which living things obtain food from the environment, which provides materials for energy production, growth, and repair."
+    },
+    {
+        "question": "What is respiration?",
+        "options": ["Breakdown of food to release energy in the presence of oxygen", "Conversion of sunlight into energy", "Excretion of waste products from the body", "Synthesis of food from carbon dioxide and water"],
+        "answer": "Breakdown of food to release energy in the presence of oxygen",
+        "explanation": "Respiration is the process by which food is broken down to release energy in the body, using oxygen obtained from the environment."
+    },
+    {
+        "question": "What is excretion?",
+        "options": ["Process of obtaining nutrients from food", "Process of removing waste products from the body", "Process of synthesizing proteins", "Process of absorbing oxygen from the environment"],
+        "answer": "Process of removing waste products from the body",
+        "explanation": "Excretion is the process by which waste products, such as urea and carbon dioxide, are removed from the body."
+    },
+    {
+        "question": "What is reproduction?",
+        "options": ["Ability of an organism to obtain energy", "Ability of an organism to give rise to new organisms", "Ability of an organism to break down food", "Ability of an organism to respond to changes in the environment"],
+        "answer": "Ability of an organism to give rise to new organisms",
+        "explanation": "Reproduction is the ability of an organism to produce offspring similar to the parent, ensuring the continuity of the species."
+    },
+    {
+        "question": "What is movement?",
+        "options": ["Ability of an organism to obtain food", "Ability of an organism to synthesize nutrients", "Ability of an organism to transfer its body from one place to another", "Ability of an organism to reproduce"],
+        "answer": "Ability of an organism to transfer its body from one place to another",
+        "explanation": "Movement is the ability of an organism to transfer its body from one place to another, enabling it to search for food, water, shelter, mates, and avoid predators."
+    },
+    {
+        "question": "What is growth?",
+        "options": ["Temporary increase in size of an organism", "Permanent increase in size of an organism", "Ability of an organism to break down food", "Ability of an organism to reproduce"],
+        "answer": "Permanent increase in size of an organism",
+        "explanation": "Growth is a permanent increase in the size of an organism, followed by development, contributing to its overall complexity and functionality."
+    },
+    {
+        "question": "What is irritability/sensitivity?",
+        "options": ["Ability of an organism to produce energy", "Ability of an organism to respond to changes in the environment", "Ability of an organism to synthesize nutrients", "Ability of an organism to reproduce"],
+        "answer": "Ability of an organism to respond to changes in the environment",
+        "explanation": "Irritability/sensitivity is the ability of an organism to detect and respond to changes in its environment, helping it adapt and survive." 
+    },
+    {
+        "question": "Why is nutrition considered one of the characteristics of living things?",
+        "options": ["To provide energy for metabolic processes", "To regulate body temperature", "To facilitate growth and repair", "To maintain homeostasis"],
+        "answer": "To provide energy for metabolic processes",
+        "explanation": "Nutrition is essential for providing the energy needed for various metabolic processes in living organisms."
+    },
+    {
+        "question": "How does respiration contribute to the characteristics of living things?",
+        "options": ["By releasing energy from food", "By facilitating nutrient absorption", "By regulating body temperature", "By supporting cell division"],
+        "answer": "By releasing energy from food",
+        "explanation": "Respiration is the process by which living organisms release energy from food, which is vital for their survival and functioning."
+    },
+    {
+        "question": "Why is excretion considered a characteristic of living things?",
+        "options": ["To remove metabolic waste products", "To regulate water balance", "To facilitate nutrient absorption", "To maintain pH balance"],
+        "answer": "To remove metabolic waste products",
+        "explanation": "Excretion is necessary for removing metabolic waste products from the body, ensuring proper functioning and maintaining internal balance."
+    },
+    {
+        "question": "How does reproduction contribute to the characteristics of living things?",
+        "options": ["By ensuring species survival", "By facilitating growth", "By regulating body temperature", "By promoting adaptation"],
+        "answer": "By ensuring species survival",
+        "explanation": "Reproduction is essential for the continuation of species, ensuring their survival and adaptation to changing environments."
+    },
+    {
+        "question": "What role does movement play in the characteristics of living things?",
+        "options": ["To search for food and mates", "To regulate body temperature", "To facilitate respiration", "To control internal pH levels"],
+        "answer": "To search for food and mates",
+        "explanation": "Movement allows living organisms to search for food, mates, shelter, and escape from predators, contributing to their survival and reproduction."
+    },
+    {
+        "question": "Why is growth considered a characteristic of living things?",
+        "options": ["To increase in size and complexity", "To maintain internal balance", "To regulate metabolic processes", "To respond to environmental stimuli"],
+        "answer": "To increase in size and complexity",
+        "explanation": "Growth involves an increase in size and complexity of living organisms over time, reflecting their ability to develop and adapt to their environment."
+    },
+    {
+        "question": "How does sensitivity/irritability contribute to the characteristics of living things?",
+        "options": ["By responding to environmental stimuli", "By regulating body temperature", "By facilitating nutrient absorption", "By promoting cell division"],
+        "answer": "By responding to environmental stimuli",
+        "explanation": "Sensitivity or irritability allows living organisms to respond to changes in their environment, helping them adapt and survive in different conditions."
+    },
+    {
+        "question": "Why is reproduction essential for the characteristics of living things?",
+        "options": ["To ensure the continuity of life", "To regulate body temperature", "To facilitate nutrient absorption", "To maintain pH balance"],
+        "answer": "To ensure the continuity of life",
+        "explanation": "Reproduction is crucial for the continuity of life, allowing species to perpetuate and adapt to changing environments over time."
+    },
+    {
+        "question": "How does movement contribute to the characteristics of living things?",
+        "options": ["By enabling organisms to explore their environment", "By regulating internal pH levels", "By promoting cell division", "By facilitating nutrient absorption"],
+        "answer": "By enabling organisms to explore their environment",
+        "explanation": "Movement allows organisms to explore their environment, find food, seek shelter, and reproduce, enhancing their chances of survival."
+    },
+    {
+        "question": "Why is sensitivity/irritability important in the characteristics of living things?",
+        "options": ["To respond to changes in the environment", "To maintain homeostasis", "To regulate metabolic processes", "To synthesize essential molecules"],
+        "answer": "To respond to changes in the environment",
+        "explanation": "Sensitivity or irritability enables living organisms to detect and respond to changes in their environment, helping them adapt and survive." 
+    },
+    {
+        "question": "What does ornithology primarily focus on?",
+        "options": ["Study of birds", "Study of fish", "Study of insects", "Study of microorganisms"],
+        "answer": "Study of birds",
+        "explanation": "Ornithology is the branch of biology that focuses on the study of birds."
+    },
+    {
+        "question": "Which branch of biology investigates the structure of living things?",
+        "options": ["Anatomy", "Physiology", "Botany", "Ecology"],
+        "answer": "Anatomy",
+        "explanation": "Anatomy is the branch of biology that investigates the structure of living organisms."
+    },
+    {
+        "question": "What is the primary focus of genetics?",
+        "options": ["Inheritance", "Body functions", "Classification", "Ecological relationships"],
+        "answer": "Inheritance",
+        "explanation": "Genetics is the branch of biology that primarily focuses on the study of inheritance."
+    },
+    {
+        "question": "Which organisms are primarily studied in mycology?",
+        "options": ["Fungi", "Bacteria", "Plants", "Animals"],
+        "answer": "Fungi",
+        "explanation": "Mycology is the branch of biology that is primarily concerned with the study of fungi."
+    },
+    {
+        "question": "What distinguishes microbiology from other branches of biology?",
+        "options": ["Study of microorganisms", "Study of plants", "Study of animals", "Study of body functions"],
+        "answer": "Study of microorganisms",
+        "explanation": "Microbiology is the branch of biology that specifically focuses on the study of microorganisms."
+    },
+    {
+        "question": "What does physiology primarily study?",
+        "options": ["Body functions", "Inheritance", "Classification", "Ecological relationships"],
+        "answer": "Body functions",
+        "explanation": "Physiology is the branch of biology that primarily focuses on the study of body functions."
+    },
+    {
+        "question": "Which branch of biology deals with the study of bacteria?",
+        "options": ["Bacteriology", "Virology", "Entomology", "Mycology"],
+        "answer": "Bacteriology",
+        "explanation": "Bacteriology is the branch of biology that deals with the study of bacteria."
+    },
+    {
+        "question": "What is the primary focus of entomology?",
+        "options": ["Insects", "Fish", "Plants", "Microorganisms"],
+        "answer": "Insects",
+        "explanation": "Entomology is the branch of biology that primarily focuses on the study of insects."
+    },
+    {
+        "question": "What distinguishes zoology from other branches of biology?",
+        "options": ["Study of animals", "Study of plants", "Study of microorganisms", "Study of body functions"],
+        "answer": "Study of animals",
+        "explanation": "Zoology is the branch of biology that specifically focuses on the study of animals."
+    },
+    {
+        "question": "What is the primary focus of virology?",
+        "options": ["Viruses", "Bacteria", "Plants", "Animals"],
+        "answer": "Viruses",
+        "explanation": "Virology is the branch of biology that primarily focuses on the study of viruses."
+    }
+,
+{
+    "question": "Which organisms are primarily studied in bacteriology?",
+    "options": ["Bacteria", "Viruses", "Fungi", "Plants"],
+    "answer": "Bacteria",
+    "explanation": "Bacteriology is the branch of biology concerned with the study of bacteria."
+},
+{
+    "question": "What does entomology primarily focus on?",
+    "options": ["Insects", "Birds", "Fish", "Plants"],
+    "answer": "Insects",
+    "explanation": "Entomology is the branch of biology that specializes in the study of insects."
+},
+{
+    "question": "Which branch of biology deals with the study of microorganisms?",
+    "options": ["Microbiology", "Botany", "Zoology", "Anatomy"],
+    "answer": "Microbiology",
+    "explanation": "Microbiology is the branch of biology that focuses on the study of microorganisms."
+},
+{
+    "question": "What is the primary focus of physiology?",
+    "options": ["Body functions", "Chemical reactions", "Geological formations", "Astronomical bodies"],
+    "answer": "Body functions",
+    "explanation": "Physiology is the branch of biology that studies the processes and functioning of body parts."
+},
+{
+    "question": "Which branch of biology is concerned with the study of inheritance?",
+    "options": ["Genetics", "Ecology", "Taxonomy", "Physiology"],
+    "answer": "Genetics",
+    "explanation": "Genetics is the branch of biology that focuses on the study of inheritance."
+},
+{
+    "question": "What is the primary focus of taxonomy?",
+    "options": ["Classification of organisms", "Study of fungi", "Study of birds", "Study of fish"],
+    "answer": "Classification of organisms",
+    "explanation": "Taxonomy is the branch of biology concerned with the classification of organisms."
+},
+{
+    "question": "Which branch of biology studies the behavior and characteristics of birds?",
+    "options": ["Ornithology", "Ichthyology", "Entomology", "Mycology"],
+    "answer": "Ornithology",
+    "explanation": "Ornithology is the branch of biology that focuses on the study of birds."
+},
+{
+    "question": "What does ichthyology primarily focus on?",
+    "options": ["Study of fish", "Study of insects", "Study of microorganisms", "Study of fungi"],
+    "answer": "Study of fish",
+    "explanation": "Ichthyology is the branch of biology that specializes in the study of fish."
+},
+{
+    "question": "What distinguishes physiology from anatomy?",
+    "options": ["Study of structure vs. study of body functions", "Study of animals vs. study of plants", "Study of inheritance vs. study of ecology", "Study of food vs. study of environmental relationships"],
+    "answer": "Study of structure vs. study of body functions",
+    "explanation": "Physiology focuses on the processes and functioning of body parts, while anatomy focuses on their structure."
+},
+{
+    "question": "What does ecology primarily study?",
+    "options": ["Relationships between organisms and their environment", "Study of viruses", "Study of insects", "Study of plants"],
+    "answer": "Relationships between organisms and their environment",
+    "explanation": "Ecology is the branch of biology concerned with the relationships between organisms and their environment."
+}
+,
+{
+    "question": "What specific areas does botany focus on?",
+    "options": ["Plants", "Animals", "Microorganisms", "Insects"],
+    "answer": "Plants",
+    "explanation": "Botany is the branch of biology that specializes in the study of plants."
+},
+{
+    "question": "Which branch of biology concentrates on the study of animals?",
+    "options": ["Zoology", "Botany", "Mycology", "Bacteriology"],
+    "answer": "Zoology",
+    "explanation": "Zoology is the branch of biology that deals with the study of animals."
+},
+{
+    "question": "What does anatomy primarily study?",
+    "options": ["Structure of living things", "Chemical reactions", "Weather patterns", "Geological formations"],
+    "answer": "Structure of living things",
+    "explanation": "Anatomy is the branch of biology that focuses on the structure of living organisms."
+},
+{
+    "question": "What is the main focus of nutrition in biology?",
+    "options": ["Food and feeding processes", "Climate change", "Astronomical bodies", "Volcanic eruptions"],
+    "answer": "Food and feeding processes",
+    "explanation": "Nutrition in biology pertains to the study of food and how living organisms feed."
+},
+{
+    "question": "What does ecology examine within the field of biology?",
+    "options": ["Relationships between organisms and their environment", "Human psychology", "Chemical reactions", "Geological formations"],
+    "answer": "Relationships between organisms and their environment",
+    "explanation": "Ecology is the branch of biology concerned with the relationships between organisms and their environment."
+},
+{
+    "question": "Which branch of biology studies fungi?",
+    "options": ["Mycology", "Botany", "Zoology", "Entomology"],
+    "answer": "Mycology",
+    "explanation": "Mycology is the branch of biology dedicated to the study of fungi."
+},
+{
+    "question": "What is the focus of virology in biology?",
+    "options": ["Viruses", "Plants", "Animals", "Insects"],
+    "answer": "Viruses",
+    "explanation": "Virology is the branch of biology that concentrates on the study of viruses."
+},
+{
+    "question": "What distinguishes biology from other scientific disciplines?",
+    "options": ["Focus on non-living entities", "Concentration on weather patterns", "Emphasis on living organisms and life processes", "Exploration of astronomical bodies"],
+    "answer": "Emphasis on living organisms and life processes",
+    "explanation": "Biology differs from other scientific disciplines due to its focus on living organisms and the processes associated with life."
+}
+,
+
+    {
+        "question": "What is the etymology of the term 'biology'?",
+        "options": [
+            "From Latin roots",
+            "From French origins",
+            "From Greek roots",
+            "From Germanic roots"
+        ],
+        "answer": "From Greek roots",
+        "explanation": "The term 'biology' is derived from two Greek words, 'Bios' meaning life and 'logos' meaning knowledge."
+    },
+    {
+        "question": "How would you define biology?",
+        "options": [
+            "The study of non-living things",
+            "The study of chemical reactions",
+            "The study of life or living organisms",
+            "The study of geological formations"
+        ],
+        "answer": "The study of life or living organisms",
+        "explanation": "Biology is a branch of science that deals with the study of life or living organisms."
+    },
+    {
+        "question": "What is the primary focus of biology?",
+        "options": [
+            "Studying inanimate objects",
+            "Investigating weather patterns",
+            "Exploring the human mind",
+            "Understanding living organisms"
+        ],
+        "answer": "Understanding living organisms",
+        "explanation": "The main focus of biology is to understand the characteristics, behaviors, and functions of living organisms."
+    },
+    {
+        "question": "Which languages contributed to the formation of the word 'biology'?",
+        "options": [
+            "Latin and French",
+            "Greek and Germanic",
+            "French and German",
+            "Latin and Greek"
+        ],
+        "answer": "Greek and Germanic",
+        "explanation": "The term 'biology' originates from Greek roots ('Bios' and 'logos'), indicating its linguistic origins."
+    },
+    {
+        "question": "What do 'Bios' and 'logos' mean individually in Greek?",
+        "options": [
+            "Bios: Earth, Logos: Matter",
+            "Bios: Water, Logos: Air",
+            "Bios: Life, Logos: Knowledge",
+            "Bios: Death, Logos: Wisdom"
+        ],
+        "answer": "Bios: Life, Logos: Knowledge",
+        "explanation": "In Greek, 'Bios' means life, and 'logos' means knowledge, leading to the definition of biology as the study of life or living organisms."
+    },
+    {
+        "question": "What distinguishes biology from other branches of science?",
+        "options": [
+            "Focus on non-living entities",
+            "Concentration on geological phenomena",
+            "Emphasis on the study of living organisms",
+            "Exploration of astronomical bodies"
+        ],
+        "answer": "Emphasis on the study of living organisms",
+        "explanation": "Biology stands apart from other branches of science due to its emphasis on the study of living organisms and their processes."
+    },
+    {
+        "question": "How does biology contribute to our understanding of the world?",
+        "options": [
+            "By focusing solely on physical phenomena",
+            "By ignoring natural processes",
+            "By studying the interactions of living organisms",
+            "By examining chemical reactions"
+        ],
+        "answer": "By studying the interactions of living organisms",
+        "explanation": "Biology enriches our understanding of the world by examining the interactions, behaviors, and characteristics of living organisms within their environments."
+    },
+    {
+        "question": "What encompasses the scope of biology?",
+        "options": [
+            "Only the study of humans",
+            "Only the study of animals",
+            "The study of all living organisms",
+            "The study of non-living entities"
+        ],
+        "answer": "The study of all living organisms",
+        "explanation": "The scope of biology extends to the study of all living organisms, including plants, animals, microorganisms, and ecosystems."
+    },
+    {
+        "question": "Why is the study of biology significant?",
+        "options": [
+            "To understand geological formations",
+            "To comprehend chemical reactions",
+            "To investigate the structure of non-living objects",
+            "To gain insight into life processes and living organisms"
+        ],
+        "answer": "To gain insight into life processes and living organisms",
+        "explanation": "Studying biology is significant as it provides insights into the processes, behaviors, and characteristics of life and living organisms."
+    },
+    {
+        "question": "What distinguishes biology from other scientific disciplines?",
+        "options": [
+            "Focus on non-living entities",
+            "Concentration on weather patterns",
+            "Emphasis on living organisms and life processes",
+            "Exploration of astronomical bodies"
+        ],
+        "answer": "Emphasis on living organisms and life processes",
+        "explanation": "Biology differs from other scientific disciplines due to its focus on living organisms and the processes associated with life."
+    }
+
+]
