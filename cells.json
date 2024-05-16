@@ -1,0 +1,2401 @@
+[
+    {
+        "question": "What distinguishes an organ system from other levels of organization?",
+        "options": [
+            "It consists of multiple tissues",
+            "It is the smallest unit of life",
+            "It performs specific functions",
+            "It is composed of organ systems"
+        ],
+        "answer": "It performs specific functions",
+        "explanation": "An organ system is characterized by its function of coordinating the activities of multiple organs to perform specific physiological functions necessary for the organism's survival."
+    },
+    
+    {
+        "question": "What is the significance of tissues in multicellular organisms?",
+        "options": [
+            "They provide energy for cellular activities",
+            "They regulate organ functions",
+            "They carry out specific functions",
+            "They maintain structural integrity"
+        ],
+        "answer": "They carry out specific functions",
+        "explanation": "Tissues are essential in multicellular organisms as they consist of specialized cells organized to perform specific functions, such as muscle contraction, nerve impulse transmission, or nutrient absorption."
+    },
+    
+    {
+        "question": "Which term describes a collection of tissues performing a specific function?",
+        "options": [
+            "Cell",
+            "Tissue",
+            "Organ",
+            "Organ System"
+        ],
+        "answer": "Tissue",
+        "explanation": "A tissue is composed of a group of specialized cells that work together to perform a specific function, contributing to the overall physiology and functionality of the organism."
+    },
+    
+    {
+        "question": "What differentiates an organ from a tissue?",
+        "options": [
+            "It consists of multiple cells",
+            "It regulates organ functions",
+            "It performs metabolic processes",
+            "It stores genetic material"
+        ],
+        "answer": "It consists of multiple cells",
+        "explanation": "An organ is characterized by its composition of multiple tissues, each containing various cell types organized to perform specialized functions collectively within the organ structure."
+    },
+    
+    {
+        "question": "Which level of organization involves a group of organs working together?",
+        "options": [
+            "Tissue",
+            "Cell",
+            "Organism",
+            "Organ System"
+        ],
+        "answer": "Organ System",
+        "explanation": "An organ system consists of multiple organs that collaborate to perform specific functions necessary for the survival and functioning of the organism."
+    },
+    
+    {
+        "question": "What defines an organism?",
+        "options": [
+            "It is composed of multiple tissues",
+            "It is the smallest unit of life",
+            "It performs specific functions",
+            "It is composed of organ systems"
+        ],
+        "answer": "It is composed of organ systems",
+        "explanation": "An organism is characterized by its composition of multiple organ systems that work together to maintain life and carry out various functions necessary for survival."
+    },
+    
+    {
+        "question": "What is the primary function of an organ?",
+        "options": [
+            "To carry out metabolic processes",
+            "To perform specific functions",
+            "To store genetic material",
+            "To provide structural support"
+        ],
+        "answer": "To perform specific functions",
+        "explanation": "An organ is a structure composed of different types of tissues that work together to perform specific functions necessary for the organism's survival and well-being."
+    },
+    
+    {
+        "question": "What distinguishes an organ system from an organ?",
+        "options": [
+            "It consists of multiple tissues",
+            "It regulates organ functions",
+            "It performs specific functions",
+            "It is composed of organ systems"
+        ],
+        "answer": "It is composed of organ systems",
+        "explanation": "An organ system consists of multiple organs that collaborate to perform specific physiological functions necessary for the organism's survival and homeostasis, whereas an organ is a structure made up of different tissues with a specific function."
+    },
+    
+    {
+        "question": "What is the role of an organ system in an organism?",
+        "options": [
+            "To carry out metabolic processes",
+            "To perform specific functions",
+            "To store genetic material",
+            "To provide structural support"
+        ],
+        "answer": "To perform specific functions",
+        "explanation": "An organ system is responsible for coordinating the activities of multiple organs to perform specific physiological functions that contribute to the organism's overall health, survival, and adaptation to its environment."
+    },
+    
+    {
+        "question": "Which term describes a group of organs working together to perform specific functions?",
+        "options": [
+            "Cell",
+            "Tissue",
+            "Organ",
+            "Organ System"
+        ],
+        "answer": "Organ System",
+        "explanation": "An organ system is composed of multiple organs that collaborate to perform specific physiological functions necessary for the survival and well-being of the organism."
+     },
+    
+    {
+        "question": "What is the main function of an organ system?",
+        "options": [
+            "To carry out basic life processes",
+            "To perform specific functions",
+            "To regulate cellular activities",
+            "To maintain structural support"
+        ],
+        "answer": "To perform specific functions",
+        "explanation": "An organ system is a group of organs that work together to perform specific functions necessary for the survival and functioning of the organism."
+    },
+    
+    {
+        "question": "Which level of organization involves a group of organs working together?",
+        "options": [
+            "Tissue",
+            "Cell",
+            "Organism",
+            "Organ System"
+        ],
+        "answer": "Organ System",
+        "explanation": "An organ system consists of multiple organs that collaborate to perform specific functions or tasks in the body, such as the nervous system or circulatory system."
+    },
+    
+    {
+        "question": "What makes an organism distinct from other levels of organization?",
+        "options": [
+            "It consists of multiple tissues",
+            "It is the smallest unit of life",
+            "It performs specific functions",
+            "It is composed of organ systems"
+        ],
+        "answer": "It is composed of organ systems",
+        "explanation": "An organism is composed of multiple organ systems that work together to maintain life and carry out various functions necessary for survival."
+    },
+    
+    {
+        "question": "Which term describes a collection of tissues performing a specific function?",
+        "options": [
+            "Cell",
+            "Tissue",
+            "Organ",
+            "Organ System"
+        ],
+        "answer": "Tissue",
+        "explanation": "Tissue is a level of organization comprising a group of similar cells that work together to perform a specific function in the body."
+    },
+    
+    {
+        "question": "What is the significance of cells in living organisms?",
+        "options": [
+            "They perform photosynthesis",
+            "They regulate organ functions",
+            "They provide structural support",
+            "They carry out fundamental life processes"
+        ],
+        "answer": "They carry out fundamental life processes",
+        "explanation": "Cells are responsible for executing fundamental life processes such as metabolism, growth, reproduction, and responding to stimuli, making them essential for the survival of living organisms."
+    },
+    
+    {
+        "question": "Which level of organization involves a single unit of life?",
+        "options": [
+            "Tissue",
+            "Cell",
+            "Organism",
+            "Organ System"
+        ],
+        "answer": "Cell",
+        "explanation": "The cell is the basic unit of life, representing the lowest level of organization that exhibits all the characteristics of living organisms."
+    },
+    
+    {
+        "question": "What differentiates an organ from other levels of organization?",
+        "options": [
+            "It is the smallest unit of life",
+            "It is composed of multiple cells",
+            "It performs specific functions",
+            "It regulates bodily processes"
+        ],
+        "answer": "It is composed of multiple cells",
+        "explanation": "An organ is characterized by its composition of multiple cells, tissues, and organs, working together to carry out specialized functions in the body."
+    },
+    
+    {
+        "question": "Which term refers to a group of organs working together to perform specific functions?",
+        "options": [
+            "Tissue",
+            "Cell",
+            "Organism",
+            "Organ System"
+        ],
+        "answer": "Organ System",
+        "explanation": "An organ system consists of multiple organs that collaborate to perform specific functions necessary for the survival and functioning of the organism."
+    },
+    
+    {
+        "question": "What defines an organism?",
+        "options": [
+            "It is composed of multiple tissues",
+            "It is the smallest unit of life",
+            "It performs specific functions",
+            "It is composed of organ systems"
+        ],
+        "answer": "It is composed of organ systems",
+        "explanation": "An organism is characterized by its composition of multiple organ systems that work together to maintain life and carry out various functions necessary for survival."
+    },
+    
+    {
+        "question": "What is the primary function of a tissue?",
+        "options": [
+            "To carry out metabolic processes",
+            "To perform specific functions",
+            "To store genetic material",
+            "To provide structural support"
+        ],
+        "answer": "To perform specific functions",
+        "explanation": "A tissue is a group of similar cells that work together to perform specific functions or tasks in the body, such as muscle contraction, nerve impulse transmission, or gas exchange."
+     },
+    
+    {
+        "question": "What is the basic unit of life?",
+        "options": [
+            "Tissue",
+            "Organ",
+            "Organism",
+            "Cell"
+        ],
+        "answer": "Cell",
+        "explanation": "The cell is the fundamental unit of life, where all biological processes occur, and it is the building block of tissues, organs, and organisms."
+    },
+    
+    {
+        "question": "How would you define tissue?",
+        "options": [
+            "Group of organs performing a specific function",
+            "Collection of cells performing a specific function",
+            "Collection of tissues performing a specific function",
+            "Basic unit of life"
+        ],
+        "answer": "Collection of cells performing a specific function",
+        "explanation": "Tissue refers to a group of similar cells that work together to perform a specific function in the body, such as blood, nervous, muscular, or photosynthetic tissue."
+    },
+    
+    {
+        "question": "Which term refers to a collection of tissues performing a specific function?",
+        "options": [
+            "Organism",
+            "Organ",
+            "Cell",
+            "Tissue"
+        ],
+        "answer": "Organ",
+        "explanation": "An organ is composed of different types of tissues that work together to carry out a specific function in the body, such as the heart, kidney, or leaves."
+    },
+    
+    {
+        "question": "What defines an organ system?",
+        "options": [
+            "Group of tissues working together",
+            "Collection of organs performing various functions",
+            "Group of organs working together",
+            "Collection of cells performing a specific function"
+        ],
+        "answer": "Group of organs working together",
+        "explanation": "An organ system is composed of multiple organs that collaborate to perform specific functions or tasks in the body, such as the nervous system, circulatory system, or digestive system."
+    },
+    
+    {
+        "question": "What term describes a collection of organ systems functioning together as a unit?",
+        "options": [
+            "Organism",
+            "Tissue",
+            "Organ System",
+            "Cell"
+        ],
+        "answer": "Organism",
+        "explanation": "An organism is the highest level of organization in biology, representing a complete individual composed of multiple organ systems that work together to maintain life."
+    },
+    
+    {
+        "question": "Which term refers to a group of organs working together?",
+        "options": [
+            "Tissue",
+            "Cell",
+            "Organism",
+            "Organ System"
+        ],
+        "answer": "Organ System",
+        "explanation": "An organ system consists of interconnected organs that collaborate to perform specific functions necessary for the survival and functioning of the organism."
+    },
+    
+    {
+        "question": "What is the primary function of cells?",
+        "options": [
+            "Conduct photosynthesis",
+            "Perform a specific function",
+            "Carry out basic life processes",
+            "Provide structural support"
+        ],
+        "answer": "Carry out basic life processes",
+        "explanation": "Cells are responsible for carrying out fundamental life processes such as metabolism, growth, reproduction, and responding to stimuli, making them the functional units of living organisms."
+    },
+    
+    {
+        "question": "Which level of organization involves a collection of cells performing a specific function?",
+        "options": [
+            "Organism",
+            "Organ",
+            "Tissue",
+            "Organ System"
+        ],
+        "answer": "Tissue",
+        "explanation": "Tissue is a level of organization that consists of a group of similar cells working together to perform a specific function, such as muscle tissue or nervous tissue."
+    },
+    
+    {
+        "question": "What distinguishes an organ from other levels of organization?",
+        "options": [
+            "It consists of multiple tissues",
+            "It is composed of different types of cells",
+            "It performs a specific function",
+            "It is the smallest unit of life"
+        ],
+        "answer": "It consists of multiple tissues",
+        "explanation": "An organ is characterized by its composition of multiple types of tissues, each with its own specialized function, working together to carry out a specific task or function in the body."
+    },
+    
+    {
+        "question": "Which term refers to a group of organs performing various functions?",
+        "options": [
+            "Organism",
+            "Tissue",
+            "Organ System",
+            "Cell"
+        ],
+        "answer": "Organism",
+        "explanation": "An organism represents the highest level of organization in biology, comprising multiple organ systems that collaborate to maintain the life and functioning of the individual."
+     },
+    
+    {
+        "question": "What distinguishes red blood cells from other cell types in animals?",
+        "options": [
+            "They conduct photosynthesis",
+            "They fuse with ovum during fertilization",
+            "They transport oxygen",
+            "They regulate body temperature"
+        ],
+        "answer": "They transport oxygen",
+        "explanation": "Red blood cells in animals are specialized for the transportation of oxygen from the lungs to various tissues and organs throughout the body, facilitated by the presence of the protein hemoglobin."
+    },
+    
+    {
+        "question": "Which specialized cell type in animals is involved in the process of fertilization?",
+        "options": [
+            "Red blood cells",
+            "White blood cells",
+            "Sperm cells",
+            "Platelets"
+        ],
+        "answer": "Sperm cells",
+        "explanation": "Sperm cells in animals are specialized for fertilization, where they carry genetic material and fuse with the ovum (egg cell) to form a zygote, initiating the development of a new organism."
+    },
+    
+    {
+        "question": "What is the primary function of white blood cells in animals?",
+        "options": [
+            "Transport nutrients",
+            "Defend against infections",
+            "Conduct photosynthesis",
+            "Regulate body temperature"
+        ],
+        "answer": "Defend against infections",
+        "explanation": "White blood cells in animals are key components of the immune system, responsible for defending the body against infections, pathogens, and foreign substances by identifying and destroying them."
+    },
+    
+    {
+        "question": "Which specialized cell type in plants is primarily responsible for absorbing water and minerals from the soil?",
+        "options": [
+            "Guard cells",
+            "Palisade cells",
+            "Root hair cells",
+            "Xylem cells"
+        ],
+        "answer": "Root hair cells",
+        "explanation": "Root hair cells in plants are specialized for absorption, with elongated projections that increase the surface area for the absorption of water and minerals from the soil."
+    },
+    
+    {
+        "question": "What is the main function of palisade cells in plants?",
+        "options": [
+            "Regulate stomatal opening",
+            "Conduct photosynthesis",
+            "Produce hormones",
+            "Store water and nutrients"
+        ],
+        "answer": "Conduct photosynthesis",
+        "explanation": "Palisade cells in plants are specialized for photosynthesis, containing chloroplasts and positioned near the upper surface of leaves to maximize light absorption for the process of photosynthesis."
+    },
+    
+    {
+        "question": "Which specialized cell type in plants regulates the opening and closing of stomata?",
+        "options": [
+            "Root hair cells",
+            "Palisade cells",
+            "Guard cells",
+            "Xylem cells"
+        ],
+        "answer": "Guard cells",
+        "explanation": "Guard cells in plants regulate the opening and closing of stomata, small pores on the leaf surface, to facilitate gas exchange and regulate water loss through transpiration."
+    },
+    
+    {
+        "question": "Which specialized cell type in animals is responsible for producing platelets involved in blood clotting?",
+        "options": [
+            "Sperm cells",
+            "Ovum",
+            "Red blood cells",
+            "Megakaryocytes"
+        ],
+        "answer": "Megakaryocytes",
+        "explanation": "Megakaryocytes are specialized cells in animals that produce platelets, which play a crucial role in blood clotting by forming plugs to seal injured blood vessels and prevent excessive bleeding."
+    },
+    
+    {
+        "question": "Which specialized cell type in plants is responsible for conducting water and dissolved nutrients throughout the plant?",
+        "options": [
+            "Guard cells",
+            "Root hair cells",
+            "Palisade cells",
+            "Xylem cells"
+        ],
+        "answer": "Xylem cells",
+        "explanation": "Xylem cells in plants are specialized for conducting water and dissolved nutrients from the roots to the rest of the plant, providing structural support and facilitating the transport of essential substances."
+    },
+    
+    {
+        "question": "What is the primary function of ovum (egg cells) in animals?",
+        "options": [
+            "Fuse with sperm cells during fertilization",
+            "Produce hormones",
+            "Defend against infections",
+            "Transport oxygen"
+        ],
+        "answer": "Fuse with sperm cells during fertilization",
+        "explanation": "The primary function of ovum (egg cells) in animals is to fuse with sperm cells during fertilization, resulting in the formation of a zygote, which develops into a new organism through the process of embryogenesis."
+    },
+    
+    {
+        "question": "Which specialized cell type in animals is responsible for producing antibodies to fight against pathogens?",
+        "options": [
+            "White blood cells",
+            "Red blood cells",
+            "Platelets",
+            "Sperm cells"
+        ],
+        "answer": "White blood cells",
+        "explanation": "White blood cells in animals, particularly lymphocytes, are responsible for producing antibodies as part of the immune response, helping to neutralize and eliminate pathogens (such as bacteria, viruses, and fungi) that invade the body."
+     },
+    
+    {
+        "question": "What is the primary function of red blood cells in animals?",
+        "options": [
+            "Absorb nutrients",
+            "Transport oxygen",
+            "Produce antibodies",
+            "Facilitate nerve transmission"
+        ],
+        "answer": "Transport oxygen",
+        "explanation": "Red blood cells in animals primarily function to transport oxygen from the lungs to various tissues and organs throughout the body."
+    },
+    
+    {
+        "question": "What is the role of sperm cells in animals?",
+        "options": [
+            "Transport of nutrients",
+            "Facilitate digestion",
+            "Fuse with ovum during fertilization",
+            "Produce hormones"
+        ],
+        "answer": "Fuse with ovum during fertilization",
+        "explanation": "Sperm cells in animals are specialized for fertilization, where they fuse with the ovum (egg cell) to form a zygote, initiating the process of embryonic development."
+    },
+    
+    {
+        "question": "What is the function of white blood cells in animals?",
+        "options": [
+            "Transport oxygen",
+            "Defend against infections",
+            "Regulate body temperature",
+            "Produce energy"
+        ],
+        "answer": "Defend against infections",
+        "explanation": "White blood cells in animals play a crucial role in the immune system, defending the body against infections, pathogens, and foreign substances by identifying and destroying them."
+    },
+    
+    {
+        "question": "Which specialized cell type in plants is responsible for absorbing water and minerals from the soil?",
+        "options": [
+            "Guard cells",
+            "Palisade cells",
+            "Root hair cells",
+            "Xylem cells"
+        ],
+        "answer": "Root hair cells",
+        "explanation": "Root hair cells in plants are specialized for absorption, with elongated projections that increase the surface area for the absorption of water and minerals from the soil."
+    },
+    
+    {
+        "question": "What is the primary function of palisade cells in plants?",
+        "options": [
+            "Control stomatal opening",
+            "Conduct photosynthesis",
+            "Produce hormones",
+            "Store water and nutrients"
+        ],
+        "answer": "Conduct photosynthesis",
+        "explanation": "Palisade cells in plants are specialized for photosynthesis, containing chloroplasts and positioned near the upper surface of leaves to maximize light absorption for the process of photosynthesis."
+    },
+    
+    {
+        "question": "What is the main role of guard cells in plants?",
+        "options": [
+            "Conduct photosynthesis",
+            "Absorb water and minerals",
+            "Control stomatal opening",
+            "Produce energy"
+        ],
+        "answer": "Control stomatal opening",
+        "explanation": "Guard cells in plants regulate the opening and closing of stomata, tiny pores on the leaf surface, to facilitate gas exchange (such as the intake of carbon dioxide and the release of oxygen) and regulate water loss through transpiration."
+    },
+    
+    {
+        "question": "Which specialized cell type in animals is responsible for producing platelets involved in blood clotting?",
+        "options": [
+            "Sperm cells",
+            "Ovum",
+            "Red blood cells",
+            "Megakaryocytes"
+        ],
+        "answer": "Megakaryocytes",
+        "explanation": "Megakaryocytes are specialized cells in animals that produce platelets, which play a crucial role in blood clotting by forming plugs to seal injured blood vessels and prevent excessive bleeding."
+    },
+    
+    {
+        "question": "Which specialized cell type in plants is responsible for conducting water and nutrients throughout the plant?",
+        "options": [
+            "Guard cells",
+            "Root hair cells",
+            "Palisade cells",
+            "Xylem cells"
+        ],
+        "answer": "Xylem cells",
+        "explanation": "Xylem cells in plants are specialized for conducting water and dissolved nutrients from the roots to the rest of the plant, providing structural support and facilitating the transport of essential substances."
+    },
+    
+    {
+        "question": "What is the primary function of ovum (egg cells) in animals?",
+        "options": [
+            "Fuse with sperm cells during fertilization",
+            "Produce hormones",
+            "Defend against infections",
+            "Transport oxygen"
+        ],
+        "answer": "Fuse with sperm cells during fertilization",
+        "explanation": "The primary function of ovum (egg cells) in animals is to fuse with sperm cells during fertilization, resulting in the formation of a zygote, which develops into a new organism through the process of embryogenesis."
+    },
+    
+    {
+        "question": "Which specialized cell type in animals is responsible for producing antibodies to fight against pathogens?",
+        "options": [
+            "White blood cells",
+            "Red blood cells",
+            "Platelets",
+            "Sperm cells"
+        ],
+        "answer": "White blood cells",
+        "explanation": "White blood cells in animals, particularly lymphocytes, are responsible for producing antibodies as part of the immune response, helping to neutralize and eliminate pathogens (such as bacteria, viruses, and fungi) that invade the body."
+     },
+    
+    {
+        "question": "What is a common function of the cell membrane in both plant and animal cells?",
+        "options": [
+            "Photosynthesis",
+            "Regulation of molecular transport",
+            "Storage of genetic material",
+            "Cell division"
+        ],
+        "answer": "Regulation of molecular transport",
+        "explanation": "The cell membrane in both plant and animal cells regulates the passage of molecules into and out of the cell, controlling the transport of substances necessary for cellular processes."
+    },
+    
+    {
+        "question": "Which organelle is common to both plant and animal cells and contains genetic material?",
+        "options": [
+            "Chloroplast",
+            "Nucleus",
+            "Endoplasmic reticulum",
+            "Vacuole"
+        ],
+        "answer": "Nucleus",
+        "explanation": "The nucleus, present in both plant and animal cells, contains the cell's genetic material, including DNA and RNA, which governs cellular activities and inheritance."
+    },
+    
+    {
+        "question": "What is a shared function of the Golgi body in plant and animal cells?",
+        "options": [
+            "Cell division",
+            "Synthesis of ATP",
+            "Modification and packaging of proteins",
+            "Photosynthesis"
+        ],
+        "answer": "Modification and packaging of proteins",
+        "explanation": "The Golgi body, found in both plant and animal cells, is responsible for modifying and packaging proteins synthesized by the endoplasmic reticulum before their distribution to other cellular destinations."
+    },
+    
+    {
+        "question": "Which cellular structure is common to both plant and animal cells and plays a role in cellular respiration?",
+        "options": [
+            "Chloroplast",
+            "Mitochondria",
+            "Nucleus",
+            "Cell wall"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria, present in both plant and animal cells, are the sites of cellular respiration, where glucose is converted into ATP to provide energy for various cellular activities."
+    },
+    
+    {
+        "question": "What is a similarity between the vacuoles in plant and animal cells?",
+        "options": [
+            "Storage of water and nutrients",
+            "Photosynthesis",
+            "Breakdown of cellular waste",
+            "Synthesis of proteins"
+        ],
+        "answer": "Storage of water and nutrients",
+        "explanation": "Both plant and animal cells have vacuoles that serve to store water, ions, and nutrients, contributing to cell turgidity, osmoregulation, and nutrient storage."
+    },
+    
+    {
+        "question": "Which organelle is common to both plant and animal cells and is involved in protein synthesis?",
+        "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Endoplasmic reticulum",
+            "Golgi body"
+        ],
+        "answer": "Endoplasmic reticulum",
+        "explanation": "The endoplasmic reticulum, present in both plant and animal cells, plays a central role in protein synthesis, where ribosomes attached to its surface synthesize proteins for various cellular functions."
+    },
+    
+    {
+        "question": "What is a shared characteristic of the cytoplasm in plant and animal cells?",
+        "options": [
+            "Photosynthesis",
+            "Storage of genetic material",
+            "Metabolic activities",
+            "Cell division"
+        ],
+        "answer": "Metabolic activities",
+        "explanation": "The cytoplasm in both plant and animal cells serves as the site for various metabolic activities, including enzymatic reactions, cellular transport, and energy production."
+    },
+    
+    {
+        "question": "Which organelle is common to both plant and animal cells and aids in maintaining cell shape and structure?",
+        "options": [
+            "Endoplasmic reticulum",
+            "Chloroplast",
+            "Cell membrane",
+            "Cell wall"
+        ],
+        "answer": "Cell membrane",
+        "explanation": "The cell membrane, present in both plant and animal cells, helps maintain cell shape and structure by regulating the passage of substances into and out of the cell and providing support and protection."
+    },
+    
+    {
+        "question": "What is a common function of the nucleus in both plant and animal cells?",
+        "options": [
+            "Cell division",
+            "Chlorophyll synthesis",
+            "Storage of water and nutrients",
+            "Cellular respiration"
+        ],
+        "answer": "Cell division",
+        "explanation": "The nucleus in both plant and animal cells plays a vital role in cell division, controlling the replication and distribution of genetic material during mitosis and meiosis."
+    },
+    
+    {
+        "question": "Which cellular structure is common to both plant and animal cells and is involved in cellular communication and adhesion?",
+        "options": [
+            "Endoplasmic reticulum",
+            "Cell membrane",
+            "Golgi body",
+            "Lysosome"
+        ],
+        "answer": "Cell membrane",
+        "explanation": "The cell membrane, present in both plant and animal cells, facilitates cellular communication and adhesion by interacting with neighboring cells and external environmental factors."
+     },
+    
+    {
+        "question": "Which organelle is common to both plant and animal cells?",
+        "options": [
+            "Chloroplast",
+            "Golgi body",
+            "Central vacuole",
+            "Mitochondria"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria are present in both plant and animal cells and are responsible for energy production through cellular respiration."
+    },
+    
+    {
+        "question": "What is a shared feature between the cytoplasm of plant and animal cells?",
+        "options": [
+            "Storage of genetic material",
+            "Site of protein synthesis",
+            "Site of cellular respiration",
+            "Location of metabolic activities"
+        ],
+        "answer": "Location of metabolic activities",
+        "explanation": "The cytoplasm in both plant and animal cells serves as the site for various metabolic activities, including enzymatic reactions and cellular transport."
+    },
+    
+    {
+        "question": "Which structure is common to both plant and animal cells and provides structural support?",
+        "options": [
+            "Cell membrane",
+            "Chloroplast",
+            "Cell wall",
+            "Lysosome"
+        ],
+        "answer": "Cell membrane",
+        "explanation": "The cell membrane is present in both plant and animal cells and provides structural support by regulating the passage of materials into and out of the cell."
+    },
+    
+    {
+        "question": "What is a shared function of the vacuole in plant and animal cells?",
+        "options": [
+            "Photosynthesis",
+            "Energy production",
+            "Storage of water and nutrients",
+            "Protein synthesis"
+        ],
+        "answer": "Storage of water and nutrients",
+        "explanation": "Both plant and animal cells have vacuoles that serve to store water, ions, and nutrients, contributing to cell turgidity and homeostasis."
+    },
+    
+    {
+        "question": "Which organelle is common to both plant and animal cells and is involved in processing and packaging proteins?",
+        "options": [
+            "Endoplasmic reticulum",
+            "Nucleus",
+            "Chloroplast",
+            "Ribosome"
+        ],
+        "answer": "Endoplasmic reticulum",
+        "explanation": "The endoplasmic reticulum (ER) is found in both plant and animal cells and plays a role in protein synthesis, modification, and transportation."
+    },
+    
+    {
+        "question": "What is a similarity between the Golgi body in plant and animal cells?",
+        "options": [
+            "Energy production",
+            "Protein synthesis",
+            "Modification and packaging of proteins",
+            "Detoxification"
+        ],
+        "answer": "Modification and packaging of proteins",
+        "explanation": "Both plant and animal cells contain Golgi bodies involved in modifying and packaging proteins synthesized in the endoplasmic reticulum before their secretion or use within the cell."
+    },
+    
+    {
+        "question": "Which cellular structure is common to both plant and animal cells and contains genetic material?",
+        "options": [
+            "Mitochondria",
+            "Chloroplast",
+            "Nucleus",
+            "Lysosome"
+        ],
+        "answer": "Nucleus",
+        "explanation": "The nucleus is present in both plant and animal cells and contains the cell's genetic material, controlling cellular activities and storing the instructions for protein synthesis."
+    },
+    
+    {
+        "question": "What is a shared characteristic of the cell membrane in plant and animal cells?",
+        "options": [
+            "Formation of cell walls",
+            "Regulation of molecular transport",
+            "Synthesis of ATP",
+            "Storage of water"
+        ],
+        "answer": "Regulation of molecular transport",
+        "explanation": "The cell membrane in both plant and animal cells regulates the passage of molecules into and out of the cell, maintaining cellular homeostasis and integrity."
+    },
+    
+    {
+        "question": "Which organelle is common to both plant and animal cells and is involved in cellular respiration?",
+        "options": [
+            "Chloroplast",
+            "Golgi body",
+            "Vacuole",
+            "Mitochondria"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria are present in both plant and animal cells and are responsible for cellular respiration, producing ATP, the cell's energy currency."
+    },
+    
+    {
+        "question": "What is a shared function of the cytoplasm in plant and animal cells?",
+        "options": [
+            "Photosynthesis",
+            "Cell division",
+            "Storage of genetic material",
+            "Metabolic activities"
+        ],
+        "answer": "Metabolic activities",
+        "explanation": "The cytoplasm in both plant and animal cells serves as the site for various metabolic activities, including enzymatic reactions, cellular transport, and energy production."
+     },
+    
+    {
+        "question": "Which organelle is responsible for photosynthesis in plant cells?",
+        "options": [
+            "Mitochondria",
+            "Golgi apparatus",
+            "Lysosomes",
+            "Chloroplasts"
+        ],
+        "answer": "Chloroplasts",
+        "explanation": "Chloroplasts contain chlorophyll, the pigment necessary for photosynthesis, making them responsible for this process in plant cells."
+    },
+    
+    {
+        "question": "What is a unique feature of the central vacuole in plant cells?",
+        "options": [
+            "It stores genetic material",
+            "It secretes enzymes",
+            "It maintains turgor pressure",
+            "It synthesizes proteins"
+        ],
+        "answer": "It maintains turgor pressure",
+        "explanation": "The central vacuole in plant cells stores water and other substances, maintaining turgor pressure, which is crucial for cell rigidity and plant structure."
+    },
+    
+    {
+        "question": "Which organelle is responsible for regulating the movement of materials in and out of a cell?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Cell membrane",
+            "Golgi apparatus"
+        ],
+        "answer": "Cell membrane",
+        "explanation": "The cell membrane, also known as the plasma membrane, regulates the passage of materials into and out of the cell, controlling the cell's internal environment."
+    },
+    
+    {
+        "question": "What is the primary function of mitochondria in cells?",
+        "options": [
+            "Photosynthesis",
+            "Cellular respiration",
+            "Protein synthesis",
+            "DNA replication"
+        ],
+        "answer": "Cellular respiration",
+        "explanation": "Mitochondria are known as the 'powerhouses' of the cell because they produce energy through cellular respiration, converting glucose and oxygen into ATP."
+    },
+    
+    {
+        "question": "Which organelle is responsible for the storage of enzymes and other materials?",
+        "options": [
+            "Nucleus",
+            "Golgi apparatus",
+            "Lysosomes",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Lysosomes",
+        "explanation": "Lysosomes contain enzymes that break down waste materials and cellular debris, as well as materials taken in by endocytosis, serving as the cell's 'recycling center.'"
+    },
+    
+    {
+        "question": "What is the function of the Golgi apparatus in cells?",
+        "options": [
+            "Synthesizing proteins",
+            "Producing ATP",
+            "Modifying and packaging proteins",
+            "Storing genetic material"
+        ],
+        "answer": "Modifying and packaging proteins",
+        "explanation": "The Golgi apparatus receives proteins from the endoplasmic reticulum, modifies them, and packages them into vesicles for transportation to other parts of the cell or for secretion outside the cell."
+    },
+    
+    {
+        "question": "Which organelle contains enzymes for breaking down old or damaged organelles?",
+        "options": [
+            "Golgi apparatus",
+            "Nucleus",
+            "Lysosomes",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Lysosomes",
+        "explanation": "Lysosomes contain hydrolytic enzymes that break down cellular waste and organelles, playing a key role in cellular recycling and waste disposal."
+    },
+    
+    {
+        "question": "What is the function of the endoplasmic reticulum (ER) in cells?",
+        "options": [
+            "Energy production",
+            "Protein synthesis",
+            "Lipid synthesis",
+            "Waste disposal"
+        ],
+        "answer": "Protein synthesis",
+        "explanation": "The endoplasmic reticulum (ER) is involved in protein synthesis, where ribosomes attached to the rough ER synthesize proteins that are then processed and transported by the ER."
+    },
+    
+    {
+        "question": "Which organelle is responsible for storing genetic material in eukaryotic cells?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Endoplasmic reticulum",
+            "Golgi apparatus"
+        ],
+        "answer": "Nucleus",
+        "explanation": "The nucleus houses the cell's genetic material (DNA), controlling cellular activities and storing the instructions for protein synthesis and cell replication."
+    },
+    
+    {
+        "question": "Which organelle is involved in the synthesis of lipids and steroid hormones?",
+        "options": [
+            "Golgi apparatus",
+            "Lysosomes",
+            "Endoplasmic reticulum",
+            "Mitochondria"
+        ],
+        "answer": "Endoplasmic reticulum",
+        "explanation": "The endoplasmic reticulum (ER) is responsible for lipid synthesis, including the production of phospholipids and steroid hormones, as well as the detoxification of drugs and toxins."
+     },
+    
+    {
+        "question": "Which type of cell typically has a regular shape?",
+        "options": [
+            "Plant cells",
+            "Animal cells"
+        ],
+        "answer": "Plant cells",
+        "explanation": "Plant cells usually have a regular shape due to the presence of a rigid cell wall and other structural components."
+    },
+    
+    {
+        "question": "What is a distinctive feature of plant cells that is absent in animal cells?",
+        "options": [
+            "Chloroplasts",
+            "Nucleus",
+            "Mitochondria",
+            "Lysosomes"
+        ],
+        "answer": "Chloroplasts",
+        "explanation": "Plant cells contain chloroplasts, which are responsible for photosynthesis and contain chlorophyll, a pigment for capturing light energy."
+    },
+    
+    {
+        "question": "Which organelle is typically larger in plant cells compared to animal cells?",
+        "options": [
+            "Nucleus",
+            "Golgi apparatus",
+            "Mitochondria",
+            "Vacuole"
+        ],
+        "answer": "Vacuole",
+        "explanation": "Plant cells usually have a larger central vacuole, which helps maintain turgor pressure and stores water, ions, and nutrients."
+    },
+    
+    {
+        "question": "What is a characteristic feature of animal cells regarding their shape?",
+        "options": [
+            "Regular shape",
+            "Presence of chloroplasts",
+            "Large central vacuole",
+            "Irregular shape"
+        ],
+        "answer": "Irregular shape",
+        "explanation": "Animal cells typically have an irregular shape, lacking the rigid cell wall found in plant cells."
+    },
+    
+    {
+        "question": "Which cellular component is found exclusively in plant cells and not in animal cells?",
+        "options": [
+            "Nucleus",
+            "Chloroplasts",
+            "Mitochondria",
+            "Golgi apparatus"
+        ],
+        "answer": "Chloroplasts",
+        "explanation": "Chloroplasts, responsible for photosynthesis, are unique to plant cells and are absent in animal cells."
+    },
+    
+    {
+        "question": "What is the primary function of the cell wall in plant cells?",
+        "options": [
+            "Regulating material movement",
+            "Energy production",
+            "Providing mechanical strength",
+            "Secreting enzymes"
+        ],
+        "answer": "Providing mechanical strength",
+        "explanation": "The cell wall in plant cells provides structural support and mechanical strength, helping maintain the cell's shape."
+    },
+    
+    {
+        "question": "Where is the nucleus typically positioned in animal cells?",
+        "options": [
+            "At the center",
+            "Near the cell wall",
+            "At the periphery",
+            "Within the chloroplasts"
+        ],
+        "answer": "At the center",
+        "explanation": "The nucleus in animal cells is typically centrally located, containing the genetic material and regulating cellular activities."
+    },
+    
+    {
+        "question": "Which organelle is responsible for maintaining turgor pressure in plant cells?",
+        "options": [
+            "Golgi apparatus",
+            "Chloroplasts",
+            "Central vacuole",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Central vacuole",
+        "explanation": "The central vacuole in plant cells helps maintain turgor pressure by storing water and other substances, contributing to cell rigidity."
+    },
+    
+    {
+        "question": "What is a significant difference between plant and animal cells?",
+        "options": [
+            "Presence of mitochondria",
+            "Presence of cell wall",
+            "Presence of lysosomes",
+            "Presence of ribosomes"
+        ],
+        "answer": "Presence of cell wall",
+        "explanation": "Plant cells have a cell wall made of cellulose, providing structural support, which is absent in animal cells."
+    },
+    
+    {
+        "question": "Which cell type typically has a larger number of chloroplasts?",
+        "options": [
+            "Animal cells",
+            "Both plant and animal cells",
+            "Plant cells",
+            "Neither plant nor animal cells"
+        ],
+        "answer": "Plant cells",
+        "explanation": "Chloroplasts, responsible for photosynthesis, are primarily found in plant cells, where they are more abundant."
+     },
+    
+    {
+        "question": "What is the primary function of the cell membrane?",
+        "options": [
+            "Energy production",
+            "Regulation of material movement",
+            "Synthesis of proteins",
+            "Waste elimination"
+        ],
+        "answer": "Regulation of material movement",
+        "explanation": "The cell membrane regulates the movement of materials into and out of the cell, controlling the exchange of ions, nutrients, and wastes to maintain cellular homeostasis."
+    },
+    
+    {
+        "question": "Which organelle is responsible for providing mechanical strength and protection in plant cells?",
+        "options": [
+            "Nucleus",
+            "Cell vacuole",
+            "Golgi body",
+            "Cell wall"
+        ],
+        "answer": "Cell wall",
+        "explanation": "The cell wall, composed of cellulose, provides mechanical strength, shape, and protection to plant cells, acting as a rigid outer layer."
+    },
+    
+    {
+        "question": "What is the function of the nucleus?",
+        "options": [
+            "Energy production",
+            "Storage of waste materials",
+            "Control of cell activities",
+            "Synthesis of lipids"
+        ],
+        "answer": "Control of cell activities",
+        "explanation": "The nucleus controls cell activities by regulating gene expression, storing genetic material (DNA), and coordinating cellular functions such as growth, metabolism, and reproduction."
+    },
+    
+    {
+        "question": "Which organelle is responsible for storing waste and food materials in the cell?",
+        "options": [
+            "Cytoplasm",
+            "Mitochondria",
+            "Lysosome",
+            "Cell vacuole"
+        ],
+        "answer": "Cell vacuole",
+        "explanation": "The cell vacuole stores waste products, nutrients, and other substances in plant and some animal cells, contributing to cell homeostasis, turgor pressure, and storage."
+    },
+    
+    {
+        "question": "Where do metabolic reactions and energy storage primarily occur within the cell?",
+        "options": [
+            "Chloroplast",
+            "Golgi body",
+            "Cytoplasm",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Cytoplasm",
+        "explanation": "Metabolic reactions and energy storage primarily occur in the cytoplasm, where enzymes and substrates interact to carry out cellular processes such as glycolysis, protein synthesis, and lipid metabolism."
+    },
+    
+    {
+        "question": "Which organelle releases energy through the process of cellular respiration?",
+        "options": [
+            "Chloroplast",
+            "Golgi body",
+            "Mitochondria",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria release energy through cellular respiration, producing ATP (adenosine triphosphate) by oxidizing glucose and fatty acids in the presence of oxygen."
+    },
+    
+    {
+        "question": "What is the primary function of chloroplasts in plant cells?",
+        "options": [
+            "Energy production",
+            "Protein synthesis",
+            "Waste elimination",
+            "Cell movement"
+        ],
+        "answer": "Energy production",
+        "explanation": "Chloroplasts in plant cells are responsible for energy production through photosynthesis, converting light energy into chemical energy stored in glucose molecules using chlorophyll pigment."
+    },
+    
+    {
+        "question": "Which organelle is involved in the secretion of enzymes and transport of materials within the cell?",
+        "options": [
+            "Nucleus",
+            "Lysosome",
+            "Golgi body",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Golgi body",
+        "explanation": "The Golgi body processes, modifies, and packages proteins and lipids produced by the endoplasmic reticulum, secreting enzymes and transporting materials within the cell via vesicles."
+    },
+    
+    {
+        "question": "What is the function of lysosomes in the cell?",
+        "options": [
+            "Energy production",
+            "Protein synthesis",
+            "Waste breakdown",
+            "Cell shape regulation"
+        ],
+        "answer": "Waste breakdown",
+        "explanation": "Lysosomes contain hydrolytic enzymes that break down waste materials, cellular debris, and foreign substances through intracellular digestion, contributing to cellular recycling and waste elimination."
+    },
+    
+    {
+        "question": "Where do metabolic reactions and energy storage primarily occur within the cell?",
+        "options": [
+            "Chloroplast",
+            "Golgi body",
+            "Cytoplasm",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Cytoplasm",
+        "explanation": "Metabolic reactions and energy storage primarily occur in the cytoplasm, where enzymes and substrates interact to carry out cellular processes such as glycolysis, protein synthesis, and lipid metabolism."
+     },
+    
+    {
+        "question": "Which organelle is responsible for synthesizing lipids and detoxifying harmful substances in the cell?",
+        "options": [
+            "Ribosome",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Lysosome"
+        ],
+        "answer": "Endoplasmic reticulum",
+        "explanation": "The endoplasmic reticulum (ER) is responsible for synthesizing lipids and detoxifying harmful substances in the cell. It has two types: smooth ER, which synthesizes lipids, and rough ER, which is studded with ribosomes and involved in protein synthesis."
+    },
+    
+    {
+        "question": "What is the primary function of the nucleolus in the nucleus?",
+        "options": [
+            "Storage of genetic material",
+            "Synthesis of ribosomal RNA (rRNA)",
+            "Production of ATP",
+            "Regulation of cell shape"
+        ],
+        "answer": "Synthesis of ribosomal RNA (rRNA)",
+        "explanation": "The primary function of the nucleolus in the nucleus is the synthesis of ribosomal RNA (rRNA), which is essential for ribosome assembly and protein synthesis within the cell."
+    },
+    
+    {
+        "question": "Which organelle is responsible for sorting, modifying, and packaging proteins for secretion?",
+        "options": [
+            "Ribosome",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Lysosome"
+        ],
+        "answer": "Golgi apparatus",
+        "explanation": "The Golgi apparatus is responsible for sorting, modifying, and packaging proteins for secretion. It receives proteins from the endoplasmic reticulum, modifies them, and then packages them into vesicles for transport to their destination."
+    },
+    
+    {
+        "question": "What is the function of ribosomes in protein synthesis?",
+        "options": [
+            "Synthesis of lipids",
+            "Synthesis of RNA",
+            "Synthesis of proteins",
+            "Synthesis of carbohydrates"
+        ],
+        "answer": "Synthesis of proteins",
+        "explanation": "Ribosomes are responsible for protein synthesis within the cell. They translate messenger RNA (mRNA) into amino acid sequences, facilitating the assembly of polypeptide chains that fold into functional proteins."
+    },
+    
+    {
+        "question": "Which organelle is involved in the breakdown of cellular waste materials and foreign invaders?",
+        "options": [
+            "Ribosome",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Lysosome"
+        ],
+        "answer": "Lysosome",
+        "explanation": "Lysosomes are involved in the breakdown of cellular waste materials and foreign invaders through enzymatic digestion. They contain hydrolytic enzymes that degrade macromolecules and organelles, playing a critical role in cellular recycling and waste elimination."
+    },
+    
+    {
+        "question": "What is the function of the cell membrane?",
+        "options": [
+            "Energy production",
+            "Protection of genetic material",
+            "Regulation of passage of substances",
+            "Synthesis of proteins"
+        ],
+        "answer": "Regulation of passage of substances",
+        "explanation": "The cell membrane regulates the passage of substances into and out of the cell, controlling the movement of ions, nutrients, and wastes to maintain cellular homeostasis. It acts as a selectively permeable barrier, allowing only specific molecules to pass through."
+    },
+    
+    {
+        "question": "Which organelle is responsible for converting light energy into chemical energy during photosynthesis?",
+        "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Chloroplast",
+            "Golgi apparatus"
+        ],
+        "answer": "Chloroplast",
+        "explanation": "Chloroplasts are responsible for converting light energy into chemical energy during photosynthesis. They contain chlorophyll, the green pigment that captures light energy and converts it into glucose, a form of chemical energy used by the cell."
+    },
+    
+    {
+        "question": "What is the primary function of the cell wall in plant cells?",
+        "options": [
+            "Regulation of cell shape",
+            "Energy production",
+            "Protection of genetic material",
+            "Maintenance of cell rigidity and support"
+        ],
+        "answer": "Maintenance of cell rigidity and support",
+        "explanation": "The primary function of the cell wall in plant cells is the maintenance of cell rigidity and support. It provides structural support and protection, allowing plant cells to maintain their shape and withstand mechanical stress."
+    },
+    
+    {
+        "question": "Which cellular organelle is responsible for ATP production through cellular respiration?",
+        "options": [
+            "Golgi apparatus",
+            "Endoplasmic reticulum",
+            "Ribosome",
+            "Mitochondria"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria are responsible for ATP production through cellular respiration. They generate ATP, the cell's primary energy currency, through the oxidation of glucose and other organic molecules."
+    },
+    
+    {
+        "question": "What is the function of the cytoskeleton in cells?",
+        "options": [
+            "Synthesis of proteins",
+            "Regulation of cell shape",
+            "Energy production",
+            "Waste elimination"
+        ],
+        "answer": "Regulation of cell shape",
+        "explanation": "The cytoskeleton in cells regulates cell shape by providing structural support and maintaining cellular organization. It consists of protein filaments that form a network throughout the cell, giving it shape, strength, and stability."
+     },
+    
+    {
+        "question": "What is the function of the nucleus in a cell?",
+        "options": [
+            "Regulates cell shape",
+            "Stores energy",
+            "Controls cell activities and stores genetic material",
+            "Synthesizes proteins"
+        ],
+        "answer": "Controls cell activities and stores genetic material",
+        "explanation": "The nucleus of a cell controls cell activities by regulating gene expression and stores the genetic material (DNA) necessary for cell replication and function."
+    },
+    
+    {
+        "question": "Which organelle is responsible for storing waste materials and maintaining turgor pressure in plant cells?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Lysosome",
+            "Vacuole"
+        ],
+        "answer": "Vacuole",
+        "explanation": "The vacuole in plant cells is responsible for storing waste materials, maintaining turgor pressure, and storing nutrients, ions, and water, playing a crucial role in cell structure and function."
+    },
+    
+    {
+        "question": "What is the primary function of lysosomes in animal cells?",
+        "options": [
+            "Energy production",
+            "Waste elimination and recycling",
+            "Photosynthesis",
+            "Cell wall synthesis"
+        ],
+        "answer": "Waste elimination and recycling",
+        "explanation": "Lysosomes in animal cells are responsible for waste elimination and recycling by breaking down cellular waste materials, damaged organelles, and foreign invaders through enzymatic digestion."
+    },
+    
+    {
+        "question": "Which organelle is known as the 'cell's powerhouses' and produces ATP through cellular respiration?",
+        "options": [
+            "Golgi apparatus",
+            "Endoplasmic reticulum",
+            "Ribosome",
+            "Mitochondria"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria are known as the 'cell's powerhouses' because they produce ATP (adenosine triphosphate), the energy currency of the cell, through the process of cellular respiration."
+    },
+    
+    {
+        "question": "What is the primary function of the Golgi apparatus?",
+        "options": [
+            "Energy production",
+            "Cell division",
+            "Protein modification, sorting, and packaging",
+            "Waste elimination"
+        ],
+        "answer": "Protein modification, sorting, and packaging",
+        "explanation": "The Golgi apparatus primarily functions in protein modification, sorting, and packaging by receiving proteins from the endoplasmic reticulum and modifying them before sorting them into vesicles for transport or secretion."
+    },
+    
+    {
+        "question": "Which cellular organelle is involved in synthesizing proteins?",
+        "options": [
+            "Ribosome",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Lysosome"
+        ],
+        "answer": "Ribosome",
+        "explanation": "Ribosomes are cellular organelles involved in synthesizing proteins by translating mRNA (messenger RNA) into specific amino acid sequences, forming polypeptide chains that fold into functional proteins."
+    },
+    
+    {
+        "question": "Which structure is responsible for regulating the passage of substances into and out of the cell?",
+        "options": [
+            "Mitochondria",
+            "Nucleus",
+            "Cell membrane",
+            "Chloroplast"
+        ],
+        "answer": "Cell membrane",
+        "explanation": "The cell membrane, also known as the plasma membrane, regulates the passage of substances into and out of the cell, controlling the movement of ions, nutrients, and wastes to maintain cellular homeostasis."
+    },
+    
+    {
+        "question": "What is the function of the middle lamella in plant cells?",
+        "options": [
+            "Energy production",
+            "Cell division",
+            "Support and rigidity",
+            "Protection of genetic material"
+        ],
+        "answer": "Support and rigidity",
+        "explanation": "The middle lamella in plant cells provides support and rigidity by cementing adjacent cell walls together, contributing to the structural integrity of plant tissues and preventing their collapse."
+    },
+    
+    {
+        "question": "Which organelle contains the green pigment chlorophyll and is responsible for photosynthesis in plant cells?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Chloroplast",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Chloroplast",
+        "explanation": "Chloroplasts contain the green pigment chlorophyll and are responsible for photosynthesis in plant cells, capturing light energy from the sun and converting it into chemical energy in the form of glucose."
+    },
+    
+    {
+        "question": "What is the primary function of the cytoskeleton in cells?",
+        "options": [
+            "Energy production",
+            "Cell division",
+            "Maintaining cell shape and providing structural support",
+            "Waste elimination"
+        ],
+        "answer": "Maintaining cell shape and providing structural support",
+        "explanation": "The cytoskeleton in cells primarily functions in maintaining cell shape and providing structural support by forming a network of protein filaments that support the cell's structure, anchor organelles, and facilitate cell movement."
+     },
+    
+    {
+        "question": "What are the basic components of an animal cell?",
+        "options": [
+            "Cell wall, chloroplasts, large central vacuole",
+            "Cell membrane, nucleus, cytoplasm",
+            "Chloroplasts, nucleus, cell wall",
+            "Cell membrane, cytoplasm, large central vacuole"
+        ],
+        "answer": "Cell membrane, nucleus, cytoplasm",
+        "explanation": "The basic components of an animal cell include the cell membrane, nucleus, and cytoplasm, which are essential for maintaining cell structure and function."
+    },
+    
+    {
+        "question": "Which organelle is unique to plant cells?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Chloroplasts",
+            "Golgi apparatus"
+        ],
+        "answer": "Chloroplasts",
+        "explanation": "Chloroplasts are organelles unique to plant cells, responsible for photosynthesis and containing chlorophyll, the pigment that captures light energy."
+    },
+    
+    {
+        "question": "What is the function of the cell wall in plant cells?",
+        "options": [
+            "Regulation of cell shape",
+            "Energy production",
+            "Protection of genetic material",
+            "Control of substances entering and leaving the cell"
+        ],
+        "answer": "Regulation of cell shape",
+        "explanation": "The cell wall in plant cells provides structural support and rigidity, helping to maintain the shape of the cell and prevent it from collapsing under osmotic pressure."
+    },
+    
+    {
+        "question": "Which organelle contains the genetic material of a cell?",
+        "options": [
+            "Golgi apparatus",
+            "Ribosome",
+            "Nucleus",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Nucleus",
+        "explanation": "The nucleus is the organelle that contains the genetic material (DNA) of a cell, which controls cellular activities and carries hereditary information."
+    },
+    
+    {
+        "question": "What is the primary function of the cytoplasm?",
+        "options": [
+            "Energy production",
+            "Genetic control",
+            "Protein synthesis",
+            "Site for cell activities and metabolic reactions"
+        ],
+        "answer": "Site for cell activities and metabolic reactions",
+        "explanation": "The cytoplasm serves as the site for various cell activities and metabolic reactions, including nutrient transport, protein synthesis, and cellular respiration."
+    },
+    
+    {
+        "question": "Which cellular structure is responsible for generating energy through cellular respiration?",
+        "options": [
+            "Mitochondria",
+            "Chloroplasts",
+            "Nucleus",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria are organelles responsible for generating energy in the form of ATP (adenosine triphosphate) through cellular respiration, utilizing oxygen and nutrients."
+    },
+    
+    {
+        "question": "What is the function of chloroplasts in plant cells?",
+        "options": [
+            "Energy production",
+            "Photosynthesis",
+            "Protein synthesis",
+            "Waste elimination"
+        ],
+        "answer": "Photosynthesis",
+        "explanation": "Chloroplasts in plant cells are responsible for photosynthesis, the process by which light energy is converted into chemical energy in the form of glucose, using carbon dioxide and water."
+    },
+    
+    {
+        "question": "Which organelle is involved in modifying, sorting, and packaging proteins for secretion?",
+        "options": [
+            "Mitochondria",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Lysosome"
+        ],
+        "answer": "Golgi apparatus",
+        "explanation": "The Golgi apparatus is involved in modifying, sorting, and packaging proteins and lipids produced by the endoplasmic reticulum for secretion or delivery to other cellular destinations."
+    },
+    
+    {
+        "question": "What is the primary function of the cell membrane?",
+        "options": [
+            "Regulation of cell shape",
+            "Energy production",
+            "Control of substances entering and leaving the cell",
+            "Storage of genetic material"
+        ],
+        "answer": "Control of substances entering and leaving the cell",
+        "explanation": "The primary function of the cell membrane is to regulate the passage of substances into and out of the cell, controlling the movement of ions, nutrients, and wastes to maintain cellular homeostasis."
+    },
+    
+    {
+        "question": "Which cellular structure provides structural support and rigidity to plant cells?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Cell wall",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Cell wall",
+        "explanation": "The cell wall provides structural support and rigidity to plant cells, helping them maintain their shape and preventing them from collapsing under osmotic pressure."
+     },
+    
+    {
+        "question": "What is the fundamental unit of life?",
+        "options": [
+            "Organelle",
+            "Cell",
+            "Tissue",
+            "Organ"
+        ],
+        "answer": "Cell",
+        "explanation": "The cell is considered the fundamental unit of life, as it is the smallest structural and functional unit of an organism capable of carrying out life processes."
+    },
+    
+    {
+        "question": "Which type of organisms are composed of a single cell?",
+        "options": [
+            "Multicellular organisms",
+            "Bacteria",
+            "Plants",
+            "Animals"
+        ],
+        "answer": "Bacteria",
+        "explanation": "Bacteria are examples of unicellular organisms, meaning they are composed of a single cell."
+    },
+    
+    {
+        "question": "What distinguishes multicellular organisms from unicellular organisms?",
+        "options": [
+            "Size",
+            "Complexity",
+            "Shape",
+            "Color"
+        ],
+        "answer": "Complexity",
+        "explanation": "Multicellular organisms are characterized by their complexity, as they are composed of multiple specialized cells organized into tissues, organs, and organ systems, whereas unicellular organisms consist of a single cell performing all life functions."
+    },
+    
+    {
+        "question": "Which process leads to the formation of new cells from existing cells?",
+        "options": [
+            "Cellular respiration",
+            "Cell division",
+            "Cellular differentiation",
+            "Cellular synthesis"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is the process by which new cells are formed from existing cells, allowing for growth, repair, and reproduction in living organisms."
+    },
+    
+    {
+        "question": "What term is used to describe cells that have the same structure and function?",
+        "options": [
+            "Differentiated cells",
+            "Specialized cells",
+            "Stem cells",
+            "Somatic cells"
+        ],
+        "answer": "Specialized cells",
+        "explanation": "Specialized cells, also known as differentiated cells, have specific structures and functions suited to perform particular tasks within the organism."
+    },
+    
+    {
+        "question": "Which organelle is often referred to as the 'cell's powerhouse'?",
+        "options": [
+            "Golgi apparatus",
+            "Mitochondria",
+            "Nucleus",
+            "Endoplasmic reticulum"
+        ],
+        "answer": "Mitochondria",
+        "explanation": "Mitochondria are often referred to as the cell's powerhouse because they are responsible for generating the majority of the cell's energy through the process of cellular respiration."
+    },
+    
+    {
+        "question": "What is the primary function of the nucleus in a cell?",
+        "options": [
+            "Energy production",
+            "Protein synthesis",
+            "Genetic control",
+            "Waste elimination"
+        ],
+        "answer": "Genetic control",
+        "explanation": "The primary function of the nucleus in a cell is genetic control, as it contains the cell's DNA and regulates gene expression, cell division, and other cellular activities related to inheritance."
+    },
+    
+    {
+        "question": "Which cellular structure is responsible for storing genetic information in eukaryotic cells?",
+        "options": [
+            "Ribosome",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Nucleus"
+        ],
+        "answer": "Nucleus",
+        "explanation": "The nucleus is responsible for storing genetic information in eukaryotic cells, as it contains the cell's DNA organized into chromosomes."
+    },
+    
+    {
+        "question": "What is the function of the cell membrane?",
+        "options": [
+            "Energy production",
+            "Regulation of cell shape",
+            "Synthesis of proteins",
+            "Control of substances entering and leaving the cell"
+        ],
+        "answer": "Control of substances entering and leaving the cell",
+        "explanation": "The cell membrane regulates the passage of substances into and out of the cell, controlling the movement of ions, nutrients, and wastes to maintain cellular homeostasis."
+    },
+    
+    {
+        "question": "Which type of cell has a cell wall?",
+        "options": [
+            "Animal cell",
+            "Plant cell",
+            "Bacterial cell",
+            "Fungal cell"
+        ],
+        "answer": "Plant cell",
+        "explanation": "Plant cells have a cell wall, which is a rigid structure located outside the cell membrane that provides support and protection to the cell."
+     },
+    
+    {
+        "question": "What is the primary method by which new cells are formed in living organisms?",
+        "options": [
+            "Cellular synthesis",
+            "Cell division",
+            "Cellular respiration",
+            "Cell differentiation"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is the primary method by which new cells are formed in living organisms."
+    },
+    
+    {
+        "question": "Which term describes the process of cell division?",
+        "options": [
+            "Cell fusion",
+            "Cellular metabolism",
+            "Mitosis",
+            "Genetic recombination"
+        ],
+        "answer": "Mitosis",
+        "explanation": "Mitosis is the process of cell division that results in the formation of two daughter cells with identical genetic material."
+    },
+    
+    {
+        "question": "In cell division, what term is used for the original cell that divides to produce daughter cells?",
+        "options": [
+            "Parent cell",
+            "Daughter cell",
+            "Somatic cell",
+            "Stem cell"
+        ],
+        "answer": "Parent cell",
+        "explanation": "The parent cell is the original cell that undergoes division to produce daughter cells during cell division."
+    },
+    
+    {
+        "question": "What is the term for the newly formed cells resulting from cell division?",
+        "options": [
+            "Parent cells",
+            "Somatic cells",
+            "Daughter cells",
+            "Stem cells"
+        ],
+        "answer": "Daughter cells",
+        "explanation": "Daughter cells are the newly formed cells resulting from the division of a parent cell."
+    },
+    
+    {
+        "question": "Which process leads to the formation of daughter cells from a parent cell?",
+        "options": [
+            "Cellular respiration",
+            "Cell division",
+            "Cellular differentiation",
+            "Cellular synthesis"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is the process that leads to the formation of daughter cells from a parent cell."
+    },
+    
+    {
+        "question": "What is the primary function of cell division in living organisms?",
+        "options": [
+            "To produce energy",
+            "To repair damaged tissues",
+            "To form new cells",
+            "To regulate body temperature"
+        ],
+        "answer": "To form new cells",
+        "explanation": "The primary function of cell division in living organisms is to form new cells for growth, repair, and reproduction."
+    },
+    
+    {
+        "question": "Which term refers to the process of cell division that occurs in multicellular organisms?",
+        "options": [
+            "Mitosis",
+            "Meiosis",
+            "Cell fusion",
+            "Cell differentiation"
+        ],
+        "answer": "Mitosis",
+        "explanation": "Mitosis is the process of cell division that occurs in multicellular organisms, leading to the production of two daughter cells with identical genetic material."
+    },
+    
+    {
+        "question": "What happens to the genetic material during cell division?",
+        "options": [
+            "It remains unchanged",
+            "It is destroyed",
+            "It is replicated and divided equally between daughter cells",
+            "It is transferred to another cell"
+        ],
+        "answer": "It is replicated and divided equally between daughter cells",
+        "explanation": "During cell division, the genetic material is replicated and divided equally between the daughter cells to ensure each cell receives a complete set of genetic instructions."
+    },
+    
+    {
+        "question": "Which process is responsible for the growth and development of multicellular organisms?",
+        "options": [
+            "Cell fusion",
+            "Cellular respiration",
+            "Cell division",
+            "Cell differentiation"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is responsible for the growth and development of multicellular organisms by increasing the number of cells in the body."
+    },
+    
+    {
+        "question": "What is the significance of cell division in unicellular organisms?",
+        "options": [
+            "To repair damaged tissues",
+            "To form new organisms",
+            "To regulate body functions",
+            "To produce specialized cells"
+        ],
+        "answer": "To form new organisms",
+        "explanation": "In unicellular organisms, cell division is essential for reproduction and the formation of new organisms from a single parent cell."
+     },
+    
+    {
+        "question": "What term describes the process by which new cells are formed?",
+        "options": [
+            "Cell division",
+            "Cell fusion",
+            "Cellular synthesis",
+            "Cellular respiration"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is the process through which new cells are formed from existing cells."
+    },
+    
+    {
+        "question": "Which term refers to the original cell before it undergoes cell division?",
+        "options": [
+            "Daughter cell",
+            "Parent cell",
+            "Somatic cell",
+            "Stem cell"
+        ],
+        "answer": "Parent cell",
+        "explanation": "The parent cell is the original cell that divides to produce daughter cells."
+    },
+    
+    {
+        "question": "What is the term for the new cells formed as a result of cell division?",
+        "options": [
+            "Parent cells",
+            "Somatic cells",
+            "Daughter cells",
+            "Stem cells"
+        ],
+        "answer": "Daughter cells",
+        "explanation": "Daughter cells are the new cells formed from the division of a parent cell."
+    },
+    
+    {
+        "question": "How are new cells typically formed in living organisms?",
+        "options": [
+            "Through cellular synthesis",
+            "Through meiosis",
+            "Through mitosis",
+            "Through genetic recombination"
+        ],
+        "answer": "Through mitosis",
+        "explanation": "New cells in living organisms are typically formed through the process of mitosis."
+    },
+    
+    {
+        "question": "What is the primary function of the parent cell in cell division?",
+        "options": [
+            "To differentiate into specialized cells",
+            "To merge with other cells",
+            "To divide into daughter cells",
+            "To remain unchanged"
+        ],
+        "answer": "To divide into daughter cells",
+        "explanation": "The primary function of the parent cell in cell division is to undergo division and produce daughter cells."
+    },
+    
+    {
+        "question": "Which process involves the formation of new cells from existing cells?",
+        "options": [
+            "Cell fusion",
+            "Cell division",
+            "Cellular respiration",
+            "Cellular metabolism"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is the process by which new cells are formed from existing cells."
+    },
+    
+    {
+        "question": "What happens to the parent cell during cell division?",
+        "options": [
+            "It merges with other cells",
+            "It remains unchanged",
+            "It divides into two or more daughter cells",
+            "It differentiates into specialized cells"
+        ],
+        "answer": "It divides into two or more daughter cells",
+        "explanation": "During cell division, the parent cell divides into two or more daughter cells."
+    },
+    
+    {
+        "question": "What is the term for the original cell that undergoes cell division?",
+        "options": [
+            "Daughter cell",
+            "Parent cell",
+            "Somatic cell",
+            "Stem cell"
+        ],
+        "answer": "Parent cell",
+        "explanation": "The parent cell is the original cell that divides to produce daughter cells."
+    },
+    
+    {
+        "question": "What term describes the cells produced as a result of cell division?",
+        "options": [
+            "Parent cells",
+            "Somatic cells",
+            "Daughter cells",
+            "Stem cells"
+        ],
+        "answer": "Daughter cells",
+        "explanation": "Daughter cells are the cells produced as a result of cell division."
+    },
+    
+    {
+        "question": "Which term refers to the process of cell division in which new cells are generated?",
+        "options": [
+            "Cellular replication",
+            "Cellular division",
+            "Mitosis",
+            "Meiosis"
+        ],
+        "answer": "Mitosis",
+        "explanation": "Mitosis is the process of cell division that leads to the generation of new cells."
+     },
+    
+    {
+        "question": "What is the process by which new cells are formed?",
+        "options": [
+            "Mitosis",
+            "Meiosis",
+            "Cellular synthesis",
+            "Cell division"
+        ],
+        "answer": "Cell division",
+        "explanation": "New cells are formed from existing cells through the process of cell division."
+    },
+    
+    {
+        "question": "What term refers to the original cell from which new cells are formed?",
+        "options": [
+            "Daughter cell",
+            "Parent cell",
+            "Somatic cell",
+            "Stem cell"
+        ],
+        "answer": "Parent cell",
+        "explanation": "The parent cell is the original cell that undergoes division to produce new cells."
+    },
+    
+    {
+        "question": "What are the newly formed cells called?",
+        "options": [
+            "Parent cells",
+            "Somatic cells",
+            "Daughter cells",
+            "Stem cells"
+        ],
+        "answer": "Daughter cells",
+        "explanation": "The new cells formed through cell division are referred to as daughter cells."
+    },
+    
+    {
+        "question": "How are new cells typically formed in living organisms?",
+        "options": [
+            "Through cellular synthesis",
+            "Through meiosis",
+            "Through mitosis",
+            "Through genetic recombination"
+        ],
+        "answer": "Through mitosis",
+        "explanation": "New cells in living organisms are typically formed through the process of mitosis."
+    },
+    
+    {
+        "question": "What term describes the process of cell division in which new cells are generated?",
+        "options": [
+            "Cellular replication",
+            "Cellular division",
+            "Mitosis",
+            "Meiosis"
+        ],
+        "answer": "Mitosis",
+        "explanation": "Mitosis is the process of cell division by which new cells are generated from existing cells."
+    },
+    
+    {
+        "question": "Which of the following accurately describes the origin of new cells?",
+        "options": [
+            "New cells are formed from inorganic molecules",
+            "New cells arise spontaneously",
+            "New cells are formed from existing cells",
+            "New cells are produced by non-living entities"
+        ],
+        "answer": "New cells are formed from existing cells",
+        "explanation": "New cells originate from pre-existing cells through the process of cell division."
+    },
+    
+    {
+        "question": "What term refers to the original cell before it undergoes cell division?",
+        "options": [
+            "Daughter cell",
+            "Parent cell",
+            "Somatic cell",
+            "Stem cell"
+        ],
+        "answer": "Parent cell",
+        "explanation": "The parent cell is the cell that divides to produce daughter cells."
+    },
+    
+    {
+        "question": "What happens to the parent cell during cell division?",
+        "options": [
+            "It merges with other cells",
+            "It divides into two or more daughter cells",
+            "It remains unchanged",
+            "It differentiates into specialized cells"
+        ],
+        "answer": "It divides into two or more daughter cells",
+        "explanation": "During cell division, the parent cell undergoes division to produce two or more daughter cells."
+    },
+    
+    {
+        "question": "What term describes the cells produced as a result of cell division?",
+        "options": [
+            "Parent cells",
+            "Somatic cells",
+            "Daughter cells",
+            "Stem cells"
+        ],
+        "answer": "Daughter cells",
+        "explanation": "The cells produced as a result of cell division are referred to as daughter cells."
+    },
+    
+    {
+        "question": "Which process involves the formation of new cells from existing cells?",
+        "options": [
+            "Cell fusion",
+            "Cell division",
+            "Cellular respiration",
+            "Cellular metabolism"
+        ],
+        "answer": "Cell division",
+        "explanation": "Cell division is the process by which new cells are formed from existing cells."
+     },
+    
+    {
+        "question": "Which term describes organisms composed of a single cell?",
+        "options": [
+            "Unicellular",
+            "Multicellular",
+            "Complex-cellular",
+            "Single-cellular"
+        ],
+        "answer": "Unicellular",
+        "explanation": "Unicellular organisms consist of a single cell, capable of performing all life functions."
+    },
+    
+    {
+        "question": "What distinguishes multicellular organisms from unicellular organisms?",
+        "options": [
+            "Number of organelles",
+            "Presence of a nucleus",
+            "Number of cells",
+            "Ability to perform photosynthesis"
+        ],
+        "answer": "Number of cells",
+        "explanation": "Multicellular organisms consist of multiple cells, whereas unicellular organisms are composed of a single cell."
+    },
+    
+    {
+        "question": "Which of the following terms best describes organisms made up of many cells?",
+        "options": [
+            "Unicellular",
+            "Single-cellular",
+            "Multicellular",
+            "Complex-cellular"
+        ],
+        "answer": "Multicellular",
+        "explanation": "Multicellular organisms are composed of many cells, each with specialized functions."
+    },
+    
+    {
+        "question": "What characteristic distinguishes unicellular organisms?",
+        "options": [
+            "Large size",
+            "Complexity",
+            "Single-cell structure",
+            "Organization into tissues"
+        ],
+        "answer": "Single-cell structure",
+        "explanation": "Unicellular organisms consist of a single cell performing all life functions."
+    },
+    
+    {
+        "question": "What is a key feature of multicellular organisms?",
+        "options": [
+            "Small size",
+            "Ability to photosynthesize",
+            "Organization into tissues and organs",
+            "Absence of a nucleus"
+        ],
+        "answer": "Organization into tissues and organs",
+        "explanation": "Multicellular organisms exhibit organization into specialized tissues and organs."
+    },
+    
+    {
+        "question": "Which term describes organisms consisting of a single cell?",
+        "options": [
+            "Unicellular",
+            "Multicellular",
+            "Complex-cellular",
+            "Single-cellular"
+        ],
+        "answer": "Unicellular",
+        "explanation": "Unicellular organisms are composed of a single cell, capable of performing all life functions."
+    },
+    
+    {
+        "question": "What primary characteristic distinguishes multicellular organisms?",
+        "options": [
+            "High complexity",
+            "Single-cell structure",
+            "Large size",
+            "Organization into tissues"
+        ],
+        "answer": "Organization into tissues",
+        "explanation": "Multicellular organisms exhibit organization into specialized tissues, allowing for division of labor among cells."
+    },
+    
+    {
+        "question": "Which statement accurately describes unicellular organisms?",
+        "options": [
+            "They consist of many cells",
+            "They are highly complex",
+            "They are only found in water",
+            "They consist of a single cell"
+        ],
+        "answer": "They consist of a single cell",
+        "explanation": "Unicellular organisms are composed of a single cell, capable of performing all necessary life functions."
+    },
+    
+    {
+        "question": "What term describes organisms composed of multiple cells?",
+        "options": [
+            "Unicellular",
+            "Single-cellular",
+            "Multicellular",
+            "Complex-cellular"
+        ],
+        "answer": "Multicellular",
+        "explanation": "Multicellular organisms are made up of many cells, each contributing to the organism's structure and function."
+    },
+    
+    {
+        "question": "Which of the following is an example of a multicellular organism?",
+        "options": [
+            "Amoeba",
+            "Yeast",
+            "Paramecium",
+            "Human"
+        ],
+        "answer": "Human",
+        "explanation": "Humans are multicellular organisms composed of trillions of specialized cells organized into tissues, organs, and organ systems."
+     },
+    
+    {
+        "question": "What term describes organisms made up of many cells?",
+        "options": [
+            "Unicellular",
+            "Single-cellular",
+            "Multicellular",
+            "Complex-cellular"
+        ],
+        "answer": "Multicellular",
+        "explanation": "Multicellular organisms are composed of multiple cells, each specialized for different functions."
+    },
+    
+    {
+        "question": "Which of the following organisms is unicellular?",
+        "options": [
+            "Human",
+            "Yeast",
+            "Dog",
+            "Oak tree"
+        ],
+        "answer": "Yeast",
+        "explanation": "Yeast is a unicellular organism, consisting of a single cell performing all life functions."
+    },
+    
+    {
+        "question": "What distinguishes unicellular organisms from multicellular organisms?",
+        "options": [
+            "Complexity",
+            "Size",
+            "Number of cells",
+            "Color"
+        ],
+        "answer": "Number of cells",
+        "explanation": "The primary difference between unicellular and multicellular organisms is the number of cells they consist of."
+    },
+    
+    {
+        "question": "Which term describes an organism consisting of a single cell?",
+        "options": [
+            "Multicellular",
+            "Complex-cellular",
+            "Unicellular",
+            "Single-cellular"
+        ],
+        "answer": "Unicellular",
+        "explanation": "Unicellular organisms are composed of a single cell, capable of performing all life functions."
+    },
+    
+    {
+        "question": "What is the primary characteristic of multicellular organisms?",
+        "options": [
+            "Size",
+            "Organization",
+            "Speed",
+            "Color"
+        ],
+        "answer": "Organization",
+        "explanation": "Multicellular organisms exhibit high levels of organization, with cells organized into tissues, organs, and systems."
+    },
+    
+    {
+        "question": "Which statement best describes unicellular organisms?",
+        "options": [
+            "They consist of many cells",
+            "They are highly complex",
+            "They are only found in water",
+            "They consist of a single cell"
+        ],
+        "answer": "They consist of a single cell",
+        "explanation": "Unicellular organisms are composed of a single cell, capable of carrying out all life processes."
+    },
+    
+    {
+        "question": "What term describes organisms consisting of multiple cells?",
+        "options": [
+            "Unicellular",
+            "Single-cellular",
+            "Multicellular",
+            "Complex-cellular"
+        ],
+        "answer": "Multicellular",
+        "explanation": "Multicellular organisms are made up of many cells, each specialized for different functions."
+    },
+    
+    {
+        "question": "Which of the following is an example of a multicellular organism?",
+        "options": [
+            "Amoeba",
+            "Yeast",
+            "Paramecium",
+            "Human"
+        ],
+        "answer": "Human",
+        "explanation": "Humans are multicellular organisms, consisting of trillions of cells organized into tissues, organs, and systems."
+    },
+    
+    {
+        "question": "What is the main characteristic of unicellular organisms?",
+        "options": [
+            "High complexity",
+            "Single-cell structure",
+            "Large size",
+            "Organization"
+        ],
+        "answer": "Single-cell structure",
+        "explanation": "Unicellular organisms consist of a single cell performing all life functions."
+    },
+    
+    {
+        "question": "Why are cells considered the building blocks of life?",
+        "options": [
+            "Because they are highly complex",
+            "Because they can perform photosynthesis",
+            "Because they consist of organelles",
+            "Because they are the smallest units capable of life processes"
+        ],
+        "answer": "Because they are the smallest units capable of life processes",
+        "explanation": "Cells are considered the building blocks of life because they are the smallest units capable of carrying out all life processes independently."
+     },
+    
+    {
+        "question": "What is the cell?",
+        "options": [
+            "The smallest basic unit of life",
+            "A multicellular organism",
+            "A specialized tissue",
+            "A type of molecule"
+        ],
+        "answer": "The smallest basic unit of life",
+        "explanation": "The cell is defined as the smallest basic unit of life, capable of carrying out all life processes."
+    },
+    
+    {
+        "question": "What are unicellular organisms?",
+        "options": [
+            "Organisms made up of many cells",
+            "Single-cell organisms",
+            "Multicellular organisms",
+            "Complex organisms"
+        ],
+        "answer": "Single-cell organisms",
+        "explanation": "Unicellular organisms are organisms that consist of a single cell, such as amoeba and paramecium."
+    },
+    
+    {
+        "question": "Give an example of a multicellular organism.",
+        "options": [
+            "Amoeba",
+            "Paramecium",
+            "Humans",
+            "Bacteria"
+        ],
+        "answer": "Humans",
+        "explanation": "Humans are examples of multicellular organisms, consisting of many cells organized into tissues, organs, and systems."
+    },
+    
+    {
+        "question": "Which statement best describes multicellular organisms?",
+        "options": [
+            "They consist of a single cell",
+            "They are only found in water",
+            "They are made up of many cells",
+            "They lack specialized structures"
+        ],
+        "answer": "They are made up of many cells",
+        "explanation": "Multicellular organisms are composed of multiple cells, each specialized for different functions."
+    },
+    
+    {
+        "question": "What distinguishes unicellular organisms from multicellular organisms?",
+        "options": [
+            "Number of cells",
+            "Size of cells",
+            "Color of cells",
+            "Type of cells"
+        ],
+        "answer": "Number of cells",
+        "explanation": "The primary distinction between unicellular and multicellular organisms is the number of cells they consist of."
+    },
+    
+    {
+        "question": "Which of the following is NOT an example of a unicellular organism?",
+        "options": [
+            "Amoeba",
+            "Bacteria",
+            "Yeast",
+            "Human"
+        ],
+        "answer": "Human",
+        "explanation": "Humans are multicellular organisms, consisting of trillions of cells."
+    },
+    
+    {
+        "question": "What is the primary characteristic of multicellular organisms?",
+        "options": [
+            "Complexity",
+            "Size",
+            "Organization",
+            "Speed"
+        ],
+        "answer": "Organization",
+        "explanation": "Multicellular organisms exhibit high levels of organization, with cells organized into tissues, organs, and systems."
+    },
+    
+    {
+        "question": "Which of the following is an example of a unicellular organism?",
+        "options": [
+            "Liver",
+            "Amoeba",
+            "Heart",
+            "Leaf"
+        ],
+        "answer": "Amoeba",
+        "explanation": "Amoeba is a classic example of a unicellular organism, consisting of a single cell performing all life functions."
+    },
+    
+    {
+        "question": "What is the significance of cells in multicellular organisms?",
+        "options": [
+            "They provide structural support",
+            "They specialize in different functions",
+            "They perform photosynthesis",
+            "They store genetic material"
+        ],
+        "answer": "They specialize in different functions",
+        "explanation": "In multicellular organisms, cells differentiate and specialize to perform specific functions required for the organism's survival."
+    },
+    
+    {
+        "question": "Why are cells considered the basic units of life?",
+        "options": [
+            "Because they are visible to the naked eye",
+            "Because they are the smallest units capable of carrying out life processes",
+            "Because they are found only in plants",
+            "Because they are inert"
+        ],
+        "answer": "Because they are the smallest units capable of carrying out life processes",
+        "explanation": "Cells are considered the basic units of life because they possess all the characteristics necessary for life and are capable of carrying out life processes independently."
+    }
+
+
+]
