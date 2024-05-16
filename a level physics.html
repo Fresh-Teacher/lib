@@ -612,6 +612,7 @@ function loadSubjects() {
     if (classSelect === 'senior1' || classSelect === 'senior2') {
         // Subjects for Senior One and Senior Two
         subjectSelect.innerHTML += '<option value="kiswahili">Kiswahili </option>';
+        subjectSelect.innerHTML += '<option value="economics">Economics </option>';
         subjectSelect.innerHTML += '<option value="latin">Latin </option>';
         subjectSelect.innerHTML += '<option value="literature">Literature </option>';
         subjectSelect.innerHTML += '<option value="luganda">Luganda </option>';
@@ -637,6 +638,7 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="ire">IRE </option>';
     } else if (classSelect === 'senior3' || classSelect === 'senior4') {
         // Subjects for Senior Three and Senior Four
+        subjectSelect.innerHTML += '<option value="economics">Economics </option>';
         subjectSelect.innerHTML += '<option value="fn">FN </option>';
         subjectSelect.innerHTML += '<option value="geography">Geography </option>';
         subjectSelect.innerHTML += '<option value="history">History </option>';
@@ -659,6 +661,7 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship </option>';
     } else if (classSelect === 'senior5') {
         // Subjects for Senior Five
+        subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship </option>';
         subjectSelect.innerHTML += '<option value="chemistry">Chemistry </option>';
         subjectSelect.innerHTML += '<option value="biology">Biology </option>';
         subjectSelect.innerHTML += '<option value="gp">GP </option>';
@@ -668,8 +671,14 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="pureMathematics">Pure Maths </option>';
         subjectSelect.innerHTML += '<option value="physics">Physics </option>';
         subjectSelect.innerHTML += '<option value="geography">Geography </option>';
+        subjectSelect.innerHTML += '<option value="economics">Economics </option>';
+        subjectSelect.innerHTML += '<option value="ict">SUB-ICT </option>';
+
+
     } else if (classSelect === 'senior6') {
         // Subjects for Senior Six
+        subjectSelect.innerHTML += '<option value="ict">SUB-ICT </option>';
+        subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship </option>';
         subjectSelect.innerHTML += '<option value="physics">Physics </option>';
         subjectSelect.innerHTML += '<option value="td">TD </option>';
         subjectSelect.innerHTML += '<option value="agriculture">Agriculture </option>';
@@ -679,7 +688,7 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="divinity">Divinity </option>';
         subjectSelect.innerHTML += '<option value="economics">Economics </option>';
         subjectSelect.innerHTML += '<option value="english">English </option>';
-        subjectSelect.innerHTML += '<option value="entrepreneurship">Entrepreneurship </option>';
+        subjectSelect.innerHTML += '<option value="economics">Economics </option>';
         subjectSelect.innerHTML += '<option value="geography">Geography </option>';
         subjectSelect.innerHTML += '<option value="gp">GP </option>';
         subjectSelect.innerHTML += '<option value="history">History </option>';
@@ -1425,11 +1434,207 @@ if (subjectSelect === 'subMathematics') {
                 <option value="thematicHistoryOfAfrica">Thematic History of Africa</option>
                 <option value="regionalHistoryOfAfrica1855To1914">Regional History of Africa 1855-1914</option>
             </optgroup>`;
-    
-
     // Add more subjects and their topics for other classes as needed
 }
+} else if (subjectSelect === 'entrepreneurship') {
+    // Topics for Entrepreneurship
+    if (classSelect === 'senior1') {
+        topicSelect.innerHTML += `
+            <option value="introductionToEntrepreneurshipEducation">Introduction to Entrepreneurship Education</option>
+            <option value="businessesInUganda">Businesses in Uganda</option>
+            <option value="businessIdeasAndBusinessOpportunities">Business Ideas and Business Opportunities</option>
+            <option value="businessStartUpProcess">Business Start-up Process</option>
+            <option value="introductionToGovernmentRevenue">Introduction to Government Revenue</option>`;
+    } else if (classSelect === 'senior2') {
+        topicSelect.innerHTML += `
+            <option value="legalFormsOfBusinessOwnership">Legal Forms of Business Ownership</option>
+            <option value="productionInBusiness">Production in Business</option>
+            <option value="marketingInASmallBusinessEnterprise">Marketing in a Small Business Enterprise</option>
+            <option value="moneyAndFinancialInstitutions">Money and Financial Institutions</option>
+            <option value="taxation">Taxation</option>`;
+    } else if (classSelect === 'senior3') {
+        topicSelect.innerHTML += `
+            <option value="businessPlanning">Business Planning</option>
+            <option value="introductionToPrinciplesOfAccounting">Introduction to Principles of Accounting</option>
+            <option value="taxAdministration">Tax Administration</option>`;
+    } else if (classSelect === 'senior4') {
+        topicSelect.innerHTML += `
+            <option value="insurance">Insurance</option>
+            <option value="internationalTrade">International Trade</option>
+            <option value="taxCompliance">Tax Compliance</option>
+            <option value="basicTaxComputations">Basic Tax Computations</option>`;
+    } 
+} else if (subjectSelect === 'economics') {
+    // Topics for Economics
+    if (classSelect === 'senior5') {
+        topicSelect.innerHTML += `
+            <option value="introductionToEconomics">Introduction to Economics</option>
+            <option value="priceTheory">Price Theory</option>
+            <option value="productionTheoryAndMarketStructures">Production Theory and Market Structures</option>
+            <option value="nationalIncome">National Income</option>
+            <option value="structureOfUgandasEconomy">The Structure of Uganda’s Economy</option>`;
+    } else if (classSelect === 'senior6') {
+        topicSelect.innerHTML += `
+            <option value="economicGrowthAndDevelopment">Economic Growth and Development</option>
+            <option value="developmentProcessAndChoiceOfDevelopmentStrategy">Development Process and Choice of a Development Strategy</option>
+            <option value="developmentOfAgricultureAndIndustry">Development of Agriculture and Industry</option>
+            <option value="populationAndLabour">Population and Labour</option>
+            <option value="employmentAndUnemployment">Employment and Unemployment</option>
+            <option value="moneyAndBanking">Money and Banking</option>
+            <option value="inflation">Inflation</option>
+            <option value="publicFinanceAndFiscalPolicy">Public Finance and Fiscal Policy</option>
+            <option value="internationalTrade">International Trade</option>
+            <option value="economicDevelopmentPlanning">Economic Development Planning</option>
+            <option value="publicAndPrivateEnterprises">Public and Private Enterprises</option>`;
+    }
+} else if (subjectSelect === 'english') {
+    // Topics for English
+    if (classSelect === 'senior1') {
+        topicSelect.innerHTML += `
+            <option value="personalLifeAndFamily">Personal life and family</option>
+            <option value="findingInformation">Finding information</option>
+            <option value="food">Food</option>
+            <option value="atTheMarket">At the market</option>
+            <option value="childrenAtWork">Children at Work</option>
+            <option value="environmentAndPollution">Environment and Pollution</option>
+            <option value="urbanAndRuralLife">Urban and rural life</option>
+            <option value="travel">Travel</option>
+            <option value="experienceOfSecondarySchool">Experience of secondary school</option>`;
+    } else if (classSelect === 'senior2') {
+        topicSelect.innerHTML += `
+            <option value="modernCommunicationTechnology">Modern Communication Technology</option>
+            <option value="celebrations">Celebrations</option>
+            <option value="parentsAndChildren">Parents and Children</option>
+            <option value="antiCorruption">Anti-corruption</option>
+            <option value="humanRightsGenderAndResponsibilities">Human rights, gender and responsibilities</option>
+            <option value="tourismMapsAndGivingDirections">Tourism, Maps and Giving Directions</option>
+            <option value="leisure">Leisure</option>
+            <option value="appearanceAndGrooming">Appearance and grooming</option>`;
+    } else if (classSelect === 'senior3') {
+        topicSelect.innerHTML += `
+            <option value="childhoodMemories">Childhood memories</option>
+            <option value="schoolClubs">School clubs</option>
+            <option value="integrity">Integrity</option>
+            <option value="identityCrisis">Identity crisis</option>
+            <option value="relationshipsAndEmotions">Relationships and emotions</option>
+            <option value="patriotism">Patriotism</option>
+            <option value="furtherEducation">Further Education</option>
+            <option value="bankingAndMoney">Banking and money</option>`;
+    } else if (classSelect === 'senior4') {
+        topicSelect.innerHTML += `
+            <option value="leadership">Leadership</option>
+            <option value="theMedia">The media</option>
+            <option value="culture">Culture</option>
+            <option value="choosingACareer">Choosing a career</option>
+            <option value="applyingForAJob">Applying for a job</option>
+            <option value="globalization">Globalization</option>`;
+    }
+} else if (subjectSelect === 'agriculture') {
+    // Topics for Agriculture
+    if (classSelect === 'senior1') {
+        topicSelect.innerHTML += `
+            <option value="introductionToAgriculture">Introduction to agriculture</option>
+            <option value="farmToolsEquipmentAndImplements">Farm tools, equipment, and implements</option>
+            <option value="soilScience">Soil science</option>
+            <option value="vegetableGrowing">Vegetable growing</option>`;
+    } else if (classSelect === 'senior2') {
+        topicSelect.innerHTML += `
+            <option value="cerealGrowing">Cereal growing</option>
+            <option value="rootAndStemTuberGrowingOrLegumeAndOilseed">Root and stem tuber growing OR Legume and oilseed</option>
+            <option value="domesticAnimalRearing">Domestic animal rearing</option>
+            <option value="poultryRearing">Poultry rearing</option>
+            <option value="fishAndAquaponicsFarming">Fish and aquaponics farming</option>
+            <option value="rabbitRearing">Rabbit rearing</option>
+            <option value="goatRearing">Goat rearing</option>
+            <option value="perennialCropProduction">Perennial crop production</option>
+            <option value="beverageProduction">Beverage Production (coffee/tea/cocoa)</option>
+            <option value="fruitsCropProduction">Fruits crop Production</option>
+            <option value="agroforestryWatershadeCropsPermcultureProduction">Agroforestry/watershade crops/permculture Production</option>`;
+    } else if (classSelect === 'senior3') {
+        topicSelect.innerHTML += `
+            <option value="cattleProduction">Cattle production</option>
+            <option value="livestockFeedMaking">Livestock feed making</option>
+            <option value="pastureManagementAndConservation">Pasture management and conservation</option>
+            <option value="hydroponicFarming">Hydroponic farming</option>
+            <option value="financialServicesAndMoneyInAgriculture">Financial services and money in agriculture</option>
+            <option value="farmBuildingsAndFarmStructures">Farm buildings and farm structures</option>`;
+    } else if (classSelect === 'senior4') {
+        topicSelect.innerHTML += `
+            <option value="valueAdditionToDomesticMilkProducts">Value addition to domestic milk products</option>
+            <option value="valueAdditionToDomesticMeatProducts">Value addition to domestic meat products</option>
+            <option value="biotechnologyAndBiosafetyInAgriculture">Biotechnology and Biosafety in agriculture</option>
+            <option value="landTenureSystem">Land tenure system</option>
+            <option value="cooperativesAndSelfHelpGroups">Cooperatives and self-help groups</option>
+            <option value="valueAdditionToAgroWastesAndByProducts">Value addition to Agro-wastes and by-products</option>
+            <option value="valueAdditionToVegetables">Value addition to Vegetables</option>`;
+    }
+} else if (subjectSelect === 'ict') {
+    // Topics for ICT
+    if (classSelect === 'senior1') {
+        topicSelect.innerHTML += `
+            <option value="introductionToICT">Introduction to ICT</option>
+            <option value="computerHardwareAndSystemStartUp">Computer Hardware and System Start up</option>
+            <option value="fileAndFolderManagement">File and Folder Management</option>
+            <option value="wordProcessingI">Word Processing I</option>`;
+    } else if (classSelect === 'senior2') {
+        topicSelect.innerHTML += `
+            <option value="spreadsheetI">Spreadsheet I</option>
+            <option value="electronicPresentation">Electronic Presentation</option>
+            <option value="informationAccessAndSharing">Information Access and Sharing</option>
+            <option value="healthAndSafety">Health and Safety</option>`;
+    } else if (classSelect === 'senior3') {
+        topicSelect.innerHTML += `
+            <option value="wordProcessingII">Word Processing II</option>
+            <option value="spreadsheetII">Spreadsheet II</option>
+            <option value="electronicPublication">Electronic Publication</option>
+            <option value="databaseManagementSystems">Database Management Systems</option>`;
+    } else if (classSelect === 'senior4') {
+        topicSelect.innerHTML += `
+            <option value="webDesign">Web Design</option>
+            <option value="electronicWasteManagement">Electronic Waste Management</option>
+            <option value="basicSoftwareManagement">Basic Software Management</option>
+            <option value="systemAndDataSecurity">System and Data Security</option>`;
+    } else if (classSelect === 'senior5') {
+        topicSelect.innerHTML += `
+        <option value="introductionToComputing">Introduction to Computing</option>
+            <option value="computerManagement">Computer Management</option>
+            <option value="computerLaboratoryCareAndMaintenance">Computer Laboratory Care and Maintenance</option>
+            <option value="computerWordProcessing">Computer Word Processing</option>
+            <option value="computerHardware">Computer Hardware</option>
+            <option value="computerSoftware">Computer Software</option>
+            <option value="electronicSpreadsheetsI">Electronic Spreadsheets I</option>
+            <option value="internetAndWorldWideWeb">Internet and World Wide Web</option>
+            <option value="computerWordProcessingII">Computer Word Processing II</option>
+            <option value="electronicPresentation">Electronic Presentation</option>
+            <option value="dataCommunicationAndNetworking">Data Communication and Networking</option>
+            <option value="electronicPublication">Electronic Publication</option>
+            <option value="electronicSpreadsheetsII">Electronic Spreadsheets II</option>
+            <option value="databases">Databases</option>
+            <option value="systemSecurityIctEthicalIssuesAndEmergingTechnologies">System Security, ICT Ethical Issues and Emerging Technologies</option>`;
+    } else if (classSelect === 'senior6') {
+        topicSelect.innerHTML += `
+        <option value="introductionToComputing">Introduction to Computing</option>
+            <option value="computerManagement">Computer Management</option>
+            <option value="computerLaboratoryCareAndMaintenance">Computer Laboratory Care and Maintenance</option>
+            <option value="computerWordProcessing">Computer Word Processing</option>
+            <option value="computerHardware">Computer Hardware</option>
+            <option value="computerSoftware">Computer Software</option>
+            <option value="electronicSpreadsheetsI">Electronic Spreadsheets I</option>
+            <option value="internetAndWorldWideWeb">Internet and World Wide Web</option>
+            <option value="computerWordProcessingII">Computer Word Processing II</option>
+            <option value="electronicPresentation">Electronic Presentation</option>
+            <option value="dataCommunicationAndNetworking">Data Communication and Networking</option>
+            <option value="electronicPublication">Electronic Publication</option>
+            <option value="electronicSpreadsheetsII">Electronic Spreadsheets II</option>
+            <option value="databases">Databases</option>
+            <option value="systemSecurityIctEthicalIssuesAndEmergingTechnologies">System Security, ICT Ethical Issues and Emerging Technologies</option>`;
+    }
 }
+
+
+
+
+
 } else {
     topicsDropdown.style.display = 'none';
 }}
