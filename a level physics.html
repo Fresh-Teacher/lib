@@ -667,6 +667,7 @@ function loadSubjects() {
         subjectSelect.innerHTML += '<option value="subMathematics">Sub-Maths </option>';
         subjectSelect.innerHTML += '<option value="pureMathematics">Pure Maths </option>';
         subjectSelect.innerHTML += '<option value="physics">Physics </option>';
+        subjectSelect.innerHTML += '<option value="geography">Geography </option>';
     } else if (classSelect === 'senior6') {
         // Subjects for Senior Six
         subjectSelect.innerHTML += '<option value="physics">Physics </option>';
@@ -876,22 +877,105 @@ function loadTopics() {
      
         }
         // Add more topics for other classes as needed
-    } else if (subjectSelect === 'geography') {
+    } else     if (subjectSelect === 'geography') {
         // Topics for Geography
         if (classSelect === 'senior1') {
             topicSelect.innerHTML += `
-                <option value="physicalGeography">Physical Geography</option>
-                <option value="humanGeography">Human Geography</option>`;
+                <option value="introduction">Introduction</option>
+                <option value="showingLocalAreaOnMap">Showing the Local Area on a Map</option>
+                <option value="mapsAndTheirUses">Maps and Their Uses</option>
+                <option value="waysOfStudyingGeography">Ways of Studying Geography</option>
+                <option value="earthAndItsMovements">The Earth and Its Movements</option>
+                <option value="weatherAndClimate">Weather and Climate</option>
+                <option value="locationSizeAndReliefRegionsOfEA">Location, Size, and Relief Regions of East Africa</option>
+                <option value="formationOfMajorLandformsAndDrainageInEA">Formation of Major Landforms and Drainage in East Africa</option>
+                <option value="climateAndNaturalVegetationOfEA">Climate and Natural Vegetation of East Africa</option>`;
         } else if (classSelect === 'senior2') {
             topicSelect.innerHTML += `
-                <option value="economicGeography">Economic Geography</option>
-                <option value="politicalGeography">Political Geography</option>`;
+                <option value="climateChangeInEAAndWorld">Climate Change in East Africa and the World</option>
+                <option value="majorClimaticZonesOfWorld">Major Climatic Zones of the World</option>
+                <option value="miningInEA">Mining in East Africa</option>
+                <option value="developmentOfManufacturingIndustriesInEA">Development of Manufacturing Industries in East Africa</option>
+                <option value="sustainableUseOfFisheriesResourcesInEA">Sustainable Use of Fisheries Resources in East Africa</option>
+                <option value="wildlifeConservationAndTourismInEA">Wildlife Conservation and Tourism in East Africa</option>
+                <option value="populationAndUrbanisationInEA">Population and Urbanisation in East Africa</option>
+                <option value="transportAndCommunicationInEA">Transport and Communication in East Africa</option>`;
         } else if (classSelect === 'senior3') {
             topicSelect.innerHTML += `
-                <option value="environmentalGeography">Environmental Geography</option>
-                <option value="geopolitics">Geopolitics</option>`;
+                <option value="tradeWithinAndOutsideEA">Trade Within and Outside East Africa</option>
+                <option value="furtherSkillsInMapReadingAndMapUse">Further Skills in Map Reading and Map Use</option>
+                <option value="locationAndSizeOfAfrica">Location and Size of Africa</option>
+                <option value="reliefRegionsAndDrainageOfAfrica">The Relief Regions and Drainage of Africa</option>
+                <option value="climateAndVegetationOfAfrica">The Climate and Vegetation of Africa</option>
+                <option value="forestsForestResourcesAndForestryInAfrica">Forests, Forest Resources and Forestry in Africa</option>
+                <option value="irrigationFarmingInAfricaAndChina">Irrigation Farming in Africa and China</option>`;
+        } else if (classSelect === 'senior4') {
+            topicSelect.innerHTML += `
+                <option value="mineralResourcesAndMiningInAfrica">Mineral Resources and Mining in Africa</option>
+                <option value="industrialDevelopmentInAfrica">Industrial Development in Africa</option>
+                <option value="miningAndIndustrialDevelopmentInChina">Mining and Industrial Development in China</option>
+                <option value="populationAndUrbanisationInAfrica">Population and Urbanisation in Africa</option>
+                <option value="populationAndUrbanisationInChina">Population and Urbanisation in China</option>
+                <option value="developmentOfTransportCommunicationAndTradeInAfrica">Development of Transport, Communication and Trade in Africa</option>
+                <option value="tradeBetweenAfricaAndRestOfWorld">Trade Between Africa and the Rest of the World</option>`;
+        } else if (classSelect === 'senior5') {
+            topicSelect.innerHTML += `
+                <option value="introductionToPhysicalGeography">Introduction to Physical Geography</option>
+                <option value="structureOfEarth">The Structure of the Earth</option>
+                <option value="originOfContinentsAndOceanBasins">The Origin of Continents and Ocean Basins</option>
+                <option value="mapWork">Map Work</option>
+                <option value="photographInterpretation">Photograph Interpretation</option>
+                <option value="rocks">Rocks</option>
+                <option value="weatheringAndSlopeDevelopment">Weathering and Slope Development</option>
+                <option value="massWasting">Mass Wasting</option>
+                <option value="tectonism">Tectonism</option>
+                <option value="glaciation">Glaciation</option>
+                <option value="lakes">Lakes</option>
+                <option value="vegetation">Vegetation</option>
+                <option value="climatologyAndMeteorology">Climatology and Meteorology</option>
+                <option value="riversAndRiverSystems">Rivers and River Systems</option>
+                <option value="soils">Soils</option>
+                <option value="coastalGeomorphology">Coastal Geomorphology</option>
+                <option value="development">Development</option>
+                <option value="statisticalRepresentationAndAnalysis">Statistical Representation, Interpretation and Analysis</option>
+                <option value="developmentOfAgriculture">Development of Agriculture</option>
+                <option value="problemsOfFoodSupply">Problems of Food Supply</option>
+                <option value="forestry">Forestry</option>
+                <option value="fishing">Fishing</option>
+                <option value="population">Population</option>
+                <option value="ruralSettlement">Rural Settlement</option>
+                <option value="urbanisationAndPortDevelopment">Urbanisation and Port Development</option>`;
+        } else if (classSelect === 'senior6') {
+            topicSelect.innerHTML += `
+                <option value="mining">Mining</option>
+                <option value="fuelAndPowerProduction">Fuel and Power Production</option>
+                <option value="industrialisation">Industrialisation</option>
+                <option value="transportAndCommunications">Transport and Communications</option>
+                <option value="worldTradeAndRegionalIntegration">World Trade and Regional Integration</option>
+                <option value="utilisationAndConservationOfNaturalResources">Utilisation and Conservation of Natural Resources</option>
+                <option value="positionAdministrativeUnitsBordersAndArea">Position, Administrative Units, Evolution of Borders and Area</option>
+                <option value="physicalRegionsAndLandformsOfUganda">Physical Regions & Landforms of Uganda</option>
+                <option value="drainageInUganda">Drainage in Uganda</option>
+                <option value="fieldwork">Fieldwork</option>
+                <option value="soilsInUganda">Soils</option>
+                <option value="climateInUganda">Climate</option>
+                <option value="vegetationInUganda">Vegetation</option>
+                <option value="forestryInUganda">Forestry</option>
+                <option value="wetlandsInUganda">Wetlands</option>
+                <option value="transportAndCommunicationInUganda">Transport and Communication</option>
+                <option value="energyAndPowerInUganda">Energy and Power</option>
+                <option value="populationInUganda">Population</option>
+                <option value="agricultureInUganda">Agriculture</option>
+                <option value="fishingIndustryInUganda">Fishing Industry</option>
+                <option value="miningInUganda">Mining</option>
+                <option value="industrialisationInUganda">Industrialisation</option>
+                <option value="urbanisationInUganda">Urbanisation</option>
+                <option value="wildlifeConservationInUganda">Wildlife Conservation</option>
+                <option value="tourismInUganda">Tourism</option>
+                <option value="tradeAndCommerceInUganda">Trade and Commerce</option>
+                <option value="environmentalDegradationInUganda">Environmental Degradation in Uganda</option>`;
         }
-        // Add more topics for other classes as needed
+            // Add more topics for other classes as needed
     }
     if (subjectSelect === 'biology') {
     // Topics for Biology
@@ -1183,7 +1267,7 @@ if (subjectSelect === 'subMathematics') {
     }
     // Add more topics for other classes as needed
 }
- if (subjectSelect === 'pureMathematics') {
+ else if (subjectSelect === 'pureMathematics') {
         // Topics for Pure Mathematics
         if (classSelect === 'senior5') {
             // Senior Five Topics
@@ -1223,9 +1307,129 @@ if (subjectSelect === 'subMathematics') {
             `;
         }
     }
-    // Add other subjects as needed
+
+    else if (subjectSelect === 'history') {
+        // Topics for History
+        if (classSelect === 'senior1') {
+            topicSelect.innerHTML += `
+                <option value="findingOutAboutOurPast">Finding out about our past</option>
+                <option value="originOfMan">The origin of man</option>
+                <option value="migrationAndSettlementInEA">Migration and settlement in East Africa since 1000 AD</option>
+                <option value="cultureAndEthnicGroupsInEA">Culture and ethnic groups in East Africa</option>
+                <option value="stateFormationInEA">State formation in East Africa</option>
+                <option value="religionsInEA">Religions in East Africa</option>
+                <option value="localAndExternalTradeContactsInEA">Local and external trade contacts with East African communities</option>
+                <option value="scramblePartitionAndColonisationOfEA">Scramble, partition and colonisation of East Africa</option>
+                <option value="responseToEstablishmentOfColonialRuleInEA">Response to the establishment of colonial rule in East Africa</option>`;
+        } else if (classSelect === 'senior2') {
+            topicSelect.innerHTML += `
+                <option value="colonialAdministrativeSystemsInEA">The colonial administrative systems in East Africa</option>
+                <option value="colonialEconomyInEA">The colonial economy in East Africa</option>
+                <option value="worldWarsAndTheirImpactInEA">World wars and their impact in East Africa</option>
+                <option value="struggleForIndependenceInEA">Struggle for independence in East Africa</option>
+                <option value="postIndependenceSocioEconomicChallengesInEA">Post-independence socio-economic challenges in East Africa</option>
+                <option value="civilSocietyAndNGOs">Civil society and non-governmental organisations</option>
+                <option value="changingLandTenureSystemsInEA">Changing land tenure systems in East Africa</option>
+                <option value="keyPersonalitiesInHistoryOfEA">Key personalities in the history of East Africa before independence</option>`;
+        } else if (classSelect === 'senior3') {
+            topicSelect.innerHTML += `
+                <option value="structureOfGovernmentInUganda">The structure of government in Uganda</option>
+                <option value="localGovernmentSystemsInUganda">Local government systems in Uganda</option>
+                <option value="constitutionalismInUganda">Constitutionalism in Uganda</option>
+                <option value="democracyAndLeadershipInUganda">Democracy and leadership in Uganda</option>
+                <option value="unitedNationsAndImpactOnUganda">The United Nations Organisation and its impact on Uganda</option>
+                <option value="evolutionOfHumanRightsInUganda">The evolution of human rights in Uganda</option>
+                <option value="postIndependenceLiberationStrugglesInUganda">The post-independence liberation struggles in Uganda</option>
+                <option value="patriotismInUganda">Patriotism in Uganda</option>
+                <option value="keyContributorsToNationBuilding">Key contributors to nation building in the post-colonial period</option>`;
+        } else if (classSelect === 'senior4') {
+            topicSelect.innerHTML += `
+                <option value="lessonsFromWorldEconomicTransformations">Lessons from world economic transformations</option>
+                <option value="panAfricanismAndFederationInAfrica">Pan-Africanism, political and economic federation in Africa</option>
+                <option value="neoColonialismInEA">Neo-colonialism in East Africa</option>
+                <option value="globalisation">Globalisation</option>
+                <option value="lessonsFromLiberationStrugglesInSA">Lessons from liberation struggles in South Africa</option>
+                <option value="peaceConflictsAndResolutionInEA">Peace, conflicts and resolution in East Africa</option>`;
+        } else if (classSelect === 'senior5') {
+        // Senior Five Topics
+        topicSelect.innerHTML += `
+            <optgroup label="National Movements and New States in Africa">
+                <option value="developmentOfAfricanNationalism">The Development of African Nationalism</option>
+                <option value="struggleForSelfGovernment">The Struggle for Self-Government</option>
+                <option value="variousIndependenceStrugglesAndWarsInAfrica">Various independence struggles and wars in Africa</option>
+            </optgroup>
+            <optgroup label="Social and Economic History of East Africa since 1800">
+                <option value="socialAndEconomicSystemsOfPreColonialEastAfrica">Social and Economic Systems of Pre-Colonial East Africa</option>
+                <option value="preColonialExternalContactsWithEastAfrica">Pre-Colonial External Contacts with East Africa</option>
+                <option value="socialAndEconomicDevelopmentsInEastAfricaDuringColonialTimes">Social and Economic Developments in East Africa during Colonial Times</option>
+                <option value="socialAndEconomicDevelopmentInEastAfricaSinceIndependence">Social and Economic Development in East Africa Since Independence</option>
+            </optgroup>
+            <optgroup label="European History 1789-1970">
+                <option value="frenchRevolutionOf1789">The French Revolution of 1789</option>
+                <option value="napoleonBonaparte1799To1815">Napoleon Bonaparte 1799-1815</option>
+                <option value="viennaSettlementOf1814To1815AndCongressSystemOf1818To1830">The Vienna Settlement of 1814-1815 and the Congress System of 1818-1830</option>
+                <option value="variousRevolutionsAndUnificationStrugglesInEurope">Various revolutions and unification struggles in Europe</option>
+            </optgroup>
+            <optgroup label="World Affairs Since 1939">
+                <option value="emergenceOfUSAndCanadaAsMajorPowers">The Emergence of the United States of America and Canada as Major Powers in World Politics</option>
+                <option value="emergenceOfUSSRAndCISAsMajorPowers">The Emergence of the Union of Soviet Socialist Republic (USSR) and the Commonwealth of Independent States in World Politics</option>
+                <option value="politicalSocialAndEconomicDevelopmentsInAfricaSince1939">Political, Social and Economic Developments in Africa Since 1939</option>
+                <option value="nationalismAndChallengesOfIntegrationInTheMiddleEast">Nationalism and Challenges of Integration in the Middle East</option>
+            </optgroup>
+            <optgroup label="The Theory of Government and Constitutional Development and Practice in East Africa">
+                <option value="natureAndPurposeOfAConstitution">The Nature and Purpose of a Constitution</option>
+                <option value="conceptOfAState">The Concept of a State</option>
+                <option value="typesOfGovernment">Types of Government</option>
+                <option value="ruleOfLaw">The Rule of Law</option>
+                <option value="localGovernment">The Local Government</option>
+            </optgroup>
+            <optgroup label="History of Africa 1855-1914">
+                <option value="thematicHistoryOfAfrica">Thematic History of Africa</option>
+                <option value="regionalHistoryOfAfrica1855To1914">Regional History of Africa 1855-1914</option>
+            </optgroup>`;
+    } else if (classSelect === 'senior6') {
+        // Senior Six Topics
+        topicSelect.innerHTML += `
+            <optgroup label="National Movements and New States in Africa">
+                <option value="africanRevolutionAndSubsequentConflicts">The African Revolution and subsequent conflicts</option>
+                <option value="newStatesModernisationAndInternalProblems">The New States: Modernisation and Internal Problems</option>
+                <option value="regionalEconomicGroupingsAndInternationalRelations">Regional Economic Groupings and International Relations</option>
+                <option value="militaryRuleInAfrica">Military Rule in Africa</option>
+            </optgroup>
+            <optgroup label="Social and Economic History of East Africa since 1800">
+                <option value="politicalSocialAndEconomicDevelopmentsInSouthernAsiaAndFarEastSince1939">Political, Social and Economic Developments in Southern Asia and the Far East Since 1939</option>
+                <option value="politicalSocialAndEconomicTransformationOfEuropeAfterWWII">Political, Social and Economic Transformation of Europe after World War II</option>
+                <option value="crossCuttingIssuesInWorldPolitics">Cross-Cutting Issues in World Politics</option>
+            </optgroup>
+            <optgroup label="European History 1789-1970">
+                <option value="easternQuestion1815To1913">The Eastern Question (1815-1913)</option>
+                <option value="postWWIGovernmentsInEuropeAndCommunismIdeology">Post World War I Governments in Europe (1917-1939) and Communism Ideology</option>
+                <option value="worldEconomicDepression1929To1935">The World Economic Depression of 1929-1935</option>
+                <option value="worldWarII1939To1945">World War II (1939-1945)</option>
+                <option value="coldWar1945To1970">The Cold War (1945-1970)</option>
+            </optgroup>
+            <optgroup label="World Affairs Since 1939">
+                <option value="politicalSocialAndEconomicDevelopmentsInSouthernAsiaAndFarEastSince1939">Political, Social and Economic Developments in Southern Asia and the Far East Since 1939</option>
+                <option value="politicalSocialAndEconomicTransformationOfEuropeAfterWWII">Political, Social and Economic Transformation of Europe after World War II</option>
+                <option value="crossCuttingIssuesInWorldPolitics">Cross-Cutting Issues in World Politics</option>
+                <option value="coldWar1945To1970">The Cold War (1945-1970)</option>
+            </optgroup>
+            <optgroup label="The Theory of Government and Constitutional Development and Practice in East Africa">
+                <option value="originAndBackgroundOfEastAfricanGovernments">Origin and Background of the East African Governments</option>
+                <option value="constitutionalDevelopmentsInEastAfrica">Constitutional Developments in East Africa</option>
+                <option value="theExecutive">The Executive</option>
+                <option value="theLegislature">The Legislature</option>
+                <option value="nationalDefenceAndMaintenanceOfLawAndOrder">National Defence and Maintenance of Law and Order</option>
+            </optgroup>
+            <optgroup label="History of Africa 1855-1914">
+                <option value="thematicHistoryOfAfrica">Thematic History of Africa</option>
+                <option value="regionalHistoryOfAfrica1855To1914">Regional History of Africa 1855-1914</option>
+            </optgroup>`;
+    
 
     // Add more subjects and their topics for other classes as needed
+}
+}
 } else {
     topicsDropdown.style.display = 'none';
 }}
