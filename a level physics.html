@@ -412,13 +412,12 @@ function displayQuestion(question) {
     // After the question is answered, add it to the askedQuestions array.
     askedQuestions.push(question);
 }
+var timerInterval; // Variable to store the timer interval
 
-    var timerInterval; // Variable to store the timer interval
-
-    // Function to start the timer
-    function startTimer() {
+// Function to start the timer
+function startTimer() {
     var timerDisplay = document.getElementById('timer');
-    var timeLeft = 3600; // 60 minutes in seconds
+    var timeLeft = 1800; // 30 minutes in seconds
 
     // Update the timer display every second
     timerInterval = setInterval(function () {
@@ -1965,6 +1964,9 @@ fetch('names.json')
     else if (topic === 'cells') {
         topicText = "Cells";
     } 
+    else if (topic === 'classification') {
+        topicText = "Classification";
+    } 
 
     // Update the displayed player info
     document.getElementById('playerNameDisplay').innerText = playerName;
@@ -2351,7 +2353,7 @@ function selectRandomQuestions(num) {
         ];
 
         var goodMessages = [
-            "Not bad, " + playerName + ", not bad at all! 😎 Keep practicing, and you'll improve in no time!",
+        "Hey, " + playerName + ", not bad at all! " + score + " out of 10. 😎 Keep practicing, and you'll improve in no time!",
             "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep pushing yourself, and you'll ace it next time! 💪",
             "Lookin' good, " + playerName + "! You got " + score + " out of 10 correct. 😄 Keep up the good work!",
             "Hey, " + playerName + ", you're makin' moves! 🚀 You got " + score + " out of 10 correct. Keep it up!",
@@ -2456,23 +2458,23 @@ function selectRandomQuestions(num) {
             "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little more coffee before their next quiz attempt! ☕",
             "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
             "Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just warming up, right? 😄 Don't worry, you'll crush it next time!",
-            "Oh, " + playerName + ", it seems like you were just giving the others a chance to catch up! 😉 You've got this!",
+            "Oh, " + playerName + ", you got " + score + " out of 10 correct. It seems like you were just giving the others a chance to catch up! 😉 You've got this!",
             "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble there, huh? No worries, you'll bounce back stronger! 💪",
             "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just testing the waters! 💦 Keep going, you'll get there!",
             "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things interesting? 😜 Don't worry, you'll ace it next time!",
-            "Aw, " + playerName + ", looks like you're just keeping us on our toes, right? 😉 Keep smiling, you'll do better!",
+            "Aw, " + playerName + ", You got " + score + " out of 10 correct. Looks like you're just keeping us on our toes, right? 😉 Keep smiling, you'll do better!",
             "Oh no, " + playerName + "! You got " + score + " out of 10 correct. Did you forget to bring your lucky charm today? 🍀 Don't worry, you'll bounce back!",
             "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the game, right? 😄 Keep practicing, you'll get there!",
             "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to give others a chance to catch up? 😉 Keep going, you're doing great!",
             "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone got a little too excited! 😄 Keep trying, you'll improve!",
             "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble, but no worries! Keep going, you're doing just fine! 😊",
-            "Aw, " + playerName + ", did you forget to put on your superhero cape today? 🦸‍♀️ Don't worry, you'll soar next time!",
+            "Aw, " + playerName + ", you got " + score + " out of 10 correct. Did you forget to put on your superhero cape today? 🦸‍♀️ Don't worry, you'll soar next time!",
             "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things suspenseful? 😜 Keep practicing, you'll do better!",
             "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the journey, right? 😄 Keep going, you'll reach your destination!",
             "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone took a detour! 🗺️ Don't worry, you'll find your way back!",
             "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone hit a little speed bump! 🚧 Keep going, you'll smooth it out!",
             "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to add a little drama to the quiz? 😄 Keep trying, you're doing great!",
-            "Aw, " + playerName + ", looks like you're just keeping us entertained! 😉 Keep going, you'll do better!",
+            "Aw, " + playerName + ", looks like you're just keeping us entertained! 😉 You got " + score + " out of 10 correct. Keep going, you'll do better!",
             "Oops, " + playerName + "! You got " + score + " out of 10 correct. Did you misplace your lucky rabbit's foot? 🐰 Don't worry, luck is on your side next time!",
             "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little hiccup, but no worries! Keep going, you're on the right track! 😊",
             "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's okay to stumble sometimes. Shake it off and give it another shot! 💪",
@@ -2482,7 +2484,7 @@ function selectRandomQuestions(num) {
             "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Rough day at school, huh? No worries! You've got this! 💼",
             "Whoopsie-daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like today's not your day, but tomorrow's a whole new game! 🌟",
             "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like the failure bugs got the best of you this time. Don't let 'em win! 🐛",
-            "Not your best day, " + playerName + ", but every stumble is just a stepping stone to success. Keep on stepping! 👣",
+            "Not your best day, " + playerName + ", but every stumble is just a stepping stone to success. You got " + score + " out of 10 correct. Keep on stepping! 👣",
             "Hey, " + playerName + "! You got " + score + " out of 10 correct. No need to fret over a little hiccup. You're destined for greatness! 🌈",
             "Chin up, " + playerName + "! You got " + score + " out of 10 correct. Every journey has its bumps. Yours just adds character to the adventure! 😊",
             "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like you took a wrong turn on the educational tour. Time to detour and keep cruising! 🚗",
