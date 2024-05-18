@@ -1,87 +1,86 @@
+const itemsPerPage = 12;
 let currentPage = 1;
-const itemsPerPage = 10;
-const bufferSize = 30;
-const container = document.getElementById('item-container');
-const loading = document.getElementById('loading');
-const error = document.getElementById('error');
+let searchTerm = '';
+let allItems = [];
+let loading = false;
 
-// Function to fetch data from local data.json file
-const fetchData = async () => {
-  try {
-    const response = await fetch('data.json');
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    console.error('Error fetching data:', err);
-    throw err;
-  }
-};
+async function fetchItems() {
+    try {
+        const response = await fetch('data.json');
+        allItems = await response.json();
+        displayItems();
+    } catch (error) {
+        console.error('Error fetching items:', error);
+    }
+}
 
-const loadItems = async (page, data) => {
-  loading.style.display = 'block';
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const start = (page - 1) * itemsPerPage;
-      const end = page * itemsPerPage;
-      const items = data.slice(start, end);
-      loading.style.display = 'none';
-      resolve(items);
-    }, 500); // Simulate a delay
-  });
-};
+function displayItems() {
+    const container = document.getElementById('item-container');
+    const loadingElement = document.getElementById('loading');
+    const noResultsElement = document.getElementById('no-results');
 
-const renderItems = (items) => {
-  items.forEach(item => {
-    const colDiv = document.createElement('div');
-    colDiv.className = 'col-md-4 mb-4';
-    colDiv.innerHTML = `
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">${item.title}</h5>
-          <p class="card-text">${item.description}</p>
-          <p class="card-text">Price: $${item.price}</p>
-          <a href="${item.pdfUrl}" class="btn btn-primary" target="_blank">View PDF</a>
-        </div>
-      </div>
-    `;
-    container.appendChild(colDiv);
-  });
-};
+    if (currentPage === 1) {
+        container.innerHTML = ''; // Clear previous items if it's a new search
+    }
 
-const handleScroll = (data) => {
-  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-  if (scrollTop + clientHeight >= scrollHeight - 5) {
-    loadMoreItems(data);
-  }
-};
+    const filteredItems = allItems.filter(item => 
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
-const loadMoreItems = async (data) => {
-  if (container.childElementCount >= data.length) {
-    return;
-  }
+    if (filteredItems.length === 0 && currentPage === 1) {
+        noResultsElement.style.display = 'block';
+        loadingElement.style.display = 'none';
+        return;
+    } else {
+        noResultsElement.style.display = 'none';
+    }
 
-  try {
-    const items = await loadItems(currentPage, data);
-    renderItems(items);
-    currentPage++;
-  } catch (error) {
-    showError();
-  }
-};
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const itemsToShow = filteredItems.slice(start, end);
 
-const showError = () => {
-  error.style.display = 'block';
-};
+    itemsToShow.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('col-md-4', 'mb-4');
+        itemElement.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${item.title}</h5>
+                    <p class="card-text">${item.description}</p>
+                    <p class="card-text"><strong>Price:</strong> $${item.price}</p>
+                    <a href="${item.pdfUrl}" class="btn btn-primary" target="_blank">View PDF</a>
+                </div>
+            </div>
+        `;
+        container.appendChild(itemElement);
+    });
 
-const initialize = async () => {
-  try {
-    const data = await fetchData();
-    loadMoreItems(data);
-    window.addEventListener('scroll', () => handleScroll(data));
-  } catch (error) {
-    showError();
-  }
-};
+    if (filteredItems.length > end) {
+        loadingElement.style.display = 'none';
+        loading = false;
+    } else {
+        loadingElement.style.display = 'none'; // Hide loading message if no more items
+    }
+}
 
-// Initial load
-initialize();
+function handleScroll() {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !loading) {
+        const loadingElement = document.getElementById('loading');
+        loading = true;
+        loadingElement.style.display = 'block';
+        currentPage++;
+        setTimeout(displayItems, 1000); // Simulate loading delay
+    }
+}
+
+function handleSearch(event) {
+    searchTerm = event.target.value;
+    currentPage = 1;
+    displayItems();
+}
+
+document.getElementById('search').addEventListener('input', handleSearch);
+window.addEventListener('scroll', handleScroll);
+
+fetchItems();
