@@ -587,7 +587,7 @@
     let searchTerm = '';
     let allItems = [];
     let loading = false;
-  
+
     async function fetchItems() {
       try {
         const response = await fetch('data.json');
@@ -597,21 +597,21 @@
         console.error('Error fetching items:', error);
       }
     }
-  
+
     function displayItems() {
       const container = document.getElementById('item-container');
       const loadingElement = document.getElementById('loading');
       const noResultsElement = document.getElementById('no-results');
-  
+
       if (currentPage === 1) {
         container.innerHTML = ''; // Clear previous items if it's a new search
       }
-  
+
       const filteredItems = allItems.filter(item => 
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
-  
+
       if (filteredItems.length === 0 && currentPage === 1) {
         noResultsElement.style.display = 'block';
         loadingElement.style.display = 'none';
@@ -619,79 +619,77 @@
       } else {
         noResultsElement.style.display = 'none';
       }
-  
+
       const start = (currentPage - 1) * itemsPerPage;
       const end = start + itemsPerPage;
       const itemsToShow = filteredItems.slice(start, end);
-  
+
       itemsToShow.forEach((item, index) => {
-        const pdfId = "read" + (start + index + 1);
-        const pdfUrl = item.pdfUrl;
-        const fileName = pdfUrl.substring(pdfUrl.lastIndexOf("/") + 1).replace(".pdf", "");
-        const title = fileName.toUpperCase();
-        const description = item.description;
-  
-        const pdfSection = document.createElement('div');
-        pdfSection.className = 'col-md-4 mb-3';
-        pdfSection.innerHTML = `
-          <div class="card">
-            <div class="card-body">
-              <h3 id="title${start + index + 1}">${title}</h3>
-              <p class="description">${description}</p>
-              <p>Price: <span class="price"><del>${item.price}</del></span> <span class="free-text">FREE</span></p>
-              <div class="button">
-                <a id="${pdfId}" class="btn btn-primary mt-2 mr-2 text-white">View File <i class="fas fa-book-reader fa-lg"></i></a>
-                <a href="${pdfUrl}" class="btn btn-info mt-2 text-white" download>Download File <i class="fas fa-download fa-lg"></i></a>
-              </div>
-            </div>
-          </div>
-        `;
-  
-        document.querySelector(".row").appendChild(pdfSection);
-  
-        document.getElementById(pdfId).addEventListener('click', () => {
-          $(this).flipBook({
-            pdfUrl: item.pdfUrl,
-            lightBox: true,
-            layout: 3,
-            currentPage: {
-              vAlign: "bottom",
-              hAlign: "left"
-            },
-            btnShare: {
-              enabled: false
-            },
-            btnPrint: {
-              enabled: true
-            },
-            btnDownloadPages: {
-              enabled: true
-            },
-            btnColor: 'rgb(255,120,60)',
-            sideBtnColor: 'rgb(255,120,60)',
-            sideBtnSize: 60,
-            sideBtnBackground: "rgba(0,0,0,.7)",
-            sideBtnRadius: 60,
-            btnSound: {
-              vAlign: "top",
-              hAlign: "left"
-            },
-            btnAutoplay: {
-              vAlign: "top",
-              hAlign: "left"
-            },
-          });
+      const pdfId = "read" + (start + index + 1);
+      const pdfUrl = item.pdfUrl;
+      const fileName = pdfUrl.substring(pdfUrl.lastIndexOf("/") + 1).replace(".pdf", "");
+      const title = fileName.toUpperCase();
+      const description = item.description;
+
+        var pdfSection = '<div class="col-md-4 mb-3">' +
+          '<div class="card">' +
+          '<div class="card-body">' +
+          '<h3 id="title' + (index + 1) + '">' + title + '</h3>' +
+          '<p class="description">' + description + '</p>' +
+          '<p>Price: <span class="price"><del>' + item.price + '</del></span> <span class="free-text">FREE</span></p>' +
+          '<div class="button">' +
+          '<a id="' + pdfId + '" class="btn btn-primary mt-2 mr-2 text-white">View File <i class="fas fa-book-reader fa-lg"></i></a>' +
+          '<a href="' + pdfUrl + '" class="btn btn-info mt-2 text-white" download>Download File <i class="fas fa-download fa-lg"></i></a>' +
+          '</div>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+
+        $(".row").append(pdfSection);
+
+        $("#" + pdfId).flipBook({
+          // Layout Setting
+          pdfUrl: item.pdfUrl,
+          lightBox: true,
+          layout: 3,
+          currentPage: {
+            vAlign: "bottom",
+            hAlign: "left"
+          },
+          // BTN SETTING
+          btnShare: {
+            enabled: false
+          },
+          btnPrint: {
+            enabled: true // Disable the print button
+          },
+          btnDownloadPages: {
+            enabled: true // Disable the download pages button
+          },
+          btnColor: 'rgb(255,120,60)',
+          sideBtnColor: 'rgb(255,120,60)',
+          sideBtnSize: 60,
+          sideBtnBackground: "rgba(0,0,0,.7)",
+          sideBtnRadius: 60,
+          btnSound: {
+            vAlign: "top",
+            hAlign: "left"
+          },
+          btnAutoplay: {
+            vAlign: "top",
+            hAlign: "left"
+          },
         });
       });
-  
+
       if (filteredItems.length > end) {
         loadingElement.style.display = 'none';
         loading = false;
       } else {
-        loadingElement.style.display = 'none';
+        loadingElement.style.display = 'none'; // Hide loading message if no more items
       }
     }
-  
+
     function handleScroll() {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !loading) {
         const loadingElement = document.getElementById('loading');
@@ -701,18 +699,17 @@
         setTimeout(displayItems, 1000); // Simulate loading delay
       }
     }
-  
+
     function handleSearch(event) {
       searchTerm = event.target.value;
       currentPage = 1;
       displayItems();
     }
-  
+
     document.getElementById('search').addEventListener('input', handleSearch);
     window.addEventListener('scroll', handleScroll);
-  
+
     fetchItems();
   </script>
-  
 </body>
 </html>
