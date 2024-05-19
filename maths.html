@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinite Scroll with Search and Flipbook</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="js/flipbook.style.css">
+  <link rel="stylesheet" type="text/css" href="js/flipbook.style.css">
   <style>
     .card {
       margin-bottom: 1rem;
@@ -46,9 +46,6 @@
     You have reached the bottom of the page. No more items to display.
   </div>
 </div>
-
-<!-- Flipbook container -->
-<div id="pdf-flipbook-container" style="display: none;"></div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/flipbook.min.js"></script>
@@ -110,34 +107,81 @@ $(document).ready(function() {
             </div>
           </div>`;
 
-        container.append(pdfSection);
+            $(".row").append(pdfSection);
 
-        $("#" + pdfId).flipBook({
-          pdfUrl: pdfUrl,
-          lightBox: true,
-          layout: 3,
-          currentPage: {
-            vAlign: "bottom",
-            hAlign: "left"
-          },
-          btnShare: { enabled: false },
-          btnPrint: { enabled: false },
-          btnDownloadPages: { enabled: false },
-          btnColor: 'rgb(255,120,60)',
-          sideBtnColor: 'rgb(255,120,60)',
-          sideBtnSize: 60,
-          sideBtnBackground: "rgba(0,0,0,.7)",
-          sideBtnRadius: 60,
-          btnSound: {
-            vAlign: "top",
-            hAlign: "left"
-          },
-          btnAutoplay: {
-            vAlign: "top",
-            hAlign: "left"
-          },
+            $("#" + pdfId).flipBook({
+              // Layout Setting
+              pdfUrl: item.pdfUrl,
+              lightBox: true,
+              layout: 3,
+              currentPage: {
+                vAlign: "bottom",
+                hAlign: "left"
+              },
+              // BTN SETTING
+              btnShare: {
+                enabled: false
+              },
+              btnPrint: {
+                enabled: false // Disable the print button
+              },
+              btnDownloadPages: {
+                enabled: false // Disable the download pages button
+              },
+              btnColor: 'rgb(255,120,60)',
+              sideBtnColor: 'rgb(255,120,60)',
+              sideBtnSize: 60,
+              sideBtnBackground: "rgba(0,0,0,.7)",
+              sideBtnRadius: 60,
+              btnSound: {
+                vAlign: "top",
+                hAlign: "left"
+              },
+              btnAutoplay: {
+                vAlign: "top",
+                hAlign: "left"
+              },
+            });
+
+          });
+
+           function updatePaginationButtons() {
+          $("#pageNumbers").text("Page " + currentPage + " of " + totalPages);
+          if (currentPage === 1) {
+            $("#previousPageBtn").hide();
+          } else {
+            $("#previousPageBtn").show();
+          }
+          if (currentPage === totalPages) {
+            $("#nextPageBtn").hide();
+          } else {
+            $("#nextPageBtn").show();
+          }
+        }
+
+        $("#previousPageBtn").click(function() {
+          if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+            updatePaginationButtons();
+          }
         });
-      });
+
+        $("#nextPageBtn").click(function() {
+          if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+            updatePaginationButtons();
+          }
+        });
+$("#jumpButton").click(function() {
+  var pageInput = parseInt($("#jumpToPage").val());
+  if (!isNaN(pageInput) && pageInput > 0 && pageInput <= totalPages) {
+    currentPage = pageInput;
+    showPage(currentPage);
+    updatePaginationButtons();
+  }
+});
 
       currentIndex = endIndex;
       spinner.hide();
