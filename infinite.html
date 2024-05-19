@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Scroll with Search</title>
+    <title>PDF Viewer Example</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +42,146 @@
         </div>
         <div id="no-results">No results found</div>
     </div>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+    <script src="js/flipbook.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Specify the workerSrc
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js';
+
+            const itemsPerPage = 12;
+            let currentPage = 1;
+            let searchTerm = '';
+            let allItems = [];
+            let loading = false;
+
+            async function fetchItems() {
+                try {
+                    const response = await fetch('data.json');
+                    allItems = await response.json();
+                    displayItems();
+                } catch (error) {
+                    console.error('Error fetching items:', error);
+                }
+            }
+
+            function displayItems() {
+                const container = document.getElementById('item-container');
+                const loadingElement = document.getElementById('loading');
+                const noResultsElement = document.getElementById('no-results');
+
+                if (currentPage === 1) {
+                    container.innerHTML = ''; // Clear previous items if it's a new search
+                }
+
+                const filteredItems = allItems.filter(item => 
+                    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+
+                if (filteredItems.length === 0 && currentPage === 1) {
+                    noResultsElement.style.display = 'block';
+                    loadingElement.style.display = 'none';
+                    return;
+                } else {
+                    noResultsElement.style.display = 'none';
+                }
+
+                const start = (currentPage - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const itemsToShow = filteredItems.slice(start, end);
+
+                itemsToShow.forEach((item, index) => {
+                    const pdfId = "read" + (start + index + 1);
+                    const pdfUrl = item.pdfUrl;
+                    const fileName = pdfUrl.substring(pdfUrl.lastIndexOf("/") + 1).replace(".pdf", "");
+                    const title = fileName.toUpperCase(); // Capitalize the extracted file name
+                    const description = item.description;
+
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('col-md-4', 'mb-3');
+                    itemElement.innerHTML = `
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 id="title${start + index + 1}">${title}</h3>
+                                <p class="description">${description}</p>
+                                <p>Price: <span class="price"><del>${item.price}</del></span> <span class="free-text">FREE</span></p>
+                                <div class="button">
+                                    <a id="${pdfId}" class="btn btn-primary mt-2 mr-2 text-white" data-url="${pdfUrl}">View File <i class="fas fa-book-reader fa-lg"></i></a>
+                                    <a href="${pdfUrl}" class="btn btn-info mt-2 text-white" download>Download File <i class="fas fa-download fa-lg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(itemElement);
+
+                    // Add event listener to view PDF
+                    $("#" + pdfId).on('click', function() {
+                        const pdfUrl = $(this).data('url');
+                        $(this).flipBook({
+                            pdfUrl: pdfUrl,
+                            lightBox: true,
+                            layout: 3,
+                            currentPage: {
+                                vAlign: "bottom",
+                                hAlign: "left"
+                            },
+                            btnShare: {
+                                enabled: false
+                            },
+                            btnPrint: {
+                                enabled: true
+                            },
+                            btnDownloadPages: {
+                                enabled: true
+                            },
+                            btnColor: 'rgb(255,120,60)',
+                            sideBtnColor: 'rgb(255,120,60)',
+                            sideBtnSize: 60,
+                            sideBtnBackground: "rgba(0,0,0,.7)",
+                            sideBtnRadius: 60,
+                            btnSound: {
+                                vAlign: "top",
+                                hAlign: "left"
+                            },
+                            btnAutoplay: {
+                                vAlign: "top",
+                                hAlign: "left"
+                            },
+                        });
+                    });
+                });
+
+                if (filteredItems.length > end) {
+                    loadingElement.style.display = 'none';
+                    loading = false;
+                } else {
+                    loadingElement.style.display = 'none'; // Hide loading message if no more items
+                }
+            }
+
+            function handleScroll() {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !loading) {
+                    const loadingElement = document.getElementById('loading');
+                    loading = true;
+                    loadingElement.style.display = 'block';
+                    currentPage++;
+                    setTimeout(displayItems, 1000); // Simulate loading delay
+                }
+            }
+
+            function handleSearch(event) {
+                searchTerm = event.target.value;
+                currentPage = 1;
+                displayItems();
+            }
+
+            document.getElementById('search').addEventListener('input', handleSearch);
+            window.addEventListener('scroll', handleScroll);
+
+            fetchItems();
+        });
+    </script>
 </body>
 </html>

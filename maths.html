@@ -1,972 +1,718 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charSet="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Maths Quiz Game</title>
-    <meta name="robots" content="index,follow" />
-    <meta name="description"
-        content="An online platform that provides educational learning content for learners and teachers." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@FreshTeacher" />
-    <meta name="twitter:creator" content="@FreshTeacher" />
-    <meta property="og:title" content="Fresh Teacher's Library" />
-    <meta property="og:description"
-        content="An online platform that provides educational learning content for learners and teachers." />
-    <meta property="og:url" content="https://fresh-teacher.github.io/" />
-    <meta property="og:image" content="https://fresh-teacher.github.io/images/logo.png" />
-    <meta property="og:image:alt" content="Fresh Teacher's Library" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="420" />
-    <link rel="stylesheet" href="separate.css" />
-    <link rel="canonical" href="https://fresh-teacher.github.io" />
-    <meta name="next-head-count" content="16" />
-    <link rel="shortcut icon" href="/favicon-32x32.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/icon.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Quiz Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Schoolbell', cursive;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .question {
-            display: none;
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            font-size: 18px;
-            margin-top: 10px; /* Add margin-top to space out the button */
-        }
-        .form-control {
-            margin-bottom: 10px; /* Add margin-bottom to space out the input field */
-        }
-        #scoreModal .modal-dialog {
-            max-width: 400px;
-        }
-        /* CSS animation for gear icons */
-        @keyframes rotateRight {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        @keyframes rotateLeft {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(-360deg);
-            }
-        }
-        .gear-icon-left {
-            display: inline-block;
-            animation: rotateLeft 2s infinite linear; /* Apply animation to rotate the gear icon to the left */
-        }
-        .gear-icon-right {
-            display: inline-block;
-            animation: rotateRight 2s infinite linear; /* Apply animation to rotate the gear icon to the right */
-        }
-        .correct-answer {
-    color: red;
-}
+  <link rel="shortcut icon" href="images/KPK_Logo.svg">
+  <title>Senior Six Past Papers</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- AJAX -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-/* Define the heartbeat animation */
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* Apply the heartbeat animation to the button */
-.btn-repeat-question {
-  animation: heartbeat 1.5s infinite;
-}
-    #timer {
-        color: red;
-    }
-
-    </style>
-</head>
-
-<script>
-    var timerInterval; // Variable to store the timer interval
-
-    // Function to start the timer
-    function startTimer() {
-        var timerDisplay = document.getElementById('timer');
-        var timeLeft = 300; // 5 minutes in seconds
-
-        // Update the timer display every second
-        timerInterval = setInterval(function() {
-            var minutes = Math.floor(timeLeft / 60);
-            var seconds = timeLeft % 60;
-
-            // Format minutes and seconds with leading zeros if needed
-            var formattedTime = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
-            timerDisplay.textContent = formattedTime;
-
-            // Check if time is up
-            if (timeLeft === 0) {
-                clearInterval(timerInterval); // Stop the timer
-                calculateScore(); // Calculate score when time is up
-            } else {
-                timeLeft--; // Decrease time by 1 second
-            }
-        }, 1000); // Update timer every second (1000 milliseconds)
-    }
-</script>
-<h5>NAME : <span id="playerNameDisplay"></span></h5>
-<h5>LEVEL : <span id="difficultyLevelDisplay"></span></h5>
-<div class="container">
-    <h1>TIME LEFT ⏰<p></p>
-        <body onload="$('#settingsModal').modal('show')"><div id="timer">05:00</div>
-        </h1><br>
-    <!-- Timer display -->
-
-    <div id="quiz">
-        <!-- Questions will be dynamically inserted here -->
+  <!-- Include JS -->
+  <script src="js/flipbook.min.js"></script>
+  <div class='hide' id='africavotes-chat'>
+    <div class='header-chat'>
+        <div class='head-home'>
+            <div class='info-avatar'><img src='dp.jpeg'></div>
+            <p><span class="africavotes-name">Fresh Teacher</span><br> <small>online </small></p>
+        </div>
+        <div class='get-new hide'>
+            <div id='get-label'></div>
+            <div id='get-nama'></div>
+        </div>
     </div>
-</div>
-
-<!-- Settings Modal -->
-<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="settingsModalLabel"><span class="gear-icon-left">⚙️</span> GAME SETTINGS <span class="gear-icon-right">⚙️</span></h5>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="playerName">Player's Name 🦸</label>
-                    <input type="text" class="form-control" id="playerName" placeholder="Enter your sweet name here...">
+    <div class='home-chat'></div>
+    <div class='start-chat'>
+        <div class="africavotes-chat-body">
+            <div class="dAbFpq">
+                <div class="eJJEeC" style="opacity: 0;">
+                    <div class="hFENyl">
+                        <div class="ixsrax"></div>
+                        <div class="dRvxoz"></div>
+                        <div class="kXBtNt"></div>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="difficultyLevel">Difficulty Level:</label>
-                    <select class="form-control" id="difficultyLevel" required>
-                        <option value="" selected disabled>Choose Level</option>
-                        <option value="easy">Junior Genius 🤪</option>
-                        <option value="medium">Not so Dumb 😜</option>
-                        <option value="hard">Brain-Bender 🧠  </option>
-                    </select>
+                <div class="kAZgZq" style="opacity: 1;">
+                    <div class="iSpIQi" id="greeting"> </div>
                 </div>
                 
-
-                <p>Please select your sound preference:</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="soundPreference" id="soundOn" value="on" checked>
-                    <label class="form-check-label" for="soundOn">
-                        Sounds On 🔊
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="soundPreference" id="soundOff" value="off">
-                    <label class="form-check-label" for="soundOff">
-                        Sounds Off 🔇
-                    </label>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="startQuiz()">START</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal for Incorrect Answer -->
-<div class="modal fade" id="incorrectModal" tabindex="-1" role="dialog" aria-labelledby="incorrectModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="incorrectModalLabel">🙅🏿 INCORRECT ANSWER</h5>
-            </div>
-            <div class="modal-body">
-                <p>Sorry, your answer is incorrect! Below is the correct answer:<br><strong> <span id="correctAnswer" class="correct-answer"></span></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-repeat-question" onclick="prankRepeatQuestion()">Repeat Question</button>
-                <button type="button" class="btn btn-primary" onclick="nextQuestion()">Next</button>
+                <script>
+                    // Get the current hour of the user's device
+                    var currentHour = new Date().getHours();
+                
+                    // Define the greeting messages based on the current time
+                    var greetingMessage;
+                    if (currentHour >= 5 && currentHour < 12) {
+                        greetingMessage = "Hello, good morning! ☀️";
+                    } else if (currentHour >= 12 && currentHour < 18) {
+                        greetingMessage = "Hello, good afternoon! 🌤️";
+                    } else {
+                        greetingMessage = "Hello, good evening! 🌙";
+                    }
+                
+                    // Set the greeting message in the div
+                    document.getElementById("greeting").innerText = greetingMessage;
+                </script>
+                
             </div>
         </div>
+        <div class='blanter-msg'> <textarea id='chat-input' maxlength='120' placeholder='Message'></textarea> <a href='javascript:void(0)' id='send-it'><svg viewbox="0 0 448 448"> <path d="M.213 32L0 181.333 320 224 0 266.667.213 416 448 224z"></path></svg></a>                </div>
     </div>
-</div>
-
-<!-- Modal for Prank Repeat Message -->
-<div class="modal fade" id="repeatPrankModal" tabindex="-1" role="dialog" aria-labelledby="repeatPrankModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            
-            <div class="modal-body">
-                <p>Hey <span id="playerNamePlaceholder"></span>, here's the deal: <br>You're just going to pay me shs. 10,000 to repeat the question for you. Shh... it's our little secret 🤫</p>
-                <button type="button" class="btn btn-success" onclick="acceptDeal()">PAY NOW</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+    <div id='get-number'></div><a class='close-chat' href='javascript:void(0)'>×</a> </div> <a class='africaVotesChat' href='javascript:void(0)' title='Show Chat'><svg width="20" viewBox="0 0 24 24"><defs/><path fill="#eceff1" d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"/><path fill="#4caf50" d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"/><path fill="#fafafa" d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg> Chat</a>
 <script>
-    
-    // Function to handle prank repeat question button click
-    function prankRepeatQuestion() {
-        $('#repeatPrankModal').modal('show'); // Show the prank repeat modal
-        
-        // Play the prank audio
-        var audio = new Audio('mutwalo.mp3');
-        audio.play();
-        
-        // Insert player's name into the message
-        var playerName = document.getElementById('playerName').value;
-        document.getElementById('playerNamePlaceholder').innerText = playerName;
-    }
-    
-    // Function to handle accepting the prank deal
-    function acceptDeal() {
-        $('#repeatPrankModal').modal('hide'); // Hide the prank modal
-        
-        // Play the fool audio
-        var audio = new Audio('munanansi.mp3');
-        audio.play();
-        
-        // Show message modal
-        $('#dealMessageModal').modal('show');
-    }
+    $(document).on("click", "#send-it", function() {
+        var a = document.getElementById("chat-input");
+        if ("" != a.value) {
+            var b = $("#get-number").text(),
+                c = document.getElementById("chat-input").value,
+                d = "https://web.whatsapp.com/send",
+                e = b,
+                f = "&text=" + c;
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (d = "whatsapp://send");
+            var g = d + "?phone=+256750687790" + e + f;
+            window.open(g, "_blank")
+        }
+    }), $(document).on("click", ".informasi", function() {
+        document.getElementById("get-number").innerHTML = $(this).children(".my-number").text(), $(".start-chat,.get-new").addClass("show").removeClass("hide"), $(".home-chat,.head-home").addClass("hide").removeClass("show"), document.getElementById("get-nama").innerHTML = $(this).children(".info-chat").children(".chat-nama").text(), document.getElementById("get-label").innerHTML = $(this).children(".info-chat").children(".chat-label").text()
+    }), $(document).on("click", ".close-chat", function() {
+        $("#africavotes-chat").addClass("hide").removeClass("show")
+    }), $(document).on("click", ".africaVotesChat,.contactWhatsapp", function() {
+        if ($("#africavotes-chat").hasClass("show")) {
+            $("#africavotes-chat").addClass("hide").removeClass("show")
+        } else {
+            $("#africavotes-chat").addClass("show").removeClass("hide");
+            $("#ContactModal").modal('hide');
+        }
+    })
 </script>
 
-
-
-
-<!-- Modal for Prank Deal Message -->
-<div class="modal fade" id="dealMessageModal" tabindex="-1" role="dialog" aria-labelledby="dealMessageModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="dealMessageModalLabel">😜I FOOLED YOU !!!🤪</h5>
-            </div>
-            <div class="modal-body">
-                <p>Well, to be honest with you, that's not how we do things here. 🤣 So, hurry up and continue with the quiz before you run out of time! ⏰ </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-warning" onclick="$('#dealMessageModal').modal('hide')">CONTINUE</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Score Modal -->
-<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
-            </div>
-            <div class="modal-body">
-                <p id="score"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="repeatQuiz()">Repeat Quiz 🔁</button>
-                <a href="index.html" class="btn btn-secondary">Back to Homepage 🏡</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-// Define soundPreference variable
-var soundPreference = '';
-
-// Define arrays for different difficulty levels
-var easyQuestions = [
-{ text: "What is 3 + 4?", answer: 7 },
-    { text: "What is 5 + 6?", answer: 11 },
-    { text: "What is 7 + 8?", answer: 15 },
-    { text: "What is 9 + 10?", answer: 19 },
-    { text: "What is 12 + 5?", answer: 17 },
-    { text: "What is 15 + 8?", answer: 23 },
-    { text: "What is 18 + 6?", answer: 24 },
-    { text: "What is 21 + 9?", answer: 30 },
-    { text: "What is 24 + 12?", answer: 36 },
-    { text: "What is 27 + 15?", answer: 42 },
-    { text: "What is 30 + 18?", answer: 48 },
-    { text: "What is 33 + 21?", answer: 54 },
-    { text: "What is 36 + 24?", answer: 60 },
-    { text: "What is 39 + 27?", answer: 66 },
-    { text: "What is 42 + 30?", answer: 72 },
-    { text: "What is 45 + 33?", answer: 78 },
-    { text: "What is 48 + 36?", answer: 84 },
-    { text: "What is 51 + 39?", answer: 90 },
-    { text: "What is 54 + 42?", answer: 96 },
-    { text: "What is 57 + 45?", answer: 102 },
-    { text: "What is 8 - 3?", answer: 5 },
-    { text: "What is 15 - 7?", answer: 8 },
-    { text: "What is 20 - 9?", answer: 11 },
-    { text: "What is 32 - 15?", answer: 17 },
-    { text: "What is 40 - 18?", answer: 22 },
-    { text: "What is 50 - 22?", answer: 28 },
-    { text: "What is 72 - 33?", answer: 39 },
-    { text: "What is 85 - 41?", answer: 44 },
-    { text: "What is 99 - 48?", answer: 51 },
-    { text: "What is 120 - 55?", answer: 65 },
-    { text: "What is 130 - 60?", answer: 70 },
-    { text: "What is 145 - 72?", answer: 73 },
-    { text: "What is 160 - 80?", answer: 80 },
-    { text: "What is 180 - 90?", answer: 90 },
-    { text: "What is 200 - 100?", answer: 100 },
-    { text: "What is 220 - 110?", answer: 110 },
-    { text: "What is 240 - 120?", answer: 120 },
-    { text: "What is 260 - 130?", answer: 130 },
-    { text: "What is 280 - 140?", answer: 140 },
-    { text: "What is 300 - 150?", answer: 150 }
-];
-
-var mediumQuestions = [
-{ text: "What is 5 * 8?", answer: 40 },
-    { text: "What is 7 * 6?", answer: 42 },
-    { text: "What is 9 * 9?", answer: 81 },
-    { text: "What is 12 * 7?", answer: 84 },
-    { text: "What is 15 * 12?", answer: 180 },
-    { text: "What is 18 * 8?", answer: 144 },
-    { text: "What is 20 * 10?", answer: 200 },
-    { text: "What is 25 * 11?", answer: 275 },
-    { text: "What is 30 * 9?", answer: 270 },
-    { text: "What is 35 * 7?", answer: 245 },
-    { text: "What is 40 * 8?", answer: 320 },
-    { text: "What is 45 * 5?", answer: 225 },
-    { text: "What is 50 * 6?", answer: 300 },
-    { text: "What is 55 * 4?", answer: 220 },
-    { text: "What is 60 * 3?", answer: 180 },
-    { text: "What is 65 * 2?", answer: 130 },
-    { text: "What is 70 * 1?", answer: 70 },
-    { text: "What is 75 * 12?", answer: 900 },
-    { text: "What is 80 * 10?", answer: 800 },
-    { text: "What is 85 * 5?", answer: 425 }
-];
-
-var hardQuestions = [
-    { text: "What is 40 ÷ 8?", answer: 5 },
-    { text: "What is 42 ÷ 7?", answer: 6 },
-    { text: "What is 81 ÷ 9?", answer: 9 },
-    { text: "What is 84 ÷ 12?", answer: 7 },
-    { text: "What is 180 ÷ 15?", answer: 12 },
-    { text: "What is 144 ÷ 18?", answer: 8 },
-    { text: "What is 200 ÷ 10?", answer: 20 },
-    { text: "What is 275 ÷ 11?", answer: 25 },
-    { text: "What is 270 ÷ 9?", answer: 30 },
-    { text: "What is 245 ÷ 7?", answer: 35 },
-    { text: "What is 320 ÷ 8?", answer: 40 },
-    { text: "What is 225 ÷ 5?", answer: 45 },
-    { text: "What is 300 ÷ 6?", answer: 50 },
-    { text: "What is 220 ÷ 4?", answer: 55 },
-    { text: "What is 180 ÷ 3?", answer: 60 },
-    { text: "What is 130 ÷ 2?", answer: 65 },
-    { text: "What is 70 ÷ 1?", answer: 70 },
-    { text: "What is 900 ÷ 12?", answer: 75 },
-    { text: "What is 800 ÷ 10?", answer: 80 },
-    { text: "What is 425 ÷ 5?", answer: 85 }
-];
-
-var selectedQuestions = []; // Array to store selected questions based on difficulty level
-
-// Function to start the quiz
-function startQuiz() {
-    var difficultyLevel = document.getElementById('difficultyLevel').value;
-    if (difficultyLevel === '') {
-        alert('Please select a difficulty level.');
-        return;
-    }
-
-    // Assign questions based on selected difficulty level
-    if (difficultyLevel === 'easy') {
-        selectedQuestions = easyQuestions;
-    } else if (difficultyLevel === 'medium') {
-        selectedQuestions = mediumQuestions;
-    } else if (difficultyLevel === 'hard') {
-        selectedQuestions = hardQuestions;
-    }
-
-    saveSettings(); // Call saveSettings to set the player's name and other settings
-}
-
-// Function to save settings
-function saveSettings() {
-    var playerNameInput = document.getElementById('playerName');
-    playerName = playerNameInput.value.trim(); // Update the global playerName variable
-
-    // Regular expression to validate the player name
-    var nameRegex = /^[a-zA-Z]+$/;
-
-    // Check if the player name is empty or contains invalid characters
-    if (playerName === '') {
-        alert('Please enter your name.');
-        return;
-    } else if (!nameRegex.test(playerName)) {
-        alert('Please enter a valid name (only letters are allowed with no spaces).');
-        return;
-    }
-
-      // Get the selected difficulty level
-      var difficultyLevel = document.getElementById('difficultyLevel').value;
-    var difficultyText = '';
-    if (difficultyLevel === 'easy') {
-        difficultyText = 'Junior Genius 🤪';
-    } else if (difficultyLevel === 'medium') {
-        difficultyText = 'Not so Dumb 😜';
-    } else if (difficultyLevel === 'hard') {
-        difficultyText = 'Brain-Bender 🧠';
-    }
-
-    // Update the displayed player name and difficulty level
-    document.getElementById('playerNameDisplay').innerText = playerName;
-    document.getElementById('difficultyLevelDisplay').innerText = difficultyText;
-
-
-    // Get sound preference
-    var soundOn = document.getElementById('soundOn');
-    soundPreference = soundOn.checked ? soundOn.value : 'off';
-
-    // Continue with starting the quiz if the name is valid
-    $('#settingsModal').modal('hide');
-    initializeQuiz();
-}
-
-function initializeQuiz() {
-    // Start the timer
-    startTimer();
-
-    // Rest of your initialization code goes here
-    if (soundPreference === '') {
-        $('#settingsModal').modal('show');
-        return;
-    }
-    var randomQuestions = selectRandomQuestions(10); // Select 10 random questions
-    var quizElement = document.getElementById('quiz');
-    for (var i = 0; i < randomQuestions.length; i++) {
-        var question = randomQuestions[i];
-        var questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        questionElement.innerHTML = '<h3>Question ' + (i + 1) + ' of ' + randomQuestions.length + ':</h3>' +
-            '<p>' + question.text + '</p>' +
-            '<input type="number" class="form-control" id="q' + (i + 1) + '">' +
-            '<button class="btn btn-primary btn-block" onclick="checkAnswer(' + question.answer + ',' + (i + 1) + ')">Next</button>';
-        quizElement.appendChild(questionElement);
-    }
-    // Show the first question
-    document.querySelector('.question').style.display = 'block';
-    if (soundPreference === 'on') {
-        playStartSound(); // Play start sound if sound preference is 'on'
-    }
-}
-
-
-var currentQuestion = 1;
-
-var currentAudio = null; // Global variable to store the current audio element
-
-// Function to play audio for feedback
-function playAudio(isCorrect) {
-    // If there's already an audio playing, stop it
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0; // Reset the audio to the beginning
-    }
-
-    // Create a new audio element and set its source based on the correctness of the answer
-    var audio = new Audio();
-    if (isCorrect) {
-        audio.src = 'mazima.mp3';
-    } else {
-        audio.src = 'alimba.mp3';
-    }
-
-    // Play the audio and store it in the currentAudio variable
-    audio.play();
-    currentAudio = audio;
-}
-
-function checkAnswer(correctAnswer, questionNumber) {
-    var userAnswer = parseInt(document.getElementById('q' + currentQuestion).value.trim());
-    if (isNaN(userAnswer)) {
-        alert("Please provide an answer.");
-        return;
-    }
-
-    var isCorrect = userAnswer === correctAnswer;
-    if (soundPreference === 'on') {
-        playAudio(isCorrect);
-    }
-
-    if (!isCorrect) {
-        showIncorrectModal(correctAnswer); // Call showIncorrectModal when the answer is incorrect
-        return;
-    }
-
-    document.querySelector('.question:nth-child(' + questionNumber + ')').style.display = 'none'; // Hide the current question
-    currentQuestion++;
-    if (currentQuestion <= 10) {
-        document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'block'; // Show the next question
-    } else {
-        calculateScore(); // Call calculateScore() when all questions are answered
-    }
-}
-
-function nextQuestion() {
-    $('#incorrectModal').modal('hide'); // Hide the incorrect answer modal
-    document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'none'; // Hide the current question
-    currentQuestion++;
-    if (currentQuestion <= 10) {
-        document.querySelector('.question:nth-child(' + currentQuestion + ')').style.display = 'block'; // Show the next question
-    } else {
-        calculateScore(); // Call calculateScore() when all questions are answered
-    }
-}
-
-function showIncorrectModal(correctAnswer) {
-    document.getElementById('correctAnswer').innerText = correctAnswer;
-    $('#incorrectModal').modal('show'); // Show the incorrect answer modal
-}
-
-// Function to select a random subset of questions
-function selectRandomQuestions(numQuestions) {
-    var shuffledQuestions = selectedQuestions.sort(() => Math.random() - 0.5); // Shuffle the questions array
-    return shuffledQuestions.slice(0, numQuestions);
-}
-
-
-function calculateScore() {
-    var score = 0;
-    var totalQuestions = 10; // Update total questions to 10
-    for (var i = 1; i <= totalQuestions; i++) {
-        var userAnswer = parseInt(document.getElementById('q' + i).value);
-        if (!isNaN(userAnswer) && userAnswer === selectedQuestions[i - 1].answer) {
-            score++;
+  <style>
+    
+    .m1 {
+            position: fixed;
+            left: 1%;
+            width: auto;
+            height: 100%;
+            top: 1%;
+            color: #000;
         }
-    }
 
-    var audioFile = '';
-    var message = '';
-
-    if (score === 10) {
-        audioFile = 'omugezi.mp3';
-    } else if (score >= 8 && score < 10) {
-        audioFile = 'my lord.mp3';
-    } else if (score >= 3 && score <= 7) {
-        audioFile = 'kaweddemu.mp3';
-    } else {
-        audioFile = 'charles.mp3';
-    }
-        var excellentMessages = [
-        "Wow! Look at you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score, huh? Are you secretly a superhero in this subject? 🦸‍♂️",
-    "Bravo, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10? You're crushing it! Keep shining bright like a star! ✨",
-    "Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10/10! You're like a migical wizard! 🧙‍♂️",
-    "Amazing work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're on fire! 🔥",
-    "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! Keep up the phenomenal work! 👏",
-    "You're unstoppable, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're one real hell of a genius! 🌟",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score alert! You're acing this game! 🚨",
-    "No way, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're the champion! 🏆",
-    "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. A flawless performance! Keep up the fantastic work! 🌈",
-    "You're a wise prodigy, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? Keep dazzling us with your skills! 💡",
-    "Fantastic job, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You make this subject look easy! 😉",
-    "Impressive work, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're a real whiz! 🎩",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10! You're rocking this quiz! 🚀",
-    "You're a super intelligent marvel, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? Keep up the incredible effort! 💫",
-    "Spectacular, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're in a league of your own! ⚡",
-    "Hats off to you, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're a wise master of this subject matter! 🎓",
-    "You're setting the bar high, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? Keep up the awesome work! 🌟",
-    "Excellent job, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? You're a real legend! 🏅",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're making everyone proud! 👍",
-    "Superb, " + playerName + "! You got " + score + " out of 10 correct. A perfect score? Keep up the fantastic performance! 🌟",
-    "You're crushing it, " + playerName + "! You got " + score + " out of 10 correct. Perfect score? You're a talented rockstar! 🎸",
-    "Bravo, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're an intelligent wizard! 🧙‍♂️",
-    "Wow, " + playerName + "! You got " + score + " out of 10 correct. You aced it! 10 out of 10. You're unstoppable! 🌟",
-    "Incredible, " + playerName + "! You got " + score + " out of 10 correct. You nailed it! 10 out of 10. You're on top of the world! 🌍",
-    "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. Flawless performance! 10 out of 10. You're a true champion! 🏆",
-    "Unbelievable, " + playerName + "! You got " + score + " out of 10 correct. You got every question right! 10 out of 10. You're a genius! 🧠",
-    "Spectacular, " + playerName + "! You got " + score + " out of 10 correct. You've mastered it! 10 out of 10. You're the mastermind! 💡",
-    "Marvelous, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a legend! 🌟",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. Outstanding job! 10 out of 10. You're unbeatable! 💪",
-    "Exceptional, " + playerName + "! You got " + score + " out of 10 correct. You're a star! 10 out of 10. You're truly remarkable! ✨",
-    "Mind-blowing, " + playerName + "! You got " + score + " out of 10 correct. You've outdone yourself! 10 out of 10. You're a prodigy! 🌟",
-    "Phenomenal, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 10 out of 10. You're the best! 🏅",
-    "Remarkable, " + playerName + "! You got " + score + " out of 10 correct. You're setting records! 10 out of 10. You're unstoppable! 🚀",
-    "Fantastic, " + playerName + "! You got " + score + " out of 10 correct. You've reached the top! 10 out of 10. You're a superstar! ⭐",
-    "Amazing, " + playerName + "! You got " + score + " out of 10 correct. You're a genius! 10 out of 10. You're destined for greatness! 🚀",
-    "Terrific, " + playerName + "! You got " + score + " out of 10 correct. You've made it! 10 out of 10. You're legendary! 🏆",
-    "Outstanding, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 10 out of 10. You're an inspiration! 🌟",
-    "Exceptional work, " + playerName + "! You got " + score + " out of 10 correct. You're brilliant! 10 out of 10. You're a role model! 👑",
-    "Exemplary performance, " + playerName + "! You got " + score + " out of 10 correct. You've aced it! 10 out of 10. You're extraordinary! 🎉",
-    "Top-notch, " + playerName + "! You got " + score + " out of 10 correct. You're a master! 10 out of 10. You're making history! 📜",
-    "Sensational, " + playerName + "! You got " + score + " out of 10 correct. You're unbeatable! 10 out of 10. You're a legend! 🌟",
-"Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're smashing it! 💥",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're cruisin'! 🚗",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
-    "Look at you go, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🚀",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. You're acing it like a boss! 💼",
-    "High five, " + playerName + "! You got " + score + " out of 10 correct. You're nailing it! 🖐️",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep slayin'! ⚔️",
-    "Hey, " + playerName + ", you're killin' it! " + score + " out of 10. Keep it up! 😎",
-    "Hey superstar, " + playerName + "! You got " + score + " out of 10 correct. You're shining bright! ✨",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're crushing it! 🎉",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🌯",
-    "You're doing awesome, " + playerName + "! You got " + score + " out of 10 correct. Keep the vibe! 🎶",
-    "Rock on, " + playerName + "! You got " + score + " out of 10 correct. You're rockin' the quiz! 🤘",
-    "Kudos, " + playerName + "! You got " + score + " out of 10 correct. You're the quiz master! 👑",
-    "Hey, " + playerName + ", you're nailing it! " + score + " out of 10. Keep the good times rollin'! 🎲",
-    "Well played, " + playerName + "! You got " + score + " out of 10 correct. You're a quiz wizard! 🧙‍♂️",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're crushin' it! 💪",
-    "Hey superstar, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🌟",
-    "Good going, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Hey, " + playerName + ", you absolutely crushed it! 10 out of 10. You're a nerdy whiz! 🧮",
-    "Dude, " + playerName + "! You got " + score + " out of 10 correct. You totally nailed it! 10 out of 10. You're on fire! 🔥",
-    "Nice one, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a legend! 🌟",
-    "Wow, " + playerName + "! You got " + score + " out of 10 correct. You totally aced it! 10 out of 10. You're unstoppable! 💪",
-    "No way, " + playerName + "! You got " + score + " out of 10 correct. You got every single one right! 10 out of 10. You're a genius! 🧠",
-    "Hey, " + playerName + ", that's incredible! 10 out of 10. You're a geeky genius! 🎓",
-    "Killer job, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're crushing it! 💥",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 10 out of 10. You're unstoppable! 🚀",
-    "Awesome work, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a rockstar! 🌟",
-    "Man, " + playerName + ", you're killing it! 10 out of 10. You're a legend! 🏆",
-    "Nailed it, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on top of your game! 💯",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a real prodigy! 🌟",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're unstoppable! 🚀",
-    "You're a genius, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on a roll! 🎲",
-    "Absolutely smashed it, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're on top of the world! 🌍",
-    "Dang, " + playerName + "! You got " + score + " out of 10 correct. Perfect score! 10 out of 10. You're a now a master! 🔢",
-    "Incredible job, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're a legend! 🌟",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. You're killing it! 10 out of 10. You're unstoppable! 💪",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. 10 out of 10. You're absolutely crushing it! 💥",
-    "Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. What's your secret? 💼",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're onto something here! 🔍",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. What's your next move? 🤔",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. What's your strategy? 🧠",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You've got this puzzle figured out! 🧩",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're cracking the code! 🔒",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 💡",
-    "Hey, " + playerName + ", that's awesome! " + score + " out of 10. What's your secret sauce? 🍔",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. You're unraveling mysteries! 🔍",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. What's your hidden talent? 🎩",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. You're uncovering secrets! 🕵️",
-    "Hey, " + playerName + ", way to go! " + score + " out of 10. What's your next discovery? 🔬",
-    "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. What's your next adventure? 🌟",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. What's your next big idea? 💡",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 🚀",
-    "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. What's your next masterpiece? 🎨",
-    "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. What's your next adventure? 🚀",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. What's your next big discovery? 🌟",
-    "Hey, " + playerName + ", not bad at all! " + score + " out of 10. What's your secret sauce? 🍔",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. What's your next move? 🤔",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. What's your strategy? 🧠",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. What's your secret weapon? 🔫",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. What's your winning formula? 🏆",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. What's your magic touch? ✨",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. What's your next breakthrough? 🚀",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. What's your ace up your sleeve? 🃏",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. What's your secret to success? 🤫",
-    "Hey, " + playerName + ", that's awesome! " + score + " out of 10. What's your secret recipe? 🍲",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. What's your key to victory? 🔑",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. What's your secret sauce? 🍝",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. What's your secret ingredient? 🥇",
-    "Hey, " + playerName + ", way to go! " + score + " out of 10. What's your next big thing? 🚀",
-    "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. What's your next masterpiece? 🎨",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. What's your next revelation? 💡",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. What's your secret talent? 🎭",
-    "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. What's your secret weapon? 🔧",
-    "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. What's your next adventure? 🚀",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. What's your next big breakthrough? 🌟"
-
-
-];
-
-var greatMessages = [
-"Hey, " + playerName + ", not bad at all! " + score + " out of 10. Keep rockin'! 🎸",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're smashing it! 💥",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. You're cruisin'! 🚗",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Yo, " + playerName + ", check you out! " + score + " out of 10. You're a champ! 🏆",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're rocking it! 🤘",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're doing great! 👍",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're on the right track! 🚀",
-    "Hey, " + playerName + ", that's awesome! " + score + " out of 10. You're smashing it! 💥",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. You're crushing it! 💥",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👏",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
-    "Hey, " + playerName + ", way to go! " + score + " out of 10. You're doing awesome! 🎉",
-    "You're doing fantastic, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🚀",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're doing amazing! 🌟",
-    "You're rocking it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🎸",
-    "Hey, " + playerName + ", keep up the awesome work! " + score + " out of 10. You're killing it! 💥",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "You're unstoppable, " + playerName + "! " + score + " out of 10. Keep it going! 🚀",
-    "Hey, " + playerName + ", that's fantastic! " + score + " out of 10. You're on a roll! 🌯",
-    "Bravo, " + playerName + "! " + score + " out of 10. You're a quiz champion! 🏆",
-    "You're crushing it, " + playerName + "! " + score + " out of 10. Keep up the awesome work! 💪",
-    "Outstanding, " + playerName + "! " + score + " out of 10. You're a quiz master! 🎓",
-    "Kudos to you, " + playerName + "! " + score + " out of 10. You're acing the quiz! 👍",
-    "Keep shining, " + playerName + "! " + score + " out of 10. You're a star! ✨",
-    "Wow, " + playerName + "! " + score + " out of 10. You're knocking it out of the park! ⚾",
-    "You're making it look easy, " + playerName + "! " + score + " out of 10. Keep up the great work! 👏",
-    "You're a force to be reckoned with, " + playerName + "! " + score + " out of 10. Keep it up! 💥",
-    "Absolutely smashing, " + playerName + "! " + score + " out of 10. You're a quiz whiz! 🧠",
-    "You're on fire, " + playerName + "! " + score + " out of 10. Keep the momentum going! 🔥",
-    "Hey there, " + playerName + "! " + score + " out of 10. You're doing amazing! 🌟",
-    "Way to go, " + playerName + "! " + score + " out of 10. You're a superstar! 🌟",
-    "You're nailing it, " + playerName + "! " + score + " out of 10. Keep up the great work! 👍",
-    "Phenomenal job, " + playerName + "! " + score + " out of 10. You're unstoppable! 💥",
-    "Keep up the fantastic work, " + playerName + "! " + score + " out of 10. You're a rockstar! 🎸",
-    "You're doing awesome, " + playerName + "! " + score + " out of 10. Keep it up! 🎉",
-    "Hey, " + playerName + ", you're a quiz superstar! " + score + " out of 10. Keep shining! 🌟",
-    "You're a quiz dynamo, " + playerName + "! " + score + " out of 10. Keep up the electrifying performance! ⚡",
-    "Fantastic work, " + playerName + "! " + score + " out of 10. You're on fire! 🔥",
-    "You're absolutely killing it, " + playerName + "! " + score + " out of 10. Keep up the amazing work! 💥",
-    "Incredible job, " + playerName + "! " + score + " out of 10. You're a quiz legend in the making! 🏅",
-    "You're a quiz wizard, " + playerName + "! " + score + " out of 10. Keep casting those correct answers! 🧙‍♂️",
-    "Outstanding performance, " + playerName + "! " + score + " out of 10. You're setting the bar high! 🚀",
-    "You're unstoppable, " + playerName + "! " + score + " out of 10. Keep up the unbeatable streak! 💪",
-    "Spectacular work, " + playerName + "! " + score + " out of 10. You're on a winning streak! 🌟",
-    "You're on a roll, " + playerName + "! " + score + " out of 10. Keep those correct answers coming! 🎲",
-    "Impressive stuff, " + playerName + "! " + score + " out of 10. You're making it look easy! 👏",
-    "You're smashing it, " + playerName + "! " + score + " out of 10. Keep up the phenomenal performance! 💥",
-    "Marvelous job, " + playerName + "! " + score + " out of 10. You're making us proud! 👍",
-    "You're a true quiz aficionado, " + playerName + "! " + score + " out of 10. Keep up the fantastic work! 🧠",
-    "Top-notch performance, " + playerName + "! " + score + " out of 10. You're a quiz virtuoso! 🎶",
-    "You're acing it, " + playerName + "! " + score + " out of 10. Keep up the stellar performance! 🌟",
-    "Brilliant work, " + playerName + "! " + score + " out of 10. You're on the path to quiz greatness! 🏆",
-    "You're absolutely crushing it, " + playerName + "! " + score + " out of 10. Keep up the phenomenal work! 💪",
-    "Magnificent job, " + playerName + "! " + score + " out of 10. You're leaving everyone else in the dust! 🚀",
-    "You're on fire, " + playerName + "! " + score + " out of 10. Keep up the blazing performance! 🔥",
-    "Exceptional performance, " + playerName + "! " + score + " out of 10. You're a shining star! ✨",
-    "You're absolutely slaying it, " + playerName + "! " + score + " out of 10. Keep up the amazing work! 💥"
-
-
-
-];
-
-var goodMessages = [
-"Not bad, " + playerName + ", not bad at all! 😎 Keep practicing, and you'll improve in no time!",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep pushing yourself, and you'll ace it next time! 💪",
-    "Lookin' good, " + playerName + "! You got " + score + " out of 10 correct. 😄 Keep up the good work!",
-    "Hey, " + playerName + ", you're makin' moves! 🚀 Keep it up!",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. 🎉 You're on the right track!",
-    "You're killin' it, " + playerName + "! You got " + score + " out of 10 correct. 🔥 Keep crushin' those tough problems!",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. 💫 You're doin' just fine!",
-    "Nice try, " + playerName + "! You got " + score + " out of 10 correct. 🙌 Every question is a step forward!",
-    "You're gettin' there, " + playerName + "! You got " + score + " out of 10 correct. 🌈 Keep practicin' those so called problems!",
-    "Good job, " + playerName + "! You got " + score + " out of 10 correct. 🎈 Keep workin' hard!",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. 🎈 Keep practicin' those genius skills!",
-    "You're gettin' better, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep it up!",
-    "You're on fire, " + playerName + "! You got " + score + " out of 10 correct. 🔥 Keep pushin' yourself!",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. 🚀 You're doin' awesome!",
-    "You're doin' fantastic, " + playerName + "! You got " + score + " out of 10 correct. 🎉 Keep it goin'!",
-    "You're doin' great, " + playerName + "! You got " + score + " out of 10 correct. 🌟 Keep up the good work!",
-    "You're makin' progress, " + playerName + "! You got " + score + " out of 10 correct. 🚀 Keep goin'!",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. 🎈 You're makin' strides!",
-    "You're gettin' better, " + playerName + "! You got " + score + " out of 10 correct. 💫 Keep it up!",
-    "Look at you go, " + playerName + "! You got " + score + " out of 10 correct. You're soaring high! 🦅",
-    "Whoa, " + playerName + "! You got " + score + " out of 10 correct. You're making waves! 🌊",
-    "High five, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🎲",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep shining! ✨",
-    "Hey, " + playerName + ", you're killin' it! " + score + " out of 10. You're on fire! 🔥",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👍",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're on the right track! 🚂",
-    "You're smashing it, " + playerName + "! You got " + score + " out of 10 correct. Keep the momentum! 💥",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're on a winning streak! 🏆",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
-    "Awesome job, " + playerName + "! You got " + score + " out of 10 correct. You're on the rise! 🚀",
-    "Fantastic work, " + playerName + "! You got " + score + " out of 10 correct. You're on fire! 🔥",
-    "You're cruising, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🚗",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🌟",
-    "You're doing brilliantly, " + playerName + "! You got " + score + " out of 10 correct. Keep up the good work! 👏",
-    "Keep going strong, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🎉",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're on the right path! 🛤️",
-    "You're on a winning streak, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
-    "Impressive work, " + playerName + "! You got " + score + " out of 10 correct. You're on a roll! 🌊",
-    "Hey, " + playerName + ", you're doing great! " + score + " out of 10. Keep it up! 🌟",
-    "Great job, " + playerName + "! You got " + score + " out of 10 correct. You're making progress! 📈",
-    "Nice work, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💪",
-    "You're on a roll, " + playerName + "! You got " + score + " out of 10 correct. Keep going! 🎲",
-    "Well done, " + playerName + "! You got " + score + " out of 10 correct. You're doing great! 👏",
-    "Keep up the good work, " + playerName + "! You got " + score + " out of 10 correct. You're doing awesome! 🌟",
-    "You're killing it, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 💥",
-    "You're on fire, " + playerName + "! You got " + score + " out of 10 correct. Keep the momentum! 🔥",
-    "Impressive, " + playerName + "! You got " + score + " out of 10 correct. You're doing fantastic! 👍",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're making waves! 🌊",
-    "Nice going, " + playerName + "! You got " + score + " out of 10 correct. You're doing amazing! 🌟",
-    "Keep it up, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 🚀",
-    "Good stuff, " + playerName + "! You got " + score + " out of 10 correct. Keep going strong! 💪",
-    "You're doing amazing, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🎉",
-    "You're doing great, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 👍",
-    "Nice job, " + playerName + "! You got " + score + " out of 10 correct. You're making strides! 🏃‍♂️",
-    "You're on a winning streak, " + playerName + "! You got " + score + " out of 10 correct. Keep it going! 🏆",
-    "Way to go, " + playerName + "! You got " + score + " out of 10 correct. You're unstoppable! 💥",
-    "You're on the right track, " + playerName + "! You got " + score + " out of 10 correct. Keep it up! 🚀",
-    "You're crushing it, " + playerName + "! You got " + score + " out of 10 correct. Keep up the good work! 👊",
-    "You're doing awesome, " + playerName + "! You got " + score + " out of 10 correct. Keep rocking it! 🎸"
-
-
-];
-
-var tryHarderMessages = [
-"Hey there, " + playerName + "! You got " + score + " out of 10 correct. Looks like you had a little hiccup with " + score + " out of 10. No worries, even superheroes have their off days! 🦸‍♂️",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, even the best stumble sometimes. Dust yourself off and try again! 🤷‍♂️",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Nobody's perfect, right? Just consider this a warm-up round! 🔥",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Everyone takes a wrong turn now and then. Shake it off and let's give it another shot! 🚶‍♂️",
-    "Looks like " + playerName + " needs a little more practice with " + score + " out of 10. No worries, Rome wasn't built in a day! 🏛️",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't tell anyone. It'll be our little secret! 🤫",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's keeping score... oh wait! 😜",
-    "Looks like someone stumbled a bit, " + playerName + ". " + score + " out of 10. Don't worry, we'll keep your quiz score safe with us! 🤐",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It happens to the best of us. Maybe next time you'll get it right... or not! 😄",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we still think you're pretty cool. Just not 'quiz-master' cool yet! 😎",
-    "Looks like " + playerName + " hit a bump in the road with " + score + " out of 10. Don't worry, every stumble is a step forward... or something like that! 🚶‍♂️",
-    "Well, " + playerName + ", " + score + " out of 10. Not quite what we expected, but hey, surprises keep life interesting! 🎉",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we'll just pretend this never happened.  😅",
-    "Looks like " + playerName + " needs a little extra practice with " + score + " out of 10. It's alright, practice makes perfect... or so they say! 🎯",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's perfect. We'll just blame it on a glitch in the matrix! 🤖",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. No worries, we'll just chalk this up to a 'learning experience'. 📝",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly a gold medal performance, but hey, at least you tried! 🏅",
-    "Looks like someone needs to hit the books a bit harder, " + playerName + ". " + score + " out of 10. Don't worry, we've got plenty of books! 📚",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's judging... okay, maybe just a little! 😜",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this the 'practice round', shall we? 😅",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone forgot their thinking cap with " + score + " out of 10. Don't worry, we'll find it for you! 🎩",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't judge... much! 😉",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'work in progress', shall we? 🛠️",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we won't tell anyone. Just remember, WHAT HAPPENS IN THE QUIZ STAYS IN THE QUIZ! 🤫",
-    "Looks like " + playerName + " needs a bit more brain juice with " + score + " out of 10. Don't worry, we'll send some your way! 🧠💡",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we shall just pretend you performed like this because you were distracted by a passing squirrel! 🐿️",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't hold it against you... much! 😄",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs to brush up on their quiz skills! 🧹",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly what we expected, but hey, life is full of surprises! 🎁",
-    "Looks like " + playerName + " stumbled a bit with " + score + " out of 10. Don't worry, we've got plenty of band-aids! 🩹",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's all right, we won't judge... too harshly! 😉",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little extra study time! 📚",
-    "Looks like " + playerName + " took a wrong turn with " + score + " out of 10. Don't worry, seems like you lost your answers in the QuizLand. We'll help you find your way to them! 🗺️",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Not quite the result we were hoping for, but hey, there's always next time! 🔄",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'creative interpretation' of the quiz! 🎨",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. It's okay, nobody's perfect... except maybe for quiz masters! 😜",
-    "Looks like someone's got a case of the quiz jitters, " + playerName + ". " + score + " out of 10. Don't worry, we've got plenty of virtual ice cream to help you chill out! 🍦",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we'll just chalk it up to a 'temporary lapse in brilliance'! 🤔",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs a little more coffee before their next quiz attempt! ☕",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
-"Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just warming up, right? 😄 Don't worry, you'll crush it next time!",
-    "Oh, " + playerName + ", it seems like you were just giving the others a chance to catch up! 😉 You've got this!",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble there, huh? No worries, you'll bounce back stronger! 💪",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you were just testing the waters! 💦 Keep going, you'll get there!",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things interesting? 😜 Don't worry, you'll ace it next time!",
-    "Aw, " + playerName + ", looks like you're just keeping us on our toes, right? 😉 Keep smiling, you'll do better!",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. Did you forget to bring your lucky charm today? 🍀 Don't worry, you'll bounce back!",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the game, right? 😄 Keep practicing, you'll get there!",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to give others a chance to catch up? 😉 Keep going, you're doing great!",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone got a little too excited! 😄 Keep trying, you'll improve!",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little stumble, but no worries! Keep going, you're doing just fine! 😊",
-    "Aw, " + playerName + ", did you forget to put on your superhero cape today? 🦸‍♀️ Don't worry, you'll soar next time!",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to keep things suspenseful? 😜 Keep practicing, you'll do better!",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. It's all part of the journey, right? 😄 Keep going, you'll reach your destination!",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone took a detour! 🗺️ Don't worry, you'll find your way back!",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone hit a little speed bump! 🚧 Keep going, you'll smooth it out!",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Did you just want to add a little drama to the quiz? 😄 Keep trying, you're doing great!",
-    "Aw, " + playerName + ", looks like you're just keeping us entertained! 😉 Keep going, you'll do better!",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Did you misplace your lucky rabbit's foot? 🐰 Don't worry, luck is on your side next time!",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. A little hiccup, but no worries! Keep going, you're on the right track! 😊",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. It's okay to stumble sometimes. Shake it off and give it another shot! 💪",
-    "Don't worry, " + playerName + "! You got " + score + " out of 10 correct. Everyone has those days. Keep your head up and try again! 🙂",
-    "Oopsie, " + playerName + "! You got " + score + " out of 10 correct. Looks like you're just warming up. Get back in there and show 'em what you've got! 🔥",
-    "Aww, " + playerName + "! You got " + score + " out of 10 correct. Don't sweat it! Even superheroes have their off days. You'll bounce back stronger! 💫",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Rough day at school, huh? No worries! You've got this! 💼",
-    "Whoopsie-daisy, " + playerName + "! You got " + score + " out of 10 correct. Looks like today's not your day, but tomorrow's a whole new game! 🌟",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like the failure bugs got the best of you this time. Don't let 'em win! 🐛",
-    "Not your best day, " + playerName + ", but every stumble is just a stepping stone to success. Keep on stepping! 👣",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. No need to fret over a little hiccup. You're destined for greatness! 🌈",
-    "Chin up, " + playerName + "! You got " + score + " out of 10 correct. Every journey has its bumps. Yours just adds character to the adventure! 😊",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. Looks like you took a wrong turn on the educational tour. Time to detour and keep cruising! 🚗",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Not your best performance, but even the greatest stars have their cloudy days. Shine on! ✨",
-    "Bummer, " + playerName + "! You got " + score + " out of 10 correct. This stubborn subject got the best of you this time, but you'll bounce back stronger! 💪",
-    "Keep your spirits high, " + playerName + "! You got " + score + " out of 10 correct. A little setback is just a setup for a major comeback! 🚀",
-    "Hey hey, " + playerName + "! You got " + score + " out of 10 correct. Don't let a little stumble trip you up. Brush it off and keep on dancing! 💃",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Looks like you hit a speed bump on the study highway. Time to put the pedal to the metal and zoom past it! 🚀",
-    "Don't sweat it, " + playerName + "! You got " + score + " out of 10 correct. Even the greatest artists have their rough drafts. You're just refining your masterpiece! 🎨",
-    "Hey there, " + playerName + "! You got " + score + " out of 10 correct. Not your best day in the quiz arena, but every setback is just a setup for a mighty comeback! 💥",
-    "No worries, " + playerName + "! You got " + score + " out of 10 correct. Even superheroes have their kryptonite moments. You'll rise again! 💫",
-    "Hey, " + playerName + "! You got " + score + " out of 10 correct. Not quite the result you wanted, but every stumble is just a step closer to success. Keep stepping! 👟",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone forgot their thinking cap with " + score + " out of 10. Don't worry, we'll find it for you! 🎩",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't judge... much! 😉",
-    "Well, well, well, " + playerName + "! You got " + score + " out of 10 correct. Let's just call this a 'work in progress', shall we? 🛠️",
-    "Oops, " + playerName + "! You got " + score + " out of 10 correct. It's okay, we won't tell anyone. Just remember, what happens in the quiz stays in the quiz! 🤫",
-    "Looks like " + playerName + " needs a bit more brain juice with " + score + " out of 10. Don't worry, we'll send some your way! 🧠💡",
-    "Oh no, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we'll just pretend you were distracted by a passing squirrel! 🐿️",
-    "Oopsie daisy, " + playerName + "! You got " + score + " out of 10 correct. Don't worry, we won't hold it against you... much! 😄",
-    "Uh-oh, " + playerName + "! You got " + score + " out of 10 correct. Looks like someone needs to brush up on their quiz skills! 🧹",
-    "Oh dear, " + playerName + "! You got " + score + " out of 10 correct. It's alright, we won't judge... too harshly! 😉",
-    "Well, " + playerName + ", " + score + " out of 10. Not exactly the result we were hoping for, but hey, at least you gave it a shot! 👏",
-    "Looks like someone, well let me just mention their name point blank, " + ( playerName  )+ ", was just feeling a lil bit sleepy and couldn't concentrate during the quiz. Better sleep well next time, bro! 😴💤"
-
-];
-
-
-        var messageArray;
-if (score === 10) {
-    messageArray = excellentMessages;
-} else if (score >= 8 && score < 10) {
-    messageArray = greatMessages;
-} else if (score >= 3 && score <= 7) {
-    messageArray = goodMessages;
-} else {
-    messageArray = tryHarderMessages;
-}
-
-var randomIndex = Math.floor(Math.random() * messageArray.length);
-message = messageArray[randomIndex];
-
-
-
-        // Play the appropriate audio if sound preference is on
-        if (soundPreference === 'on') {
-            var audio = new Audio(audioFile);
-            audio.play();
+        .m2 {
+            position: fixed;
+            right: 1%;
+            width: auto;
+            height: 100%;
+            top: 1%;
+            color: #000;
         }
-        
-        document.getElementById('score').innerText = message; // Display personalized message
-        $('#scoreModal').modal('show');
-    }
+                .africavotes-name {
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            line-height: .5
+        }
 
-    function repeatQuiz() {
-        location.reload();
-    }
+        #africavotes-chat {
+            box-sizing: border-box !important;
+            outline: none !important;
+            position: fixed;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 1px 15px rgba(32, 33, 36, .28);
+            bottom: 90px;
+            right: 30px;
+            overflow: hidden;
+            z-index: 99;
+            animation-name: showchat;
+            animation-duration: 1s;
+            transform: scale(1)
+        }
 
-    // Function to play start sound
-function playStartSound() {
-    var audio = new Audio('start.mp3');
-    audio.play();
+        a.africaVotesChat {
+            background: #fff;
+            color: #404040;
+            position: fixed;
+            display: flex;
+            font-weight: 400;
+            justify-content: space-between;
+            z-index: 98;
+            bottom: 25px;
+            right: 30px;
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 1px 15px rgba(32, 33, 36, .28)
+        }
+
+        a.africaVotesChat svg {
+            transform: scale(1.2);
+            margin: 0 10px 0 0
+        }
+
+        .header-chat {
+    background: #009688;
+    background: #095e54;
+    color: #fff;
+    padding: 20px;
+    text-align: left; /* Set text-align to left to avoid centering */
 }
 
-</script>
 
+        .header-chat h3 {
+            margin: 0 0 10px
+        }
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        .header-chat p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0
+        }
 
+        .info-avatar {
+            position: relative
+        }
+
+        .info-avatar img {
+            border-radius: 100%;
+            width: 50px;
+            float: left;
+            margin: 0 10px 0 0
+        }
+
+        a.informasi {
+            padding: 20px;
+            display: block;
+            overflow: hidden;
+            animation-name: showhide;
+            animation-duration: 0.5s
+        }
+
+        a.informasi:hover {
+            background: #f1f1f1
+        }
+
+        .info-chat span {
+            display: block
+        }
+
+        #get-label,
+        span.chat-label {
+            font-size: 12px;
+            color: #888
+        }
+
+        #get-nama,
+        span.chat-nama {
+            margin: 5px 0 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: #222
+        }
+
+        #get-label,
+        #get-nama {
+            color: #fff
+        }
+
+        span.my-number {
+            display: none
+        }
+
+        .blanter-msg {
+            color: #444;
+            padding: 20px;
+            font-size: 12.5px;
+            text-align: center;
+            background: #eee;
+            border-top: 1px solid #ddd
+        }
+
+        textarea#chat-input {
+            border: none;
+            font-family: "Arial", sans-serif;
+            width: 100%;
+            height: 42px;
+            outline: none;
+            resize: none;
+            padding: 10px;
+            font-size: 14px
+        }
+
+        a#send-it {
+            width: 30px;
+            font-weight: 700;
+            padding: 7px 7px 0;
+            background: #eee
+        }
+
+        a#send-it svg {
+            fill: #a6a6a6;
+            height: 24px;
+            width: 24px
+        }
+
+        .first-msg {
+            background: transparent;
+            padding: 30px;
+            text-align: center
+        }
+
+        .first-msg span {
+            background: #e2e2e2;
+            color: #333;
+            font-size: 14.2px;
+            line-height: 1.7;
+            border-radius: 10px;
+            padding: 15px 20px;
+            display: inline-block
+        }
+
+        .start-chat .blanter-msg {
+            display: flex
+        }
+
+        #get-number {
+            display: none
+        }
+
+        a.close-chat {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            color: #fff;
+            font-size: 30px
+        }
+
+        @keyframes ZpjSY {
+            0% {
+                background-color: #b6b5ba
+            }
+            15% {
+                background-color: #111
+            }
+            25% {
+                background-color: #b6b5ba
+            }
+        }
+
+        @keyframes hPhMsj {
+            15% {
+                background-color: #b6b5ba
+            }
+            25% {
+                background-color: #111
+            }
+            35% {
+                background-color: #b6b5ba
+            }
+        }
+
+        @keyframes iUMejp {
+            25% {
+                background-color: #b6b5ba
+            }
+            35% {
+                background-color: #111
+            }
+            45% {
+                background-color: #b6b5ba
+            }
+        }
+
+        @keyframes showhide {
+            from {
+                transform: scale(.5);
+                opacity: 0
+            }
+        }
+
+        @keyframes showchat {
+            from {
+                transform: scale(0);
+                opacity: 0
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            #africavotes-chat {
+                width: auto;
+                left: 5%;
+                right: 5%;
+                font-size: 80%
+            }
+        }
+
+        .hide {
+            display: none;
+            opacity: 1
+        }
+
+        .show {
+            display: block;
+            opacity: 1
+        }
+
+        .africavotes-message-container {
+            display: flex;
+            z-index: 1
+        }
+
+        .africavotes-message {
+            padding: 7px 14px 6px;
+            background-color: #fff;
+            border-radius: 0 8px 8px;
+            position: relative;
+            transition: all 0.3s ease 0s;
+            opacity: 0;
+            transform-origin: center top 0;
+            z-index: 2;
+            box-shadow: rgba(0, 0, 0, .13) 0 1px .5px;
+            margin-top: 4px;
+            margin-left: -54px;
+            max-width: calc(100% - 66px)
+        }
+
+        .africavotes-chat-body {
+            padding: 20px 20px 20px 10px;
+            background-color: #e6ddd4;
+            position: relative
+        }
+
+        .africavotes-chat-body::before {
+            display: block;
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            opacity: .08;
+            background-image: url(https://africavotes.com/public/img/social/whatsapp.webp)
+        }
+
+        .dAbFpq {
+            display: flex;
+            z-index: 1
+        }
+
+        .eJJEeC {
+            background-color: #fff;
+            width: 52.5px;
+            height: 32px;
+            border-radius: 16px;
+            display: flex;
+            -moz-box-pack: center;
+            justify-content: center;
+            -moz-box-align: center;
+            align-items: center;
+            margin-left: 10px;
+            opacity: 0;
+            transition: all 0.1s ease 0s;
+            z-index: 1;
+            box-shadow: rgba(0, 0, 0, .13) 0 1px .5px
+        }
+
+        .hFENyl {
+            position: relative;
+            display: flex
+        }
+
+        .ixsrax {
+            height: 5px;
+            width: 5px;
+            margin: 0 2px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            top: 0;
+            background-color: #9e9da2;
+            animation-name: ZpjSY
+        }
+
+        .dRvxoz {
+            height: 5px;
+            width: 5px;
+            margin: 0 2px;
+            background-color: #b6b5ba;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            top: 0;
+            animation-name: hPhMsj
+        }
+
+        .kAZgZq {
+            padding: 7px 14px 6px;
+            background-color: #fff;
+            border-radius: 0 8px 8px;
+            position: relative;
+            transition: all 0.3s ease 0s;
+            opacity: 0;
+            transform-origin: center top 0;
+            z-index: 2;
+            box-shadow: rgba(0, 0, 0, .13) 0 1px .5px;
+            margin-top: 4px;
+            margin-left: -54px;
+            max-width: calc(100% - 66px)
+        }
+
+        .kAZgZq::before {
+            position: absolute;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            top: 0;
+            left: -12px;
+            width: 12px;
+            height: 19px
+        }
+
+        .bMIBDo {
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 18px;
+            color: rgba(0, 0, 0, .4)
+        }
+
+        .iSpIQi {
+            font-size: 14px;
+            line-height: 19px;
+            margin-top: 4px;
+            color: #111
+        }
+
+        .iSpIQi {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 4px;
+    color: #111;
+    text-align: left; /* Set text-align to left to avoid centering */
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding-top: 20px;
+    }
+    .search-box {
+      margin-bottom: 20px;
+    }
+    #loading {
+      text-align: center;
+      display: none;
+      margin: 20px 0;
+    }
+    #no-results {
+      text-align: center;
+      display: none;
+      margin: 20px 0;
+      color: red;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <a class="navbar-brand" href="index.html">
+      <div class="navbar-brand-content">
+        <img src="images/logo.png" alt="Fresh Teacher's Logo" width="50" height="50">
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-title"><strong>FRESH TEACHER'S E-LIBRARY 📚</strong></span>
+          <span class="navbar-brand-motto"><em>Learn. Unlearn. Relearn</em></span>
+        </div>
+      </div>
+    </a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <!-- Search Bar -->
+    <div class="container mt-5"><br>
+      <div class="search-bar">
+        <input type="text" id="search" class="search-input form-control" placeholder="Search for content...">
+      </div><br>
+      <div id="item-container" class="row"></div>
+      <div id="loading">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div id="no-results">No results found</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="background-color: #ffffff; height: 100px; display: flex; justify-content: center; align-items: center;">
+    <div class="container">
+      <p style="text-align: center;">
+        Made with <span style="color: red;">❦</span> by Mutumba Jesse Paul aka Fresh Teacher<br>
+        &copy; Fresh Teacher's Software <span id="currentYear"></span><br>
+        <a href="tel:+256750687790">0750687790</a> / <a href="tel:+256786812837">0786812837</a> <br>     
+        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="disclaimer.html">Disclaimer</a>
+      </p>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7f8qz66b3Q5yT00E7Ga4Z+B/MxXQ5j+2U4Bqk4By9pFqwnq0v" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpA4KE7taVg8y6g6KbfsC5oSiFlocg8zoJsgm6nH7o5gKk5FbPE6PU6I+e" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nUw7p0azet+frh5MWLcD85v" crossorigin="anonymous"></script>
+
+  <script>
+    const itemsPerPage = 12;
+    let currentPage = 1;
+    let searchTerm = '';
+    let allItems = [];
+    let loading = false;
+  
+    async function fetchItems() {
+      try {
+        const response = await fetch('data.json');
+        allItems = await response.json();
+        displayItems();
+      } catch (error) {
+        console.error('Error fetching items:', error);
+      }
+    }
+  
+    function displayItems() {
+      const container = document.getElementById('item-container');
+      const loadingElement = document.getElementById('loading');
+      const noResultsElement = document.getElementById('no-results');
+  
+      if (currentPage === 1) {
+        container.innerHTML = ''; // Clear previous items if it's a new search
+      }
+  
+      const filteredItems = allItems.filter(item => 
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+  
+      if (filteredItems.length === 0 && currentPage === 1) {
+        noResultsElement.style.display = 'block';
+        loadingElement.style.display = 'none';
+        return;
+      } else {
+        noResultsElement.style.display = 'none';
+      }
+  
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const itemsToShow = filteredItems.slice(start, end);
+  
+      itemsToShow.forEach((item, index) => {
+        const pdfId = "read" + (start + index + 1);
+        const pdfUrl = item.pdfUrl;
+        const fileName = pdfUrl.substring(pdfUrl.lastIndexOf("/") + 1).replace(".pdf", "");
+        const title = fileName.toUpperCase();
+        const description = item.description;
+  
+        const pdfSection = document.createElement('div');
+        pdfSection.className = 'col-md-4 mb-3';
+        pdfSection.innerHTML = `
+          <div class="card">
+            <div class="card-body">
+              <h3 id="title${start + index + 1}">${title}</h3>
+              <p class="description">${description}</p>
+              <p>Price: <span class="price"><del>${item.price}</del></span> <span class="free-text">FREE</span></p>
+              <div class="button">
+                <a id="${pdfId}" class="btn btn-primary mt-2 mr-2 text-white">View File <i class="fas fa-book-reader fa-lg"></i></a>
+                <a href="${pdfUrl}" class="btn btn-info mt-2 text-white" download>Download File <i class="fas fa-download fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        `;
+  
+        document.querySelector(".row").appendChild(pdfSection);
+  
+        document.getElementById(pdfId).addEventListener('click', () => {
+          $(this).flipBook({
+            pdfUrl: item.pdfUrl,
+            lightBox: true,
+            layout: 3,
+            currentPage: {
+              vAlign: "bottom",
+              hAlign: "left"
+            },
+            btnShare: {
+              enabled: false
+            },
+            btnPrint: {
+              enabled: true
+            },
+            btnDownloadPages: {
+              enabled: true
+            },
+            btnColor: 'rgb(255,120,60)',
+            sideBtnColor: 'rgb(255,120,60)',
+            sideBtnSize: 60,
+            sideBtnBackground: "rgba(0,0,0,.7)",
+            sideBtnRadius: 60,
+            btnSound: {
+              vAlign: "top",
+              hAlign: "left"
+            },
+            btnAutoplay: {
+              vAlign: "top",
+              hAlign: "left"
+            },
+          });
+        });
+      });
+  
+      if (filteredItems.length > end) {
+        loadingElement.style.display = 'none';
+        loading = false;
+      } else {
+        loadingElement.style.display = 'none';
+      }
+    }
+  
+    function handleScroll() {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !loading) {
+        const loadingElement = document.getElementById('loading');
+        loading = true;
+        loadingElement.style.display = 'block';
+        currentPage++;
+        setTimeout(displayItems, 1000); // Simulate loading delay
+      }
+    }
+  
+    function handleSearch(event) {
+      searchTerm = event.target.value;
+      currentPage = 1;
+      displayItems();
+    }
+  
+    document.getElementById('search').addEventListener('input', handleSearch);
+    window.addEventListener('scroll', handleScroll);
+  
+    fetchItems();
+  </script>
+  
 </body>
 </html>
