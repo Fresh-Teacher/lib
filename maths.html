@@ -451,9 +451,43 @@
     color: #111;
     text-align: left; /* Set text-align to left to avoid centering */
 }
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+.animated-btn {
+    animation: slideIn 1s ease-out, shake 3s 1s infinite;
+}
+
+
   </style>
 </head>
 <body>
+      <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <a class="navbar-brand" href="index.html">
+      <div class="navbar-brand-content">
+            <a href="index.html">
+                <button class="btn btn-danger animated-btn">↩ RETURN TO LIBRARY 📚</button>
+            </a>  </div>
+      </div>
+    </a>
+       
+  </nav><br>
+
 
 <div class="container mt-5">
   <input type="text" id="search" class="form-control mb-4" placeholder="Search items...">
@@ -549,10 +583,10 @@ $(document).ready(function() {
                 enabled: false
               },
               btnPrint: {
-                enabled: false // Disable the print button
+                enabled: true // Enable the print button
               },
               btnDownloadPages: {
-                enabled: false // Disable the download pages button
+                enabled: true // Enable the download pages button
               },
               btnColor: 'rgb(255,120,60)',
               sideBtnColor: 'rgb(255,120,60)',
